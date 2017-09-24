@@ -11,10 +11,10 @@ If you arelady created a new theme or used the provided `component_training` the
 ### Creating our first component
 Inside the `component_training` folder do one of these two things:
 1. If you are using the theme generator:
-  * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Card"'`
+   * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Card"'`
 
 A new component (Card), will be created inside `/src/components/`.  Inside the Card component you will notice 3 files: `card.json`, `card.scss`, and `card.twig`.
 
 2. If you are NOT using the theme generator,  you can create your components by hand.
-  * Inside `src/components/` create a new folder called `card`
-  * Inside the `card` folder, create the 3 files listed above (`card.json`,`card.scss`, and `card.twig`).
+   * Inside `src/components/` create a new folder called `card`
+   * Inside the `card` folder, create the 3 files listed above (`card.json`,`card.scss`, and `card.twig`).
