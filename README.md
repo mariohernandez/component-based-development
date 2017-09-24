@@ -1,5 +1,3 @@
-# 00-Requirements
-
 # Component-based Development with Drupal 8
 This is a guide that outlines the process of development wth components in Drupal 8.
 
