@@ -31,5 +31,5 @@ npm run build
 ### View Styleguide.
 
 ```
-http://d8.local/themes/custom/theme-name/dist/style-guide/index.html
+http://d8.local/themes/custom/component_training/dist/style-guide/index.html
 ```
