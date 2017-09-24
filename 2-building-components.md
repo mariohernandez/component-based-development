@@ -22,6 +22,9 @@ A new component, **card**, will be created inside `/src/components/`.  Inside th
 #### Creating data source for our component
 In order to see our component in the styleguide, we need to provide stock/dummy content.  Our Card component looks at the `card.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
 
+If you used the theme generator to create your **card** component, you sill notice **card.json** already has content.  I'd say copy the code snippet below and replace the current content in the **card.json**.  If you did not use the theme generator to create your **card** component your **card.json** will be empty.  Copy the code below into it.
+
+**card.json**
 ```
 {
   "image": "<img src="http://placehold.it/400x300" alt="Card component">",
