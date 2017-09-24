@@ -13,8 +13,27 @@ Inside the `component_training` folder do one of these two things:
 1. If you are using the theme generator:
    * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Card"'`
 
-A new component (Card), will be created inside `/src/components/`.  Inside the Card component you will notice 3 files: `card.json`, `card.scss`, and `card.twig`.
+A new component, **card**, will be created inside `/src/components/`.  Inside the **card** component you will notice 3 files: `card.json`, `card.scss`, and `card.twig`.  We will go over these files in more detail later.
 
 2. If you are NOT using the theme generator,  you can create your components by hand.
-   * Inside `src/components/` create a new folder called `card`
-   * Inside the `card` folder, create the 3 files listed above (`card.json`,`card.scss`, and `card.twig`).
+   * Inside `src/components/` create a new folder called **card**.
+   * Inside the **card** folder, create the 3 files listed above (`card.json`,`card.scss`, and `card.twig`).
+
+#### Creating data source for our component
+In order to see our component in the styleguide, we need to provide stock/dummy content.  Our Card component looks at the `card.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
+
+```
+{
+  "image": "<img src="http://placehold.it/400x300" alt="Card component">",
+  "title": "Title for our component",
+  "teaser": "Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+  "cta": {
+    "text": "Learn more",
+    "url": "#"
+  }
+}
+```
+
+
+
+
