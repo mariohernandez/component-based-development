@@ -48,7 +48,7 @@ The code above is a JSON object.  JSON objects are written in `key/value` pairs.
 The next step in the process is to write the markup the **card** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
 
 **card.twig**
-```
+```html
 <article class="card {{ class='default('') }}">
   <div class="card__image">
     <img src="{{ image.src }}" alt="{{ image.alt }}">
