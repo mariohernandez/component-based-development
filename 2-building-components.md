@@ -32,7 +32,7 @@ If you used the theme generator to create your **card** component, you should no
   "image": {
     "src": "http://placehold.it/400x300",
     "alt": "Component alt text"
-  }
+  },
   "title": "Title for our component",
   "teaser": "Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
   "cta": {
