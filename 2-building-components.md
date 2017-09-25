@@ -23,8 +23,8 @@ A new component, **card**, will be created inside `/src/components/`.  Inside th
 #### 1.2.1 - Creating data source for our component
 In order to see our component in the styleguide, we need to provide stock/dummy content.  Our card component looks at the `card.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
 
-**_NOTE_**
-If you used the theme generator to create your **card** component, you should notice **card.json** already has content.  I'd say copy the code snippet below and replace the current content in the **card.json**.  If you did not use the theme generator to create your **card** component your **card.json** will be empty.  Copy the code below into it.
+> **_NOTE_**
+> If you used the theme generator to create your **card** component, you should notice **card.json** already has content.  I'd say copy the code snippet below and replace the current content in the **card.json**.  If you did not use the theme generator to create your **card** component your **card.json** will be empty.  Copy the code below into it.
 
 **card.json**
 ```json
@@ -73,6 +73,9 @@ The final step in this process is to write the styles to make our component look
   border: 1px solid #333;
 }
 ```
+
+
+Next step:  [Prepare Drupal for Integration](3-prepare-drupal.md)
 
 
 
