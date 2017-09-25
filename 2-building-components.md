@@ -19,7 +19,7 @@ A new component, **card**, will be created inside `/src/components/`.  Inside th
    * Inside `src/components/` create a new folder called **card**.
    * Inside the **card** folder, create the 3 files listed above (`card.json`,`card.scss`, and `card.twig`).
 
-#### Creating data source for our component
+#### 1.2.1 - Creating data source for our component
 In order to see our component in the styleguide, we need to provide stock/dummy content.  Our Card component looks at the `card.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
 
 **_NOTE_**
