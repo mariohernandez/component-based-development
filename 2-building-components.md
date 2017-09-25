@@ -19,16 +19,20 @@ A new component, **card**, will be created inside `/src/components/`.  Inside th
    * Inside `src/components/` create a new folder called **card**.
    * Inside the **card** folder, create the 3 files listed above (`card.json`,`card.scss`, and `card.twig`).
 
+
 #### 1.2.1 - Creating data source for our component
-In order to see our component in the styleguide, we need to provide stock/dummy content.  Our Card component looks at the `card.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
+In order to see our component in the styleguide, we need to provide stock/dummy content.  Our card component looks at the `card.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
 
 **_NOTE_**
-If you used the theme generator to create your **card** component, you sill notice **card.json** already has content.  I'd say copy the code snippet below and replace the current content in the **card.json**.  If you did not use the theme generator to create your **card** component your **card.json** will be empty.  Copy the code below into it.
+If you used the theme generator to create your **card** component, you should notice **card.json** already has content.  I'd say copy the code snippet below and replace the current content in the **card.json**.  If you did not use the theme generator to create your **card** component your **card.json** will be empty.  Copy the code below into it.
 
 **card.json**
 ```
 {
-  "image": "<img src="http://placehold.it/400x300" alt="Card component">",
+  "image": {
+    "src": "http://placehold.it/400x300",
+    "alt": "Component alt text"
+  }
   "title": "Title for our component",
   "teaser": "Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
   "cta": {
@@ -37,6 +41,21 @@ If you used the theme generator to create your **card** component, you sill noti
   }
 }
 ```
+The code above is a JSON object.  JSON objects are written in `key/value` pairs.  The **key** is a variable we can later pass to Drupal to map data to our component.  More on this later.
+
+
+#### 1.2.2 - Writing Twig Markup
+The next step in the process is to write the markup the **card** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
+
+```
+<article class="card {{ class='default('') }}">
+  <div class="card__image"></div>
+  <div class="card__title"></div>
+  <div class="card__teaser"></div>
+  <card__cta></card__cta>
+</article>
+```
+
 
 
 
