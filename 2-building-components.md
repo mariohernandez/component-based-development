@@ -47,14 +47,20 @@ The code above is a JSON object.  JSON objects are written in `key/value` pairs.
 #### 1.2.2 - Writing Twig Markup
 The next step in the process is to write the markup the **card** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
 
+**card.twig**
 ```
 <article class="card {{ class='default('') }}">
-  <div class="card__image"></div>
-  <div class="card__title"></div>
-  <div class="card__teaser"></div>
-  <card__cta></card__cta>
+  <div class="card__image">
+    <img src="{{ image.src }}" alt="{{ image.alt }}">
+  </div>
+  <div class="card__title">{{ title }}</div>
+  <div class="card__teaser">{{ teaser }}</div>
+  <div class="card__cta">
+    <a class="cta__cta--link" href="{{ cta.url }}">{{ cta.text }}</a>
+  </div>
 </article>
 ```
+Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the card component's markup is now in place.  In addition, we are passing the json data using twig syntax.
 
 
 
