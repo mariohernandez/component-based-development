@@ -33,3 +33,5 @@ npm run build
 ```
 http://d8.local/themes/custom/component_training/dist/style-guide/index.html
 ```
+
+Next step:  [Building components](2-building-components.md)
