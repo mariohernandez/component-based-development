@@ -27,7 +27,7 @@ In order to see our component in the styleguide, we need to provide stock/dummy 
 If you used the theme generator to create your **card** component, you should notice **card.json** already has content.  I'd say copy the code snippet below and replace the current content in the **card.json**.  If you did not use the theme generator to create your **card** component your **card.json** will be empty.  Copy the code below into it.
 
 **card.json**
-```
+```json
 {
   "image": {
     "src": "http://placehold.it/400x300",
@@ -61,6 +61,18 @@ The next step in the process is to write the markup the **card** components need
 </article>
 ```
 Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the card component's markup is now in place.  In addition, we are passing the json data using twig syntax.
+
+
+
+#### 1.2.3 - Writing CSS Styles
+The final step in this process is to write the styles to make our component look and feel as shown in our design comps.
+
+**card.twig**
+```css
+.card {
+  border: 1px solid #333;
+}
+```
 
 
 
