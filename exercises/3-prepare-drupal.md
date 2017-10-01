@@ -3,7 +3,15 @@
 ## 2 - Prepare Drupal for Components Integration
 Now that our components are built, we can move on to Drupal to build the infrastructure necessary to integrate our components.
 
-Create a **Card** component with the following fields:
+### Enable Modules
+Enable the following modules and their dependencies (if any):
+* Devel and Kint
+* Paragraphs
+
+
+### Create Paragraph Types (Entities)
+
+Create a **Card** paragraph type with the following fields:
 
 Field label | Field type      | Field machine name  | Notes
 ----------- | --------------- | ------------------- | ----------------
@@ -11,3 +19,9 @@ Image       | image           | field_card_image    | Configure with responsive 
 Title       | plain text      | field_card_title    |
 Body        | text long       | field_card_body     |
 Learn more  | link            | field_card_cta      |
+
+Create a **Social Media Icons** paragraph type with the following fields:
+
+Field label | Field type      | Field machine name  | Notes
+----------- | --------------- | ------------------- | ----------------
+Social Icon | link            | field_social_icon   | Make title required
