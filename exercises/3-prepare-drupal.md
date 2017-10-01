@@ -7,7 +7,7 @@ Create a **Card** component with the following fields:
 
 Field label | Field type      | Field machine name  | Notes
 ----------- | --------------- | ------------------- | ----------------
-Image       | image           | field_card_image    |
+Image       | image           | field_card_image    | Configure with responsive image style **card**
 Title       | plain text      | field_card_title    |
 Body        | text long       | field_card_body     |
 Learn more  | link            | field_card_cta      |
