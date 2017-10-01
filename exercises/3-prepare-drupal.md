@@ -8,6 +8,4 @@ Create a **Card** component with the following fields:
 Field   | Type       | Field machine name
 ------- | ---------- | ------------------
 Image   | image      | field_card_image
-------- | ---------- | ------------------
 Title   | plain text | field_card_title
-------- | ---------- | ------------------
