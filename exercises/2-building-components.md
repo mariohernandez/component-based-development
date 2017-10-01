@@ -74,6 +74,9 @@ The final step in this process is to write the styles to make our component look
 }
 ```
 
+---
+Previous step:  [New Theme](1-new-theme.md)
+
 
 Next step:  [Prepare Drupal for Integration](3-prepare-drupal.md)
 

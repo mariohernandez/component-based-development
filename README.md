@@ -72,3 +72,9 @@ you can grab the `badcamp` theme in this repo and save it in `docroot/themes/cus
 
 #### Styleguide
 To view the styleguide navigate to `http://your-local/themes/custom/theme-name/dist/style-guide/`
+
+
+---
+
+
+First Exercise:  [Create a new Theme](exercises/1-new-theme.md)
