@@ -24,7 +24,7 @@ Create a **Social Media Icons** paragraph type with the following fields:
 
 Field label | Field type      | Field machine name  | Notes
 ----------- | --------------- | ------------------- | ----------------
-Social Icon | link            | field_social_icon   | Make title required
+Social Icon | link            | field_social_icon   | Make link text required
 
 
 ---
