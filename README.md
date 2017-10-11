@@ -38,7 +38,7 @@ Install and enable the following modules (including dependencies):
 ## Compiling Sass, Javascript and Styleguide
 (_Steps 2 and 3 only need to run once_)
 
-1. Navigate to `docroot/themes/custom/theme-name`
+1. Navigate to `docroot/themes/custom/badcamp`
 
 2. Run `npm install` to install all theme plugins and dependencies
 
@@ -71,7 +71,7 @@ you can grab the `badcamp` theme in this repo and save it in `docroot/themes/cus
 
 
 #### Styleguide
-To view the styleguide navigate to `http://your-local/themes/custom/theme-name/dist/style-guide/`
+To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist/style-guide/`
 
 
 ---
