@@ -18,9 +18,8 @@ The insturctions provided with each tool are optional but recommended.  Feel fre
 * [Homebrew](https://brew.sh/): Package manager for OSx (optional)
 * [NodeJS](https://nodejs.org/en/): For plugins and development tools
 * [NPM](https://www.npmjs.com/):  To manage node dependencies/packages
-* [Gulp](https://gulpjs.com/): To automate many of the development taks we will perform
- regularly.
-[NVM](https://github.com/creationix/nvm): To manage version of Node across projects.
+* [Gulp](https://gulpjs.com/): To automate many of the development taks we will perform regularly.
+* [NVM](https://github.com/creationix/nvm): To manage version of Node across projects.
 * [Mediacurrent's theme generator](https://github.com/mediacurrent/theme_generator_8).  We will install this during the training to generate a new base theme.
 
 ### Disable Drupal 8 Caching & enable Twig Debugging
@@ -42,7 +41,7 @@ Install and enable the following modules (including dependencies):
 
 2. Run `npm install` to install all theme plugins and dependencies
 
-3. Run `nvm install` to install version of node located in `.nvmrc`
+3. Run `nvm install` to install version of node declared in `.nvmrc`
 
 4. Run `npm run build` to fully compile all theme's code
 
