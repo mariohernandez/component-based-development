@@ -5,8 +5,8 @@ Creating a new Drupal theme or updating an existing one is one of the first thin
 In this training we will assume you are using [Mediacurrent's Theme Generator](https://github.com/mediacurrent/theme_generator_8) to create a new theme.  Follow the instructions on the theme generator project to get your theme setup.
 
 ## Using included theme
-Alternatively, you can use the `component_training` theme which is included with this project.
-* Copy the `component_training` folder into `docroot/themes/custom/`
+Alternatively, you can use the `badcamp` theme which is included with this project.
+* Copy the `badcamp` folder into `docroot/themes/custom/`
 * Follow instructions below
 
 ### Compiling the theme for first time
@@ -31,7 +31,7 @@ npm run build
 ### View Styleguide.
 
 ```
-http://d8.local/themes/custom/component_training/dist/style-guide/index.html
+http://d8.local/themes/custom/badcamp/dist/style-guide/index.html
 ```
 
 Next step:  [Building components](2-building-components.md)
