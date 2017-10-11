@@ -31,7 +31,7 @@ npm run build
 ### View Styleguide.
 
 ```
-http://d8.local/themes/custom/badcamp/dist/style-guide/index.html
+http://your-local/themes/custom/badcamp/dist/style-guide/
 ```
 
 Next step:  [Building components](2-building-components.md)

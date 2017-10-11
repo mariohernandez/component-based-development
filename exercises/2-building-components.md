@@ -6,7 +6,7 @@ This training is broken down in three parts:  Building Components, Preparing Dru
 ### 1.1 - Generating the styleguide
 Before we can build components, we need to generate a living styleguide to host our components.  For the purpose of this training, we will use [KSS Node](https://github.com/kss-node/kss-node) to build our living styleguide.  KSS Node is a methodology for documenting CSS and generating style guides.  Lucky for us, Mediacurrent's theme generator already provides KSS Node fully integrated with our new Drupal theme.
 
-If you arelady created a new theme or used the provided `badcamp` theme, and compiled the theme, you already have a styleguide in place.  You can view the styleguide by going `http://d8.local/themes/custom/badcamp/dist/style-guide/index.html`.  Feel free to take a look around the styleguide, but we will get into it in more detail as the training progresses.
+If you already created a new theme or used the provided `badcamp` theme, and compiled the theme, you already have a styleguide in place.  You can view the styleguide by going `http://your-local/themes/custom/badcamp/dist/style-guide/`.  Feel free to take a look around the styleguide, but we will get into it in more detail as the training progresses.
 
 ### 1.2 - Creating our first component
 Inside the `badcamp` folder do one of these two things:
