@@ -34,4 +34,4 @@ npm run build
 http://your-local/themes/custom/badcamp/dist/style-guide/
 ```
 
-Next step:  [Building components](2-building-components.md)
+Next exercise:  [Building components](2-building-components.md)

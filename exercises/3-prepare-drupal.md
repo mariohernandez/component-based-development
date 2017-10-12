@@ -29,6 +29,6 @@ Social Icon | link            | field_social_icon   | Make link text required
 
 ---
 
-Previous step:  [Building components](2-building-components.md)
+Previous exercise:  [Building components](2-building-components.md)
 
-Next step:  [Integrate Components](4-integrating-components.md)
+Next exercise:  [Integrate Components](4-integrating-components.md)

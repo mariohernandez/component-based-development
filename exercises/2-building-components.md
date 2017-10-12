@@ -88,10 +88,10 @@ http://your-local/themes/custom/badcamp/dist/style-guide/
 ```
 
 ---
-Previous step:  [New Theme](1-new-theme.md)
+Previous exercise:  [New Theme](1-new-theme.md)
 
 
-Next step:  [Prepare Drupal for Integration](3-prepare-drupal.md)
+Next exercise:  [Prepare Drupal for Integration](3-prepare-drupal.md)
 
 
 

@@ -2,6 +2,6 @@
 
 ---
 
-Previous step:  [Building components](3-prepare-drupal.md)
+Previous exercise:  [Building components](3-prepare-drupal.md)
 
 [Back to beginning](../README.md)
