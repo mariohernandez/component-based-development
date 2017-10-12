@@ -11,14 +11,14 @@ Enable the following modules and their dependencies (if any):
 
 ### Create Paragraph Types (Entities)
 
-Create a **Card** paragraph type with the following fields:
+Create a **Speaker** paragraph type with the following fields:
 
 Field label | Field type      | Field machine name  | Notes
 ----------- | --------------- | ------------------- | ----------------
-Image       | image           | field_card_image    | Configure with responsive image style "**card**"
-Title       | plain text      | field_card_title    |
-Body        | text long       | field_card_body     |
-Learn more  | link            | field_card_cta      |
+Image       | image           | field_speaker_image    | Configure with responsive image style "**speaker**"
+Title       | plain text      | field_speaker_title    |
+Body        | text long       | field_speaker_body     |
+Learn more  | link            | field_speaker_cta      |
 
 Create a **Social Media Icons** paragraph type with the following fields:
 

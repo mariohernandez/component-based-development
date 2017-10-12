@@ -11,22 +11,22 @@ If you already created a new theme or used the provided `badcamp` theme, and com
 ### 1.2 - Creating our first component
 Inside the `badcamp` folder do one of these two things:
 1. If you are using the theme generator:
-   * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Card"'`
+   * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Speaker"'`
 
-A new component, **card**, will be created inside `/src/components/`.  Inside the **card** component you will notice 3 files: `card.json`, `card.scss`, and `card.twig`.  We will go over these files in more detail later.
+A new component, **speaker**, will be created inside `/src/components/`.  Inside the **speaker** component you will notice 3 files: `speaker.json`, `speaker.scss`, and `speaker.twig`.  We will go over these files in more detail later.
 
 2. If you are NOT using the theme generator,  you can create your components by hand.
-   * Inside `src/components/` create a new folder called **card**.
-   * Inside the **card** folder, create the 3 files listed above (`card.json`,`card.scss`, and `card.twig`).
+   * Inside `src/components/` create a new folder called **speaker**.
+   * Inside the **speaker** folder, create the 3 files listed above (`speaker.json`,`speaker.scss`, and `speaker.twig`).
 
 
 #### 1.2.1 - Creating data source for our component
-In order to see our component in the styleguide, we need to provide stock/dummy content.  Our card component looks at the `card.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
+In order to see our component in the styleguide, we need to provide stock/dummy content.  Our speaker component looks at the `speaker.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
 
 > **_NOTE_**
-> If you used the theme generator to create your **card** component, you should notice **card.json** already has content.  I'd say copy the code snippet below and replace the current content in the **card.json**.  If you did not use the theme generator to create your **card** component your **card.json** will be empty.  Copy the code below into it.
+> If you used the theme generator to create your **speaker** component, you should notice **speaker.json** already has content.  I'd say copy the code snippet below and replace the current content in the **speaker.json**.  If you did not use the theme generator to create your **speaker** component your **speaker.json** will be empty.  Copy the code below into it.
 
-**card.json**
+**speaker.json**
 ```json
 {
   "image": {
@@ -45,37 +45,37 @@ The code above is a JSON object.  JSON objects are written in `key/value` pairs.
 
 
 #### 1.2.2 - Writing Twig Markup
-The next step in the process is to write the markup the **card** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
+The next step in the process is to write the markup the **speaker** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
 
-**card.twig**
+**speaker.twig**
 ```html
-<article class="card {{ class='default('') }}">
-  <div class="card__image">
+<article class="speaker {{ class='default('') }}">
+  <div class="speaker__image">
     <img src="{{ image.src }}" alt="{{ image.alt }}">
   </div>
-  <div class="card__title">{{ title }}</div>
-  <div class="card__teaser">{{ teaser }}</div>
-  <div class="card__cta">
+  <div class="speaker__title">{{ title }}</div>
+  <div class="speaker__teaser">{{ teaser }}</div>
+  <div class="speaker__cta">
     <a class="cta__cta--link" href="{{ cta.url }}">{{ cta.text }}</a>
   </div>
 </article>
 ```
-Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the card component's markup is now in place.  In addition, we are passing the json data using twig syntax.
+Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the speaker component's markup is now in place.  In addition, we are passing the json data using twig syntax.
 
 
 
 #### 1.2.3 - Writing CSS Styles
 The final step in this process is to write the styles to make our component look and feel as shown in our design comps.
 
-**card.twig**
+**speaker.twig**
 ```css
-.card {
+.speaker {
   border: 1px solid #333;
 }
 ```
 
 #### 1.2.4 - Compiling Styleguide
-Now that the Card component is finished we need to compile the styleguie.
+Now that the speaker component is finished we need to compile the styleguie.
 
 ```
 npm run styleguide
