@@ -8,7 +8,7 @@ Before we can build components, we need to generate a living styleguide to host 
 
 If you already created a new theme or used the provided `badcamp` theme, and compiled the theme, you already have a styleguide in place.  You can view the styleguide by going `http://your-local/themes/custom/badcamp/dist/style-guide/`.  Feel free to take a look around the styleguide, we will get into it in more detail as the training progresses.
 
-### 1.2 - Creating our first component
+### 1.2 - Creating our first component (Speaker)
 Inside the `badcamp` folder do one of these two things:
 1. If you are using the theme generator:
    * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Speaker"'`

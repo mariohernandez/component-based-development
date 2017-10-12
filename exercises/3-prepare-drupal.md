@@ -13,18 +13,13 @@ Enable the following modules and their dependencies (if any):
 
 Create a **Speaker** paragraph type with the following fields:
 
-Field label | Field type      | Field machine name  | Notes
------------ | --------------- | ------------------- | ----------------
-Image       | image           | field_speaker_image    | Configure with responsive image style "**speaker**"
-Title       | plain text      | field_speaker_title    |
-Body        | text long       | field_speaker_body     |
-Learn more  | link            | field_speaker_cta      |
-
-Create a **Social Media Icons** paragraph type with the following fields:
-
-Field label | Field type      | Field machine name  | Notes
------------ | --------------- | ------------------- | ----------------
-Social Icon | link            | field_social_icon   | Make link text required
+Field label | Field type      | Field machine name     | Notes
+----------- | --------------- | ---------------------- | ----------------
+Image       | image           | field_speaker_image    | Image style "**speaker**"
+Name        | plain text      | field_speaker_name     |
+Role        | plain text      | field_speaker_role     |
+Bio         | text long       | field_speaker_bio      |
+Social Icon | link            | field_speaker_social   | Unlimited
 
 
 ---
