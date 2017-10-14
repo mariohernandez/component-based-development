@@ -34,25 +34,25 @@ Social Icon | link            | field_speaker_social   | Unlimited
 
 Paragraphs on their own are useless.  In order to make use of our Speaker paragraph type we need to add it as an entity reference field to a content type or custom block.  For the purpose of this training, we will use the **Basic Page** content type.
 
-* Click **Structure | Content Types**
+1. Click **Structure | Content Types**
 
-* Click **Basic Page**
+2. Click **Basic Page**
 
-* Click the **Manage Fields** button
+3. Click the **Manage Fields** button
 
-* Click the **Add field** blue button
+4. Click the **Add field** blue button
 
-* From the _Add a new field_ dropdown, select **Paragraph**
+5. From the _Add a new field_ dropdown, select **Paragraph**
 
-* In the label field type **Speaker** and click **Save and continue**
+6. In the label field type **Speaker** and click **Save and continue**
 
-* Leave _Type of item to reference_ as **Paragraph**
+7. Leave _Type of item to reference_ as **Paragraph**
 
-* Change the _Allowed number of values_ to **Limited 1**
+8. Change the _Allowed number of values_ to **Limited 1**
 
-* Click **Save field settings**
+9. Click **Save field settings**
 
-* Under the _Reference Type_ fieldset, check the box next to **Speaker** and click **Save Settings**
+10. Under the _Reference Type_ fieldset, check the box next to **Speaker** and click **Save Settings**
 
 
 ### Create a new node of type Basic Page
@@ -71,7 +71,7 @@ Our theme namespace typically matches the name of our theme.  In our case, the n
 Go ahead and enable the _Components Libraries_ mdoule.
 
 
-## 2.1 - Enable Twig debugging and disable Drupal's cache
+### 2.1 - Enable Twig debugging and disable Drupal's cache
 
 While integrating components we work with Drupal twig templates to manipulate markup and Kint to print variables we need to pass to our component.  Before we start we need to disable CSS and JavaScript aggregation which Drupals comes with it turned on by default.  We also need to enable twig debugging.  More on this later, for now follow these steps:
 
@@ -90,7 +90,7 @@ While integrating components we work with Drupal twig templates to manipulate ma
 Follow the instructions on this article to [disable drupal caching and enable twig debugging](https://www.drupal.org/node/2598914).
 
 
-## 2.1.3 - Enable the custom theme (i.e. Badcamp)
+### 2.1.3 - Enable the custom theme (i.e. Badcamp)
 
 Enable the Badcamp theme before proceeding.
 
