@@ -20,7 +20,7 @@ A new component, **speaker**, will be created inside `/src/components/`.  Inside
    * Inside the **speaker** folder, create the 3 files listed above (`speaker.json`,`speaker.scss`, and `speaker.twig`).
 
 
-#### 1.2.1 - Creating data source for our component
+### 1.2.1 - Creating data source for our component
 In order to see our component in the styleguide, we need to provide stock/dummy content.  Our speaker component looks at the `speaker.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
 
 > **_NOTE_**
@@ -60,7 +60,7 @@ In order to see our component in the styleguide, we need to provide stock/dummy 
 The code above is a JSON object.  JSON objects are written in `key/value` pairs.  The **key** is a variable we can later pass to Drupal to map data to our component.  More on this later.
 
 
-#### 1.2.2 - Writing Twig Markup
+### 1.2.2 - Writing Twig Markup
 The next step in the process is to write the markup the **speaker** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
 
 **speaker.twig**
@@ -107,7 +107,7 @@ Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the speake
 
 
 
-#### 1.2.3 - Writing CSS Styles
+### 1.2.3 - Writing CSS Styles
 The final step in this process is to write the styles to make our component look and feel as shown in our design comps.  Copy all of the code below into your **speaker.scss**
 
 **speaker.scss**
@@ -191,7 +191,7 @@ The final step in this process is to write the styles to make our component look
 One advantage of component is that because of their unique name within a theme, the CSS styles require little to no nesting.  This makes code more readable and easier to maintain.
 
 
-#### 1.2.4 - Creating the speaker library
+### 1.3 - Creating the speaker library
 Libraries are the recommended way for adding CSS and JavaScript to pages in Drupal 8.  Although our component is not talking to Drupal yet, we will add the "Speaker" library so it's ready when we need to use it in Drupal.  Also, creating the library now feels natural since we are working with the Speaker component.
 
 * Open your **libraries.yml** file located in your theme (i.e. `badcamp.libraries.yml`).  If your theme name is not badcamp, your libraries.yml file will include your theme's name.
@@ -221,7 +221,7 @@ speaker:
 ```
 
 
-#### 1.2.5 - Compiling Styleguide
+### 1.4 - Compiling Styleguide
 Now that the speaker component is finished we need to compile the styleguie.  Run the command below from within the root of your theme (i.e. badcamp).
 
 ```
