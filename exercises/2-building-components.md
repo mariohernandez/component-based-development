@@ -4,20 +4,26 @@
 This training is broken down in three parts:  Building Components, Preparing Drupal for Components, and finally, Integrating components with Drupal.
 
 ### 1.1 - Generating the styleguide
-Before we can build components, we need to generate a living styleguide to host our components.  For the purpose of this training, we will use [KSS Node](https://github.com/kss-node/kss-node) to build our living styleguide.  KSS Node is a methodology for documenting CSS and generating style guides.  Lucky for us, Mediacurrent's theme generator already provides KSS Node fully integrated with our new Drupal theme.
+Before we can build components, we need to generate a living styleguide to host our components.  For the purpose of this training, we will use [KSS Node](https://github.com/kss-node/kss-node) to build our living styleguide.  KSS Node is a methodology for documenting CSS and generating styleguides.  Fortunately, Mediacurrent's theme generator already provides KSS Node fully integrated with our new Drupal theme.
 
 If you already created a new theme or used the provided `badcamp` theme, and compiled the theme, you already have a styleguide in place.  You can view the styleguide by going `http://your-local/themes/custom/badcamp/dist/style-guide/`.  Feel free to take a look around the styleguide, we will get into it in more detail as the training progresses.
 
-### 1.2 - Creating our first component (Speaker)
-Inside the `badcamp` folder do one of these two things:
-1. If you are using the theme generator:
+### 1.2 - Creating our first component (Speaker card)
+During this training we will build a page that list speakers and their profiles.  One of the advantages of components is being able to reuse them and even alter them without having to rebuild from scratch.  We will start by building a **Speaker** card component which will consist of a speaker photo, name, short bio and social media channels to connect with the speaker.
+
+Once our single component is ready, we will create a page in which we reuse the speaker component to list as many speakers as we need by passing data from Drupal to populate each speaker card.
+
+#### Let's create the Spekaer component now
+
+Inside the `badcamp` directory do one of these two things:
+1. If you are using Mediacurrent's theme generator:
    * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Speaker"'`
 
 A new component, **speaker**, will be created inside `/src/components/`.  Inside the **speaker** component you will notice 3 files: `speaker.json`, `speaker.scss`, and `speaker.twig`.  We will go over these files in more detail later.
 
-2. If you are NOT using the theme generator,  you can create your components by hand.
-   * Inside `src/components/` create a new folder called **speaker**.
-   * Inside the **speaker** folder, create the 3 files listed above (`speaker.json`,`speaker.scss`, and `speaker.twig`).
+2. If you are NOT using Mediacurrent's theme generator,  you can create the component by hand.
+   * Inside `src/components/` create a new directory called **speaker**.
+   * Inside the **speaker** directory, create the 3 files listed above (`speaker.json`,`speaker.scss`, and `speaker.twig`).
 
 
 ### 1.2.1 - Creating data source for our component
@@ -58,6 +64,8 @@ In order to see our component in the styleguide, we need to provide stock/dummy 
 }
 ```
 The code above is a JSON object.  JSON objects are written in `key/value` pairs.  The **key** is a variable we can later pass to Drupal to map data to our component.  More on this later.
+
+We have created individual variables for each of the fields of the Speaker component.  However, for the social media icons we have created an array which holds the url and name of the social channel.  This array will allow us to add as many or as little social media channels per speaker.
 
 
 ### 1.2.2 - Writing Twig Markup
@@ -103,7 +111,9 @@ The next step in the process is to write the markup the **speaker** components n
   {% endif %}
 </article>
 ```
-Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the speaker component's markup is now in place.  In addition, we are passing the json data using twig syntax.
+Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the speaker component's markup is now in place.  In addition, we are passing the json data using twig syntax.  We opted to use conditionals (`if` statements) for each field to ensure there is data in each field before it is rendered.
+
+We will discuss in detail during training everything inside the twig template to ensure everyone has a full understanding of what's happening.  For now, proceed with the instructions.
 
 
 
@@ -188,17 +198,17 @@ The final step in this process is to write the styles to make our component look
 }
 ```
 
-One advantage of component is that because of their unique name within a theme, the CSS styles require little to no nesting.  This makes code more readable and easier to maintain.
+Another advantage of components is their unique name makes our css styles easy to read and easier to maintain.  If you notice there is no nesting at all in our styles which makes overriding styles very easy if needed.
 
 
 ### 1.3 - Creating the speaker library
 Libraries are the recommended way for adding CSS and JavaScript to pages in Drupal 8.  Although our component is not talking to Drupal yet, we will add the "Speaker" library so it's ready when we need to use it in Drupal.  Also, creating the library now feels natural since we are working with the Speaker component.
 
-* Open your **libraries.yml** file located in your theme (i.e. `badcamp.libraries.yml`).  If your theme name is not badcamp, your libraries.yml file will include your theme's name.
+* Open your **libraries.yml** file located in your theme's root (i.e. `badcamp.libraries.yml`).  If your theme name is not badcamp, your libraries.yml file will include your theme's name.
 
 * Since our theme was created using Mediacurrent's Theme Generator, your libraries.yml probably includes examples of how to declare libraries for Drupal to consume.  Take a moment to review the commented code in the libraries file for ideas on how libraries work or visit this page to learn more about [Drupal 8 Libraries](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme).
 
-* Add the following code snippet somewhere in your `badcamp.libraries.yml` file to create the Spekaer library
+* Add the following code snippet somewhere in your `badcamp.libraries.yml` file to create the Speaker library
 
 ```
 speaker:
@@ -208,7 +218,7 @@ speaker:
 ```
  * Since our compiling gulp task compiles all CSS into `dist/css/filename.css`, we are indicating in the Speaker library that any CSS the Speaker component needs will be located in `dist/css/speaker.css`.
 
- * Should our component need Javascript, we would append to our Speaker library the location of the JavaScript file for our component.
+ * Should our component need Javascript, we would append to our Speaker library the location of the JavaScript file, like this:
 
 **Example of Speaker library including JavaScript**
 ```
@@ -220,6 +230,15 @@ speaker:
     js/speaker.js: {}
 ```
 
+* **speaker**: Name of library used when attaching it to any twig template.  See **speaker.twig** above and you will notice first line includes the following: `{{ attach_library('badcamp/speaker') }}`.  As previously mentioned, the library is only used by Drupal.  The styleguide does not need the library to render CSS or Javascript as these are included globally within KSS Node.
+
+* **css/js**:  This indicates whether we are including CSS or Javascript to our library.
+
+* **component**:  This determines a file organization and aggregation strategy used by Drupal.  Drupall follows a SMACSS-style categorization of its CSS rules.  Read more about the [separation of concern for CSS as well as file organization with SMACSS](https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8).
+
+* **dist/css/speaker.css: {}** or **js/speaker.js: {}**:  This represents the path where your CSS or Javascript are located in relation to your theme's root for this particular library.
+
+
 
 ### 1.4 - Compiling Styleguide
 Now that the speaker component is finished we need to compile the styleguie.  Run the command below from within the root of your theme (i.e. badcamp).
@@ -228,6 +247,12 @@ Now that the speaker component is finished we need to compile the styleguie.  Ru
 npm run styleguide
 ```
 
+#### Preview of the Speaker card component
+![Speaker Card Component](/assets/speaker.png)
+
+
+
+#### View component in styleguide
 Let's take a look to make sure our new component looks and behaves as expected
 
 ```

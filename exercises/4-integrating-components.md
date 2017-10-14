@@ -7,6 +7,6 @@ We are now ready to integrate the Speaker component with Drupal so it inherits a
 
 ---
 
-Previous exercise:  [Building components](3-prepare-drupal.md)
+Previous exercise:  [Prepare Drupal for Components Integration](3-prepare-drupal.md)
 
 [Back to beginning](../README.md)

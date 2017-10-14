@@ -75,7 +75,7 @@ If you haven't enabled the Components Libraries module please do so.
 
 ### 2.4 - Enable Twig debugging and disable Drupal's cache
 
-While integrating components we work with Drupal twig templates to manipulate markup and Kint to print variables we need to pass to our component.  Before we start we need to disable CSS and JavaScript aggregation which Drupals comes with it turned on by default.  We also need to enable twig debugging.  More on this later, for now follow these steps:
+While integrating components we work with Drupal twig templates to manipulate markup and Kint to print variables we need to pass to our component.  Before we start we need to disable CSS and JavaScript aggregation which are on by default in Drupal 8.  We also need to enable twig debugging.  More on this later, for now follow these steps:
 
 
 ### 2.5 Disable Drupal CSS/JS Aggregation
@@ -87,7 +87,7 @@ While integrating components we work with Drupal twig templates to manipulate ma
 * Click **Save Configuration**
 
 
-### 2.6 Disable Drupal Caching and enable twig debuggin
+### 2.6 Disable Drupal Caching and enable twig debugging
 
 Follow the instructions on this article to [disable drupal caching and enable twig debugging](https://www.drupal.org/node/2598914).
 
