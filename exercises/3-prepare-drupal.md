@@ -31,7 +31,7 @@ Social Icon | link            | field_speaker_social   | Unlimited
 
 
 
-### 2.3.1 Add the Speaker paragraph type as an entity reference field to Basic Page Content type
+### 2.2.1 Add the Speaker paragraph type as an entity reference field to Basic Page Content type
 
 Paragraphs on their own are useless.  In order to make use of our Speaker paragraph type we need to add it as an entity reference field to a content type or custom block.  For the purpose of this training, we will use the **Basic Page** content type.
 
@@ -56,14 +56,14 @@ Paragraphs on their own are useless.  In order to make use of our Speaker paragr
 10. Under the _Reference Type_ fieldset, check the box next to **Speaker** and click **Save Settings**
 
 
-### 2.3.2 Create a new node of type Basic Page
+### 2.2.2 Create a new node of type Basic Page
 
 Now that we have added the Speaker paragraph type to the Basic Page content type, let's create a new node of type Basic Page and populate all the fields available.
 
 Our component is rendered however we still need to do a little more work so Drupal knows we have a component available we want to use.
 
 
-### 2.4 Components Libraries Module
+### 2.3 Components Libraries Module
 
 In order for Drupal to be able to use the Speaker component we created, we need the _Components Libraries_ module, which allows us to create a namespace for our theme.  Using a namespace makes it easier to reference twig templates that are not in the default **/templates** directory Drupal typically looks for twig templates in.
 
@@ -73,12 +73,12 @@ If you haven't enabled the Components Libraries module please do so.
 
 
 
-### 2.5 - Enable Twig debugging and disable Drupal's cache
+### 2.4 - Enable Twig debugging and disable Drupal's cache
 
 While integrating components we work with Drupal twig templates to manipulate markup and Kint to print variables we need to pass to our component.  Before we start we need to disable CSS and JavaScript aggregation which Drupals comes with it turned on by default.  We also need to enable twig debugging.  More on this later, for now follow these steps:
 
 
-### 2.6 Disable Drupal CSS/JS Aggregation
+### 2.5 Disable Drupal CSS/JS Aggregation
 
 * Click **Configuration | Performance**
 
@@ -87,12 +87,12 @@ While integrating components we work with Drupal twig templates to manipulate ma
 * Click **Save Configuration**
 
 
-### 2.7 Disable Drupal Caching and enable twig debuggin
+### 2.6 Disable Drupal Caching and enable twig debuggin
 
 Follow the instructions on this article to [disable drupal caching and enable twig debugging](https://www.drupal.org/node/2598914).
 
 
-### 2.8 - Enable the custom theme (i.e. Badcamp)
+### 2.7 - Enable the custom theme (i.e. Badcamp)
 
 Enable the Badcamp theme before proceeding.
 
