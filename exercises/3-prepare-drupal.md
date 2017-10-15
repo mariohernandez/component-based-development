@@ -91,7 +91,7 @@ component-libraries:
       - src/layout
       - src/templates
 ```
-The code above assigns the namespace of `badcamp` which can be referenced by modules and themes within our project.  In addition, it assignes multiple paths where Drupal can look for twig templates.  By default Drupal 8 only looks for custom twig templates inside the `/templates` directory, but with the namespace in place, we've added `src/components` and `src/layout` as extra directory where twig templates may exist.
+The code above assigns the namespace of `badcamp` which can be referenced by modules and themes within our project.  In addition, it assignes multiple paths where Drupal can look for twig templates.  By default Drupal 8 only looks for custom twig templates inside the `/templates` directory, but with the namespace in place, we've added `src/components` and `src/layout` as extra directories where twig templates may exist.
 
 All of our components will be stored inside `src/components` making it possible for Drupal to easily access them using the new namespace.
 
@@ -101,7 +101,7 @@ All of our components will be stored inside `src/components` making it possible 
 While integrating components we work with Drupal twig templates to manipulate markup and Kint to print variables we need to pass to our component.  Before we start we need to disable CSS and JavaScript aggregation which are on by default in Drupal 8.  We also need to enable twig debugging.  More on this later, for now follow these steps:
 
 
-### 2.5 Disable Drupal CSS/JS Aggregation
+#### 2.4.1 Disable Drupal CSS/JS Aggregation
 
 * Click **Configuration | Performance**
 
@@ -110,7 +110,7 @@ While integrating components we work with Drupal twig templates to manipulate ma
 * Click **Save Configuration**
 
 
-### 2.6 Disable Drupal Caching and enable twig debugging
+#### 2.4.2 Disable Drupal Caching and enable twig debugging
 
 Follow the instructions on this article to [disable drupal caching and enable twig debugging](https://www.drupal.org/node/2598914).
 
