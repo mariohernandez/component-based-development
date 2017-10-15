@@ -76,4 +76,4 @@ To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist
 ---
 
 
-First Exercise:  [Create a new Theme](exercises/1-new-theme.md)
+First Exercise:  [Create a new theme](exercises/1-new-theme.md)

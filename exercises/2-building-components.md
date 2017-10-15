@@ -36,9 +36,9 @@ In order to see our component in the styleguide, we need to provide stock/dummy 
 ```json
 {
   "name": "AmyJune Hineline",
-  "image": {
+  "photo": {
     "src": "http://placehold.it/200x200",
-    "alt": "Speaker background image"
+    "alt": "Speaker's photo"
   },
   "type": "Community Lead",
   "bio": "I am Drupal Sitebuilder and Community Lead for Hook 42. I have been an active participant in the Drupal community for almost 2 years by contributing to projects and helping with documentation.",
@@ -76,9 +76,9 @@ The next step in the process is to write the markup the **speaker** components n
 {{ attach_library('badcamp/speaker') }}
 <article class="speaker {{ class|default('') }}">
 
-  {% if image %}
+  {% if photo %}
     <div class="speaker__header">
-      <img class="speaker__photo" src="{{ image.src }}" alt="{{ image.alt }}">
+      <img class="speaker__photo" src="{{ photo.src }}" alt="{{ photo.alt }}">
     {% if name %}
       <h2 class="speaker__name">{{ name }}</h2>
     {% endif %}
@@ -260,7 +260,7 @@ http://your-local/themes/custom/badcamp/dist/style-guide/
 ```
 
 ---
-Previous exercise:  [New Theme](1-new-theme.md)
+Previous exercise:  [Create a new theme](1-new-theme.md)
 
 
 Next exercise:  [Prepare Drupal for Integration](3-prepare-drupal.md)

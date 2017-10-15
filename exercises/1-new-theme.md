@@ -10,7 +10,7 @@ Alternatively, you can use the `badcamp` theme which is included with this proje
 * Follow instructions below
 
 ### Compiling the theme for first time
-After you create your theme, navigate to your new theme's folder and execute the following commands to compile Sass, Javascript and Styleguide.
+After you create your theme, navigate to your new theme's folder (if not already there), and execute the following commands to compile Sass, Javascript and Styleguide.
 
 ```
 npm install
