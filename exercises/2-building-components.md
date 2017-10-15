@@ -36,10 +36,7 @@ In order to see our component in the styleguide, we need to provide stock/dummy 
 ```json
 {
   "name": "AmyJune Hineline",
-  "photo": {
-    "src": "http://placehold.it/200x200",
-    "alt": "Speaker's photo"
-  },
+  "photo": "<img src='../assets/amyjune.jpg' alt='AmyJune Hineline'>",
   "type": "Community Lead",
   "bio": "I am Drupal Sitebuilder and Community Lead for Hook 42. I have been an active participant in the Drupal community for almost 2 years by contributing to projects and helping with documentation.",
   "items": [
@@ -76,39 +73,37 @@ The next step in the process is to write the markup the **speaker** components n
 {{ attach_library('badcamp/speaker') }}
 <article class="speaker {{ class|default('') }}">
 
-  {% if photo %}
-    <div class="speaker__header">
-      <img class="speaker__photo" src="{{ photo.src }}" alt="{{ photo.alt }}">
-    {% if name %}
-      <h2 class="speaker__name">{{ name }}</h2>
+<div class="speaker__header">
+  <div class="speaker__photo">
+    {{ photo }}
+  </div>
+  <h2 class="speaker__name">{{ name }}</h2>
+</div>
+
+{% if role or bio  %}
+  <div class="speaker__content">
+    {%
+      include '@badcamp/eyebrow/eyebrow.twig' with {
+        'eyebrow': role,
+        'class': 'speaker__eyebrow',
+      } only
+    %}
+    {% if bio %}
+      <p class="speaker__bio">{{ bio }}</p>
     {% endif %}
-    </div>
-  {% endif %}
+  </div>
+{% endif %}
 
-  {% if type or bio  %}
-    <div class="speaker__content">
-      {%
-        include '@badcamp/eyebrow/eyebrow.twig' with {
-          'eyebrow': type,
-          'class': 'speaker__eyebrow',
-        } only
-      %}
-      {% if bio %}
-        <p class="speaker__bio">{{ bio }}</p>
-      {% endif %}
-    </div>
-  {% endif %}
-
-  {% if items %}
-    <div class="speaker__social-icons--wrapper">
-      {%
-        include '@badcamp/social-icons/social-icons.twig' with {
-          'items': items,
-          'classes': 'speaker__social-icons',
-        } only
-      %}
-    </div>
-  {% endif %}
+{% if items %}
+  <div class="speaker__social-icons--wrapper">
+    {%
+      include '@badcamp/social-icons/social-icons.twig' with {
+        'items': items,
+        'classes': 'speaker__social-icons',
+      } only
+    %}
+  </div>
+{% endif %}
 </article>
 ```
 Using [BEM](https://css-tricks.com/bem-101/) to name our css classes, the speaker component's markup is now in place.  In addition, we are passing the json data using twig syntax.  We opted to use conditionals (`if` statements) for each field to ensure there is data in each field before it is rendered.
@@ -134,29 +129,29 @@ The final step in this process is to write the styles to make our component look
 @import '../../global/utils/init';
 
 .speaker {
-  border: 1px solid $color-blue;
+  border: 1px solid #ccc;
   max-width: 400px;
   position: relative;
 }
 
 .speaker__header {
-  background: $color-blue url('../assets/speaker-bg.png') 0 0 no-repeat;
+  background: #ccc url('../assets/speaker-bg.png') 0 0 no-repeat;
   line-height: 0.8;
   padding: 20px 0;
   position: relative;
 }
 
-.speaker__photo {
+.speaker__photo img {
   border-radius: 50%;
   display: block;
   width: 140px;
   height: 140px;
   margin: 0 auto 20px;
-  border: 1px solid $color-gold;
+  border: 1px solid #ccc;
 }
 
 .speaker__name {
-  @include font-secondary;
+  // @include font-secondary;
   color: $color-white;
   font-size: 18px;
   font-weight: 400;
@@ -178,7 +173,7 @@ The final step in this process is to write the styles to make our component look
 }
 
 .speaker__social-icons--wrapper {
-  background: $color-blue;
+  background: #ccc;
   padding: 10px 0;
   height: 45px;
   width: 100%;
@@ -187,13 +182,14 @@ The final step in this process is to write the styles to make our component look
 }
 
 .speaker__social-icons {
+  display: flex;
+  justify-content: space-between;
   line-height: 1;
   margin: 0 auto;
-  justify-content: space-between;
   width: 200px;
 
   .social-icon--img {
-    fill: $color-silver;
+    fill: $color-white;
   }
 }
 ```

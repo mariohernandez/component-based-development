@@ -69,12 +69,21 @@ This is how we got the field structure above:
 * In the paragraph template, find this line `{{ content }}`.  We will replace the **content** variable with our component by using a Twig's `include` statement as shown bellow:
 
 ```php
+{# creates variable from render array to pass to speaker include #}
+{% set icons = [] %}
+{% for icon in content.field_speaker_social['#items'] %}
+    {% set icon = icon.title  %}
+    {% set url = icon.uri %}
+    {% set icons = icons|merge([{'icon': icon, 'url': url}]) %}
+{% endfor %}
+
 {%
   include '@badcamp/speaker/speaker.twig' with {
     'photo': content.field_speaker_photo,
-    'name': content.field_speaker_name,
-    'bio': content.field_speaker_bio,
-    'items': social_icons,
+    'name': content.field_speaker_name.0['#context'].value,
+    'role': content.field_speaker_role.0['#context'].value,
+    'bio': content.field_speaker_bio.0['#context'].value,
+    'items': icons,
   } only
 %}
 ```
@@ -95,6 +104,14 @@ Notice in the code above the words `with` and `only`.  These allow us to restric
 If we look at the entire code in the `paragraph--speaker.html.twig`, it shoudl looke like this:
 
 ```php
+{# creates variable from render array to pass to speaker include #}
+{% set icons = [] %}
+{% for icon in content.field_speaker_social['#items'] %}
+    {% set icon = icon.title  %}
+    {% set url = icon.uri %}
+    {% set icons = icons|merge([{'icon': icon, 'url': url}]) %}
+{% endfor %}
+
 {%
   set classes = [
     'paragraph',
@@ -109,10 +126,10 @@ If we look at the entire code in the `paragraph--speaker.html.twig`, it shoudl l
       {%
         include '@badcamp/speaker/speaker.twig' with {
           'photo': content.field_speaker_photo,
-          'name': content.field_speaker_name.0['#context'],
-          'role': content.field_speaker_role.0['#context'],
-          'bio': content.field_speaker_bio.0['#context'],
-          'items': social_icons,
+          'name': content.field_speaker_name.0['#context'].value,
+          'role': content.field_speaker_role.0['#context'].value,
+          'bio': content.field_speaker_bio.0['#context'].value,
+          'items': icons,
         } only
       %}
 
@@ -120,9 +137,6 @@ If we look at the entire code in the `paragraph--speaker.html.twig`, it shoudl l
   </div>
 {% endblock paragraph %}
 ```
-
-
-In fact, all the items to the left of the `:` (colon) sign, are the variables we declared in the JSON object.  The value to the right of the `:` sign,
 
 
 
