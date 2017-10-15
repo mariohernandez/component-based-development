@@ -30,9 +30,6 @@ Role        | Text (plain)      | field_speaker_role     | Limited 1
 Bio         | Text (plain, long)| field_speaker_bio      | Limited 1
 Social Icon | Link              | field_speaker_social   | Unlimited
 
-#### Example of Speaker paragraph type fields configuration
-![Speaker paragraph type fields](/assets/fields.png)
-
 
 
 ### 2.2.1 Add the Speaker paragraph type as an entity reference field to Basic Page Content type

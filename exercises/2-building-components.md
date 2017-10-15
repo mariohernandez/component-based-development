@@ -248,7 +248,7 @@ npm run styleguide
 ```
 
 #### Preview of the Speaker card component
-![Speaker Card Component](/assets/speaker.png)
+![Speaker Card Component](assets/speaker.png)
 
 
 

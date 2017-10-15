@@ -15,7 +15,7 @@ As you can see, the node renders but it lacks all the styles and markup we creat
 * Having access to Twig's debugging information allows us to easily identify which templates Drupal is using to render our content.
 
 * I am particularly interested in the block of code that looks like this:
-![Twig debugging info](/assets/debug.png)
+![Twig debugging info](assets/debug.png)
 
 * Notice the template named `paragraph.html.twig`.  The **X** next to it indicates this is the paragraph template Drupal is using to render our component.
 Also notice the path I have outlined in red.  This is telling us where that template is coming from in the event we want to override it.
@@ -41,7 +41,7 @@ Learn more about [Twig templates naming conventions](https://www.drupal.org/docs
 
 * If you inspect the speaker node again, you should see our newly created paragraph template being used to render the Speaker component. In addition, the path of the template points to our theme's location where we saved the template.
 
-![Twig debugging info](/assets/debug2.png)
+![Twig debugging info](assets/debug2.png)
 
 
 ### 3.3 Integrating the Speaker component
@@ -56,14 +56,14 @@ Before we can fully integrate the Speaker component with Drupal, we need to dete
 
 * Add this line at the top of the _paragraph--teaser template_ `{{ kint(content) }}`.  This will allow us to inspect the variables and field values Drupal is printing to render the Speaker component.  Having this information available is extremely important as we will use this information to pass to our component.  Kint content looks like this:
 
-![Kint debugging info](/assets/kint.png)
+![Kint debugging info](assets/kint.png)
 Notice those are the same fields we created in Drupal's paragraph type which also match the data structure of our component.  If we expand each of those fields we will find the actual field structure we need to pass to the component to render the Drupal content we added when we created the Basic Page node.
 
 **Example**
 `'name': content.field_speaker_name.0['#context'].value,`
 
 This is how we got the field structure above:
-![Kint debugging info](/assets/kint2.png)
+![Kint debugging info](assets/kint2.png)
 
 
 * In the paragraph template, find this line `{{ content }}`.  We will replace the **content** variable with our component by using a Twig's `include` statement as shown bellow:
