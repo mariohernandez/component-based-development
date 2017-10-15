@@ -72,7 +72,7 @@ We have created individual variables for each of the fields of the Speaker compo
 The next step in the process is to write the markup the **speaker** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
 
 **speaker.twig**
-```html
+```php
 {{ attach_library('badcamp/speaker') }}
 <article class="speaker {{ class|default('') }}">
 

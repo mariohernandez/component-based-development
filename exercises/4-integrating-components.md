@@ -57,13 +57,28 @@ Before we can fully integrate the Speaker component with Drupal, we need to dete
 
 ```php
 {%
-  include '@badcamp/speaker/speaker.twig' with {
-    'photo': content.field_speaker_photo,
-    'name': content.field_speaker_name,
-    'bio': content.field_speaker_bio,
-    'items': social_icons,
-  } only
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  ]
 %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      {%
+        include '@badcamp/speaker/speaker.twig' with {
+          'photo': content.field_speaker_photo,
+          'name': content.field_speaker_name,
+          'bio': content.field_speaker_bio,
+          'items': social_icons,
+        } only
+      %}
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
 ```
 
 
