@@ -16,9 +16,9 @@ Your local environment needs to be configured with the tools below to be able to
 The insturctions provided with each tool are optional but recommended.  Feel free to improvise.
 * Laptop computer (mac preferred)
 * [Homebrew](https://brew.sh/): Package manager for OSx (optional)
-* [NodeJS](https://nodejs.org/en/): For plugins and development tools
+* [NodeJS](https://nodejs.org/en/): For plugins and development tools.  You can [follow these instructions](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x) if you are running MacOS.
 * [NPM](https://www.npmjs.com/):  To manage node dependencies/packages
-* [Gulp](https://gulpjs.com/): To automate many of the development taks we will perform regularly.
+* [Gulp](https://gulpjs.com/): To automate many of the development taks we will perform regularly.  The first command on [these instructions](https://coolestguidesontheplanet.com/installing-gulp-on-osx-10-11-el-capitan/) should get you up and running with Gulp.
 * [NVM](https://github.com/creationix/nvm): To manage version of Node across projects.
 * [Mediacurrent's theme generator](https://github.com/mediacurrent/theme_generator_8).  We will install this during the training to generate a new base theme.
 
