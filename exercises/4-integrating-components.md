@@ -72,15 +72,16 @@ The `include` statement above allows us to insert or nest a twig template inside
 The following list of items in the snippet above represent the `key | value` format we first were introduced to when we created the JSON object for the Speaker component in part 1 of this process.
 
 `'photo': content.field_speaker_photo`
+
 **photo** is the variable the component expects which originated in the JSON object we previously created.
 
-**content.field_speaker_xxxx** is the value in coming Drupal.  For the Speaker component to render as intended in the styleguide we provided stock/dummy content, now that we are integrating the component in Drupal we can use real data from Drupal.
+**content.field_speaker_xxxx** is the value coming from Drupal.  For the Speaker component to render as intended in the styleguide we provided stock/dummy content, now that we are integrating the component in Drupal we can use real data from Drupal.
 
-Also notice in the code above the words `with` and `only`.  These allow us to restrict which data we can pass to our component.   Sometimes we may want to integrate the Speaker component with a limited number of fields.  The `with` and `only` will allow us to do so.
+Notice in the code above the words `with` and `only`.  These allow us to restrict which data we can pass to our component.   Sometimes we may want to integrate the Speaker component with a limited number of fields.  The `with` and `only` will allow us to do so.
 
 If we look at the entire code in the `paragraph--speaker.html.twig`, it shoudl looke like this:
 
-```
+```php
 {%
   set classes = [
     'paragraph',
