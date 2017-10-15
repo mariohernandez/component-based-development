@@ -57,12 +57,14 @@ Before we can fully integrate the Speaker component with Drupal, we need to dete
 * Add this line at the top of the _paragraph--teaser template_ `{{ kint(content) }}`.  This will allow us to inspect the variables and field values Drupal is printing to render the Speaker component.  Having this information available is extremely important as we will use this information to pass to our component.  Kint content looks like this:
 
 ![Kint debugging info](assets/kint.png)
+
 Notice those are the same fields we created in Drupal's paragraph type which also match the data structure of our component.  If we expand each of those fields we will find the actual field structure we need to pass to the component to render the Drupal content we added when we created the Basic Page node.
 
 **Example**
 `'name': content.field_speaker_name.0['#context'].value,`
 
 This is how we got the field structure above:
+
 ![Kint debugging info](assets/kint2.png)
 
 
