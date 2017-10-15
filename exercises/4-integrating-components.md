@@ -31,7 +31,7 @@ Luckily for us, we can customize the paragraph template to control how the Speak
 
 * Navigate to `/modules/contrib/paragraphs/templates/
 
-* Copy `paragraph.html.twig` into `/themes/custom/badcamp/src/templates/paragraphs`.  **Note**: The `paragraphs` folder in the path is not required, but it's a great way to organize your templates if you intend to have many of them in your theme.
+* Copy `paragraph.html.twig` into `/themes/custom/badcamp/src/templates/paragraphs`.  **Note**: The `paragraphs` directory in the path is not required, but it's a great way to organize your templates if you intend to have many of them in your theme.
 
 * Rename the template `paragraph--speaker.hteml.twig`.  If you are wondering why that name or how do we know we can use that name, take another look at the debugging screenshot and you will notice that in addition to providing the current template name being used to render the component, Drupal also offers suggestions for template names that would be more specific to the content we are working with.  In our case, the `paragraph--speaker.html.twig` template, will ensure it only affects the Speaker content and not other paragraph types we may create later on.
 
@@ -39,6 +39,32 @@ Luckily for us, we can customize the paragraph template to control how the Speak
 
 * If you inspect your code again, you should see our newly created paragraph template being used to render the Speaker component:
 ![Twig debugging info](/assets/debug2.png)
+
+
+### 3.3 Integrating the Speaker component
+
+The next part of this exercise will focus on integrating the Speaker component we built and styled in part 1, with Drupal.
+
+#### 3.3.1 Using Kint to debug twig
+
+Before we can fully integrate the Speaker component with Drupal, we need to determine which variables and values Drupal is parsing so we can pass that information to our component.  Learn more about [debuging with Kint here](https://drupalize.me/blog/201405/lets-debug-twig-drupal-8).  You can ignore the part about configuring twig debugging since we've already done that.
+
+* Open `paragraph--teaser.html.twig` in your text editor.
+
+* Add this line at the top of the paragraph--teaser template `{{ kint(content) }}`.  This will allow us to inspect the variables and field values Drupal is printing to render the Speaker component.  Having this information available is extremely important as we will use this information to pass to our component.  Let's do that now.
+
+* In the paragraph template, find this line `{{ content }}`.  We will replace the **content** variable with our component by using a Twig's `include` statement as shown bellow:
+
+```php
+{%
+  include '@badcamp/speaker/speaker.twig' with {
+    'photo': content.field_speaker_photo,
+    'name': content.field_speaker_name,
+    'bio': content.field_speaker_bio,
+    'items': social_icons,
+  } only
+%}
+```
 
 
 
