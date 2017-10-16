@@ -53,7 +53,7 @@ The twig template allows us to write the markup we deem most appropriate for our
   border-bottom: 2px solid $color-gold;
   color: $color-gold;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.15rem;
   line-height: 1;
   text-transform: uppercase;
