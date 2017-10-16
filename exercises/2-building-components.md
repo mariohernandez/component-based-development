@@ -8,6 +8,75 @@ Before we can build components, we need to generate a living styleguide to host 
 
 If you already created a new theme or used the provided `badcamp` theme, and compiled the theme, you already have a styleguide in place.  You can view the styleguide by going `http://your-local/themes/custom/badcamp/dist/style-guide/`.  Feel free to take a look around the styleguide, we will get into it in more detail as the training progresses.
 
+### 1.2 Creating a basic component (Eyebrow)
+
+Before we went into the more advance stuff, let's start by creating a super simple component.  The component name is **Eyebrow** and this is a component you would normally use to label or categorize content content.
+
+A typical component would have 3 files: `component-name.json`, `component-name.scss`, and `component-name.twig`.  Later we will use Mediacurrent's theme generator to build our components but for the purpose of understanding thing better, let's crete the Eyebrow component by hand
+
+* Inside the **badcamp/src/components/** directory, create the files we discussed above, but use `eyebrow` as the component name.  So you shoud end up with `eyebrow.json`, `eyebrow.scss`, and `eyebrow.twig`.
+
+* Inside `eyebrow.json` copy the following code:
+
+```
+{
+  "eyebrow": "Community Lead",
+  "class": ""
+}
+```
+
+We just created a JSON object with a variable of **eyebrow** and value of **Community Lead**.  We will get deeper into JSON object when we build more advance components.
+
+* Inside `eyebrow.twig` copy the following code:
+
+```
+<h3 class="eyebrow">{{ eyebrow }}</h3>
+```
+
+The twig template allows us to write the markup we deem most appropriate for our components.  In addition, we are passing data from the JSON object we wrote above.  We will get into more details about twig templates.
+
+* Inside `eyebrow.scss` copy this code:
+
+```
+// Eyebrow
+//
+// This is the eyebrow component.
+//
+// Markup: eyebrow.twig
+//
+// Style guide: Components.eyebrow
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.eyebrow {
+  border-bottom: 2px solid #DAA520;
+  display: inline-block;
+  line-height: 1;
+  color: #DAA520;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding-bottom: 2px;
+  white-space: nowrap;
+  letter-spacing: 0.15rem;
+}
+```
+
+Above are the styles that give the Eyebrow component a more appealing look.  Notice the commended code at the top of the file.  Those comments is what KSS Node uses to generate the component in the styleguide.  In fact, let's compile the styleguide now so the Eyebrow component can be available
+
+* Inside `badcamp`, run this command
+
+```
+npm run styleguide
+```
+
+Now let's take a look at the styleguide by going
+
+```
+http://your-local/themes/custom/badcamp/dist/style-guide/
+```
+
+
 ### 1.2 - Creating our first component (Speaker card)
 During this training we will build a page that list speakers and their profiles.  One of the advantages of components is being able to reuse them and even alter them without having to rebuild from scratch.  We will start by building a **Speaker** card component which will consist of a speaker photo, name, short bio and social media channels to connect with the speaker.
 
@@ -129,13 +198,13 @@ The final step in this process is to write the styles to make our component look
 @import '../../global/utils/init';
 
 .speaker {
-  border: 1px solid #ccc;
+  border: 1px solid #003954;
   max-width: 400px;
   position: relative;
 }
 
 .speaker__header {
-  background: #ccc url('../assets/speaker-bg.png') 0 0 no-repeat;
+  background: #003954 url('../assets/speaker-bg.png') 0 0 no-repeat;
   line-height: 0.8;
   padding: 20px 0;
   position: relative;
@@ -147,7 +216,7 @@ The final step in this process is to write the styles to make our component look
   width: 140px;
   height: 140px;
   margin: 0 auto 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #003954;
 }
 
 .speaker__name {
@@ -173,7 +242,7 @@ The final step in this process is to write the styles to make our component look
 }
 
 .speaker__social-icons--wrapper {
-  background: #ccc;
+  background: #003954;
   padding: 10px 0;
   height: 45px;
   width: 100%;
