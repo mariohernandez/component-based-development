@@ -81,4 +81,4 @@ http://your-local/themes/custom/badcamp/dist/style-guide/
 Previous exercise:  [Create a new theme](1-new-theme.md)
 
 
-Next exercise:  [Build more components](3-building-components.md)
+Next exercise:  [Building more components](3-building-components.md)
