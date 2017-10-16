@@ -252,7 +252,7 @@ http://your-local/themes/custom/badcamp/dist/style-guide/
 ```
 
 ---
-Previous exercise:  [Building basic components](2-building-components.md)
+Previous exercise:  [Building basic components](3-building-components.md)
 
 
 Next exercise:  [Preparing Drupal for integration](5-prepare-drupal.md)
