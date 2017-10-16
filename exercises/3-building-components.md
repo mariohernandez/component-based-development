@@ -4,12 +4,12 @@
 This training is broken down in three parts:  Building Components, Preparing Drupal for Components, and finally, Integrating components with Drupal.
 
 
-### 1.3 - Creating our first component (Speaker card)
+### 1.3 - Creating more advanced components
 During this training we will build a page that list speakers and their profiles.  One of the advantages of components is being able to reuse them and even alter them without having to rebuild from scratch.  We will start by building a **Speaker** card component which will consist of a speaker photo, name, short bio and social media channels to connect with the speaker.
 
 Once our single component is ready, we will create a page in which we reuse the speaker component to list as many speakers as we need by passing data from Drupal to populate each speaker card.
 
-#### Let's create the Spekaer component now
+#### Let's create the Speaker component now
 
 Inside the `badcamp` directory do one of these two things:
 1. If you are using Mediacurrent's theme generator:
@@ -255,4 +255,4 @@ http://your-local/themes/custom/badcamp/dist/style-guide/
 Previous exercise:  [Build basic components](2-building-components.md)
 
 
-Next exercise:  [Prepare Drupal for Integration](3-prepare-drupal.md)
+Next exercise:  [Building advanced components](4-building-components.md)

@@ -123,6 +123,7 @@ Enable the Badcamp theme before proceeding.
 
 ---
 
-Previous exercise:  [Building components](2-building-components.md)
+Previous exercise:  [Building advanced components](4-building-components.md)
 
-Next exercise:  [Integrate Components](4-integrating-components.md)
+
+Next exercise:  [Integrate Components](6-integrating-components.md)

@@ -14,7 +14,7 @@ Before we went into the more advance stuff, let's start by creating a super simp
 
 A typical component would have 3 files: `component-name.json`, `component-name.scss`, and `component-name.twig`.  Later we will use Mediacurrent's theme generator to build our components but for the purpose of understanding thing better, let's crete the Eyebrow component by hand
 
-* Inside the **badcamp/src/components/** directory, create the files we discussed above, but use `eyebrow` as the component name.  So you shoud end up with `eyebrow.json`, `eyebrow.scss`, and `eyebrow.twig`.
+* Inside the **badcamp/src/components/eyebrow/** directory, create the files we discussed above, but use `eyebrow` as the component name.  So you shoud end up with `eyebrow.json`, `eyebrow.scss`, and `eyebrow.twig`.
 
 * Inside `eyebrow.json` copy the following code:
 
@@ -50,15 +50,15 @@ The twig template allows us to write the markup we deem most appropriate for our
 @import '../../global/utils/init';
 
 .eyebrow {
-  border-bottom: 2px solid #DAA520;
+  border-bottom: 2px solid $color-gold;
+  color: $color-gold;
   display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
   line-height: 1;
-  color: #DAA520;
   text-transform: uppercase;
-  font-size: 1.2rem;
   padding-bottom: 2px;
   white-space: nowrap;
-  letter-spacing: 0.15rem;
 }
 ```
 
@@ -81,4 +81,4 @@ http://your-local/themes/custom/badcamp/dist/style-guide/
 Previous exercise:  [Create a new theme](1-new-theme.md)
 
 
-Next exercise:  [Build more components](2-1-building-components.md)
+Next exercise:  [Build more components](3-building-components.md)
