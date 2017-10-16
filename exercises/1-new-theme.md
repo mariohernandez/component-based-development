@@ -13,15 +13,15 @@ Alternatively, you can use the `badcamp` theme which is included with this proje
 After you create your theme, navigate to your new theme's folder (if not already there), and execute the following commands to compile Sass, Javascript and Styleguide.
 
 ```
-npm install
-```
-
-```
 nvm install
 ```
 
 ```
 nvm use
+```
+
+```
+npm install
 ```
 
 ```
