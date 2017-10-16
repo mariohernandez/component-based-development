@@ -4,8 +4,6 @@ The component based development training focuses on 3 areas:
 2. Prepping Drupal environment for component integration.
 3. Integrate components with Drupal.
 
-These three areas are covered in my blog series "[Integrating Components with Drupal](https://www.mediacurrent.com/blog/integrating-components-drupal-8-part-1)".
-The training will use many of the techniques and approaches on the blog series with updates based on latest best practices.
 
 ## Local environment setup
 
@@ -13,16 +11,16 @@ Your local environment needs to be configured with the tools below to be able to
 **NOTE**:  Help with your local environment setup will be extremely limited.
 
 ### Tools
-The insturctions provided with each tool are optional but recommended.  Feel free to improvise.
+The instructions provided with each tool are optional but recommended.  Feel free to improvise.
 * Laptop computer (mac preferred)
 * [Homebrew](https://brew.sh/): Package manager for OSx (optional)
-* [NodeJS](https://nodejs.org/en/): For plugins and development tools.  You can [follow these instructions](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x) if you are running MacOS.
-* [NPM](https://www.npmjs.com/):  To manage node dependencies/packages
-* [Gulp](https://gulpjs.com/): To automate many of the development taks we will perform regularly.  The first command on [these instructions](https://coolestguidesontheplanet.com/installing-gulp-on-osx-10-11-el-capitan/) should get you up and running with Gulp.
+<!-- * [NodeJS](https://nodejs.org/en/): For plugins and development tools.  You can [follow these instructions](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x) if you are running MacOS. -->
+<!-- * [NPM](https://www.npmjs.com/):  To manage node dependencies/packages -->
+<!-- * [Gulp](https://gulpjs.com/): To automate many of the development taks we will perform regularly.  The first command on [these instructions](https://coolestguidesontheplanet.com/installing-gulp-on-osx-10-11-el-capitan/) should get you up and running with Gulp. -->
 * [NVM](https://github.com/creationix/nvm): To manage version of Node across projects.
-* [Mediacurrent's theme generator](https://github.com/mediacurrent/theme_generator_8).  We will install this during the training to generate a new base theme.
+<!-- * [Mediacurrent's theme generator](https://github.com/mediacurrent/theme_generator_8).  We will install this during the training to generate a new base theme. -->
 
-### Disable Drupal 8 Caching & enable Twig Debugging
+<!-- ### Disable Drupal 8 Caching & enable Twig Debugging
 This is necessary to properly debug and inspect twig templates.
 * https://www.drupal.org/node/2598914
 
@@ -35,42 +33,59 @@ Install and enable the following modules (including dependencies):
 * [Admin Toolbar](https://www.drupal.org/project/admin_toolbar) (optional)
 
 ## Compiling Sass, Javascript and Styleguide
-(_Steps 2 and 3 only need to run once_)
+(_First two commands below only need to run once_)
 
-1. Navigate to `docroot/themes/custom/badcamp`
+* Navigate to `docroot/themes/custom/badcamp` and run the following commands:
 
-2. Run `npm install` to install all theme plugins and dependencies
+```
+nvm install
+```
+This will install the node version declared in `.nvrrc`
 
-3. Run `nvm install` to install version of node declared in `.nvmrc`
+```
+npm install
+```
+This will install all theme plugins and dependencies
 
-4. Run `npm run build` to fully compile all theme's code
+```
+npm run build
+```
 
 
 ### Other commands you can run
+As you are actively working on your theme, you can run various gulp tasks individually depending on your needs:
+
 ```
 npm run compile
 ```
+Will compile Sass into CSS
+
 
 ```
 npm run watch
 ```
+Will watch for Sass changes and compile them into CSS automatically upon save.
+
 
 ```
 npm run styleguide
 ```
+Will rebuild the styleguide.
+
 
 ```
 npm run compress
 ```
+Will compress assets to optimize them for web.
+
 
 #### Theme
-If you are having difficulties configuring or getting the Mediacurrent theme generator
+If you are having difficulties configuring or getting Mediacurrent's theme generator
 you can grab the `badcamp` theme in this repo and save it in `docroot/themes/custom/`.
-<!-- ![Featured Sponsors Component](/badcamp.png "Featured Sponsors Component") -->
 
 
 #### Styleguide
-To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist/style-guide/`
+To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist/style-guide/` -->
 
 
 ---
