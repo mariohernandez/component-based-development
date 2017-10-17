@@ -1,32 +1,40 @@
 # Component-based Development with Drupal 8
 
-## 1 - Building Components (continued)
-This training is broken down in three parts:  Building Components, Preparing Drupal for Components, and finally, Integrating components with Drupal.
+## 1 - Building Components (continued...)
+
+Now that we have built a couple of pretty simple component in which we introduced essential steps, information and patterns, we can probably take this to a new level.
 
 
 ### 1.3 - Creating more advanced components
-During this training we will build a page that list speakers and their profiles.  One of the advantages of components is being able to reuse them and even alter them without having to rebuild from scratch.  We will start by building a **Speaker** card component which will consist of a speaker photo, name, short bio and social media channels to connect with the speaker.
+During this training we will build a page that lists speakers and their profiles.  One of the advantages of components is being able to reuse them and even alter them without having to rebuild them from scratch.  We will start by building a **Speaker** card component which will consist of a speaker photo, role, name, short bio and social media channels to connect with the speaker.
 
 Once our single component is ready, we will create a page in which we reuse the speaker component to list as many speakers as we need by passing data from Drupal to populate each speaker card.
+
+In this section we will introduce the use of **Twig includes**.  Which is a way to nest one component into another.  Very powerful technique for building advanced components.
+
 
 #### Let's create the Speaker component now
 
 Inside the `badcamp` directory do one of these two things:
+
 1. If you are using Mediacurrent's theme generator:
    * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Speaker"'`
 
-A new component, **speaker**, will be created inside `/src/components/`.  Inside the **speaker** component you will notice 3 files: `speaker.json`, `speaker.scss`, and `speaker.twig`.  We will go over these files in more detail later.
+A new component, **speaker**, will be created inside `/src/components/`.  Inside the **speaker** component you will notice the same 3 files we created by hand in previous components (`speaker.json`, `speaker.scss`, and `speaker.twig`).  The generator does its best to add dummy data for the component but we will most likely end up replacing it or modifying it with the real data we need for the component.
 
-2. If you are NOT using Mediacurrent's theme generator,  you can create the component by hand.
+2. If you are **NOT** using Mediacurrent's theme generator,  you can create the component by hand just like we did before.
+
    * Inside `src/components/` create a new directory called **speaker**.
+
    * Inside the **speaker** directory, create the 3 files listed above (`speaker.json`,`speaker.scss`, and `speaker.twig`).
 
 
-### 1.3.1 - Creating data source for our component
-In order to see our component in the styleguide, we need to provide stock/dummy content.  Our speaker component looks at the `speaker.json` file for all of its content.  We could actually hard-code our content in the twig template but using **.json** allows us to separate data from presentation.
+### 1.3.1 - Creating data source for our component (JSON object)
+
+A JSON Object takes the place of a database when building components.  In it we can find all the data we need to pass to our component in a `key | value` format.
 
 > **_NOTE_**
-> If you used the theme generator to create your **speaker** component, you should notice **speaker.json** already has content.  I'd say copy the code snippet below and replace the current content in the **speaker.json**.  If you did not use the theme generator to create your **speaker** component your **speaker.json** will be empty.  Copy the code below into it.
+> If you used the Mediacurrent's theme generator to create your **speaker** component, you should notice **speaker.json** already has content.  I'd say copy the code snippet below and replace the current content in the **speaker.json**.  If you did not use the theme generator to create your **speaker** component your **speaker.json** will be empty.  Copy the code below into it.
 
 **speaker.json**
 ```json
@@ -56,8 +64,6 @@ In order to see our component in the styleguide, we need to provide stock/dummy 
   "class": ""
 }
 ```
-The code above is a JSON object.  JSON objects are written in `key/value` pairs.  The **key** is a variable we can later pass to Drupal to map data to our component.  More on this later.
-
 We have created individual variables for each of the fields of the Speaker component.  However, for the social media icons we have created an array which holds the url and name of the social channel.  This array will allow us to add as many or as little social media channels per speaker.
 
 
@@ -67,6 +73,7 @@ The next step in the process is to write the markup the **speaker** components n
 **speaker.twig**
 ```php
 {{ attach_library('badcamp/speaker') }}
+
 <article class="speaker {{ class|default('') }}">
 
 <div class="speaker__header">
@@ -147,7 +154,6 @@ The final step in this process is to write the styles to make our component look
 }
 
 .speaker__name {
-  // @include font-secondary;
   color: $color-white;
   font-size: 18px;
   font-weight: 400;
