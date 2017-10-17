@@ -1,17 +1,23 @@
 # Component Based Development in Drupal 8
 The component based development training focuses on 3 areas:
+
 1. Building components in Twig using a living styleguide.
-2. Prepping Drupal environment for component integration.
+
+2. Prepping Drupal for component integration.
+
 3. Integrate components with Drupal.
 
 
 ## Local environment setup
 
-Your local environment needs to be configured with the tools below to be able to follow along.  Please ensure your environment is fully configured prior to starting the training to make our time more productive.
-**NOTE**:  Help with your local environment setup will be extremely limited.
+During this training we will be using many of the popular front-end tools such as NodeJS, NVM, NPM, Gulp, and others.  Although it is recommended  you have these tools installed and in functioning state, the only one that is ultimately required to be installed is NVM.  Follow the instructions below for installing and configuring NVM in your local environment.  The rest of the tools will be installed as we work with our theme during training.
+
+**NOTE**:  This is a full class and assistance with your local environment may be limited.
 
 ### Tools
+
 The instructions provided with each tool are optional but recommended.  Feel free to improvise.
+
 * Laptop computer (mac preferred)
 * [Homebrew](https://brew.sh/): Package manager for OSx (optional)
 <!-- * [NodeJS](https://nodejs.org/en/): For plugins and development tools.  You can [follow these instructions](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x) if you are running MacOS. -->
