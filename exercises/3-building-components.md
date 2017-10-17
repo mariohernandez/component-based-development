@@ -1,14 +1,14 @@
 # Component-based Development with Drupal 8
 
-## 1 - Building Components
+## 1 - Building Components (continued...)
 This training is broken down in three parts:  Building Components, Preparing Drupal for Components, and finally, Integrating components with Drupal.
 
 
-### 1.1 Creating social media icons component
+### 1.1 Creating the social media icons component
 
 Let's now build the social media icons component.  Breaking things down into smaller components allows us to make components more reusable.
 
-* Inside the **badcamp/src/components/** directory, create a new directory and call it `social-icons`, then create the following 3 files inside of it: `social-icons.json`, `social-icons.scss`, and `social-icons.twig`.
+* Inside **/themes/custom/badcamp/src/components/** create a new directory and call it `social-icons`, as before, create the following 3 files inside of it: `social-icons.json`, `social-icons.scss`, and `social-icons.twig`.
 
 * Inside `social-icons.json` copy the following code:
 
@@ -38,6 +38,9 @@ Let's now build the social media icons component.  Breaking things down into sma
 
 We just created a JSON object with an array of icons.  Each icon accepts two parameters, **icon**, which represent the name of the icon/social media channel (twitter, facebook, etc.), and **url**, which is the url to the social media channel for a given person.
 
+**IMPORTANT**:  JSON is very strict about indentation and data format.  Notice how the last item on each group does not have an ending _comma_ (`,`).  Also, the very last item in the entire object does not have an endin comma.
+
+
 * Inside `social-icons.twig` copy the following code:
 
 ```php
@@ -46,26 +49,21 @@ We just created a JSON object with an array of icons.  Each icon accepts two par
 
 <ul class="social-icons {{ class|default('') }}">
   {% for item in items %}
-    {% if loop.first %}
-      {% set item_class = 'social-icons__item social-icons__item--first' %}
-    {% elseif loop.last %}
-      {% set item_class = 'social-icons__item social-icons__item--last' %}
-    {% else %}
-      {% set item_class = 'social-icons__item' %}
-    {% endif %}
-
-    <li class="{{ item_class }}">
+    <li class="social-icons__item">
       <a href="{{ item.url }}" class="social-icons__link">
-        {{ icons.get(item.icon, 'social-icon--img') }}
+        {{ icons.get(item.icon, 'icon social-icons--icon') }}
       </a>
     </li>
   {% endfor %}
 </ul>
 ```
 
-Using twig we are creating an unordered list in which each list item will be a social media icon.  We will look through the array in the JSON file and print an icon for each item in the array.  While we loop through the array we are adding some custom classes to each list item so we can properly address theming of the list.
+Using twig we are creating an unordered list in which each list item will be a social media icon.  We loop through the array in the JSON object and print an icon for each item in the array.  As we loop we add custom classes to each list item so we can properly address theming of the list.
 
-One key item to notice is that we are importing the icons macro.  This is a custom macro we have created in order to easily print icons as SVG files.  We will discuss this macro in more details during training.
+One key item to notice is that we are attaching a library (`{{ attach_library('badcamp/social-icon') }}`.  Libraries is the recommended way for adding CSS and Javascript to Drupal pages.  More on libraries later.
+
+We are also importing a custom macro to be able to print each social media icon as SVG files.  We will discuss this macro later on.
+
 
 * Inside `social-icons.scss` copy this code:
 
@@ -87,19 +85,15 @@ One key item to notice is that we are importing the icons macro.  This is a cust
 
 .social-icons__item {
   margin: 0 1rem;
-
-  &--first {
-    margin-left: 0;
-  }
 }
 
-.social-icon--img {
+.social-icons--icon {
   width: 24px;
   height: 24px;
 }
 ```
 
-As we did with the eyebrow component, we have written css styles to make the icons looks nicer.  Again, the commented code in the sass file is what KSS node will use to create/render our social icons component.
+As we did with the eyebrow component, we have written css styles to make the icons looks nicer.  Again, the commented code in the sass file is what KSS Node will use to create/render our social icons component.
 
 Let's compile the styleguide again to create the social icons component.
 

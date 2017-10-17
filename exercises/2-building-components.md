@@ -27,6 +27,9 @@ A typical component would have 3 files: `component-name.json`, `component-name.s
 
 We just created a JSON object with a variable of **eyebrow** and value of **Community Lead**.  We will get deeper into JSON objects when we build more advance components.
 
+The **class** variable above is a placeholder so we can pass a modifier class when we make use of this component.  Modifier classes allow us to create variations of components without havign to recreate the component again.  These classes are used by CSS to make changes to the look and feel of a component.  More on this later.
+
+
 * Inside `eyebrow.twig` copy the following code:
 
 ```
