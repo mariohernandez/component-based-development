@@ -8,13 +8,13 @@ Before we can build components, we need to generate a living styleguide to host 
 
 If you already created a new theme or used the provided `badcamp` theme, and compiled the theme, you already have a styleguide in place.  You can view the styleguide by going `http://your-local/themes/custom/badcamp/dist/style-guide/`.  Feel free to take a look around the styleguide, we will get into it in more detail as the training progresses.
 
-### 1.2 Creating a basic component (Eyebrow)
+## 1.2 Creating a basic component (Eyebrow)
 
-Before we went into the more advance stuff, let's start by creating a super simple component.  The component name is **Eyebrow** and this is a component you would normally use to label or categorize content content.
+Before we dive into the more advance stuff, let's start by creating a super simple component.  The component name is **Eyebrow** and this is a component you would normally use to label or categorize content.
 
-A typical component would have 3 files: `component-name.json`, `component-name.scss`, and `component-name.twig`.  Later we will use Mediacurrent's theme generator to build our components but for the purpose of understanding thing better, let's crete the Eyebrow component by hand
+A typical component would have 3 files: `component-name.json`, `component-name.scss`, and `component-name.twig`.  Later we will use Mediacurrent's theme generator to build our components but for the purpose of understanding things better, let's crete the Eyebrow component by hand
 
-* Inside the **badcamp/src/components/eyebrow/** directory, create the files we discussed above, but use `eyebrow` as the component name.  So you shoud end up with `eyebrow.json`, `eyebrow.scss`, and `eyebrow.twig`.
+* Inside **/themes/custom/badcamp/src/components/** create a new directory called **eyebrow**, then create the files we mentioned above, but use `eyebrow` as the component name.  So you shoud end up with `eyebrow.json`, `eyebrow.scss`, and `eyebrow.twig`.
 
 * Inside `eyebrow.json` copy the following code:
 
@@ -33,7 +33,7 @@ We just created a JSON object with a variable of **eyebrow** and value of **Comm
 <h3 class="eyebrow">{{ eyebrow }}</h3>
 ```
 
-The twig template allows us to write the markup we deem most appropriate for our components.  In addition, we are passing data from the JSON object we wrote above.  We will get into more details about twig templates.
+The twig template allows us to write the markup we deem most appropriate for our components.  In addition, we are passing data from the JSON object into Twig.
 
 * Inside `eyebrow.scss` copy this code:
 

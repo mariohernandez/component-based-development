@@ -19,6 +19,7 @@ During this training we will be using many of the popular front-end tools such a
 The instructions provided with each tool are optional but recommended.  Feel free to improvise.
 
 * Laptop computer (mac preferred)
+
 * [Homebrew](https://brew.sh/): Package manager for OSx (optional)
 <!-- * [NodeJS](https://nodejs.org/en/): For plugins and development tools.  You can [follow these instructions](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x) if you are running MacOS. -->
 <!-- * [NPM](https://www.npmjs.com/):  To manage node dependencies/packages -->
