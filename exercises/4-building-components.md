@@ -150,7 +150,7 @@ The final step in this process is to write the styles to make our component look
   width: 140px;
   height: 140px;
   margin: 0 auto 20px;
-  border: 1px solid #003954;
+  border: 1px solid #FFFFFF;
 }
 
 .speaker__name {
