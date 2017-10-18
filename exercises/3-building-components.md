@@ -100,7 +100,7 @@ Let's compile the styleguide again to create the social icons component.
 * Inside `badcamp`, run this command
 
 ```
-npm run styleguide
+npm run build
 ```
 
 Now let's take a look at the styleguide by going

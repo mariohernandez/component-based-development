@@ -242,7 +242,7 @@ speaker:
 Now that the speaker component is finished we need to compile the styleguie.  Run the command below from within the root of your theme (i.e. badcamp).
 
 ```
-npm run styleguide
+npm run build
 ```
 
 #### Preview of the Speaker card component

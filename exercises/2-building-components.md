@@ -70,7 +70,7 @@ Above are the styles that give the Eyebrow component a more appealing look.  Not
 * Inside `badcamp`, run this command
 
 ```
-npm run styleguide
+npm run build
 ```
 
 Now let's take a look at the styleguide by going
