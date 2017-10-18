@@ -41,7 +41,7 @@ A JSON Object takes the place of a database when building components.  In it we 
 {
   "name": "AmyJune Hineline",
   "photo": "<img src='../assets/amyjune.jpg' alt='AmyJune Hineline'>",
-  "type": "Community Lead",
+  "role": "Community Lead",
   "bio": "I am Drupal Sitebuilder and Community Lead for Hook 42. I have been an active participant in the Drupal community for almost 2 years by contributing to projects and helping with documentation.",
   "items": [
     {
@@ -102,7 +102,7 @@ The next step in the process is to write the markup the **speaker** components n
     {%
       include '@badcamp/social-icons/social-icons.twig' with {
         'items': items,
-        'classes': 'speaker__social-icons',
+        'class': 'speaker__social-icons',
       } only
     %}
   </div>
@@ -190,7 +190,7 @@ The final step in this process is to write the styles to make our component look
   margin: 0 auto;
   width: 200px;
 
-  .social-icon--img {
+  .social-icons--icon {
     fill: $color-white;
   }
 }
