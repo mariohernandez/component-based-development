@@ -53,7 +53,7 @@ The twig template allows us to write the markup we deem most appropriate for our
 @import '../../global/utils/init';
 
 .eyebrow {
-  border-bottom: 2px solid $color-gold;
+  border-bottom: 2px solid #DAA520;
   color: $color-gold;
   display: inline-block;
   font-size: 0.9rem;
@@ -65,7 +65,7 @@ The twig template allows us to write the markup we deem most appropriate for our
 }
 ```
 
-Above are the styles that give the Eyebrow component a more appealing look.  Notice the commended code at the top of the file.  Those comments are what KSS Node uses to generate the component in the styleguide.  In fact, let's compile the styleguide now to see the outcome of our component.
+Above are the styles that give the Eyebrow component a more appealing look.  Notice the commented code at the top of the file.  Those comments are what KSS Node uses to generate the component in the styleguide.  In fact, let's compile the styleguide now to see the outcome of our component.
 
 * Inside `badcamp`, run this command
 
