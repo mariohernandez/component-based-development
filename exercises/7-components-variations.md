@@ -131,3 +131,9 @@ Let's take a look to make sure our new component looks and behaves as expected
 ```
 http://your-local/themes/custom/badcamp/dist/style-guide/
 ```
+
+---
+
+Previous exercise:  [Integrate components](6-integrating-components.md)
+
+Next exercise:  [Integrating Featured Speakers](8-integrate-featured-speakers.md)

@@ -151,4 +151,4 @@ After clearing Drupal's cache, you can refresh the page to load the speaker comp
 
 Previous exercise:  [Prepare Drupal for Integration](5-prepare-drupal.md)
 
-[Back to beginning](../README.md)
+Next excercise:  [Components variations](7-components-variations.md)
