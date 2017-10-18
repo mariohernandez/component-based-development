@@ -54,7 +54,7 @@ The twig template allows us to write the markup we deem most appropriate for our
 
 .eyebrow {
   border-bottom: 2px solid #DAA520;
-  color: $color-gold;
+  color: #DAA520;
   display: inline-block;
   font-size: 0.9rem;
   letter-spacing: 0.15rem;
