@@ -52,9 +52,9 @@ Now that we have a custom twig template in place we are going to start the integ
 
 Before we can fully integrate the Speaker component with Drupal, we need to determine which variables and values Drupal is parsing so we can pass that information to our component.  Learn more about [debuging with Kint here](https://drupalize.me/blog/201405/lets-debug-twig-drupal-8).  You can ignore the part about configuring twig debugging since we've already done that.
 
-* Open `paragraph--teaser.html.twig` in your text editor.
+* Open `paragraph--speaker.html.twig` in your text editor.
 
-* Add this line at the top of the _paragraph--teaser template_ `{{ kint(content) }}`.  This will allow us to inspect the variables and field values Drupal is printing to render the Speaker component.  Having this information available is extremely important as we will use this information to pass to our component.  Kint content looks like this:
+* Add this line at the top of the _paragraph--speaker template_ `{{ kint(content) }}`.  This will allow us to inspect the variables and field values Drupal is printing to render the Speaker component.  Having this information available is extremely important as we will use this information to pass to our component.  Kint content looks like this:
 
 ![Kint debugging info](assets/kint.png)
 
