@@ -74,9 +74,9 @@ This is how we got the field structure above:
 {# creates variable from render array to pass to speaker include #}
 {% set icons = [] %}
 {% for icon in content.field_speaker_social['#items'] %}
-    {% set icon = icon.title  %}
-    {% set url = icon.uri %}
-    {% set icons = icons|merge([{'icon': icon, 'url': url}]) %}
+    {% set title = icon.title  %}
+    {% set url = icon.url.uri %}
+    {% set icons = icons|merge([{'icon': title, 'url': url}]) %}
 {% endfor %}
 
 {%
