@@ -98,7 +98,7 @@ To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist
 
 This is an example of the component we will be building and integrating during this training.
 
-![Speaker Card Component](assets/speaker.png)
+![Speaker Card Component](exercises/assets/speaker.png)
 
 ---
 
