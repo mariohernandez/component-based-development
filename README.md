@@ -94,6 +94,11 @@ you can grab the `badcamp` theme in this repo and save it in `docroot/themes/cus
 #### Styleguide
 To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist/style-guide/` -->
 
+#### Preview of the Speaker card component
+
+This is an example of the component we will be building and integrating during this training.
+
+![Speaker Card Component](assets/speaker.png)
 
 ---
 
