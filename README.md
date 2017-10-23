@@ -109,7 +109,7 @@ To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist
 
 7. [Components Variations](exercises/7-components-variations.md)
 
-8. [Integrating Featured Speakers](exercises/8-integrate-featured-speakers) (Complete instructions pending)
+8. [Integrating Featured Speakers](exercises/8-integrate-featured-speakers.md) (Complete instructions pending)
 
 
 #### Preview of the Speaker card component
