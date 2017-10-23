@@ -6,10 +6,6 @@ Component variations is the ability to display a component differently than its 
 
 Let's first create a variation of the Speaker card component in the styleguide then we will go back to Drupal to implement the variation.
 
-Here's what we are after for this variation.
-![Featured Speakers](assets/featured-speakers.png)
-
-As you can see, we have eliminated some fields and also changed the layout of the original component.
 
 **featured-speakers.json**
 ```
@@ -124,7 +120,7 @@ In the next excercise we will jump back into Drupal to create a new Content Type
 ### Compiling Styleguide
 
 ```
-npm run styleguide
+npm run build
 ```
 
 #### Preview of the Featured Speakers component
