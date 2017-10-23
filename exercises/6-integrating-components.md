@@ -105,15 +105,15 @@ The following list of items in the snippet above represent the `key | value` for
 
 Notice in the code above the words `with` and `only`.  These allow us to restrict which data we can pass to our component.   Sometimes we may want to integrate the Speaker component with a limited number of fields.  The `with` and `only` will allow us to do so.
 
-If we look at the entire code in the `paragraph--speaker.html.twig`, it shoudl look like this:
+If we look at the entire code in the `paragraph--speaker.html.twig`, it should look like this:
 
 ```php
 {# creates variable from render array to pass to speaker include #}
 {% set icons = [] %}
 {% for icon in content.field_speaker_social['#items'] %}
-    {% set icon = icon.title  %}
-    {% set url = icon.uri %}
-    {% set icons = icons|merge([{'icon': icon, 'url': url}]) %}
+    {% set title = icon.title  %}
+    {% set url = icon.url.uri %}
+    {% set icons = icons|merge([{'icon': title, 'url': url}]) %}
 {% endfor %}
 
 {%
@@ -144,7 +144,7 @@ If we look at the entire code in the `paragraph--speaker.html.twig`, it shoudl l
 
 ### 3.4 Viewing the Speaker component in Drupal
 
-After clearing Drupal's cache, you can refresh the page to load the speaker component.  This time the component within Drupal should look identical to the component we built in the styleguide.  The reason is that we are passing the styleguide component to drupal and along with that come the CSS and markup we wrote.
+After clearing Drupal's cache, you can refresh the page to load the speaker component.  This time the component within Drupal should look identical to the component we built in the styleguide.  The reason is that we are passing the styleguide component to Drupal and along with that comes the CSS and markup we wrote.
 
 
 ---
