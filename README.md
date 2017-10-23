@@ -95,21 +95,21 @@ you can grab the `badcamp` theme in this repo and save it in `docroot/themes/cus
 To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist/style-guide/` -->
 ### Training Outline
 
-1. [Create new Drupal 8 Theme](1-new-theme.md)
+1. [Create new Drupal 8 Theme](exercises/1-new-theme.md)
 
-2. [Building a basic component](2-building-components.md)
+2. [Building a basic component](exercises/2-building-components.md)
 
-3. [Building Social Icons component](3-building-components.md)
+3. [Building Social Icons component](exercises/3-building-components.md)
 
-4. [Building an advanced component](4-building-components.md)
+4. [Building an advanced component](exercises/4-building-components.md)
 
-5. [Preparing Drupal for Component Integration](5-prepare-drupal.md)
+5. [Preparing Drupal for Component Integration](exercises/5-prepare-drupal.md)
 
-6. [Integrating components with Drupal](6-integrating-components.md)
+6. [Integrating components with Drupal](exercises/6-integrating-components.md)
 
-7. [Components Variations](7-components-variations.md)
+7. [Components Variations](exercises/7-components-variations.md)
 
-8. [Integrating Featured Speakers](8-integrate-featured-speakers) (Complete instructions pending)
+8. [Integrating Featured Speakers](exercises/8-integrate-featured-speakers) (Complete instructions pending)
 
 
 #### Preview of the Speaker card component
