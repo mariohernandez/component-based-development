@@ -1,6 +1,16 @@
 # Component-based Development with Drupal 8
 
+**NOTE**:  This exercise is not complete.  Comeback soon for complete instructiosn on getting this component into Drupal.
+
+
 ## Integrating Featured Speakers
+
+* In Drupal, let's create a new content type, **Featured Speakers**
+
+* Add a _Paragraph Field_ and select **Speaker** as the paragraph to reference
+
+* Select unlimited for the number of values to ensure we are able to add multiple speakers to the page.
+
 
 ```
 {% if content.field_featured_speakers %}
@@ -12,7 +22,6 @@
       {% set speakers = speakers|merge([{'photo': photo, 'name': name, 'bio': bio}]) %}
   {% endfor %}
 {% endif %}
-
 
 <section{{ attributes.addClass(class) }}>
   <div{{ content_attributes }}>

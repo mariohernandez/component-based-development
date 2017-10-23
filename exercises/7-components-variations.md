@@ -7,9 +7,9 @@ Component variations is the ability to display a component differently than its 
 Let's first create a variation of the Speaker card component in the styleguide then we will go back to Drupal to implement the variation.
 
 Here's what we are after for this variation.
-<!-- image here -->
+![Featured Speakers](assets/featured-speakers.png)
 
-As you can see, we have eliminated some fields and also change the layout of the original component.
+As you can see, we have eliminated some fields and also changed the layout of the original component.
 
 **featured-speakers.json**
 ```
@@ -33,6 +33,8 @@ As you can see, we have eliminated some fields and also change the layout of the
   ]
 }
 ```
+Since we will have multiple speakers, we need to add each one of them in an array so we can loop through them.  The code above shows the `items` array in which we have outlined each speaker.  The fields for each speaker are `name`, `photo`, and `bio`.
+
 
 **featured-speakers.twig**
 ```
@@ -51,6 +53,7 @@ As you can see, we have eliminated some fields and also change the layout of the
   {% endfor %}
 </section>
 ```
+First we created a **loop** to iterate through the _items_ array.  For each item (speaker), in the array, we include the _speaker_ card and pass the **key | value** from the JSON object.  The entire collection of speakers is wrapped in a `<section>` element.
 
 
 **featured-speakers.scss**
@@ -71,13 +74,13 @@ As you can see, we have eliminated some fields and also change the layout of the
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 55em) {
+  @include breakpoint($bp-sm) {
     flex-direction: row;
   }
 
   &.speaker {
     border: 0;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid $color-silver;
     max-width: inherit;
 
     &:last-child {
@@ -92,7 +95,7 @@ As you can see, we have eliminated some fields and also change the layout of the
   }
 
   .speaker__photo img {
-    border: 5px solid #eee;
+    border: 5px solid $color-gallery;
   }
 
   .speaker__content {
@@ -101,18 +104,22 @@ As you can see, we have eliminated some fields and also change the layout of the
     min-height: inherit;
     margin-top: 0;
 
-    @media (min-width: 55em) {
+    @include breakpoint($bp-sm) {
       margin-top: 20px;
     }
   }
 
   .speaker__name {
-    color: #003954;
+    color: $color-blue;
     font-size: 14px;
     text-transform: uppercase;
   }
 }
 ```
+So we took the original spekaer styles and overrode to achieve the new look.
+
+In the next excercise we will jump back into Drupal to create a new Content Type (Featured Speakers), in which we will add an entity reference field for the Speaker card.  The difference between the Featured Speakers Content type Speaker card field is that this time it will accept multiple instances of the speaker card.
+
 
 ### Compiling Styleguide
 
@@ -122,7 +129,6 @@ npm run styleguide
 
 #### Preview of the Featured Speakers component
 ![Featured Speakers Component](assets/featured-speakers.png)
-
 
 
 #### View component in styleguide
