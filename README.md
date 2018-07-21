@@ -1,16 +1,16 @@
 # Component Based Development in Drupal 8
-The component based development training focuses on 3 areas:
+The component based development training is broken down in 3 parts:
 
-1. Building components in Twig using a living styleguide.
+1. Building components in Twig using KSS Node.
 
 2. Prepping Drupal for component integration.
 
-3. Integrate components with Drupal.
+3. Integrating components with Drupal.
 
 
 ## Local environment setup
 
-During this training we will be using many of the popular front-end tools such as NodeJS, NVM, NPM, Gulp, and others.  Although it is recommended  you have these tools installed and in functioning state, the only one that is ultimately required to be installed is NVM.  Follow the instructions below for installing and configuring NVM in your local environment.  The rest of the tools will be installed as we work with our theme during training.
+During this training we will be using many of the popular front-end tools such as NodeJS, NVM, NPM, Gulp, and others.  Although it is recommended  you have these tools installed and in functioning state, the only one that is required to be installed is NVM.  Follow the instructions below for installing and configuring NVM in your local environment.  The rest of the tools will be installed as we run theme compiling tasks later in the training.
 
 **NOTE**:  This is a full class and assistance with your local environment may be limited.
 
@@ -42,7 +42,7 @@ Install and enable the following modules (including dependencies):
 ## Compiling Sass, Javascript and Styleguide
 (_First two commands below only need to run once_)
 
-* Navigate to `docroot/themes/custom/badcamp` and run the following commands:
+* Navigate to `docroot/themes/custom/shiny` and run the following commands:
 
 ```
 nvm install
@@ -88,11 +88,11 @@ Will compress assets to optimize them for web.
 
 #### Theme
 If you are having difficulties configuring or getting Mediacurrent's theme generator
-you can grab the `badcamp` theme in this repo and save it in `docroot/themes/custom/`.
+you can grab the `shiny` theme in this repo and save it in `docroot/themes/custom/`.
 
 
 #### Styleguide
-To view the styleguide navigate to `http://your-local/themes/custom/badcamp/dist/style-guide/` -->
+To view the styleguide navigate to `http://your-local/themes/custom/shiny/dist/style-guide/` -->
 ### Training Outline
 
 1. [Create new Drupal 8 Theme](exercises/1-new-theme.md)
