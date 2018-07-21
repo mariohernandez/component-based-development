@@ -34,12 +34,12 @@ Since we will have multiple speakers, we need to add each one of them in an arra
 
 **featured-speakers.twig**
 ```
-{{ attach_library('badcamp/featured-speakers') }}
+{{ attach_library('shiny/featured-speakers') }}
 
 <section class="featured-speakers">
   {% for item in items %}
     {%
-      include '@badcamp/speaker/speaker.twig' with {
+      include '@shiny/speaker/speaker.twig' with {
         'name': item.name,
         'photo': item.photo,
         'bio': item.bio,
@@ -131,7 +131,7 @@ npm run build
 Let's take a look to make sure our new component looks and behaves as expected
 
 ```
-http://your-local/themes/custom/badcamp/dist/style-guide/
+http://your-local/themes/custom/shiny/dist/style-guide/
 ```
 
 ---

@@ -24,7 +24,7 @@
 
 The same as we did on previously to create a custom paragraph template for the Speaker paragraph type, this time we will create one for the content type Featured Speakers.
 
-* Create a new directory as follows: `/themes/custom/badcamp/src/templates/content/`
+* Create a new directory as follows: `/themes/custom/shiny/src/templates/content/`
 **Note**:  We obtained the template name above by inspecting the Featured Speakers node.  Alternatively, you could had copied the `node.html.twig` template from Drupal core and rename it _node--feature-speakers.html.twig_.
 
 
@@ -45,7 +45,7 @@ Paste the following code into the new twig template.
 <section{{ attributes.addClass(class) }}>
   <div{{ content_attributes }}>
     {%
-      include '@badcamp/featured-speakers/featured-speakers.twig' with {
+      include '@shiny/featured-speakers/featured-speakers.twig' with {
         'items': speakers,
       } only
     %}
