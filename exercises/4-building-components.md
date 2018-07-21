@@ -2,7 +2,7 @@
 
 ## 1 - Building Components (continued...)
 
-Now that we have built a couple of pretty simple component in which we introduced essential steps, information and patterns, we can probably take this to a new level.
+Now that we have built a couple of pretty simple components in which we introduced essential steps, information and patterns, we can probably take this to a new level.
 
 
 ### 1.3 - Creating more advanced components
@@ -10,12 +10,12 @@ During this training we will build a page that lists speakers and their profiles
 
 Once our single component is ready, we will create a page in which we reuse the speaker component to list as many speakers as we need by passing data from Drupal to populate each speaker card.
 
-In this section we will introduce the use of **Twig includes**.  Which is a way to nest one component into another.  Very powerful technique for building advanced components.
+In this section we will introduce the use of [Twig includes](https://twig.symfony.com/doc/2.x/tags/include.html).  Which is a way to nest one component into another.  Very powerful technique for building advanced components.
 
 
 #### Let's create the Speaker component now
 
-Inside the `badcamp` directory do one of these two things:
+Inside the `shiny` directory do one of these two things:
 
 1. If you are using Mediacurrent's theme generator:
    * Run `npx -p yo -p generator-mc-d8-theme -c 'yo mc-d8-theme:component "Speaker"'`
@@ -35,6 +35,7 @@ A JSON Object takes the place of a database when building components.  In it we 
 
 > **_NOTE_**
 > If you used the Mediacurrent's theme generator to create your **speaker** component, you should notice **speaker.json** already has content.  I'd say copy the code snippet below and replace the current content in the **speaker.json**.  If you did not use the theme generator to create your **speaker** component your **speaker.json** will be empty.  Copy the code below into it.
+
 
 **speaker.json**
 ```json
@@ -61,7 +62,7 @@ A JSON Object takes the place of a database when building components.  In it we 
       "url": "#"
     }
   ],
-  "class": ""
+  "classes": ""
 }
 ```
 We have created individual variables for each of the fields of the Speaker component.  However, for the social media icons we have created an array which holds the url and name of the social channel.  This array will allow us to add as many or as little social media channels per speaker.
@@ -72,23 +73,23 @@ The next step in the process is to write the markup the **speaker** components n
 
 **speaker.twig**
 ```php
-{{ attach_library('badcamp/speaker') }}
+{{ attach_library('shiny/speaker') }}
 
-<article class="speaker {{ class|default('') }}">
+<article class="speaker {{ classes|default('') }}">
 
-<div class="speaker__header">
+<header class="speaker__header">
   <div class="speaker__photo">
     {{ photo }}
   </div>
   <h2 class="speaker__name">{{ name }}</h2>
-</div>
+</header>
 
 {% if role or bio  %}
   <div class="speaker__content">
     {%
-      include '@badcamp/eyebrow/eyebrow.twig' with {
+      include '@shiny/eyebrow/eyebrow.twig' with {
         'eyebrow': role,
-        'class': 'speaker__eyebrow',
+        'classes': 'speaker__eyebrow',
       } only
     %}
     {% if bio %}
@@ -98,14 +99,14 @@ The next step in the process is to write the markup the **speaker** components n
 {% endif %}
 
 {% if items %}
-  <div class="speaker__social-icons--wrapper">
+  <footer class="speaker__social-icons--wrapper">
     {%
-      include '@badcamp/social-icons/social-icons.twig' with {
+      include '@shiny/social-icons/social-icons.twig' with {
         'items': items,
-        'class': 'speaker__social-icons',
+        'classes': 'speaker__social-icons',
       } only
     %}
-  </div>
+  </footer>
 {% endif %}
 </article>
 ```
@@ -200,13 +201,15 @@ Another advantage of components is their unique name makes our css styles easy t
 
 
 ### 1.4 - Creating the speaker library
-Libraries are the recommended way for adding CSS and JavaScript to pages in Drupal 8.  Although our component is not talking to Drupal yet, we will add the "Speaker" library so it's ready when we need to use it in Drupal.  Also, creating the library now feels natural since we are working with the Speaker component.
+Libraries are the recommended way for adding CSS and JavaScript to pages in Drupal 8.  Although our component is not talking to Drupal yet, we will add the "Speaker" library so it's ready when we need to use it in Drupal.
 
-* Open your **libraries.yml** file located in your theme's root (i.e. `badcamp.libraries.yml`).  If your theme name is not badcamp, your libraries.yml file will include your theme's name.
+**IMPORTANT**: Libraries have no effect in the styleguide.  Libraries are only intended to take effect when viewing our components in Drupal.  The theme has been setup in a way that all Sass code is compiled and automatically added to the styleguide.
+
+1. Open your **shiny.libraries.yml** file located in your theme's root (i.e. `shiny.libraries.yml`).  If your theme name is not shiny, your libraries.yml file will include your theme's name.
 
 * Since our theme was created using Mediacurrent's Theme Generator, your libraries.yml probably includes examples of how to declare libraries for Drupal to consume.  Take a moment to review the commented code in the libraries file for ideas on how libraries work or visit this page to learn more about [Drupal 8 Libraries](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme).
 
-* Add the following code snippet somewhere in your `badcamp.libraries.yml` file to create the Speaker library
+* Add the following code snippet somewhere in your `shiny.libraries.yml` file to create the Speaker library
 
 ```
 speaker:
@@ -228,7 +231,7 @@ speaker:
     js/speaker.js: {}
 ```
 
-* **speaker**: Name of library used when attaching it to any twig template.  See **speaker.twig** above and you will notice first line includes the following: `{{ attach_library('badcamp/speaker') }}`.  As previously mentioned, the library is only used by Drupal.  The styleguide does not need the library to render CSS or Javascript as these are included globally within KSS Node.
+* **speaker**: Name of library used when attaching it to any twig template.  See **speaker.twig** above and you will notice first line includes the following: `{{ attach_library('shiny/speaker') }}`.  As previously mentioned, the library is only used by Drupal.  The styleguide does not need the library to render CSS or Javascript as these are included globally within KSS Node.
 
 * **css/js**:  This indicates whether we are including CSS or Javascript to our library.
 
@@ -239,7 +242,7 @@ speaker:
 
 
 ### 1.5 - Compiling Styleguide
-Now that the speaker component is finished we need to compile the styleguie.  Run the command below from within the root of your theme (i.e. badcamp).
+Now that the speaker component is finished we need to compile the styleguie.  Run the command below from within the root of your theme (i.e. shiny).
 
 ```
 npm run build
@@ -254,7 +257,7 @@ npm run build
 Let's take a look to make sure our new component looks and behaves as expected
 
 ```
-http://your-local/themes/custom/badcamp/dist/style-guide/
+http://your-local/themes/custom/shiny/dist/style-guide/
 ```
 
 ---

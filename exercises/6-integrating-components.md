@@ -5,12 +5,12 @@
 We are now ready to integrate the Speaker component with Drupal so it inherits all the markup and styles we wrote on the first step of this process.
 
 ### 3.1 Inspecting the Speaker Node
-Let's take a look at the Basic page node we created previously now that we have enabled the Badcamp theme.
+Let's take a look at the Basic page node we created previously now that we have enabled the shiny theme.
 As you can see, the node renders but it lacks all the styles and markup we created when we built the Speaker component.  The reason for this is that Drupal still does not know about the Speaker component.  In this section we will take all the steps needed to make Drupal aware of our component and make the necessary configuration updates to complete the component integration.
 
 * While displaying the Speaker node, right-click on it and choose **Inspect** or **Inspect element** from your browser's dialog box
 
-* If you are looking at the _Elements_ tab within the browser's code inspector, you will see all the markup drupal is printing to render the component.  In addition, you will notice several lines of green information which normally you don't see.  The green text is Twig debbuging information, which will become really handy to integrate the component.
+* If you are looking at the _Elements_ tab within the browser's code inspector, you will see all the markup drupal is printing to render the component.  In addition, you will notice several lines of green information which normally you don't see.  The green text is Twig debbuging information, which will become really handy for integrating the component.
 
 * Having access to Twig's debugging information allows us to easily identify which templates Drupal is using to render our content.
 
@@ -27,13 +27,13 @@ As we saw above, Drupal is using `paragraph.html.twig` to render the Speaker com
 
 Luckily for us, we can customize the paragraph template to control how the Speaker component is rendered. Although we can easily navigate to the path shown in the debugging screenshot above, it is not recommended to override Core or Module's templates.  Instead, we are going to create a copy of the paragraph twig template inside our theme.  This is the recommended way for overriding any twig template.
 
-#### 3.2.1 Copy and rename Paragraph template into Badcamp theme
+#### 3.2.1 Copy and rename Paragraph template into shiny theme
 
-* Navigate to `/modules/contrib/paragraphs/templates/`
+1. Navigate to `/modules/contrib/paragraphs/templates/`
 
-* Copy `paragraph.html.twig` into `/themes/custom/badcamp/src/templates/paragraphs`.  **Note**: The `paragraphs` directory in the path is not required, but it's a great way to organize your templates if you intend to have many of them in your theme.
+2. Copy `paragraph.html.twig` into `/themes/custom/shiny/src/templates/paragraphs`.  **Note**: The `paragraphs` directory in the path is not required, but it's a great way to organize your templates if you intend to have many of them in your theme.
 
-* Rename the template `paragraph--speaker.hteml.twig`.  If you are wondering why that name or how do we know we can use that name, take another look at the debugging screenshot and you will notice that in addition to providing the current template name being used to render the component, Drupal also offers suggestions for template names that would be more specific to the content we are working with.  In our case, the `paragraph--speaker.html.twig` template, will ensure it only affects the Speaker content and not other paragraph types we may create later on.
+3. Rename the template `paragraph--speaker.hteml.twig`.  If you are wondering why that name or how do we know we can use that name, take another look at the debugging screenshot and you will notice that in addition to providing the current template name being used to render the component, Drupal also offers suggestions for template names that would be more specific to the content we are working with.  In our case, the `paragraph--speaker.html.twig` template, will ensure it only affects the Speaker content and not other paragraph types we may create later on.
 
 Learn more about [Twig templates naming conventions](https://www.drupal.org/docs/8/theming/twig/twig-template-naming-conventions).
 
@@ -71,7 +71,6 @@ This is how we got the field structure above:
 * In the paragraph template, find this line `{{ content }}`.  We will replace the **content** variable with our component by using a Twig's `include` statement as shown bellow:
 
 ```php
-{# creates variable from render array to pass to speaker include #}
 {% set icons = [] %}
 {% for icon in content.field_speaker_social['#items'] %}
     {% set title = icon.title  %}
@@ -80,7 +79,7 @@ This is how we got the field structure above:
 {% endfor %}
 
 {%
-  include '@badcamp/speaker/speaker.twig' with {
+  include '@shiny/speaker/speaker.twig' with {
     'photo': content.field_speaker_photo,
     'name': content.field_speaker_name.0['#context'].value,
     'role': content.field_speaker_role.0['#context'].value,
@@ -108,7 +107,6 @@ Notice in the code above the words `with` and `only`.  These allow us to restric
 If we look at the entire code in the `paragraph--speaker.html.twig`, it should look like this:
 
 ```php
-{# creates variable from render array to pass to speaker include #}
 {% set icons = [] %}
 {% for icon in content.field_speaker_social['#items'] %}
     {% set title = icon.title  %}
@@ -128,7 +126,7 @@ If we look at the entire code in the `paragraph--speaker.html.twig`, it should l
     {% block content %}
 
       {%
-        include '@badcamp/speaker/speaker.twig' with {
+        include '@shiny/speaker/speaker.twig' with {
           'photo': content.field_speaker_photo,
           'name': content.field_speaker_name.0['#context'].value,
           'role': content.field_speaker_role.0['#context'].value,

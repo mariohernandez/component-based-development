@@ -11,16 +11,16 @@ Enable the following modules and their dependencies (if any):
 
 
 ### 2.2 Create Paragraph Types (Entities)
-We will use the paragraphs module to integrate our components into Drupal by creating custom paragraph types.  However, components can be integrated using other entities types such as custom blocks, custom content types, etc.
+We will use the paragraphs module to integrate our components with Drupal by creating custom paragraph types.  However, components can be integrated using other entities types such as custom blocks, custom content types, etc.
 
 
-* Create a **Speaker** paragraph type
+1. Create a **Speaker** paragraph type
   * Login to your drupal site with administrator previleges
   * Click **Structure | Paragraphs types**
   * Click the **Add Paragraphs type** blue button
   * For label type **Speaker** and click **Save and manage fields**
 
-* Add the following fields and properties to the Speaker paragraph type:
+2. Add the following fields and properties to the Speaker paragraph type:
 
 Field label | Field type        | Field machine name     | Allowed # of values
 ----------- | ----------------- | ---------------------- | -------------------
@@ -69,7 +69,7 @@ Our component is rendered however we still need to do a little more work so Drup
 
 In order for Drupal to be able to use the Speaker component we created, we need the _Components Libraries_ module, which allows us to create a namespace for our theme.  Using a namespace makes it easier to reference twig templates that are not in the default **/templates** directory Drupal typically looks for twig templates in.
 
-The namespace typically matches the name of our theme.  In our case, the namespace will be `@badcamp`.  More on this later.
+The namespace typically matches the name of our theme.  In our case, the namespace will be `@shiny`.  More on this later.
 
 If you haven't enabled the Components Libraries module please do so.
 
@@ -77,34 +77,30 @@ If you haven't enabled the Components Libraries module please do so.
 The namespace is added in the `theme-name.info.yml` file.  Since we created our theme using Mediacurrent's theme generator, the namespace has already been added.  However if you did not use the theme generator, add the following snippet to your `.info.yml` file:
 
 ```
-# This section is used by the contrib module, Component Libraries. It allows you
-# to reference .twig files in your sass/ directory by using the Twig namespace:
-# @badcamp
-# See https://www.drupal.org/project/components for more information.
 component-libraries:
-  badcamp:
+  shiny:
     paths:
       - src/components
       - src/layout
       - src/templates
 ```
-The code above assigns the namespace of `badcamp` which can be referenced by modules and themes within our project.  In addition, it assignes multiple paths where Drupal can look for twig templates.  By default Drupal 8 only looks for custom twig templates inside the `/templates` directory, but with the namespace in place, we've added `src/components` and `src/layout` as extra directories where twig templates may exist.
+The code above assigns the namespace of `shiny` which can be referenced by modules and themes within our project.  In addition, it assignes multiple paths where Drupal can look for twig templates.  By default Drupal 8 only looks for custom twig templates inside the `/templates` directory, but with the namespace in place, we've added `src/components` and `src/layout` as extra directories where twig templates may exist.
 
 All of our components will be stored inside `src/components` making it possible for Drupal to easily access them using the new namespace.
 
 
 ### 2.4 - Enable Twig debugging and disable Drupal's cache
 
-While integrating components we work with Drupal twig templates to manipulate markup and Kint to print variables we need to pass to our component.  Before we start we need to disable CSS and JavaScript aggregation which are on by default in Drupal 8.  We also need to enable twig debugging.  More on this later, for now follow these steps:
+We need to disable CSS and JavaScript aggregation which are on by default in Drupal 8.  We also need to enable twig debugging.  More on this later, for now follow these steps:
 
 
 #### 2.4.1 Disable Drupal CSS/JS Aggregation
 
-* Click **Configuration | Performance**
+1. While logged in as Administrator, Click **Configuration | Performance**
 
-* Clear the _Aggregate CSS files_ and _Aggregate JavaScript files_ checkboxes
+2. Clear the _Aggregate CSS files_ and _Aggregate JavaScript files_ checkboxes
 
-* Click **Save Configuration**
+3. Click **Save Configuration**
 
 
 #### 2.4.2 Disable Drupal Caching and enable twig debugging
@@ -112,13 +108,13 @@ While integrating components we work with Drupal twig templates to manipulate ma
 Follow the instructions on this article to [disable drupal caching and enable twig debugging](https://www.drupal.org/node/2598914).
 
 
-### 2.7 - Enable the custom theme (i.e. Badcamp)
+### 2.7 - Enable the custom theme (i.e. shiny)
 
-Enable the Badcamp theme before proceeding.
+Enable the shiny theme before proceeding.
 
-* Click **Appearance**
+1. Click **Appearance**
 
-* Click on **Install and set as default** next to the Badcamp theme (or, your own custom theme)
+2. Click on **Install and set as default** next to the shiny theme (or, your own custom theme)
 
 
 ---
