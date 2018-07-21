@@ -29,6 +29,8 @@ A typical component would have 3 files: `component-name.json`, `component-name.s
   "classes": ""
 }
 ```
+**IMPORTANT**:  JSON is very strict about indentation and data format.  Notice how the last item on each group does not have an ending _comma_ (`,`).  Also, the very last item in the entire object does not have an endin comma.
+
 
 We just created a JSON object with a key of **eyebrow** and value of **Community Lead**.  We will get deeper into JSON objects when we build more advanced components.
 
@@ -42,10 +44,12 @@ The **classes** variable above is a placeholder so we can pass a modifier class 
 2. Inside `eyebrow.twig` paste the code snippet below:
 
 ```
-<p class="eyebrow">{{ eyebrow }}</p>
+<p class="eyebrow {{ classes|default('') }}">{{ eyebrow }}</p>
 ```
 
 The twig template allows us to write the markup we deem most appropriate for our components.  In addition, we are passing data from the JSON object into Twig.
+
+Notice the ``{{ classes }}`` placeholder?  This will allow us to pass any css class we want when we nest this component with others.  If no class is passed, the placeholder defaults to empty.  More on this later.
 
 
 ### Component styles
@@ -84,19 +88,19 @@ Above are the styles that give the Eyebrow component a more appealing look.  Not
 
 ### Compiling styleguide
 
-* Inside `shiny`, run this command
+1. Inside `shiny`, run this command
 
 ```
 npm run build
 ```
 
-Now let's take a look at the styleguide by going
+2. Now let's take a look at the styleguide by going
 
 ```
 http://your-local/themes/custom/shiny/dist/style-guide/
 ```
 
-Expand the **Components** category on the styleguide located on the left side of the screen and you shouls see among others, the Eyebrow component.
+3. Expand the **Components** category on the styleguide located on the left side of the screen and you shouls see among others, the Eyebrow component.
 
 
 ---

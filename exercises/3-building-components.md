@@ -1,16 +1,22 @@
 # Component-based Development with Drupal 8
 
 ## 1 - Building Components (continued...)
-This training is broken down in three parts:  Building Components, Preparing Drupal for Components, and finally, Integrating components with Drupal.
-
 
 ### 1.1 Creating the social media icons component
 
 Let's now build the social media icons component.  Breaking things down into smaller components allows us to make components more reusable.
 
-* Inside **/themes/custom/badcamp/src/components/** create a new directory and call it `social-icons`, as before, create the following 3 files inside of it: `social-icons.json`, `social-icons.scss`, and `social-icons.twig`.
+1. Inside **/themes/custom/shiny/src/components/** create a new directory called `social-icons`.
 
-* Inside `social-icons.json` copy the following code:
+2. Create the following 3 files inside **social-icons/**:
+* `social-icons.json`,
+
+* `social-icons.scss`
+
+* `social-icons.twig`.
+
+
+3. Inside `social-icons.json` paste the following code snippet:
 
 ```
 {
@@ -32,22 +38,23 @@ Let's now build the social media icons component.  Breaking things down into sma
       "url": "#"
     }
   ],
-  "class": ""
+  "classes": ""
 }
 ```
-
-We just created a JSON object with an array of icons.  Each icon accepts two parameters, **icon**, which represent the name of the icon/social media channel (twitter, facebook, etc.), and **url**, which is the url to the social media channel for a given person.
-
 **IMPORTANT**:  JSON is very strict about indentation and data format.  Notice how the last item on each group does not have an ending _comma_ (`,`).  Also, the very last item in the entire object does not have an endin comma.
 
+We just created a JSON object with an array of icons.  Each icon accepts two parameters, **icon**, which represent the name of the social media channel (twitter, facebook, etc.), and **url**, which is the url to the social media channel.
 
-* Inside `social-icons.twig` copy the following code:
+We are also again creating a **classes** variable in case we need to pass css classes when we use this component.
+
+
+4. Inside `social-icons.twig` copy the following code:
 
 ```php
-{% import '@badcamp/icons/icons.twig' as icons %}
-{{ attach_library('badcamp/social-icons') }}
+{% import '@shiny/icons/icons.twig' as icons %}
+{{ attach_library('shiny/social-icons') }}
 
-<ul class="social-icons {{ class|default('') }}">
+<ul class="social-icons {{ classes|default('') }}">
   {% for item in items %}
     <li class="social-icons__item">
       <a href="{{ item.url }}" class="social-icons__link">
@@ -60,12 +67,12 @@ We just created a JSON object with an array of icons.  Each icon accepts two par
 
 Using twig we are creating an unordered list in which each list item will be a social media icon.  We loop through the array in the JSON object and print an icon for each item in the array.  As we loop we add custom classes to each list item so we can properly address theming of the list.
 
-One key item to notice is that we are attaching a library (`{{ attach_library('badcamp/social-icon') }}`.  Libraries is the recommended way for adding CSS and Javascript to Drupal pages.  More on libraries later.
+One key item to notice is that we are attaching a library (`{{ attach_library('shiny/social-icon') }}`.  Libraries is the recommended way for adding CSS and Javascript to Drupal pages.  More on libraries later.
 
 We are also importing a custom macro to be able to print each social media icon as SVG files.  We will discuss this macro later on.
 
 
-* Inside `social-icons.scss` copy this code:
+5. Inside `social-icons.scss` copy this code:
 
 ```
 // Social Icons
@@ -97,7 +104,7 @@ As we did with the eyebrow component, we have written css styles to make the ico
 
 Let's compile the styleguide again to create the social icons component.
 
-* Inside `badcamp`, run this command
+* Inside `shiny`, run this command
 
 ```
 npm run build
@@ -106,7 +113,7 @@ npm run build
 Now let's take a look at the styleguide by going
 
 ```
-http://your-local/themes/custom/badcamp/dist/style-guide/
+http://your-local/themes/custom/shiny/dist/style-guide/
 ```
 
 
