@@ -72,7 +72,7 @@ We have created individual variables for each of the fields of the Speaker compo
 The next step in the process is to write the markup the **speaker** components needs to be rendered.  In addition, we will pass the data from the JSON object we created in the previous step.
 
 **speaker.twig**
-```php
+```twig
 {{ attach_library('shiny/speaker') }}
 
 <article class="speaker {{ classes|default('') }}">
@@ -120,7 +120,7 @@ We will discuss in detail during training everything inside the twig template to
 The final step in this process is to write the styles to make our component look and feel as shown in our design comps.  Copy all of the code below into your **speaker.scss**
 
 **speaker.scss**
-```css
+```scss
 // Speaker
 //
 // This is the speaker component.
@@ -205,11 +205,11 @@ Libraries are the recommended way for adding CSS and JavaScript to pages in Drup
 
 **IMPORTANT**: Libraries have no effect in the styleguide.  Libraries are only intended to take effect when viewing our components in Drupal.  The theme has been setup in a way that all Sass code is compiled and automatically added to the styleguide.
 
-1. Open your **shiny.libraries.yml** file located in your theme's root (i.e. `shiny.libraries.yml`).  If your theme name is not shiny, your libraries.yml file will include your theme's name.
+1. Open the **shiny.libraries.yml** file located in your theme's root.  If your theme name is not shiny, your libraries.yml file will include your theme's name.
 
-* Since our theme was created using Mediacurrent's Theme Generator, your libraries.yml probably includes examples of how to declare libraries for Drupal to consume.  Take a moment to review the commented code in the libraries file for ideas on how libraries work or visit this page to learn more about [Drupal 8 Libraries](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme).
+2. Since our theme was created using Mediacurrent's Theme Generator, your libraries.yml probably includes examples of how to declare libraries.  Take a moment to review the commented code in the libraries file for ideas on how libraries work or visit this page to learn more about [Drupal 8 Libraries](https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme).
 
-* Add the following code snippet somewhere in your `shiny.libraries.yml` file to create the Speaker library
+3. Add the following code snippet somewhere in your `shiny.libraries.yml` file to create the Speaker library
 
 ```
 speaker:
@@ -240,6 +240,11 @@ speaker:
 * **dist/css/speaker.css: {}** or **js/speaker.js: {}**:  This represents the path where your CSS or Javascript are located in relation to your theme's root for this particular library.
 
 
+## Creating more libraries
+
+We created two simple components before (eyebrow and social-icons), however we never created their respective libraries.  Let's do that now.
+
+* Follow the same steps as the Speaker library to create the **eyebrow** and **social-icons** libraries.
 
 ### 1.5 - Compiling Styleguide
 Now that the speaker component is finished we need to compile the styleguie.  Run the command below from within the root of your theme (i.e. shiny).

@@ -31,7 +31,7 @@ The same as we did on previously to create a custom paragraph template for the S
 ### Customize new twig template
 
 Paste the following code into the new twig template.
-```
+```twig
 {% if content.field_featured_speakers %}
   {% set speakers = [] %}
   {% for speaker in content.field_featured_speakers['#items'] %}

@@ -8,7 +8,7 @@ Let's first create a variation of the Speaker card component in the styleguide t
 
 
 **featured-speakers.json**
-```
+```json
 {
   "items": [
     {
@@ -33,7 +33,7 @@ Since we will have multiple speakers, we need to add each one of them in an arra
 
 
 **featured-speakers.twig**
-```
+```twig
 {{ attach_library('shiny/featured-speakers') }}
 
 <section class="featured-speakers">
@@ -53,7 +53,7 @@ First we created a **loop** to iterate through the _items_ array.  For each item
 
 
 **featured-speakers.scss**
-```
+```scss
 // Featured Speakers
 //
 // This is the featured-speakers component.

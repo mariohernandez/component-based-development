@@ -70,7 +70,7 @@ This is how we got the field structure above:
 
 * In the paragraph template, find this line `{{ content }}`.  We will replace the **content** variable with our component by using a Twig's `include` statement as shown bellow:
 
-```php
+```twig
 {% set icons = [] %}
 {% for icon in content.field_speaker_social['#items'] %}
     {% set title = icon.title  %}
@@ -106,7 +106,7 @@ Notice in the code above the words `with` and `only`.  These allow us to restric
 
 If we look at the entire code in the `paragraph--speaker.html.twig`, it should look like this:
 
-```php
+```twig
 {% set icons = [] %}
 {% for icon in content.field_speaker_social['#items'] %}
     {% set title = icon.title  %}

@@ -18,7 +18,7 @@ Let's now build the social media icons component.  Breaking things down into sma
 
 3. Inside `social-icons.json` paste the following code snippet:
 
-```
+```json
 {
   "items": [
     {
@@ -50,7 +50,7 @@ We are also again creating a **classes** variable in case we need to pass css cl
 
 4. Inside `social-icons.twig` copy the following code:
 
-```php
+```twig
 {% import '@shiny/icons/icons.twig' as icons %}
 {{ attach_library('shiny/social-icons') }}
 
@@ -74,7 +74,7 @@ We are also importing a custom macro to be able to print each social media icon 
 
 5. Inside `social-icons.scss` copy this code:
 
-```
+```scss
 // Social Icons
 //
 // This is the social-icons component. It's an example.

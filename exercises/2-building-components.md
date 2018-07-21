@@ -23,7 +23,7 @@ A typical component would have 3 files: `component-name.json`, `component-name.s
 
 3. Inside `eyebrow.json` paste the code snippet below:
 
-```
+```json
 {
   "eyebrow": "Community Lead",
   "classes": ""
@@ -59,7 +59,7 @@ Notice the ``{{ classes }}`` placeholder?  This will allow us to pass any css cl
 2. Inside `eyebrow.scss` paste the code snippet below:
 
 
-```
+```scss
 // Eyebrow
 //
 // This is the eyebrow component.
