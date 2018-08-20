@@ -93,7 +93,7 @@ you can grab the `shiny` theme in this repo and save it in `docroot/themes/custo
 
 #### Styleguide
 To view the styleguide navigate to `http://your-local/themes/custom/shiny/dist/style-guide/` -->
-### Training Outline
+<!-- ### Training Outline
 
 1. [Create new Drupal 8 Theme](exercises/1-new-theme.md)
 
@@ -116,9 +116,13 @@ To view the styleguide navigate to `http://your-local/themes/custom/shiny/dist/s
 
 This is an example of the component we will be building and integrating during this training.
 
-![Speaker Card Component](exercises/assets/speaker.png)
+![Speaker Card Component](exercises/assets/speaker.png) -->
 
----
+<!-- ---
 
 
-First Exercise:  [Create a new theme](exercises/1-new-theme.md)
+First Exercise:  [Create a new theme](exercises/1-new-theme.md) -->
+
+## Workshop exercises:
+
+[Component based development exercises](https://mariohernandez.gitbooks.io/components/content/).
