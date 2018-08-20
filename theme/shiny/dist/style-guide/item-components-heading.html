@@ -45,16 +45,18 @@
       <article role="main" class="kss-article">
       
         
-                            <div id="kssref-components-sample-list" class="kss-section kss-depth-2">
+                            <div id="kssref-components-heading" class="kss-section kss-depth-2">
             <div class="kss-style">
                             <h2 class="kss-title kss-title--level-2">
-                <a class="kss-title__permalink" href="#kssref-components-sample-list">
-                  Sample List
+                <a class="kss-title__permalink" href="#kssref-components-heading">
+                  Heading
                 </a>
               </h2>
 
                               <div class="kss-description">
-                  <p>This is the Sample List component. It&#39;s an example.</p>
+                  <p>This is the Heading component typically used as pages or sections title.<br />
+This is a dynamic component which can be altered to any heading level
+(i.e. h1 - h6)<br /> by passing an integer value to the &#39;heading_level&#39; variable.</p>
 
                 </div>
               
@@ -65,21 +67,11 @@
                 <div class="kss-modifier kss-modifier-original">
                   <div class="kss-modifier-example">
                     
-<section class="sample-list">
-  <h2 class="sample-list__heading">Sample List component</h2>
-    <article class="sample-list__item">
-    <h3>This is the first title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </article>
-    <article class="sample-list__item">
-    <h3>This is the second title</h3>
-    <p>Donec tristique varius tortor, a rutrum mauris rhoncus venenatis.</p>
-  </article>
-    <article class="sample-list__item">
-    <h3>This is the third title</h3>
-    <p>Etiam ac mauris vitae ante vulputate convallis non eu orci.</p>
-  </article>
-  </section>
+
+
+<h1 class="heading">
+      Welcome to BADCamp 2018
+  </h1>
 
                   </div>
                 </div>
@@ -87,16 +79,17 @@
                                                 <div class="kss-markup">
                   <button class="js-show-markup">Show Markup Example</button>
                   <template>
-                    <pre><code data-language="html">{{ attach_library(&#039;theme_name/sample-list&#039;) }}
-&lt;section class=&quot;sample-list&quot;&gt;
-  &lt;h2 class=&quot;sample-list__heading&quot;&gt;{{ heading }}&lt;/h2&gt;
-  {% for item in items %}
-  &lt;article class=&quot;sample-list__item&quot;&gt;
-    &lt;h3&gt;{{ item.title }}&lt;/h3&gt;
-    &lt;p&gt;{{ item.desc }}&lt;/p&gt;
-  &lt;/article&gt;
-  {% endfor %}
-&lt;/section&gt;
+                    <pre><code data-language="html">{{ attach_library(&#039;shiny/heading&#039;) }}
+
+{# Default to h2 (heading level 2) if no heading level is supplied. #}
+{% set heading_level = heading_level | default(2) %}
+&lt;h{{ heading_level }} class=&quot;heading{{ classes|default(&#039;&#039;) }}&quot;&gt;
+  {% if url|default() %}
+    &lt;a href=&quot;{{ url }}&quot;&gt;{{ title }}&lt;/a&gt;
+  {% else %}
+    {{ title }}
+  {% endif %}
+&lt;/h{{ heading_level }}&gt;
 </code></pre>
                   </template>
                 </div>

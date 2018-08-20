@@ -1,0 +1,18 @@
+// Hero
+//
+// This is the Hero component typically used on site's homepage.
+//
+// Markup: hero.twig
+//
+// Style guide: Components.Hero
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.hero {
+  background: #000;
+
+  &--light {
+    background: #fff;
+  }
+}
