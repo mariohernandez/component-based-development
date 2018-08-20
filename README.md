@@ -125,4 +125,4 @@ First Exercise:  [Create a new theme](exercises/1-new-theme.md) -->
 
 ## Workshop exercises:
 
-[Component based development exercises](https://mariohernandez.gitbooks.io/components/content/).
+[Component based development exercises](https://mariohernandez.gitbooks.io/components/content/kss-node/).
