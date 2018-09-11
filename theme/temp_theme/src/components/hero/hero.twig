@@ -1,4 +1,4 @@
-{{ attach_library('shiny/hero') }}
+{{ attach_library('temp_theme/hero') }}
 
 <section class="hero">
   <div class="hero__media">
@@ -7,7 +7,7 @@
   <div class="hero__content">
     {% if heading %}
       {%
-        include '@shiny/heading/heading.twig'  with {
+        include '@temp_theme/heading/heading.twig'  with {
           "title": heading.title,
           "url": "#",
           "heading_level": 1,
@@ -18,7 +18,7 @@
 
     {% if subheading %}
       {%
-        include '@shiny/heading/heading.twig'  with {
+        include '@temp_theme/heading/heading.twig'  with {
           "title": subheading.title,
           "heading_level": 2,
           "classes": 'hero__subheading',
@@ -33,13 +33,13 @@
     {% if watch_button or add_button %}
       <div class="hero__ctas">
         {%
-          include '@shiny/button/button.twig'  with {
+          include '@temp_theme/button/button.twig'  with {
             "button": watch_button,
             "classes": 'button--primary',
           } only
         %}
         {%
-          include '@shiny/button/button.twig'  with {
+          include '@temp_theme/button/button.twig'  with {
             "button": add_button,
           } only
         %}
