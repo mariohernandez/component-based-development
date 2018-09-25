@@ -1,0 +1,22 @@
+name: components-training
+recipe: drupal8
+config:
+  webroot: ./web
+
+services:
+  node:
+    type: node:9
+    globals:
+      gulp-cli: "latest"
+
+events:
+  post-start:
+    - appserver: cd $LANDO_MOUNT && composer install
+
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
