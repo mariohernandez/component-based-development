@@ -1,0 +1,20 @@
+uuid: 9589aa31-a7f9-4c4b-ae28-8a19d1cd0412
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nitflex_dev_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: nitflex_dev_theme_local_actions
+theme: nitflex_dev_theme
+region: help
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
