@@ -1,4 +1,4 @@
-name: components-training
+name: nitflex
 recipe: drupal8
 config:
   webroot: ./web
@@ -11,7 +11,7 @@ services:
 
 events:
   post-start:
-    - appserver: cd $LANDO_MOUNT && composer install
+    - appserver: composer install
 
 tooling:
   npm:
