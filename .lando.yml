@@ -1,0 +1,22 @@
+name: nitflex
+recipe: drupal8
+config:
+  webroot: ./web
+
+services:
+  node:
+    type: node:9
+    globals:
+      gulp-cli: "latest"
+
+events:
+  post-start:
+    - appserver: composer install
+
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
