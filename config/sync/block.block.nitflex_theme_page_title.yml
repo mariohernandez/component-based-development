@@ -1,15 +1,15 @@
-uuid: 66e98b74-e9c0-42c4-bb6d-eabe7410b0a5
+uuid: 79a8340b-b0b8-4d96-9ec8-e8562d919066
 langcode: en
 status: true
 dependencies:
   theme:
-    - nitflex_final_theme
+    - nitflex_theme
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: nitflex_final_theme_page_title
-theme: nitflex_final_theme
+id: nitflex_theme_page_title
+theme: nitflex_theme
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

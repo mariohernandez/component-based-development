@@ -1,17 +1,17 @@
-uuid: e367a504-0ea0-4c58-a411-a0a93b6c52b5
+uuid: 80436369-f99b-4658-9a8a-c7d39ad89c33
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - nitflex_final_theme
+    - nitflex_theme
 _core:
   default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: nitflex_final_theme_content
-theme: nitflex_final_theme
+id: nitflex_theme_content
+theme: nitflex_theme
 region: content
-weight: -5
+weight: -3
 provider: null
 plugin: system_main_block
 settings:

@@ -1,15 +1,15 @@
-uuid: b860dc1d-8771-41a5-904b-991b03597e8b
+uuid: e6e9afc0-6aed-44f7-8d72-d0a1f0c90bdd
 langcode: en
 status: true
 dependencies:
   theme:
-    - nitflex_final_theme
+    - nitflex_theme
 _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
-id: nitflex_final_theme_local_actions
-theme: nitflex_final_theme
+id: nitflex_theme_local_actions
+theme: nitflex_theme
 region: help
-weight: -3
+weight: -1
 provider: null
 plugin: local_actions_block
 settings:
