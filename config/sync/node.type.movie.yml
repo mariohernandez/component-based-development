@@ -1,0 +1,17 @@
+uuid: 236b513c-8729-4eb0-b28b-38c3cbc3d70b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Movie
+type: movie
+description: 'Movie listings for the Nitflex site.'
+help: 'Provide details for the movie.'
+new_revision: false
+preview_mode: 1
+display_submitted: false

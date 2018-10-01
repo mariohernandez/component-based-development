@@ -70,5 +70,6 @@ component-libraries:
 # semi-colon is the region's description used on the admin/structure/block page.
 regions:
   header: Header
+  help: Help
   content: Content
   footer: Footer

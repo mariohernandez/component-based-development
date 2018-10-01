@@ -1,4 +1,4 @@
-uuid: fad170de-2b6b-4c2c-bcf9-7a0a94fb02c7
+uuid: 8f6ff3f8-77ce-48b9-9118-01dbc64126da
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: nitflex_theme_help
 theme: nitflex_theme
 region: help
-weight: -2
+weight: 0
 provider: null
 plugin: help_block
 settings:

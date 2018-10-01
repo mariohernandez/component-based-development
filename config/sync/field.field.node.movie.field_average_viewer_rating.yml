@@ -1,0 +1,23 @@
+uuid: a10c5ebe-a24d-401e-bd9e-d4e1066f99cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_average_viewer_rating
+    - node.type.movie
+  module:
+    - options
+id: node.movie.field_average_viewer_rating
+field_name: field_average_viewer_rating
+entity_type: node
+bundle: movie
+label: 'Average Viewer Rating'
+description: 'Select an average viewer rating.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

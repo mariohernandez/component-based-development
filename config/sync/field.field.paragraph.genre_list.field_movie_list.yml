@@ -1,0 +1,55 @@
+uuid: b12ec724-3588-4f6f-8012-3410a731d72c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_movie_list
+    - paragraphs.paragraphs_type.genre_list
+    - views.view.movie_list
+  module:
+    - viewsreference
+id: paragraph.genre_list.field_movie_list
+field_name: field_movie_list
+entity_type: paragraph
+bundle: genre_list
+label: 'Movie List'
+description: 'Select the <strong>Movie List</strong> option above, and in the <strong>options</strong> below, provide the term IDs of the genres to include, separated by commas. You can find the term IDs for genres by visiting the Genre vocabulary page (<a href="/admin/structure/taxonomy/manage/genre/overview">/admin/structure/taxonomy/manage/genre/overview</a>), and viewing the ID number in the path for individual terms (e.g., <a href="/taxonomy/term/6">/taxonomy/term/6</a>)'
+required: true
+translatable: false
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: block_1
+    argument: null
+    title: 0
+    data: null
+    target_uuid: cee29256-3daf-44e1-9287-34fcc5e1296d
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    movie_list: movie_list
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

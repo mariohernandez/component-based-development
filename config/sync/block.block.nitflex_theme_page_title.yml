@@ -1,4 +1,4 @@
-uuid: 66e98b74-e9c0-42c4-bb6d-eabe7410b0a5
+uuid: 79a8340b-b0b8-4d96-9ec8-e8562d919066
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: nitflex_theme_page_title
 theme: nitflex_theme
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

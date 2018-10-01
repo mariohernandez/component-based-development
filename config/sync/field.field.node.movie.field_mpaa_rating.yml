@@ -1,0 +1,23 @@
+uuid: 5e9df5fe-2e5d-430a-aace-b93ad59664a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mpaa_rating
+    - node.type.movie
+  module:
+    - options
+id: node.movie.field_mpaa_rating
+field_name: field_mpaa_rating
+entity_type: node
+bundle: movie
+label: 'MPAA Rating'
+description: 'Provide the MPAA rating.'
+required: true
+translatable: false
+default_value:
+  -
+    value: PG
+default_value_callback: ''
+settings: {  }
+field_type: list_string

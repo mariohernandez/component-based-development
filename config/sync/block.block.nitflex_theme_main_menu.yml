@@ -1,4 +1,4 @@
-uuid: 3dd549f5-2969-4975-bdd7-7469d464d1df
+uuid: 66c43dc5-3ff6-4460-81e2-6de11588312c
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ _core:
 id: nitflex_theme_main_menu
 theme: nitflex_theme
 region: header
-weight: -5
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:

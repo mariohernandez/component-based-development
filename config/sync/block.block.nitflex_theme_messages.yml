@@ -1,4 +1,4 @@
-uuid: e9db7ca6-7554-4a4e-998a-12f982bf76d8
+uuid: bb5c3764-79d1-4214-bf41-a32fbe1a3c71
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: nitflex_theme_messages
 theme: nitflex_theme
 region: help
-weight: -5
+weight: -3
 provider: null
 plugin: system_messages_block
 settings:

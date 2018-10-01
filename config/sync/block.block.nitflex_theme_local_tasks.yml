@@ -1,4 +1,4 @@
-uuid: 7fd9b360-915b-4c50-9cf0-43a6eb2a6460
+uuid: c48cb136-a19e-444d-989d-306ea93467b0
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: nitflex_theme_local_tasks
 theme: nitflex_theme
 region: help
-weight: -4
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

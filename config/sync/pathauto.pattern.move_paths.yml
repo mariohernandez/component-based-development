@@ -1,0 +1,22 @@
+uuid: d81e1e7b-fc13-4aeb-8b69-5aa71090ea49
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: move_paths
+label: 'Move Paths'
+type: 'canonical_entities:node'
+pattern: 'movie/[node:title]'
+selection_criteria:
+  41107c32-fc1b-41f7-b650-11bb7823b69b:
+    id: node_type
+    bundles:
+      movie: movie
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 41107c32-fc1b-41f7-b650-11bb7823b69b
+selection_logic: and
+weight: -5
+relationships: {  }
