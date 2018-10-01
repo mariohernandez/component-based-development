@@ -1,0 +1,33 @@
+uuid: 72f7b872-ce17-41ff-a253-448182088524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.genre_list.field_list_title
+    - field.field.paragraph.genre_list.field_movie_list
+    - paragraphs.paragraphs_type.genre_list
+  module:
+    - viewsreference
+id: paragraph.genre_list.default
+targetEntityType: paragraph
+bundle: genre_list
+mode: default
+content:
+  field_list_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_movie_list:
+    weight: 1
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

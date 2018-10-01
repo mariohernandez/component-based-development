@@ -1,0 +1,32 @@
+uuid: 14e16b38-135e-4bb3-8a85-24a544070607
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: favorites
+label: Favorites
+bundles:
+  - movie
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Add To Favorites'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Remove From Favorites'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+    teaser: teaser
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

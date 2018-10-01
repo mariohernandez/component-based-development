@@ -1,0 +1,19 @@
+uuid: ccbe4dfc-3fea-47d7-bf97-b52c607b9fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_title
+    - paragraphs.paragraphs_type.genre_list
+id: paragraph.genre_list.field_list_title
+field_name: field_list_title
+entity_type: paragraph
+bundle: genre_list
+label: 'List Title'
+description: 'Provide a title for the list.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

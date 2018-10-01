@@ -1,0 +1,31 @@
+uuid: d2ecec61-7432-40f8-98af-5c666a33bb34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movie_list
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.genre_list
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_movie_list
+field_name: field_movie_list
+entity_type: node
+bundle: landing_page
+label: 'Movie Lists'
+description: 'Add movie lists based on genre.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      genre_list: genre_list
+    target_bundles_drag_drop:
+      genre_list:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

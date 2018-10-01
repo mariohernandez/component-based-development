@@ -1,0 +1,22 @@
+uuid: 3f3fb9e7-9906-4ce6-9109-d1b6de7ad380
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.movie
+  module:
+    - text
+id: node.movie.body
+field_name: body
+entity_type: node
+bundle: movie
+label: Synopsis
+description: 'Provide a synopsis of the movie.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
