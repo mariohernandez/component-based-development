@@ -24,6 +24,7 @@
 html {
   box-sizing: border-box;
   font-family: sans-serif; /* 1 */
+  font-size: 62.5%;
   line-height: 1.15; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
@@ -46,8 +47,9 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
+  @include font-stack-base;
   margin: 0;
-  font-size: 100%;
+  font-size: 1.4rem;
   line-height: 1.15;
   letter-spacing: 0.02em;
   color: $color-tundora;
@@ -75,7 +77,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1.25rem;
+  @include font-stack-secondary;
+  font-size: 2rem;
   margin: 0 0 1rem;
 }
 

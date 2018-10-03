@@ -6,7 +6,7 @@
 .tabs {
   list-style: none;
   margin: 0;
-  padding: 1rem 0;
+  padding: 20px 0;
   position: relative;
 }
 
@@ -16,7 +16,7 @@
 
     &::after {
       background-color: $color-silver;
-      bottom: 16px;
+      bottom: 20px;
       content: '';
       display: block;
       height: 1px;
@@ -29,14 +29,14 @@
 
   li {
     display: block;
-    font-size: 0.875rem;
+    font-size: 1.6rem;
     font-weight: $font-weight-bold;
-    margin: 0 0 0.5em;
+    margin: 0 0 10px;
     padding: 0;
 
     @include breakpoint($bp-sm) {
       display: inline-block;
-      margin: 0 0.5em 0 0;
+      margin: 0 10px 0 0;
     }
   }
 
@@ -45,7 +45,7 @@
     border: 1px solid $color-silver;
     color: $color-silver;
     display: block;
-    padding: 0.5em 1.5em;
+    padding: 10px 20px;
     text-decoration: none;
 
     @include breakpoint($bp-sm) {
@@ -78,8 +78,8 @@
 
   li {
     display: inline-block;
-    font-size: 0.875rem;
-    margin: 0.5rem 1rem 0.25rem 0;
+    font-size: 1.6rem;
+    margin: 10px 20px 5px 0;
   }
 
   a {
@@ -87,7 +87,7 @@
     border-bottom: 2px solid $color-alto;
     color: $color-silver;
     display: block;
-    padding: 0.5rem 0.75rem 0.25rem;
+    padding: 10px 15px 5px;
   }
 
   .is-active a,
@@ -101,7 +101,7 @@
 }
 
 .tabs__local-actions {
-  padding: 1rem 0;
+  padding: 20px 0;
 }
 
 .tabs__local-actions-links {

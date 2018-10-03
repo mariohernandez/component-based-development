@@ -48,6 +48,7 @@ base theme: stable
 # The "libraries:" section will add a library to _all_ pages.
 libraries:
   - nitflex_dev_theme/global
+  - nitflex_dev_theme/fonts
   # Example adding the webfonts library to every page.
   # See nitflex_dev_theme.libraries.yml for more info.
   #- nitflex_dev_theme/webfonts

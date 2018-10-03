@@ -11,6 +11,7 @@ html {
   box-sizing: border-box;
   font-family: sans-serif;
   /* 1 */
+  font-size: 62.5%;
   line-height: 1.15;
   /* 2 */
   -ms-text-size-adjust: 100%;
@@ -31,8 +32,9 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
   margin: 0;
-  font-size: 100%;
+  font-size: 1.4rem;
   line-height: 1.15;
   letter-spacing: 0.02em;
   color: #464646; }
@@ -58,7 +60,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1.25rem;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 2rem;
   margin: 0 0 1rem; }
 
 /* Grouping content
@@ -433,13 +436,13 @@ li {
 .tabs {
   list-style: none;
   margin: 0;
-  padding: 1rem 0;
+  padding: 20px 0;
   position: relative; }
 
 @media (min-width: 55em) {
   .tabs.primary::after {
     background-color: #bbb;
-    bottom: 16px;
+    bottom: 20px;
     content: '';
     display: block;
     height: 1px;
@@ -450,21 +453,21 @@ li {
 
 .tabs.primary li {
   display: block;
-  font-size: 0.875rem;
-  font-weight: bold;
-  margin: 0 0 0.5em;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 10px;
   padding: 0; }
   @media (min-width: 55em) {
     .tabs.primary li {
       display: inline-block;
-      margin: 0 0.5em 0 0; } }
+      margin: 0 10px 0 0; } }
 
 .tabs.primary a {
   background-color: #eee;
   border: 1px solid #bbb;
   color: #bbb;
   display: block;
-  padding: 0.5em 1.5em;
+  padding: 10px 20px;
   text-decoration: none; }
   @media (min-width: 55em) {
     .tabs.primary a {
@@ -489,15 +492,15 @@ li {
 
 .tabs.secondary li {
   display: inline-block;
-  font-size: 0.875rem;
-  margin: 0.5rem 1rem 0.25rem 0; }
+  font-size: 1.6rem;
+  margin: 10px 20px 5px 0; }
 
 .tabs.secondary a {
   background-color: transparent;
   border-bottom: 2px solid #ddd;
   color: #bbb;
   display: block;
-  padding: 0.5rem 0.75rem 0.25rem; }
+  padding: 10px 15px 5px; }
 
 .tabs.secondary .is-active a,
 .tabs.secondary a:focus,
@@ -508,7 +511,7 @@ li {
   text-decoration: none; }
 
 .tabs__local-actions {
-  padding: 1rem 0; }
+  padding: 20px 0; }
 
 .tabs__local-actions-links {
   margin: 0; }
