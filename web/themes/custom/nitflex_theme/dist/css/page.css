@@ -1,0 +1,9 @@
+.page {
+  overflow: hidden; }
+
+.page__container {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.page__help {
+  padding: 0 20px; }
