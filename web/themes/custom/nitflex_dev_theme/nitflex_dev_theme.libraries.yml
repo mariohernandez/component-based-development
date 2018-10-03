@@ -6,6 +6,8 @@ global:
     # base, layout, component, state, theme
     base:
       dist/css/global.css: {}
+    layout:
+      dist/css/page.css: {}
 
 
 # Example external library.
@@ -29,3 +31,8 @@ global:
 #   dependencies:
 #     - nitflex_dev_theme/clearfix
 #     - nitflex_dev_theme/visually-hidden
+
+tabs: 
+  css:
+    component:
+      dist/css/tabs.css: {}
