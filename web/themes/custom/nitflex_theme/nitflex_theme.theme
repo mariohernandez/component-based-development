@@ -44,11 +44,11 @@ function nitflex_theme_preprocess_page(array &$variables) {
 
 }
 
-/**
- * Implements hook_theme_suggestions_page_alter().
- */
 function nitflex_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-
+  // Add content type suggestions.
+  if (($node = \Drupal::request()->attributes->get('node')) && (strpos($_SERVER['REQUEST_URI'], "revisions") == false)) {
+    array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
+  }
 }
 
 /**
