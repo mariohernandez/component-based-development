@@ -1,0 +1,9 @@
+uuid: 956cf729-112b-433f-8951-4bf4e0fbf523
+langcode: en
+status: true
+dependencies: {  }
+id: genre_list
+label: 'Movie Genre List'
+icon_uuid: null
+description: 'A list of movies based on selected genres.'
+behavior_plugins: {  }

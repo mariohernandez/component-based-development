@@ -52,6 +52,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "kss": "^3.0.0-beta.23",
     "run-sequence": "^2.0.0",
-    "singularitygs": "^1.8.0"
+    "singularitygs": "^1.8.0",
+    "twig": "RobLoach/twig.js#compile"
   }
 }

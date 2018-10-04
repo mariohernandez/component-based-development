@@ -48,6 +48,7 @@ base theme: stable
 # The "libraries:" section will add a library to _all_ pages.
 libraries:
   - nitflex_theme/global
+  - nitflex_theme/fonts
   # Example adding the webfonts library to every page.
   # See nitflex_theme.libraries.yml for more info.
   #- nitflex_theme/webfonts
@@ -70,5 +71,6 @@ component-libraries:
 # semi-colon is the region's description used on the admin/structure/block page.
 regions:
   header: Header
+  help: Help
   content: Content
   footer: Footer

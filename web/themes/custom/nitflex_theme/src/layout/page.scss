@@ -1,0 +1,17 @@
+// General page layout styling.
+
+// Import site utilities.
+@import '../global/utils/init';
+
+.page {
+  overflow: hidden;
+}
+
+.page__container {
+  margin: 0 auto;
+  max-width: $content-width;
+}
+
+.page__help {
+  padding: 0 20px;
+}

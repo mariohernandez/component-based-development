@@ -29,16 +29,14 @@
 // Style guide: Type
 
 @mixin font-stack-base {
-  font-family: 'Neue Haas Grotesk W01 Disp', 'Arial', sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
 @mixin font-stack-secondary {
-  font-family: 'Neue Haas Grotesk W01', 'Arial', sans-serif;
+  font-family: 'Montserrat', 'Arial', sans-serif;
 }
 
-@mixin font-stack-tertiary {
-  font-family: 'Minion W01', 'Georgia', serif;
-}
-
-$font-weight-bold: bold;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-x-bold: 900;
 $font-italic: italic;

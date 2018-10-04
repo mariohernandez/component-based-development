@@ -1,0 +1,33 @@
+uuid: ebc06f09-7b08-4f2d-91b0-db460ea88ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.genre_list.field_list_title
+    - field.field.paragraph.genre_list.field_movie_list
+    - paragraphs.paragraphs_type.genre_list
+  module:
+    - viewsreference
+id: paragraph.genre_list.default
+targetEntityType: paragraph
+bundle: genre_list
+mode: default
+content:
+  field_list_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_movie_list:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

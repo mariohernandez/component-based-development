@@ -6,7 +6,13 @@ global:
     # base, layout, component, state, theme
     base:
       dist/css/global.css: {}
+    layout:
+      dist/css/page.css: {}
 
+fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Open+Sans:400,700': { type: external, minified: true }
 
 # Example external library.
 # webfonts:
@@ -29,3 +35,8 @@ global:
 #   dependencies:
 #     - nitflex_theme/clearfix
 #     - nitflex_theme/visually-hidden
+
+tabs: 
+  css:
+    component:
+      dist/css/tabs.css: {}
