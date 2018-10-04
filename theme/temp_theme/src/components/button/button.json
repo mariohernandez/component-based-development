@@ -1,6 +1,7 @@
 {
   "button": {
     "text": "Watch now",
-    "url": "#"
+    "url": "",
+    "type": ""
   }
 }

@@ -1,3 +1,15 @@
-<a href="{{ button.url }}" class="button {{ modifier_class }}{{ classes|default('') }}">
-  {{ button.text }}
-</a>
+{{ attach_library('temp_theme/button') }}
+
+{# If an href value is provided render as a link #}
+{% if button.url %}
+  <a href="{{ button.url }}" class="button {{ modifier_class }}{{ classes|default('') }}">
+    {{ button.text }}
+  </a>
+{# Otherwise render as a button. #}
+{% else %}
+  <button
+    type="{{ button.type|default('submit') }}"
+    class="button {{ modifier_class }}{{ classes|default('') }}">
+    {{ button.text }}
+  </button
+{% endif %}

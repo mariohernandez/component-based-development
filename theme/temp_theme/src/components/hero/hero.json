@@ -6,11 +6,12 @@
   },
   "add_button": {
     "text": "+ My list",
-    "url": "#"
+    "url": "",
+    "type": "submit"
   },
   "heading": {
     "title": "BADCamp",
-    "url": "#",
+    "url": "",
     "heading_level": "",
     "classes": ""
   },

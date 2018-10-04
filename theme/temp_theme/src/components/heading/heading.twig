@@ -1,11 +1,11 @@
 {{ attach_library('temp_theme/heading') }}
 
 {# Default to h2 (heading level 2) if no heading level is supplied. #}
-{% set heading_level = heading_level | default(2) %}
-<h{{ heading_level }} class="heading{{ classes|default('') }}">
-  {% if url|default() %}
-    <a href="{{ url }}">{{ title }}</a>
+{% set heading_level = heading.heading_level | default(3) %}
+<h{{ heading_level }} class="heading {{ heading.classes|default('') }}">
+  {% if heading.url %}
+    <a href="{{ heading.url }}">{{ heading.title }}</a>
   {% else %}
-    {{ title }}
+    {{ heading.title }}
   {% endif %}
 </h{{ heading_level }}>
