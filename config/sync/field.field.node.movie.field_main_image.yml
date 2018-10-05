@@ -12,7 +12,7 @@ field_name: field_main_image
 entity_type: node
 bundle: movie
 label: 'Main Image'
-description: 'Provide a main image for the movie.'
+description: 'Provide a main image for the movie. Optimum image size: 2200x1238'
 required: true
 translatable: false
 default_value: {  }

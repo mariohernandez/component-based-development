@@ -1,0 +1,15 @@
+uuid: 2e1b496d-baeb-4a71-94ea-a6f641242073
+langcode: en
+status: true
+dependencies: {  }
+name: 16_9_285x160
+label: '16:9 285x160'
+effects:
+  ea3a8b88-99d0-435b-86d9-4cb184b7bdf3:
+    uuid: ea3a8b88-99d0-435b-86d9-4cb184b7bdf3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 285
+      height: 160
+      anchor: center-center

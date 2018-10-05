@@ -20,3 +20,4 @@ content:
     region: content
 hidden:
   field_featured_movie: true
+  field_movie_list: true
