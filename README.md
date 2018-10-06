@@ -27,13 +27,13 @@ Lando is a free, open source, cross-platform, local development environment tool
 After following these steps, you should have an unstyled site Drupal site available locally at: http://nitflex.lndo.site:8000/.
 
 ### Install Front End Tooling
-- In your terminal app, navigate to the root level of the `nitflex_dev_theme` (from the root level of the repo run `cd web/themes/custom/nitflex_theme`)
+- In your terminal app, navigate to the root level of the `nitflex_dev_theme` (from the root level of the repo run `cd web/themes/custom/nitflex_dev_theme`)
 - Run: `lando npm install`. This will install the required front end tools (Node, Gulp, etc.)
 
 ### Log into the site and preview preview the final results
 - Go to: [http://nitflex.lndo.site:8000/user](http://nitflex.lndo.site:8000/user) and log in with username: `admin`, pw: `admin`.
-- Go to: [http://nitflex.lndo.site:8000/admin/appearance](http://nitflex.lndo.site:8000/admin/appearance) and set the default theme to be the Nitflex theme. Return to the homepage.
-- You should now see a styled version of the site! Switch the site back to the Nitflex DEV theme, and let's get crackin' making it look as pretty as the main Nitflex theme! 
+- Go to: [http://nitflex.lndo.site:8000/admin/appearance](http://nitflex.lndo.site:8000/admin/appearance) and set the default theme to be the **Nitflex** theme. Return to the homepage.
+- You should now see a styled version of the site! Switch the site back to the Nitflex **DEV** theme, and let's get crackin' making it look as pretty as the main Nitflex theme! 
 
 **NOTE**:  This is a full class and assistance with your local environment may be limited. We are leveraging Lando to help streamline the setup of a consistent local development environment.
 
