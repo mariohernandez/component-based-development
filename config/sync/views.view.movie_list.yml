@@ -29,7 +29,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -219,10 +219,11 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: 'List via Term ID'
     position: 1
     display_options:
       display_extenders: {  }
+      display_description: 'List of movie nodes based on a genre term ID'
     cache_metadata:
       max-age: -1
       contexts:

@@ -12,8 +12,8 @@ id: paragraph.genre_list.field_movie_list
 field_name: field_movie_list
 entity_type: paragraph
 bundle: genre_list
-label: 'Movie List'
-description: 'Select the <strong>Movie List</strong> option above, and in the <strong>options</strong> below, provide the term IDs of the genres to include, separated by commas. You can find the term IDs for genres by visiting the Genre vocabulary page (<a href="/admin/structure/taxonomy/manage/genre/overview">/admin/structure/taxonomy/manage/genre/overview</a>), and viewing the ID number in the path for individual terms (e.g., <a href="/taxonomy/term/6">/taxonomy/term/6</a>)'
+label: 'Movie List View'
+description: 'Select the <strong>Movie List</strong> option above, and in the <strong>options</strong> below, provide the term ID of the genres to include. You can find the term IDs for genres by visiting the Genre vocabulary page (<a href="/admin/structure/taxonomy/manage/genre/overview">/admin/structure/taxonomy/manage/genre/overview</a>), and viewing the ID number in the path for individual terms (e.g., <a href="/taxonomy/term/6">/taxonomy/term/6</a>)'
 required: true
 translatable: false
 default_value:
