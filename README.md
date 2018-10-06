@@ -16,7 +16,7 @@ Lando is a free, open source, cross-platform, local development environment tool
 `git clone git@github.com:mariohernandez/component-based-development.git`
 
 ### 3. After cloning this repo locally, run the following commands from the root level of the repository in your preferred terminal app:
-- `lando start`<br />_This will set up Lando, plus install Drupal and required contrib modules._
+- `lando start`<br />_This will set up Lando, plus pull down Drupal and required contrib modules._
 
 - `lando drush si -y config_installer --account-name=admin --account-pass=admin --db-url='mysql://drupal8:drupal8@database/drupal8'`<br />_This will do a basic installation of Drupal with some custom configuration._
 
@@ -24,7 +24,7 @@ Lando is a free, open source, cross-platform, local development environment tool
 
 - `lando db-import drupal8.export.gz`<br />_This will import a custom database that includes placeholder content for the demo site we'll use in the training exercises._
 
-After following these steps, you should have an unstyled site Drupal site available locally at: http://nitflex.lndo.site:8000/.
+After following these steps, you should have an unstyled Drupal site available locally at: http://nitflex.lndo.site:8000/.
 
 ### Install Front End Tooling
 - In your terminal app, navigate to the root level of the `nitflex_dev_theme` (from the root level of the repo run `cd web/themes/custom/nitflex_dev_theme`)
