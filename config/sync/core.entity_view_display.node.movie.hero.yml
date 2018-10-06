@@ -11,9 +11,10 @@ dependencies:
     - field.field.node.movie.field_mpaa_rating
     - field.field.node.movie.field_promo_sentence
     - node.type.movie
+    - responsive_image.styles.hero
   module:
-    - image
     - options
+    - responsive_image
     - user
 id: node.movie.hero
 targetEntityType: node
@@ -31,10 +32,10 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: hero
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
   field_mpaa_rating:
     weight: 2

@@ -11,7 +11,7 @@ services:
 
 events:
   post-start:
-    - appserver: composer install
+    - appserver: cd $LANDO_MOUNT && composer install
 
 tooling:
   npm:

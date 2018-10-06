@@ -1,0 +1,25 @@
+uuid: aa323169-1a8a-4c17-afbf-7c5c3d8ca7b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16_9_285x160
+    - image.style.16_9_450x253
+    - image.style.16_9_570x320
+    - image.style.16_9_900x506
+id: 4_col_row_16_9
+label: '4 col row - 16:9'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width: 768px) 50vw, (min-width: 1025px) 25vw, 100vw'
+      sizes_image_styles:
+        - 16_9_285x160
+        - 16_9_450x253
+        - 16_9_570x320
+        - 16_9_900x506
+breakpoint_group: responsive_image
+fallback_image_style: 16_9_285x160

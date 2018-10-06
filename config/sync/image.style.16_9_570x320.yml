@@ -1,0 +1,15 @@
+uuid: 81d561c3-e12a-4325-afba-8451c0b2163b
+langcode: en
+status: true
+dependencies: {  }
+name: 16_9_570x320
+label: '16:9 570x320'
+effects:
+  ebc0cca1-0565-4731-a606-0f3cb66f260d:
+    uuid: ebc0cca1-0565-4731-a606-0f3cb66f260d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 570
+      height: 320
+      anchor: center-center

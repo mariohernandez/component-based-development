@@ -11,9 +11,10 @@ dependencies:
     - field.field.node.movie.field_mpaa_rating
     - field.field.node.movie.field_promo_sentence
     - node.type.movie
+    - responsive_image.styles.4_col_row_16_9
   module:
-    - image
     - options
+    - responsive_image
     - text
     - user
 id: node.movie.teaser
@@ -44,12 +45,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_main_image:
-    type: image
+    type: responsive_image
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: 4_col_row_16_9
       image_link: ''
     third_party_settings: {  }
   field_mpaa_rating:

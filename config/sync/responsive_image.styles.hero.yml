@@ -1,0 +1,29 @@
+uuid: 9b677495-b36a-4b73-9af6-302f8c62072d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16_9_1200x675
+    - image.style.16_9_2200x1238
+    - image.style.16_9_285x160
+    - image.style.16_9_450x253
+    - image.style.16_9_570x320
+    - image.style.16_9_900x506
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - 16_9_1200x675
+        - 16_9_2200x1238
+        - 16_9_285x160
+        - 16_9_450x253
+        - 16_9_570x320
+        - 16_9_900x506
+breakpoint_group: responsive_image
+fallback_image_style: 16_9_285x160

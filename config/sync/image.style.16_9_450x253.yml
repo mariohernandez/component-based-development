@@ -1,0 +1,15 @@
+uuid: 71660f7b-905b-49e6-8199-1170d31f3393
+langcode: en
+status: true
+dependencies: {  }
+name: 16_9_450x253
+label: '16:9 450x253'
+effects:
+  8b2081ba-b843-4510-b415-7c2a09558e78:
+    uuid: 8b2081ba-b843-4510-b415-7c2a09558e78
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 253
+      anchor: center-center
