@@ -52,7 +52,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 4
+          items_per_page: 5
           offset: 0
       style:
         type: default
