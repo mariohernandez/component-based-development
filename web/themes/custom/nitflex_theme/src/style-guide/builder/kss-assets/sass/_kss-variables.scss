@@ -1,0 +1,47 @@
+// Variables for the style guide.
+
+// Colors
+$color-kss-white: #ffffff;
+$color-kss-x-light: #f5f5f5;
+$color-kss-light: #bbbbbb;
+$color-kss-mid: #595959;
+$color-kss-dark: #222222;
+$color-kss-black: #000000;
+
+// Code syntax colors
+$color-kss-blue: #0086B3;
+$color-kss-lt-blue: #86dcf9;
+$color-kss-green: #009926;
+$color-kss-navy: #000080;
+$color-kss-red: #990000;
+$color-kss-rose: #dd1144;
+$color-kss-teal: #008080;
+$color-kss-violet: #445588;
+$color-kss-yellow: #eae853;
+$color-kss-lt-yellow: #f1f0a6;
+
+// Breakpoints
+$bp-kss-xsm: 480px;
+$bp-kss-sm: 728px;
+$bp-kss-md: 1025px;
+$bp-kss-lg: 1200px;
+$bp-kss-xlg: 1480px;
+
+// Z-Index
+$zi-kss-header: 1000;
+$zi-kss-menu: 999;
+
+// Standard max-width of content wrappers
+$kss-content-w: 1200px;
+
+// Header colors
+$kss-header-bg: $color-kss-dark;
+$kss-header-text: $color-kss-white;
+
+// Menu colors
+$kss-menu-link: $color-kss-white;
+$kss-menu-link-active: $color-kss-lt-yellow;
+$kss-menu-dpdwn-bg: $color-kss-mid;
+
+// Default font family
+$kss-font-stack: sans-serif;

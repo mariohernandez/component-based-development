@@ -7,9 +7,18 @@
 var kss = require('kss');
 
 //=======================================================
+// Include gulp
+//=======================================================
+var gulp = require('gulp');
+
+//=======================================================
 // Include Our Plugins
 //=======================================================
-var path = require('path');
+var path    = require('path');
+var sass    = require('gulp-sass');
+var prefix  = require('gulp-autoprefixer');
+var rename  = require('gulp-rename');
+var sync    = require('browser-sync');
 
 // Export our tasks.
 module.exports = {
@@ -34,15 +43,32 @@ module.exports = {
       // keep adding the file here everytime you add a new component.
       // Drupal libraries should be leveraged for adding CSS per component.
       css: [
-        path.relative(
-          dirname + '/style-guide/',
-          dirname + '/all/all.css'
-        )
       ],
       js: [
       ],
       homepage: 'style-guide.md',
-      title: 'Style Guide'
+      title: 'Style Guide',
+      custom: ['Layout', 'Classes']
     });
+  },
+
+  // Compile style guide Sass.
+  sass: function() {
+    return gulp.src('./src/style-guide/builder/kss-assets/**/*.scss')
+      .pipe(sass({ outputStyle: 'nested' })
+        .on('error', sass.logError))
+      .pipe(prefix({
+        browsers: [
+          'last 2 versions',
+          'IE >= 10'
+        ],
+        cascade: false
+      }))
+      .pipe(rename(function (path) {
+        path.dirname = '';
+        return path;
+      }))
+      .pipe(gulp.dest('./src/style-guide/builder/kss-assets'))
+      .pipe(sync.stream({match: '**/*.css'}));
   }
 };

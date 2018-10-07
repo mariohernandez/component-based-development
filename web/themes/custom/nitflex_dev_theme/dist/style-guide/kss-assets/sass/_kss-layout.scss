@@ -1,0 +1,121 @@
+// Layout/structural styling
+
+.kss-layout__wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+.kss-layout__header {
+  align-items: center;
+  background-color: $color-kss-black;
+  display: flex;
+}
+
+.kss-layout__main-title {
+  color: $color-kss-white;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+  order: 2;
+}
+
+.kss-layout__main {
+  display: flex;
+  overflow: hidden;
+}
+
+.kss-layout__sidebar {
+  min-height: calc(100vh - 54px);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 0;
+
+  &::after {
+    background-color: $color-kss-light;
+    display: block;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+  }
+
+  .js-open & {
+    flex: 1 0 70%;
+    max-width: 70%;
+    width: 70%;
+
+    @include media-mw($bp-kss-xsm) {
+      flex: 1 0 auto;
+      max-width: 250px;
+      width: 250px;
+    }
+  }
+}
+
+.kss-layout__content-frame-wrapper {
+  background-color: $color-kss-light;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+
+  &.kss-active {
+    height: calc(100% - 50px);
+  }
+}
+
+.kss-layout__content-frame {
+  background-color: $color-kss-white;
+  border: 0;
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transition: width 200ms ease-in-out;
+  width: 100%;
+
+  &.kss-active {
+    height: 100%;
+  }
+}
+
+.kss-layout__main--home {
+  padding-top: 50px;
+
+  > .kss-inactive {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.kss-layout__content-wrapper {
+  flex: 1 0 100%;
+  width: 100%;
+}
+
+.kss-layout__content {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.kss-layout__content-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $kss-content-w;
+  padding: 4rem 2rem;
+}
+
+.kss-layout__content-title {
+  border-bottom: 1px solid $color-kss-light;
+  font-weight: normal;
+  line-height: 1.25;
+  margin: 0 0 4rem;
+  padding: 0 0.5rem 2rem;
+}

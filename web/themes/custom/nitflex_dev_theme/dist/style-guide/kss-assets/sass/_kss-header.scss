@@ -1,0 +1,37 @@
+// Header styling
+
+.kss-header {
+  align-items: center;
+  background-color: $kss-header-bg;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $zi-kss-header;
+}
+
+.kss-header__title-wrapper {
+  align-items: center;
+  display: flex;
+  order: 2;
+}
+
+.kss-header__title {
+  color: $kss-header-text;
+  font-family: $kss-font-stack;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  order: 2;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.kss-header__logo-wrapper {
+  box-sizing: border-box;
+  max-height: 50px;
+  padding: 5px 20px 5px 0;
+}

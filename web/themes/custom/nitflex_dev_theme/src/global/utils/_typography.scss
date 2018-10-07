@@ -1,32 +1,27 @@
-// Type
+// Typography
 //
-// Custom fonts are loaded via JavaScript provided by fonts.com.
+// Custom fonts are loaded via Google fonts.
 //
 // Markup:
-// <h3>Base</h3>
-// <h4>font-stack-base</h4>
-// <div style="font: 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 55 Roman </div>
-// <div style="font: italic 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 56 Italic </div>
-// <div style="font: 500 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 65 Medium </div>
-// <div style="font: bold 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 75 Bold </div>
-// <div style="font: bold italic 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 76 Bold Italic </div>
-// <h3>Secondary</h3>
-// <h4>font-stack-secondary</h4>
-// <div style="font: 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 45 Light </div>
-// <div style="font: italic 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 46 Light Italic </div>
-// <div style="font: 500 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 55 Roman </div>
-// <div style="font: bold 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 56 Italic </div>
-// <div style="font: bold italic 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 65 Medium </div>
-// <h3>Tertiary</h3>
-// <h4>font-stack-tertiary</h4>
-// <div style="font: 20px/2 'Minion W01'"> Minion® W01 Bold </div>
-// <div style="font: italic 20px/2 'Minion W01'"> Minion® W01 Bold Italic </div>
-// <div style="font: bold 20px/2 'Minion W01'"> Minion® W01 Italic </div>
-// <div style="font: bold italic 20px/2 'Minion W01'"> Minion® W01 Regular </div>
+// <h2>Base</h2>
+// <p><code>font-stack-base</code></p>
+// <div style="font: 20px/2 'Open Sans'"> Open Sans</div>
+// <div style="font: italic 20px/2 'Open Sans'"> Open Sans italic</div>
+// <div style="font: 700 20px/2 'Open Sans'"> Open Sans </div>
+// <div style="font: 700 italic 20px/2 'Open Sans'"> Open Sans italic </div>
+// <hr />
+// <h2>Secondary</h2>
+// <p><code>font-stack-secondary</code></p>
+// <div style="font: 20px/2 'Montserrat'"> Montserrat</div>
+// <div style="font: italic 20px/2 'Montserrat'"> Montserrat italic</div>
+// <div style="font: 700 20px/2 'Montserrat'"> Montserrat Bold</div>
+// <div style="font: 700 20px/2 'Montserrat'"> Montserrat Bold italic</div>
+// <div style="font: 900 20px/2 'Montserrat'"> Montserrat Black </div>
+// <div style="font: 900 italic 20px/2 'Montserrat'"> Montserrat Black italic</div>
 //
 // Weight: 999
 //
-// Style guide: Type
+// Style guide: General.typography
 
 @mixin font-stack-base {
   font-family: 'Open Sans', 'Arial', sans-serif;
