@@ -1,4 +1,4 @@
-# Nitflex Final Style Guide
+# Nitflex Theme Style Guide
 
 This application is a living style guide, generated from KSS documented styles.
 
