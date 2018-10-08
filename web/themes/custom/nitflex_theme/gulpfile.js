@@ -76,7 +76,19 @@ gulp.task('compress', function() {
 //=======================================================
 // Generate style guide
 //=======================================================
-gulp.task('styleguide', function() {
+gulp.task('styleguide', function(callback) {
+  runSequence(
+    'styleguide:sass',
+    'styleguide:generate',
+    callback
+  );
+});
+
+gulp.task('styleguide:sass', function() {
+  return taskStyleGuide.sass();
+});
+
+gulp.task('styleguide:generate', function() {
   return taskStyleGuide.generate(__dirname);
 });
 

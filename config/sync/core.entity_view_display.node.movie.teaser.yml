@@ -37,13 +37,6 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_genres:
-    type: entity_reference_entity_id
-    weight: 4
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_main_image:
     type: responsive_image
     weight: 0
@@ -61,10 +54,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   flag_favorites:
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_genres: true
   field_promo_sentence: true
   links: true

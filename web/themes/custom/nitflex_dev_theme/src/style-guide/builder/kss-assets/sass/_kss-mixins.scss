@@ -1,0 +1,8 @@
+// Mixins for KSS styling
+
+// Simple min-width media query.
+@mixin media-mw($bp-value) {
+  @media only screen and (min-width: $bp-value){
+    @content;
+  }
+}

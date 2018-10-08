@@ -7,10 +7,12 @@
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../all/all.css">
   {{ styles|raw }}
 </head>
-<body class="kss-body{{ homepage ? ' kss-body--homepage' }}{{ sections[0].layout == 'page' ? ' kss-body--page' }}{{ sections[0].classes ? ' ' ~ sections[0].classes }}">
+<body class="kss-body{{ homepage ? ' kss-body--homepage' }}{{ sections[0].layout == 'page' ? ' kss-body--page ' ~ sections[0].classes }}">
   {% if homepage %}
+    <a href="#kss-main-content" class="kss-visually-hidden kss-focusable">Skip to main content</a>
     <header class="kss-header">
       <div class="kss-header__title-wrapper">
         <h1 class="kss-header__title">{{ options.title }}</h1>
@@ -18,7 +20,6 @@
           {#
             Include custom logo here.
           #}
-          {{ test_title }}
         </div>
       </div>
       <nav class="kss-menu">
@@ -30,7 +31,7 @@
         </button>
         <ul class="kss-menu__list" aria-hidden="false" id="kss-main-menu">
           <li class="kss-menu__list-item kss-menu__list-item--home">
-            <a class="kss-menu__list-item-link" href="./index.html">
+            <a class="kss-menu__list-item-link" href="./index.html?">
               <span class="kss-menu__list-item-name">Overview</span>
             </a>
           </li>
@@ -95,6 +96,7 @@
       </ul>
     </header>
     <main class="kss-layout__main--home" aria-label="Content">
+      <a id="kss-main-content" tabindex="-1"></a>
       <div class="kss-layout__content-frame-wrapper">
         <iframe class="kss-layout__content-frame"></iframe>
       </div>
@@ -120,7 +122,7 @@
               <div class="kss-item kss-item--depth-{{ section.depth }}{{ section.classes ? ' ' ~ section.classes }}" id="kss-ref-{{ section.referenceURI }}">
 
                 <div class="kss-item__overview-wrapper">
-                  <h2 class="kss-item__title{{ section.description is empty ? ' no-description' }}">{{ section.header }}</h2>
+                  <h2 class="kss-item__title{{ section.description is empty ? ' no-description' }}"><a href="item-{{ section.referenceURI }}.html" target="_blank" aria-label="View standalone page of {{ section.header }} in a new tab.">{{ section.header }}</a></h2>
                   {% if section.description %}
                     <div class="kss-item__description">
                       {{ section.description|raw }}
@@ -175,7 +177,7 @@
                         <dd class="kss-item__markup-example-content kss-syntax-wrapper">
                           <pre>
                             <code data-language="html">
-                              {{ section.markup|escape('html') }}
+                              {{- section.markup|escape('html') -}}
                             </code>
                           </pre>
                         </dd>
@@ -202,12 +204,27 @@
       {% endfor %}
     {% endif %}
   {% endif %}
-  <script src="kss-assets/jquery.min.js"></script>
+  <!-- SCRIPTS -->
+  <!-- Fake drupalSettings -->
+  <!--
+  <script type="application/json" data-drupal-selector="drupal-settings-json">
+  </script>
+  -->
+  <!-- / Fake drupalSettings -->
+  <script src="/core/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/core/assets/vendor/jquery-once/jquery.once.min.js"></script>
+  <script src="/core/assets/vendor/domready/ready.min.js"></script>
+  <script src="/core/misc/drupalSettingsLoader.js"></script>
+  <script src="/core/misc/drupal.js"></script>
+  <script src="/core/misc/drupal.init.js"></script>
+  <script src="/core/assets/vendor/picturefill/picturefill.min.js"></script>
   {% if homepage %}
     <script src="kss-assets/kss-menu.js"></script>
   {% else %}
     <script src="kss-assets/rainbow.min.js"></script>
   {% endif %}
+  <!-- BEGIN: Component js -->
+  <!-- END: Component js -->
   {{ scripts|raw }}
   <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>

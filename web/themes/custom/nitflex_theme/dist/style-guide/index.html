@@ -3,45 +3,106 @@
 <head>
   <meta charset="utf-8">
   <title>Style Guide</title>
-
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../all/all.css">
-
+  
 </head>
-<body id="kss-node">
-  <div class="kss-wrapper">
-
-    <div class="kss-sidebar">
-      <div class="kss-sidebar-inner">
-        <header class="kss-header">
-          <h1 class="kss-doc-title">Style Guide</h1>
-        </header>
-        <nav class="kss-nav">
-          <ul class="kss-menu">
-            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
-                          <li class="kss-menu-item">
-                <a href="section-icons.html"><span class="kss-ref">1</span><span class="kss-name">Icons</span></a>
-                              </li>
-                          <li class="kss-menu-item">
-                <a href="section-colors.html"><span class="kss-ref">2</span><span class="kss-name">Colors</span></a>
-                              </li>
-                          <li class="kss-menu-item">
-                <a href="section-type.html"><span class="kss-ref">3</span><span class="kss-name">Type</span></a>
-                              </li>
-                        <li><button class="kss-menu-full-width js-full-width" title="Remove navigation and padding to show what a component looks like at full page width.">Remove Navigation</button></li>
-          </ul>
-        </nav>
+<body class="kss-body kss-body--homepage">
+      <a href="#kss-main-content" class="kss-visually-hidden kss-focusable">Skip to main content</a>
+    <header class="kss-header">
+      <div class="kss-header__title-wrapper">
+        <h1 class="kss-header__title">Style Guide</h1>
+        <div class="kss-header__logo-wrapper">
+          
+        </div>
       </div>
-    </div>
-
-    <div class="kss-content">
-      <article role="main" class="kss-article">
-              <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-          <h1>Nitflex Theme Style Guide</h1>
+      <nav class="kss-menu">
+        <button class="kss-menu__toggle" aria-labeledby="Menu toggle" aria-expanded="true" aria-controls="kss-main-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          Menu
+        </button>
+        <ul class="kss-menu__list" aria-hidden="false" id="kss-main-menu">
+          <li class="kss-menu__list-item kss-menu__list-item--home">
+            <a class="kss-menu__list-item-link" href="./index.html?">
+              <span class="kss-menu__list-item-name">Overview</span>
+            </a>
+          </li>
+                      <li class="kss-menu__list-item kss-menu__list-item--section">
+              <a class="kss-menu__list-item-link" href="section-general.html" role="button" aria-controls="kss-menu-child-menu-1" aria-expanded="false">
+                <span class="kss-menu__list-item-ref">1.0</span>
+                <span class="kss-menu__list-item-name">General</span>
+              </a>
+                              <ul class="kss-menu__list--child" id="kss-menu-child-menu-1" aria-hidden="true">
+                                      <li class="kss-menu__list-item kss-menu__list-item--page">
+                      <a class="kss-menu__list-item-link" href="index.html?item=general-icons" data-item="general-icons" data-level="child">
+                        <span class="kss-menu__list-item-ref">
+                          1.1
+                        </span>
+                        <span class="kss-menu__list-item-name">
+                          Icons
+                        </span>
+                      </a>
+                    </li>
+                                      <li class="kss-menu__list-item kss-menu__list-item--page">
+                      <a class="kss-menu__list-item-link" href="index.html?item=general-colors" data-item="general-colors" data-level="child">
+                        <span class="kss-menu__list-item-ref">
+                          1.2
+                        </span>
+                        <span class="kss-menu__list-item-name">
+                          Colors
+                        </span>
+                      </a>
+                    </li>
+                                      <li class="kss-menu__list-item kss-menu__list-item--page">
+                      <a class="kss-menu__list-item-link" href="index.html?item=general-typography" data-item="general-typography" data-level="child">
+                        <span class="kss-menu__list-item-ref">
+                          1.3
+                        </span>
+                        <span class="kss-menu__list-item-name">
+                          Typography
+                        </span>
+                      </a>
+                    </li>
+                                  </ul>
+                          </li>
+                  </ul>
+      </nav>
+      
+            <ul class="kss-breakpoint-menu">
+                  <li class="kss-breakpoint-menu__item">
+            <button class="kss-breakpoint-menu__button" aria-labeledby="Resize content frame width to small" data-bp-value="375">small</button>
+          </li>
+                  <li class="kss-breakpoint-menu__item">
+            <button class="kss-breakpoint-menu__button" aria-labeledby="Resize content frame width to medium" data-bp-value="768">medium</button>
+          </li>
+                  <li class="kss-breakpoint-menu__item">
+            <button class="kss-breakpoint-menu__button" aria-labeledby="Resize content frame width to large" data-bp-value="1025">large</button>
+          </li>
+                  <li class="kss-breakpoint-menu__item">
+            <button class="kss-breakpoint-menu__button" aria-labeledby="Resize content frame width to x-large" data-bp-value="1480">x-large</button>
+          </li>
+                  <li class="kss-breakpoint-menu__item">
+            <button class="kss-breakpoint-menu__button kss-active" aria-labeledby="Resize content frame width to full" data-bp-value="full">full</button>
+          </li>
+      </ul>
+    </header>
+    <main class="kss-layout__main--home" aria-label="Content">
+      <a id="kss-main-content" tabindex="-1"></a>
+      <div class="kss-layout__content-frame-wrapper">
+        <iframe class="kss-layout__content-frame"></iframe>
+      </div>
+      <section class="kss-layout__content-wrapper">
+        <article role="main" class="kss-layout__content">
+          <div class="kss-item">
+            <div class="kss-item__overview-wrapper kss-item__overview-wrapper--home">
+              <h2 class="kss-item__title">Overview</h2>
+              <div class="kss-item__description">
+                <h1>Nitflex Theme Style Guide</h1>
 <p>This application is a living style guide, generated from KSS documented styles.</p>
 <h2>Getting Started</h2>
 <p>If you haven't yet, install nvm:
@@ -68,28 +129,30 @@ https://github.com/creationix/nvm</p>
 <p><code>npm run clean</code></p>
 <p><em>This will perform a one-time deletion of all compiled files within the dist/ directory.</em></p>
 
-        </div>
-            </article>
-    </div>
-</div>
-
-<!-- SCRIPTS -->
-<!-- Fake drupalSettings -->
-<script type="application/json" data-drupal-selector="drupal-settings-json">
-  {}
-</script>
-<!-- / Fake drupalSettings -->
-<script src="/core/assets/vendor/jquery/jquery.min.js"></script>
-<script src="/core/assets/vendor/jquery-once/jquery.once.min.js"></script>
-<script src="/core/assets/vendor/domready/ready.min.js"></script>
-<script src="/core/misc/drupalSettingsLoader.js"></script>
-<script src="/core/misc/drupal.js"></script>
-<script src="/core/misc/drupal.init.js"></script>
-<script src="kss-assets/kss.js"></script>
-<script src="kss-assets/rainbow.min.js"></script>
-<script src="kss-assets/main.js"></script>
-
-
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- SCRIPTS -->
+  <!-- Fake drupalSettings -->
+  <!--
+  <script type="application/json" data-drupal-selector="drupal-settings-json">
+  </script>
+  -->
+  <!-- / Fake drupalSettings -->
+  <script src="/core/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/core/assets/vendor/jquery-once/jquery.once.min.js"></script>
+  <script src="/core/assets/vendor/domready/ready.min.js"></script>
+  <script src="/core/misc/drupalSettingsLoader.js"></script>
+  <script src="/core/misc/drupal.js"></script>
+  <script src="/core/misc/drupal.init.js"></script>
+  <script src="/core/assets/vendor/picturefill/picturefill.min.js"></script>
+      <script src="kss-assets/kss-menu.js"></script>
+    <!-- BEGIN: Component js -->
+  <!-- END: Component js -->
+  
+  <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

@@ -17,6 +17,12 @@
   const $bpMenu = $('.kss-breakpoint-menu');
   const $bpLink = $('.kss-breakpoint-menu__button');
 
+  // Adding cache busting query string to links.
+  $('.kss-menu__list-item-link').each(function(i, v) {
+    const url = $(v).attr('href');
+    $(v).attr('href', url + '&c=' + Date.now());
+  });
+
   // 'item' query string.
   const match = RegExp('[?&]item=([^&]*)').exec(window.location.search);
 
