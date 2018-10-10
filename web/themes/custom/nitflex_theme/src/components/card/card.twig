@@ -1,0 +1,29 @@
+{{ attach_library('nitflex_theme/card') }}
+
+<article class="card{{ classes|default('') }}">
+ <div class="card__image">
+   {{ image }}
+   <button class="card__icon js-add-to-list" aria-label="Add to watch list">
+   </button>
+ </div>
+ <div class="card__content">
+   {%
+     include '@nitflex_dev_theme/heading/heading.twig' with {
+       "title": heading.title,
+       "url": heading.url,
+       "heading_level": 3,
+       "classes": 'card__heading'
+     } only
+   %}
+   {% if rating %}
+     <div class="card__rating">
+       {{ rating }}
+     </div>
+   {% endif %}
+   {% if teaser %}
+     <div class="card__teaser">
+       {{ teaser }}
+     </div>
+   {% endif %}
+ </div>
+</article>

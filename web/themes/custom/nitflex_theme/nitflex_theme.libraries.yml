@@ -36,7 +36,32 @@ fonts:
 #     - nitflex_theme/clearfix
 #     - nitflex_theme/visually-hidden
 
-tabs: 
+button:
+  css:
+    component:
+      dist/css/button.css: {}
+
+card:
+  css:
+    component:
+      dist/css/card.css: {}
+  js:
+    dist/js/card.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+eyebrow:
+  css:
+    component:
+      dist/css/eyebrow.css: {}
+
+heading:
+  css:
+    component:
+      dist/css/heading.css: {}
+
+tabs:
   css:
     component:
       dist/css/tabs.css: {}

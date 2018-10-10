@@ -1,0 +1,11 @@
+{
+ "image": "<img src='../assets/jarassic-world.jpg' alt='' />",
+ "heading": {
+   "title": "Movie title",
+   "url": "#",
+   "heading_level": 4,
+   "classes": ""
+ },
+ "rating": "8/10",
+ "teaser": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
+}
