@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../all/all.css">
+  
+</head>
+<body class="kss-body">
+            <main class="kss-layout__main js-open" aria-label="Content">
+        <section class="kss-layout__content-wrapper">
+          <article role="main" class="kss-layout__content">
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-button">
+
+                <div class="kss-item__overview-wrapper">
+                  <h2 class="kss-item__title"><a href="item-components-button.html" target="_blank" aria-label="View standalone page of Button in a new tab.">Button</a></h2>
+                                      <div class="kss-item__description">
+                      <p>This is the button component.</p>
+
+                    </div>
+                                                    </div>
+
+                                  <div class="kss-item__example-wrapper">
+                    <div class="kss-item__example">
+                      
+
+
+  <button
+    type="submit"
+    class="button">
+    Watch now
+  </button
+
+                    </div>
+                                          <div class="kss-item__modifier-details">
+                        <div class="kss-item__modifier-name">
+                          .button--primary
+                        </div>
+                        <div class="kss-item__modifier-description">
+                          A button variation with strong styles.
+                        </div>
+                      </div>
+                      <div class="kss-item__example kss-item__example--modifier">
+                        
+
+
+  <button
+    type="submit"
+    class="button">
+    Watch now
+  </button
+
+                      </div>
+                                      </div>
+
+                  <div class="kss-item__details-wrapper">
+                      <dl class="kss-item__markup-example">
+                        <dt class="kss-item__markup-example-title">Markup Details</dt>
+                        <dd class="kss-item__markup-example-content kss-syntax-wrapper">
+                          <pre>
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/button&#039;) }}
+
+{# If an url value is provided render as a link #}
+{% if button.url %}
+  &lt;a href=&quot;{{ button.url }}&quot; class=&quot;button&quot;&gt;
+    {{ button.text }}
+  &lt;/a&gt;
+{# Otherwise render as a button. #}
+{% else %}
+  &lt;button
+    type=&quot;{{ button.type|default(&#039;submit&#039;) }}&quot;
+    class=&quot;button&quot;&gt;
+    {{ button.text }}
+  &lt;/button
+{% endif %}
+</code>
+                          </pre>
+                        </dd>
+                      </dl>                    </div>
+                                                </div>
+                      </article>
+        </section>
+      </main>
+        <!-- SCRIPTS -->
+  <!-- Fake drupalSettings -->
+  <!--
+  <script type="application/json" data-drupal-selector="drupal-settings-json">
+  </script>
+  -->
+  <!-- / Fake drupalSettings -->
+  <script src="/core/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/core/assets/vendor/jquery-once/jquery.once.min.js"></script>
+  <script src="/core/assets/vendor/domready/ready.min.js"></script>
+  <script src="/core/misc/drupalSettingsLoader.js"></script>
+  <script src="/core/misc/drupal.js"></script>
+  <script src="/core/misc/drupal.init.js"></script>
+  <script src="/core/assets/vendor/picturefill/picturefill.min.js"></script>
+      <script src="kss-assets/rainbow.min.js"></script>
+    <!-- BEGIN: Component js -->
+  <!-- END: Component js -->
+  
+  <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

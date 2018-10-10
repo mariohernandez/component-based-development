@@ -1,0 +1,6 @@
+.eyebrow {
+  display: inline-block;
+  letter-spacing: 0.15rem;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap; }

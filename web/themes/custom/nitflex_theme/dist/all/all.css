@@ -422,6 +422,47 @@ li {
   padding: 0;
   list-style: none; }
 
+.button,
+button {
+  background: transparent;
+  border: 2px solid #FFF;
+  border-radius: 44px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 40px;
+  text-decoration: none;
+  -webkit-transition: border 0.125s ease, background 0.125s ease;
+  -o-transition: border 0.125s ease, background 0.125s ease;
+  transition: border 0.125s ease, background 0.125s ease;
+  white-space: nowrap; }
+  .button:hover, .button:focus,
+  button:hover,
+  button:focus {
+    background: #FFF;
+    color: #000; }
+  .button.button--primary,
+  button.button--primary {
+    background: #e50914;
+    border-color: #e50914;
+    color: #FFF; }
+    .button.button--primary:hover, .button.button--primary:focus,
+    button.button--primary:hover,
+    button.button--primary:focus {
+      background: transparent;
+      color: #e50914; }
+
+.eyebrow {
+  display: inline-block;
+  letter-spacing: 0.15rem;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap; }
+
+.heading {
+  line-height: 1.3; }
+
 
 .page {
   overflow: hidden; }
