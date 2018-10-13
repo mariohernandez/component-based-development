@@ -13,10 +13,12 @@
     {% if heading %}
       {%
         include '@nitflex_theme/heading/heading.twig' with {
-          "title": heading.title,
-          "url": heading.url,
-          "heading_level": 3,
-          "classes": 'card__heading'
+          "heading": {
+            "title": heading.title,
+            "url": "#",
+            "heading_level": 3,
+            "classes": 'card__heading'
+          }
         } only
       %}
     {% endif %}

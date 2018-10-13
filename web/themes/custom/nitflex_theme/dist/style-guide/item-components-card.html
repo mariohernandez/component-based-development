@@ -30,7 +30,7 @@
 
 <article class="card">
   <div class="card__cover-image">
-    <img src='../assets/jarassic-world.jpg' alt='' />
+    <img src='../assets/action-3.jpg' alt='' />
     <button class="card__icon js-add-to-list" aria-label="Add to watch list">
     </button>
   </div>
@@ -39,9 +39,9 @@
 
 
 
-<h2 class="heading ">
-      
-  </h2>
+<h3 class="heading card__heading">
+      <a href="#">Movie title goes here</a>
+  </h3>
               <div class="card__promo">
         Opening this fall
       </div>
@@ -83,10 +83,12 @@
     {% if heading %}
       {%
         include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-          &quot;title&quot;: heading.title,
-          &quot;url&quot;: heading.url,
-          &quot;heading_level&quot;: 3,
-          &quot;classes&quot;: &#039;card__heading&#039;
+          &quot;heading&quot;: {
+            &quot;title&quot;: heading.title,
+            &quot;url&quot;: &quot;#&quot;,
+            &quot;heading_level&quot;: 3,
+            &quot;classes&quot;: &#039;card__heading&#039;
+          }
         } only
       %}
     {% endif %}
