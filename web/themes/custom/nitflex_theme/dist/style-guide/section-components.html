@@ -103,7 +103,7 @@
                     <div class="kss-item__example">
                       
 
-<article class="card">
+<article class="card ">
   <div class="card__cover-image">
     <img src='../assets/action-3.jpg' alt='' />
     <button class="card__icon js-add-to-list" aria-label="Add to watch list">
@@ -111,12 +111,14 @@
   </div>
     <div class="card__content">
           
+        
 
 
 
-<h3 class="heading card__heading">
+<h3 class="heading">
       <a href="#">Movie title goes here</a>
   </h3>
+      
               <div class="card__promo">
         Opening this fall
       </div>
@@ -145,7 +147,7 @@
                           <pre>
                             <code data-language="html">{{ attach_library(&#039;nitflex_theme/card&#039;) }}
 
-&lt;article class=&quot;card{{ classes|default(&#039;&#039;) }}&quot;&gt;
+&lt;article class=&quot;card {{ attributes ? attributes.class }}&quot;{{ attributes ? attributes|without(class) }}&gt;
 {% if cover_image %}
   &lt;div class=&quot;card__cover-image&quot;&gt;
     {{ cover_image }}
@@ -156,16 +158,18 @@
  {% if heading or average_rating or genre or synopsis or mpaa_rating or promo_sentence %}
   &lt;div class=&quot;card__content&quot;&gt;
     {% if heading %}
-      {%
-        include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-          &quot;heading&quot;: {
-            &quot;title&quot;: heading.title,
-            &quot;url&quot;: &quot;#&quot;,
-            &quot;heading_level&quot;: 3,
-            &quot;classes&quot;: &#039;card__heading&#039;
-          }
-        } only
-      %}
+      {{ title_prefix }}
+        {%
+          include &#039;@nitflex_theme/heading/heading.twig&#039; with {
+            &quot;heading&quot;: {
+              &quot;title&quot;: heading.title,
+              &quot;url&quot;: &quot;#&quot;,
+              &quot;heading_level&quot;: 3,
+              &quot;classes&quot;: &#039;card__heading&#039;
+            }
+          } only
+        %}
+      {{ title_suffix }}
     {% endif %}
     {% if promo_sentence %}
       &lt;div class=&quot;card__promo&quot;&gt;
@@ -248,7 +252,7 @@
 
 
 
-<h2 class="heading ">
+<h2 class="heading">
       <a href="#">Back to being BAD</a>
   </h2>
 
@@ -265,7 +269,7 @@
 {# Default to h2 (heading level 2) if no heading level is supplied. #}
 {% set heading_level = heading.heading_level | default(2) %}
 
-&lt;h{{ heading_level }} class=&quot;heading {{ heading.classes|default(&#039;&#039;) }}&quot;&gt;
+&lt;h{{ heading_level }} class=&quot;heading&quot;&gt;
   {% if heading.url %}
     &lt;a href=&quot;{{ heading.url }}&quot;&gt;{{ heading.title }}&lt;/a&gt;
   {% else %}

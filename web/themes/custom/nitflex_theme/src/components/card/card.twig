@@ -1,6 +1,6 @@
 {{ attach_library('nitflex_theme/card') }}
 
-<article class="card{{ classes|default('') }}">
+<article class="card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
 {% if cover_image %}
   <div class="card__cover-image">
     {{ cover_image }}
@@ -11,16 +11,18 @@
  {% if heading or average_rating or genre or synopsis or mpaa_rating or promo_sentence %}
   <div class="card__content">
     {% if heading %}
-      {%
-        include '@nitflex_theme/heading/heading.twig' with {
-          "heading": {
-            "title": heading.title,
-            "url": "#",
-            "heading_level": 3,
-            "classes": 'card__heading'
-          }
-        } only
-      %}
+      {{ title_prefix }}
+        {%
+          include '@nitflex_theme/heading/heading.twig' with {
+            "heading": {
+              "title": heading.title,
+              "url": "#",
+              "heading_level": 3,
+              "classes": 'card__heading'
+            }
+          } only
+        %}
+      {{ title_suffix }}
     {% endif %}
     {% if promo_sentence %}
       <div class="card__promo">
