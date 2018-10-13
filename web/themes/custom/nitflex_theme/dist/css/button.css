@@ -1,5 +1,4 @@
-.button,
-button {
+.button {
   background: transparent;
   border: 2px solid #FFF;
   border-radius: 44px;
@@ -13,18 +12,19 @@ button {
   -o-transition: border 0.125s ease, background 0.125s ease;
   transition: border 0.125s ease, background 0.125s ease;
   white-space: nowrap; }
-  .button:hover, .button:focus,
-  button:hover,
-  button:focus {
+  .button.add-to-watch-list {
+    background: #000; }
+    .button.add-to-watch-list:hover, .button.add-to-watch-list:focus {
+      background: #e50914;
+      border-color: #e50914;
+      color: #FFF; }
+  .button:hover, .button:focus {
     background: #FFF;
     color: #000; }
-  .button.button--primary,
-  button.button--primary {
+  .button.button--primary {
     background: #e50914;
     border-color: #e50914;
     color: #FFF; }
-    .button.button--primary:hover, .button.button--primary:focus,
-    button.button--primary:hover,
-    button.button--primary:focus {
+    .button.button--primary:hover, .button.button--primary:focus {
       background: transparent;
       color: #e50914; }
