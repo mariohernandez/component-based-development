@@ -11,7 +11,7 @@ id: node.movie.field_main_image
 field_name: field_main_image
 entity_type: node
 bundle: movie
-label: 'Main Image'
+label: 'Cover Image'
 description: 'Provide a main image for the movie. Optimum image size: 2200x1238'
 required: true
 translatable: false

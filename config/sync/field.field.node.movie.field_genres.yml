@@ -10,7 +10,7 @@ id: node.movie.field_genres
 field_name: field_genres
 entity_type: node
 bundle: movie
-label: Genres
+label: Genre
 description: 'Select the appropriate genres for the movie.'
 required: true
 translatable: false
