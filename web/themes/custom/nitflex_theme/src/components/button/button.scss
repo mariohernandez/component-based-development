@@ -11,8 +11,7 @@
 // Import site utilities.
 @import '../../global/utils/init';
 
-.button,
-button {
+.button {
   background: transparent;
   border: 2px solid $color-white;
   border-radius: 44px;
@@ -24,6 +23,17 @@ button {
   text-decoration: none;
   transition: border 0.125s ease, background 0.125s ease;
   white-space: nowrap;
+
+  &.add-to-watch-list {
+    background: $color-black;
+
+    &:hover,
+    &:focus {
+      background: #e50914;
+      border-color: #e50914;
+      color: $color-white;
+    }
+  }
 
   &:hover,
   &:focus {
