@@ -23,21 +23,21 @@
           {{ title_suffix }}
         </div>
       {% endif %}
+      {% if promo_text %}
+        <div class="featured-movie__promo">
+          {%
+            include '@nitflex_theme/eyebrow/eyebrow.twig' with {
+              "eyebrow": promo_text
+            }
+          %}
+        </div>
+      {% endif %}
       {% if mpaa_rating %}
         <div class="featured-movie__mpaa-rating">
           <span>{{ 'Rated '|t }}</span>
           {%
             include '@nitflex_theme/eyebrow/eyebrow.twig' with {
               "eyebrow": mpaa_rating
-            }
-          %}
-        </div>
-      {% endif %}
-      {% if promo_text %}
-        <div class="featured-movie__promo">
-          {%
-            include '@nitflex_theme/eyebrow/eyebrow.twig' with {
-              "eyebrow": promo_text
             }
           %}
         </div>

@@ -595,6 +595,14 @@ h4 {
 .featured-movie__cover-image img {
   float: right; }
 
+.featured-movie__promo {
+  color: #bbb;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px; }
+  .featured-movie__promo .eyebrow {
+    text-transform: none; }
+
 .featured-movie__meta {
   color: #FFF;
   left: 75px;

@@ -302,16 +302,16 @@
   </h1>
           
         </div>
+                    <div class="featured-movie__promo">
+          
+
+<p class="eyebrow ">Attend its 11th season this fall</p>
+        </div>
                     <div class="featured-movie__mpaa-rating">
           <span>Rated </span>
           
 
 <p class="eyebrow ">PG13</p>
-        </div>
-                    <div class="featured-movie__promo">
-          
-
-<p class="eyebrow ">Attend its 11th season this fall</p>
         </div>
                   <div class="featured-movie__average-rating">
         
@@ -371,21 +371,21 @@
           {{ title_suffix }}
         &lt;/div&gt;
       {% endif %}
+      {% if promo_text %}
+        &lt;div class=&quot;featured-movie__promo&quot;&gt;
+          {%
+            include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
+              &quot;eyebrow&quot;: promo_text
+            }
+          %}
+        &lt;/div&gt;
+      {% endif %}
       {% if mpaa_rating %}
         &lt;div class=&quot;featured-movie__mpaa-rating&quot;&gt;
           &lt;span&gt;{{ &#039;Rated &#039;|t }}&lt;/span&gt;
           {%
             include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
               &quot;eyebrow&quot;: mpaa_rating
-            }
-          %}
-        &lt;/div&gt;
-      {% endif %}
-      {% if promo_text %}
-        &lt;div class=&quot;featured-movie__promo&quot;&gt;
-          {%
-            include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
-              &quot;eyebrow&quot;: promo_text
             }
           %}
         &lt;/div&gt;
