@@ -2,6 +2,7 @@
   "button": {
     "text": "Watch now",
     "url": "",
-    "type": ""
+    "type": "",
+    "classes": ""
   }
 }

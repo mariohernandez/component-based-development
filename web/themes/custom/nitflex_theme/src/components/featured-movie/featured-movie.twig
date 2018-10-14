@@ -54,7 +54,10 @@
         {% if add_button %}
           {%
             include '@nitflex_theme/button/button.twig' with {
-              "button": add_button
+              "button": {
+                "text": add_button.text,
+                "classes": 'button--primary'
+              }
             } only
           %}
         {% endif %}

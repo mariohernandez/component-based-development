@@ -12,8 +12,8 @@
 @import '../../global/utils/init';
 
 .button {
-  background: transparent;
-  border: 2px solid $color-white;
+  background: $color-black;
+  border: 2px solid $color-tundora;
   border-radius: 44px;
   color: $color-white;
   display: inline-block;
@@ -24,33 +24,18 @@
   transition: border 0.125s ease, background 0.125s ease;
   white-space: nowrap;
 
-  &.add-to-watch-list {
-    background: $color-black;
-
-    &:hover,
-    &:focus {
-      background: #e50914;
-      border-color: #e50914;
-      color: $color-white;
-    }
-  }
-
   &:hover,
   &:focus {
-    background: $color-white;
-    color: $color-black;
+    border-color: $color-white;
   }
 
   // Updates color and other styles for primary button.
   &.button--primary {
-    background: #e50914;
     border-color: #e50914;
-    color: $color-white;
 
     &:hover,
     &:focus {
-      background: transparent;
-      color: #e50914;
+      background: #e50914;
     }
   }
 }

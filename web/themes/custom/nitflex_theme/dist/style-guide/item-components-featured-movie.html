@@ -56,7 +56,7 @@
                   
 
 
-  <a href="#" class="button">
+  <a href="#" class="button ">
     Watch now
   </a>
 
@@ -65,7 +65,7 @@
 
   <button
     type="submit"
-    class="button">
+    class="button ">
     Add to watch list
   </button
               </div>
@@ -135,7 +135,10 @@
         {% if add_button %}
           {%
             include &#039;@nitflex_theme/button/button.twig&#039; with {
-              &quot;button&quot;: add_button
+              &quot;button&quot;: {
+                &quot;text&quot;: add_button.text,
+                &quot;classes&quot;: &#039;button--primary&#039;
+              }
             } only
           %}
         {% endif %}

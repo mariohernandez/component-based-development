@@ -10,6 +10,7 @@
     "url": "#"
   },
   "add_button": {
-    "text": "Add to watch list"
+    "text": "Add to watch list",
+    "classes": ""
   }
 }

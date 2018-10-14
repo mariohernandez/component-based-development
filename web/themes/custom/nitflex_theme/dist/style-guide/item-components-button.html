@@ -31,7 +31,7 @@
 
   <button
     type="submit"
-    class="button">
+    class="button ">
     Watch now
   </button
 
@@ -50,7 +50,7 @@
 
   <button
     type="submit"
-    class="button">
+    class="button button--primary">
     Watch now
   </button
 
@@ -66,14 +66,14 @@
 
 {# If an url value is provided render as a link #}
 {% if button.url %}
-  &lt;a href=&quot;{{ button.url }}&quot; class=&quot;button&quot;&gt;
+  &lt;a href=&quot;{{ button.url }}&quot; class=&quot;button {{ modifier_class }}{{ classes|default(&#039;&#039;) }}&quot;&gt;
     {{ button.text }}
   &lt;/a&gt;
 {# Otherwise render as a button. #}
 {% else %}
   &lt;button
     type=&quot;{{ button.type|default(&#039;submit&#039;) }}&quot;
-    class=&quot;button&quot;&gt;
+    class=&quot;button {{ modifier_class }}{{ classes|default(&#039;&#039;) }}&quot;&gt;
     {{ button.text }}
   &lt;/button
 {% endif %}
