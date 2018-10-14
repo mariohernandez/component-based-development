@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../all/all.css">
+  
+</head>
+<body class="kss-body">
+            <main class="kss-layout__main js-open" aria-label="Content">
+        <section class="kss-layout__content-wrapper">
+          <article role="main" class="kss-layout__content">
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-featured-movie">
+
+                <div class="kss-item__overview-wrapper">
+                  <h2 class="kss-item__title"><a href="item-components-featured-movie.html" target="_blank" aria-label="View standalone page of Featured Movie in a new tab.">Featured Movie</a></h2>
+                                      <div class="kss-item__description">
+                      <p>This is the featured movie component.</p>
+
+                    </div>
+                                                    </div>
+
+                                  <div class="kss-item__example-wrapper">
+                    <div class="kss-item__example">
+                      
+
+<section class="featured-movie ">
+      <div class="featured-movie__cover-image">
+      <img src='../assets/action-3.jpg' alt='Alt text' />
+    </div>
+        <div class="featured-movie__meta">
+              <div class="featured-image__title">
+          
+
+
+
+<h1 class="heading">
+      Come for the code stay for the magic
+  </h1>
+        </div>
+                    <div class="featured-movie__mpaa-rating">
+          Rated PG13
+        </div>
+                    <div class="featured-movie__promo">
+          11th season happening now
+        </div>
+                  <div class="featured-movie__average-rating">
+        6/10
+      </div>
+                </div>
+          <div class="featured-moview__ctas">
+                  
+
+
+  <a href="#" class="button">
+    Watch now
+  </a>
+
+                          
+
+
+  <button
+    type="submit"
+    class="button">
+    Add to watch list
+  </button
+              </div>
+      </section>
+
+                    </div>
+                                      </div>
+
+                  <div class="kss-item__details-wrapper">
+                      <dl class="kss-item__markup-example">
+                        <dt class="kss-item__markup-example-title">Markup Details</dt>
+                        <dd class="kss-item__markup-example-content kss-syntax-wrapper">
+                          <pre>
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/featured-movie&#039;) }}
+
+&lt;section class=&quot;featured-movie {{ attributes ? attributes.class }}&quot;{{ attributes ? attributes|without(class) }}&gt;
+  {% if cover_image %}
+    &lt;div class=&quot;featured-movie__cover-image&quot;&gt;
+      {{ cover_image }}
+    &lt;/div&gt;
+  {% endif %}
+  {% if title or mpaa_rating or average_rating or promo_text or sypnosis %}
+    &lt;div class=&quot;featured-movie__meta&quot;&gt;
+      {% if title %}
+        &lt;div class=&quot;featured-image__title&quot;&gt;
+          {%
+            include &#039;@nitflex_theme/heading/heading.twig&#039; with {
+              &quot;heading&quot;: {
+                &quot;title&quot;: title,
+                &quot;heading_level&quot;: 1,
+                &quot;url&quot;: &quot;&quot;
+              }
+            } only
+          %}
+        &lt;/div&gt;
+      {% endif %}
+      {% if mpaa_rating %}
+        &lt;div class=&quot;featured-movie__mpaa-rating&quot;&gt;
+          {{ &#039;Rated &#039;|t ~ mpaa_rating }}
+        &lt;/div&gt;
+      {% endif %}
+      {% if promo_text %}
+        &lt;div class=&quot;featured-movie__promo&quot;&gt;
+          {{ promo_text }}
+        &lt;/div&gt;
+      {% endif %}
+      {% if average_rating %}
+      &lt;div class=&quot;featured-movie__average-rating&quot;&gt;
+        {{ average_rating }}
+      &lt;/div&gt;
+      {% endif %}
+      {% if sypnosis %}
+      &lt;div class=&quot;featured-movie__synopsis&quot;&gt;
+        {{ sypnosis }}
+      &lt;/div&gt;
+      {% endif %}
+    &lt;/div&gt;
+    {% if watch_button or add_button %}
+      &lt;div class=&quot;featured-moview__ctas&quot;&gt;
+        {% if watch_button %}
+          {%
+            include &#039;@nitflex_theme/button/button.twig&#039; with {
+              &quot;button&quot;: watch_button
+            } only
+          %}
+        {% endif %}
+        {% if add_button %}
+          {%
+            include &#039;@nitflex_theme/button/button.twig&#039; with {
+              &quot;button&quot;: add_button
+            } only
+          %}
+        {% endif %}
+      &lt;/div&gt;
+    {% endif %}
+  {% endif %}
+&lt;/section&gt;
+</code>
+                          </pre>
+                        </dd>
+                      </dl>                    </div>
+                                                </div>
+                      </article>
+        </section>
+      </main>
+        <!-- SCRIPTS -->
+  <!-- Fake drupalSettings -->
+  <!--
+  <script type="application/json" data-drupal-selector="drupal-settings-json">
+  </script>
+  -->
+  <!-- / Fake drupalSettings -->
+  <script src="/core/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/core/assets/vendor/jquery-once/jquery.once.min.js"></script>
+  <script src="/core/assets/vendor/domready/ready.min.js"></script>
+  <script src="/core/misc/drupalSettingsLoader.js"></script>
+  <script src="/core/misc/drupal.js"></script>
+  <script src="/core/misc/drupal.init.js"></script>
+  <script src="/core/assets/vendor/picturefill/picturefill.min.js"></script>
+      <script src="kss-assets/rainbow.min.js"></script>
+    <!-- BEGIN: Component js -->
+  <!-- END: Component js -->
+  
+  <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
