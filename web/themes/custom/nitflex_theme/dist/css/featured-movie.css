@@ -1,0 +1,13 @@
+.featured-movie {
+  position: relative; }
+  .featured-movie img {
+    display: block; }
+
+.featured-movie__meta {
+  color: #FFF;
+  left: 75px;
+  position: absolute;
+  top: 35%; }
+
+.featured-movie__ctas {
+  margin-top: 40px; }

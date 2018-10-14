@@ -8,3 +8,22 @@
 
 // Import site utilities.
 @import '../../global/utils/init';
+
+.featured-movie {
+  position: relative;
+
+  img {
+    display: block;
+  }
+}
+
+.featured-movie__meta {
+  color: $color-white;
+  left: 75px;
+  position: absolute;
+  top: 35%;
+}
+
+.featured-movie__ctas {
+  margin-top: 40px;
+}

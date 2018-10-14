@@ -39,28 +39,34 @@
 
 
 <h1 class="heading">
-      Come for the code stay for the magic
+      BADCamp 2018
   </h1>
         </div>
                     <div class="featured-movie__mpaa-rating">
-          Rated PG13
+          <span>Rated </span>
+          
+
+<p class="eyebrow ">PG13</p>
         </div>
                     <div class="featured-movie__promo">
-          11th season happening now
+          
+
+<p class="eyebrow ">Attend its 11th season this fall</p>
         </div>
                   <div class="featured-movie__average-rating">
-        6/10
+        
+
+<p class="eyebrow ">6/10</p>
       </div>
-                </div>
-          <div class="featured-moview__ctas">
-                  
+                          <div class="featured-movie__ctas">
+                      
 
 
   <a href="#" class="button ">
     Watch now
   </a>
 
-                          
+                                
 
 
   <button
@@ -68,8 +74,9 @@
     class="button ">
     Add to watch list
   </button
-              </div>
-      </section>
+                  </div>
+          </div>
+  </section>
 
                     </div>
                                       </div>
@@ -104,17 +111,30 @@
       {% endif %}
       {% if mpaa_rating %}
         &lt;div class=&quot;featured-movie__mpaa-rating&quot;&gt;
-          {{ &#039;Rated &#039;|t ~ mpaa_rating }}
+          &lt;span&gt;{{ &#039;Rated &#039;|t }}&lt;/span&gt;
+          {%
+            include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
+              &quot;eyebrow&quot;: mpaa_rating
+            }
+          %}
         &lt;/div&gt;
       {% endif %}
       {% if promo_text %}
         &lt;div class=&quot;featured-movie__promo&quot;&gt;
-          {{ promo_text }}
+          {%
+            include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
+              &quot;eyebrow&quot;: promo_text
+            }
+          %}
         &lt;/div&gt;
       {% endif %}
       {% if average_rating %}
       &lt;div class=&quot;featured-movie__average-rating&quot;&gt;
-        {{ average_rating }}
+        {%
+          include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
+            &quot;eyebrow&quot;: average_rating
+          }
+        %}
       &lt;/div&gt;
       {% endif %}
       {% if sypnosis %}
@@ -122,28 +142,28 @@
         {{ sypnosis }}
       &lt;/div&gt;
       {% endif %}
+      {% if watch_button or add_button %}
+        &lt;div class=&quot;featured-movie__ctas&quot;&gt;
+          {% if watch_button %}
+            {%
+              include &#039;@nitflex_theme/button/button.twig&#039; with {
+                &quot;button&quot;: watch_button
+              } only
+            %}
+          {% endif %}
+          {% if add_button %}
+            {%
+              include &#039;@nitflex_theme/button/button.twig&#039; with {
+                &quot;button&quot;: {
+                  &quot;text&quot;: add_button.text,
+                  &quot;classes&quot;: &#039;button--primary&#039;
+                }
+              } only
+            %}
+          {% endif %}
+        &lt;/div&gt;
+      {% endif %}
     &lt;/div&gt;
-    {% if watch_button or add_button %}
-      &lt;div class=&quot;featured-moview__ctas&quot;&gt;
-        {% if watch_button %}
-          {%
-            include &#039;@nitflex_theme/button/button.twig&#039; with {
-              &quot;button&quot;: watch_button
-            } only
-          %}
-        {% endif %}
-        {% if add_button %}
-          {%
-            include &#039;@nitflex_theme/button/button.twig&#039; with {
-              &quot;button&quot;: {
-                &quot;text&quot;: add_button.text,
-                &quot;classes&quot;: &#039;button--primary&#039;
-              }
-            } only
-          %}
-        {% endif %}
-      &lt;/div&gt;
-    {% endif %}
   {% endif %}
 &lt;/section&gt;
 </code>

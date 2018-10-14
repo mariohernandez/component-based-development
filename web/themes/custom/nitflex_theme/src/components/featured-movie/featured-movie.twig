@@ -23,17 +23,30 @@
       {% endif %}
       {% if mpaa_rating %}
         <div class="featured-movie__mpaa-rating">
-          {{ 'Rated '|t ~ mpaa_rating }}
+          <span>{{ 'Rated '|t }}</span>
+          {%
+            include '@nitflex_theme/eyebrow/eyebrow.twig' with {
+              "eyebrow": mpaa_rating
+            }
+          %}
         </div>
       {% endif %}
       {% if promo_text %}
         <div class="featured-movie__promo">
-          {{ promo_text }}
+          {%
+            include '@nitflex_theme/eyebrow/eyebrow.twig' with {
+              "eyebrow": promo_text
+            }
+          %}
         </div>
       {% endif %}
       {% if average_rating %}
       <div class="featured-movie__average-rating">
-        {{ average_rating }}
+        {%
+          include '@nitflex_theme/eyebrow/eyebrow.twig' with {
+            "eyebrow": average_rating
+          }
+        %}
       </div>
       {% endif %}
       {% if sypnosis %}
@@ -41,27 +54,27 @@
         {{ sypnosis }}
       </div>
       {% endif %}
+      {% if watch_button or add_button %}
+        <div class="featured-movie__ctas">
+          {% if watch_button %}
+            {%
+              include '@nitflex_theme/button/button.twig' with {
+                "button": watch_button
+              } only
+            %}
+          {% endif %}
+          {% if add_button %}
+            {%
+              include '@nitflex_theme/button/button.twig' with {
+                "button": {
+                  "text": add_button.text,
+                  "classes": 'button--primary'
+                }
+              } only
+            %}
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
-    {% if watch_button or add_button %}
-      <div class="featured-moview__ctas">
-        {% if watch_button %}
-          {%
-            include '@nitflex_theme/button/button.twig' with {
-              "button": watch_button
-            } only
-          %}
-        {% endif %}
-        {% if add_button %}
-          {%
-            include '@nitflex_theme/button/button.twig' with {
-              "button": {
-                "text": add_button.text,
-                "classes": 'button--primary'
-              }
-            } only
-          %}
-        {% endif %}
-      </div>
-    {% endif %}
   {% endif %}
 </section>

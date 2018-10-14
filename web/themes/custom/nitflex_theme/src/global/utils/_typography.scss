@@ -24,14 +24,11 @@
 // Style guide: General.typography
 
 @mixin font-stack-base {
-  font-family: 'Open Sans', 'Arial', sans-serif;
-}
-
-@mixin font-stack-secondary {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
+   font-weight: 300;
 }
 
 $font-weight-regular: 400;
 $font-weight-bold: 700;
-$font-weight-x-bold: 900;
+$font-weight-x-bold: 800;
 $font-italic: italic;
