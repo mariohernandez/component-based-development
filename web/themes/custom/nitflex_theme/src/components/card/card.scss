@@ -12,6 +12,7 @@
 .card {
   color: $color-white;
   max-width: 460px;
+  overflow: hidden;
   position: relative;
   transition: transform 1s ease-in-out;
 

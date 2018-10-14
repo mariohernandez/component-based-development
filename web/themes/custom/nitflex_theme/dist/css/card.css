@@ -1,6 +1,7 @@
 .card {
   color: #FFF;
   max-width: 460px;
+  overflow: hidden;
   position: relative;
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
