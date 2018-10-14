@@ -10,15 +10,17 @@
     <div class="featured-movie__meta">
       {% if title %}
         <div class="featured-image__title">
-          {%
-            include '@nitflex_theme/heading/heading.twig' with {
-              "heading": {
-                "title": title,
-                "heading_level": 1,
-                "url": ""
-              }
-            } only
-          %}
+          {{ title_prefix }}
+            {%
+              include '@nitflex_theme/heading/heading.twig' with {
+                "heading": {
+                  "title": title,
+                  "heading_level": 1,
+                  "url": ""
+                }
+              } only
+            %}
+          {{ title_suffix }}
         </div>
       {% endif %}
       {% if mpaa_rating %}
