@@ -1,7 +1,16 @@
 .featured-movie {
+  background: #000;
   position: relative; }
   .featured-movie img {
     display: block; }
+
+.featured-movie__cover-image::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.featured-movie__cover-image img {
+  float: right; }
 
 .featured-movie__meta {
   color: #FFF;

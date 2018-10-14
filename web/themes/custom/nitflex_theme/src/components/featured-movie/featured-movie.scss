@@ -10,10 +10,19 @@
 @import '../../global/utils/init';
 
 .featured-movie {
+  background: $color-black;
   position: relative;
 
   img {
     display: block;
+  }
+}
+
+.featured-movie__cover-image {
+  @include clearfix;
+
+  img {
+    float: right;
   }
 }
 

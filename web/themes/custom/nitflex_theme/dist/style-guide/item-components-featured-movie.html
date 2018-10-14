@@ -30,17 +30,19 @@
 
 <section class="featured-movie ">
       <div class="featured-movie__cover-image">
-      <img src='../assets/action-3.jpg' alt='Alt text' />
+      <img src='../assets/circusman.png' alt='Alt text' />
     </div>
         <div class="featured-movie__meta">
               <div class="featured-image__title">
           
+            
 
 
 
 <h1 class="heading">
       BADCamp 2018
   </h1>
+          
         </div>
                     <div class="featured-movie__mpaa-rating">
           <span>Rated </span>
@@ -98,15 +100,17 @@
     &lt;div class=&quot;featured-movie__meta&quot;&gt;
       {% if title %}
         &lt;div class=&quot;featured-image__title&quot;&gt;
-          {%
-            include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-              &quot;heading&quot;: {
-                &quot;title&quot;: title,
-                &quot;heading_level&quot;: 1,
-                &quot;url&quot;: &quot;&quot;
-              }
-            } only
-          %}
+          {{ title_prefix }}
+            {%
+              include &#039;@nitflex_theme/heading/heading.twig&#039; with {
+                &quot;heading&quot;: {
+                  &quot;title&quot;: title,
+                  &quot;heading_level&quot;: 1,
+                  &quot;url&quot;: &quot;&quot;
+                }
+              } only
+            %}
+          {{ title_suffix }}
         &lt;/div&gt;
       {% endif %}
       {% if mpaa_rating %}
