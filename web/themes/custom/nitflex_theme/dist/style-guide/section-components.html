@@ -125,121 +125,6 @@
                         </dd>
                       </dl>                    </div>
                                                 </div>
-                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-card">
-
-                <div class="kss-item__overview-wrapper">
-                  <h2 class="kss-item__title"><a href="item-components-card.html" target="_blank" aria-label="View standalone page of Card in a new tab.">Card</a></h2>
-                                      <div class="kss-item__description">
-                      <p>This is the card component for the project's landing page.</p>
-
-                    </div>
-                                                    </div>
-
-                                  <div class="kss-item__example-wrapper">
-                    <div class="kss-item__example">
-                      
-
-<article class="card ">
-  <div class="card__cover-image">
-    <img src='../assets/action-3.jpg' alt='' />
-    <button class="card__icon js-add-to-list" aria-label="Add to watch list">
-    </button>
-  </div>
-    <div class="card__content">
-          
-        
-
-
-
-<h3 class="heading">
-      <a href="#">Movie title goes here</a>
-  </h3>
-      
-              <div class="card__promo">
-        Opening this fall
-      </div>
-                <div class="card__genre">
-        action
-      </div>
-              <div class="card__mpaa-rating">
-        pg13
-      </div>
-              <div class="card__average-rating">
-        8/10
-      </div>
-              <div class="card__synopsis">
-        Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.
-      </div>
-      </div>
- </article>
-
-                    </div>
-                                      </div>
-
-                  <div class="kss-item__details-wrapper">
-                      <dl class="kss-item__markup-example">
-                        <dt class="kss-item__markup-example-title">Markup Details</dt>
-                        <dd class="kss-item__markup-example-content kss-syntax-wrapper">
-                          <pre>
-                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/card&#039;) }}
-
-&lt;article class=&quot;card {{ attributes ? attributes.class }}&quot;{{ attributes ? attributes|without(class) }}&gt;
-{% if cover_image %}
-  &lt;div class=&quot;card__cover-image&quot;&gt;
-    {{ cover_image }}
-    &lt;button class=&quot;card__icon js-add-to-list&quot; aria-label=&quot;Add to watch list&quot;&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
- {% endif %}
- {% if heading or average_rating or genre or synopsis or mpaa_rating or promo_sentence %}
-  &lt;div class=&quot;card__content&quot;&gt;
-    {% if heading %}
-      {{ title_prefix }}
-        {%
-          include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-            &quot;heading&quot;: {
-              &quot;title&quot;: heading.title,
-              &quot;url&quot;: &quot;#&quot;,
-              &quot;heading_level&quot;: 3,
-              &quot;classes&quot;: &#039;card__heading&#039;
-            }
-          } only
-        %}
-      {{ title_suffix }}
-    {% endif %}
-    {% if promo_sentence %}
-      &lt;div class=&quot;card__promo&quot;&gt;
-        {{ promo_sentence }}
-      &lt;/div&gt;
-    {% endif %}
-      {% if genre %}
-      &lt;div class=&quot;card__genre&quot;&gt;
-        {{ genre }}
-      &lt;/div&gt;
-    {% endif %}
-    {% if mpaa_rating %}
-      &lt;div class=&quot;card__mpaa-rating&quot;&gt;
-        {{ mpaa_rating }}
-      &lt;/div&gt;
-    {% endif %}
-    {% if average_rating %}
-      &lt;div class=&quot;card__average-rating&quot;&gt;
-        {{ average_rating }}
-      &lt;/div&gt;
-    {% endif %}
-    {% if synopsis %}
-      &lt;div class=&quot;card__synopsis&quot;&gt;
-        {{ synopsis }}
-      &lt;/div&gt;
-    {% endif %}
-  &lt;/div&gt;
- {% endif %}
-&lt;/article&gt;
-</code>
-                          </pre>
-                        </dd>
-                      </dl>                    </div>
-                                                </div>
                           <div class="kss-item kss-item--depth-2" id="kss-ref-components-eyebrow">
 
                 <div class="kss-item__overview-wrapper">
@@ -473,6 +358,121 @@
     {{ heading.title }}
   {% endif %}
 &lt;/h{{ heading_level }}&gt;
+</code>
+                          </pre>
+                        </dd>
+                      </dl>                    </div>
+                                                </div>
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-movie-card">
+
+                <div class="kss-item__overview-wrapper">
+                  <h2 class="kss-item__title"><a href="item-components-movie-card.html" target="_blank" aria-label="View standalone page of Movie Card in a new tab.">Movie Card</a></h2>
+                                      <div class="kss-item__description">
+                      <p>This is the movie card component which represents a single movie in our app.</p>
+
+                    </div>
+                                                    </div>
+
+                                  <div class="kss-item__example-wrapper">
+                    <div class="kss-item__example">
+                      
+
+<article class="movie-card ">
+  <div class="movie-card__cover-image">
+    <img src='../assets/action-3.jpg' alt='' />
+    <button class="movie-card__icon js-add-to-list" aria-label="Add to watch list">
+    </button>
+  </div>
+    <div class="movie-card__content">
+          
+        
+
+
+
+<h3 class="heading">
+      <a href="#">Movie title goes here</a>
+  </h3>
+      
+              <div class="movie-card__promo">
+        Opening this fall
+      </div>
+                <div class="movie-card__genre">
+        action
+      </div>
+              <div class="movie-card__mpaa-rating">
+        pg13
+      </div>
+              <div class="movie-card__average-rating">
+        8/10
+      </div>
+              <div class="movie-card__synopsis">
+        Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.
+      </div>
+      </div>
+ </article>
+
+                    </div>
+                                      </div>
+
+                  <div class="kss-item__details-wrapper">
+                      <dl class="kss-item__markup-example">
+                        <dt class="kss-item__markup-example-title">Markup Details</dt>
+                        <dd class="kss-item__markup-example-content kss-syntax-wrapper">
+                          <pre>
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/movie-card&#039;) }}
+
+&lt;article class=&quot;movie-card {{ attributes ? attributes.class }}&quot;{{ attributes ? attributes|without(class) }}&gt;
+{% if cover_image %}
+  &lt;div class=&quot;movie-card__cover-image&quot;&gt;
+    {{ cover_image }}
+    &lt;button class=&quot;movie-card__icon js-add-to-list&quot; aria-label=&quot;Add to watch list&quot;&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+ {% endif %}
+ {% if heading or average_rating or genre or synopsis or mpaa_rating or promo_sentence %}
+  &lt;div class=&quot;movie-card__content&quot;&gt;
+    {% if heading %}
+      {{ title_prefix }}
+        {%
+          include &#039;@nitflex_theme/heading/heading.twig&#039; with {
+            &quot;heading&quot;: {
+              &quot;title&quot;: heading.title,
+              &quot;url&quot;: &quot;#&quot;,
+              &quot;heading_level&quot;: 3,
+              &quot;classes&quot;: &#039;movie-card__heading&#039;
+            }
+          } only
+        %}
+      {{ title_suffix }}
+    {% endif %}
+    {% if promo_sentence %}
+      &lt;div class=&quot;movie-card__promo&quot;&gt;
+        {{ promo_sentence }}
+      &lt;/div&gt;
+    {% endif %}
+      {% if genre %}
+      &lt;div class=&quot;movie-card__genre&quot;&gt;
+        {{ genre }}
+      &lt;/div&gt;
+    {% endif %}
+    {% if mpaa_rating %}
+      &lt;div class=&quot;movie-card__mpaa-rating&quot;&gt;
+        {{ mpaa_rating }}
+      &lt;/div&gt;
+    {% endif %}
+    {% if average_rating %}
+      &lt;div class=&quot;movie-card__average-rating&quot;&gt;
+        {{ average_rating }}
+      &lt;/div&gt;
+    {% endif %}
+    {% if synopsis %}
+      &lt;div class=&quot;movie-card__synopsis&quot;&gt;
+        {{ synopsis }}
+      &lt;/div&gt;
+    {% endif %}
+  &lt;/div&gt;
+ {% endif %}
+&lt;/article&gt;
 </code>
                           </pre>
                         </dd>

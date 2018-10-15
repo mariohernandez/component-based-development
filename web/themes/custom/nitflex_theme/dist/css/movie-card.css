@@ -1,4 +1,4 @@
-.card {
+.movie-card {
   background: #000;
   color: #FFF;
   max-width: 460px;
@@ -9,10 +9,10 @@
   -o-transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out; }
-  .card a {
+  .movie-card a {
     color: #FFF;
     text-decoration: none; }
-  .card::after {
+  .movie-card::after {
     background: transparent;
     bottom: 0;
     content: '';
@@ -24,28 +24,28 @@
     -webkit-transition: background 0.25s ease-in-out;
     -o-transition: background 0.25s ease-in-out;
     transition: background 0.25s ease-in-out; }
-  .card:hover, .card:focus {
+  .movie-card:hover, .movie-card:focus {
     -webkit-transform: scale(1.06);
     -ms-transform: scale(1.06);
     transform: scale(1.06); }
-    .card:hover::after, .card:focus::after {
+    .movie-card:hover::after, .movie-card:focus::after {
       background: rgba(0, 0, 0, 0.5); }
-    .card:hover .card__icon, .card:focus .card__icon {
+    .movie-card:hover .movie-card__icon, .movie-card:focus .movie-card__icon {
       opacity: 1; }
-    .card:hover .card__content, .card:focus .card__content {
+    .movie-card:hover .movie-card__content, .movie-card:focus .movie-card__content {
       margin-top: 0;
       opacity: 1; }
 
-.card__heading {
+.movie-card__heading {
   font-weight: 200; }
 
-.card__rating {
+.movie-card__rating {
   font-weight: 600; }
 
-.card__cover-image img {
+.movie-card__cover-image img {
   display: block; }
 
-.card__icon {
+.movie-card__icon {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -73,13 +73,13 @@
   transition: 0.25s ease;
   width: 30px;
   z-index: 2; }
-  .card__icon:hover {
+  .movie-card__icon:hover {
     background-position: 5px -21px; }
-  .is-added .card__icon {
+  .is-added .movie-card__icon {
     background-color: #e50914;
     background-position: 5px -21px; }
 
-.card__content {
+.movie-card__content {
   display: block;
   position: absolute;
   top: 50%;

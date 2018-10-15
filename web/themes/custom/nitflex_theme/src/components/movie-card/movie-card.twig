@@ -1,15 +1,15 @@
-{{ attach_library('nitflex_theme/card') }}
+{{ attach_library('nitflex_theme/movie-card') }}
 
-<article class="card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
+<article class="movie-card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
 {% if cover_image %}
-  <div class="card__cover-image">
+  <div class="movie-card__cover-image">
     {{ cover_image }}
-    <button class="card__icon js-add-to-list" aria-label="Add to watch list">
+    <button class="movie-card__icon js-add-to-list" aria-label="Add to watch list">
     </button>
   </div>
  {% endif %}
  {% if heading or average_rating or genre or synopsis or mpaa_rating or promo_sentence %}
-  <div class="card__content">
+  <div class="movie-card__content">
     {% if heading %}
       {{ title_prefix }}
         {%
@@ -18,34 +18,34 @@
               "title": heading.title,
               "url": "#",
               "heading_level": 3,
-              "classes": 'card__heading'
+              "classes": 'movie-card__heading'
             }
           } only
         %}
       {{ title_suffix }}
     {% endif %}
     {% if promo_sentence %}
-      <div class="card__promo">
+      <div class="movie-card__promo">
         {{ promo_sentence }}
       </div>
     {% endif %}
       {% if genre %}
-      <div class="card__genre">
+      <div class="movie-card__genre">
         {{ genre }}
       </div>
     {% endif %}
     {% if mpaa_rating %}
-      <div class="card__mpaa-rating">
+      <div class="movie-card__mpaa-rating">
         {{ mpaa_rating }}
       </div>
     {% endif %}
     {% if average_rating %}
-      <div class="card__average-rating">
+      <div class="movie-card__average-rating">
         {{ average_rating }}
       </div>
     {% endif %}
     {% if synopsis %}
-      <div class="card__synopsis">
+      <div class="movie-card__synopsis">
         {{ synopsis }}
       </div>
     {% endif %}

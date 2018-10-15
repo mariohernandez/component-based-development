@@ -1,15 +1,15 @@
-// Card
+// Movie Card
 //
-// This is the card component for the project's landing page.
+// This is the movie card component which represents a single movie in our app.
 //
-// Markup: card.twig
+// Markup: movie-card.twig
 //
-// Style guide: Components.Card
+// Style guide: Components.Movie card
 
 // Import site utilities.
 @import '../../global/utils/init';
 
-.card {
+.movie-card {
   background: $color-black;
   color: $color-white;
   max-width: 460px;
@@ -45,27 +45,27 @@
       background: rgba($color-black, 0.5);
     }
 
-    .card__icon {
+    .movie-card__icon {
       opacity: 1;
     }
 
     // On hover the text content fades into view.
-    .card__content {
+    .movie-card__content {
       margin-top: 0;
       opacity: 1;
     }
   }
 }
 
-.card__heading {
+.movie-card__heading {
   font-weight: 200;
 }
 
-.card__rating {
+.movie-card__rating {
   font-weight: 600;
 }
 
-.card__cover-image {
+.movie-card__cover-image {
 
   img {
     display: block;
@@ -73,7 +73,7 @@
 }
 
 // Add to watch list icon.
-.card__icon {
+.movie-card__icon {
   align-items: center;
   background-color: transparent;
   background-image: url('../assets/add-check.svg');
@@ -108,7 +108,7 @@
 }
 
 // Text content wrapper.
-.card__content {
+.movie-card__content {
   @include vertical-align(absolute);
   font-size: 14px;
   font-weight: 300;
