@@ -23,6 +23,7 @@ link_type: ajax_link
 flagTypeConfig:
   show_in_links:
     full: full
+    hero: hero
     teaser: teaser
   show_as_field: true
   show_on_form: false
