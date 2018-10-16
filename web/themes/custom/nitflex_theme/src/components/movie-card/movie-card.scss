@@ -33,20 +33,18 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition: background 0.25s ease-in-out;
   }
 
   &:hover,
   &:focus {
-    transform: scale(1.06);
+
+    .movie-card__cover-image {
+      transform: scale(1.06);
+    }
 
     // Dark overlay.
     &::after {
       background: rgba($color-black, 0.5);
-    }
-
-    .movie-card__icon {
-      opacity: 1;
     }
 
     // On hover the text content fades into view.
@@ -66,6 +64,7 @@
 }
 
 .movie-card__cover-image {
+  transition: transform 0.25s ease-in-out;
 
   img {
     display: block;
