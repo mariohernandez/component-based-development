@@ -14,6 +14,8 @@ This repo includes everything you need to set up a [Lando-based](https://docs.de
 ### 1. Install Lando, along wth dependencies (Docker).
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology. See the documentation [https://docs.devwithlando.io/installation/installing.html](https://docs.devwithlando.io/installation/installing.html)
 
+**NOTE**: If you are using OSX, you may need to install XCode's Command Line Tools.
+
 ### 2. Clone the training repository anywhere in you local system.
 `git clone git@github.com:mariohernandez/component-based-development.git`
 
