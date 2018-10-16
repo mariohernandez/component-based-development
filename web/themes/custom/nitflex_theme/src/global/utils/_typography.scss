@@ -23,12 +23,17 @@
 //
 // Style guide: General.typography
 
-@mixin font-stack-base {
-  font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
-   font-weight: 300;
-}
-
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 $font-weight-x-bold: 800;
 $font-italic: italic;
+
+@mixin font-stack-base {
+  font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
+   font-weight: $font-weight-regular;
+}
+
+@mixin font-stack-secondary {
+  font-family: 'Times', sans-serif;
+  font-weight: $font-weight-regular;
+}

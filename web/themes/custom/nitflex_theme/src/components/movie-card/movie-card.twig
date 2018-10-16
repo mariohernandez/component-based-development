@@ -9,18 +9,16 @@
     </div>
   {% endif %}
   <div class="movie-card__content">
-    {% if heading %}
-      {%
-        include '@nitflex_theme/heading/heading.twig' with {
-          "heading": {
-            "title": heading.title,
-            "url": heading.url,
-            "heading_level": heading.heading_level,
-            "classes": 'movie-card__heading'
-          }
-        } only
-      %}
-    {% endif %}
+    {%
+      include '@nitflex_theme/heading/heading.twig' with {
+        "heading": {
+          "title": heading.title,
+          "url": heading.url,
+          "heading_level": heading.heading_level,
+          "classes": 'movie-card__heading'
+        }
+      } only
+    %}
     <div class="movie-card__favorites-toggle">
       {% block favorites_toggle %}
         {%

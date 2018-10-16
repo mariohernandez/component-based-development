@@ -484,12 +484,12 @@
       <img src='../assets/action-3.jpg' alt='' />
     </div>
     <div class="movie-card__content">
-          
+    
 
 
 <h4 class="heading  movie-card__heading">    <a href="#">Movie title goes here</a>
   </h4>
-        <div class="movie-card__favorites-toggle">
+    <div class="movie-card__favorites-toggle">
               
 
 <div class="add-to-favorites ">
@@ -569,18 +569,16 @@
     &lt;/div&gt;
   {% endif %}
   &lt;div class=&quot;movie-card__content&quot;&gt;
-    {% if heading %}
-      {%
-        include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-          &quot;heading&quot;: {
-            &quot;title&quot;: heading.title,
-            &quot;url&quot;: heading.url,
-            &quot;heading_level&quot;: heading.heading_level,
-            &quot;classes&quot;: &#039;movie-card__heading&#039;
-          }
-        } only
-      %}
-    {% endif %}
+    {%
+      include &#039;@nitflex_theme/heading/heading.twig&#039; with {
+        &quot;heading&quot;: {
+          &quot;title&quot;: heading.title,
+          &quot;url&quot;: heading.url,
+          &quot;heading_level&quot;: heading.heading_level,
+          &quot;classes&quot;: &#039;movie-card__heading&#039;
+        }
+      } only
+    %}
     &lt;div class=&quot;movie-card__favorites-toggle&quot;&gt;
       {% block favorites_toggle %}
         {%
