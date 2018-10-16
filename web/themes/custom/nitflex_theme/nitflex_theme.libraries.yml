@@ -36,6 +36,16 @@ fonts:
 #     - nitflex_theme/clearfix
 #     - nitflex_theme/visually-hidden
 
+add-to-favorites:
+  css:
+    component:
+      dist/css/add-to-favorites.css: {}
+
+average-rating:
+  css:
+    component:
+      dist/css/average-rating.css: {}
+
 button:
   css:
     component:

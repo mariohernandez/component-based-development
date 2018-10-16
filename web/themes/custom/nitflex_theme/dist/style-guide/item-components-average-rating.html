@@ -14,12 +14,12 @@
             <main class="kss-layout__main js-open" aria-label="Content">
         <section class="kss-layout__content-wrapper">
           <article role="main" class="kss-layout__content">
-                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-movie-card">
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-average-rating">
 
                 <div class="kss-item__overview-wrapper">
-                  <h2 class="kss-item__title"><a href="item-components-movie-card.html" target="_blank" aria-label="View standalone page of Movie Card in a new tab.">Movie Card</a></h2>
+                  <h2 class="kss-item__title"><a href="item-components-average-rating.html" target="_blank" aria-label="View standalone page of Average Rating in a new tab.">Average Rating</a></h2>
                                       <div class="kss-item__description">
-                      <p>This is the movie card component which represents a single movie in our app.</p>
+                      <p>This is the average rating component.</p>
 
                     </div>
                                                     </div>
@@ -27,33 +27,6 @@
                                   <div class="kss-item__example-wrapper">
                     <div class="kss-item__example">
                       
-
-<article class="movie-card ">
-  
-  
-      <div class="movie-card__cover-image">
-      <img src='../assets/action-3.jpg' alt='' />
-    </div>
-    <div class="movie-card__content">
-          
-
-
-<h4 class="heading  movie-card__heading">    <a href="#">Movie title goes here</a>
-  </h4>
-        <div class="movie-card__favorites-toggle">
-              
-
-<div class="add-to-favorites ">
-  <a href="#" class="add-to-favorites__link">
-    Add to favorites
-  </a>
-</div>
-          </div>
-          <div class="movie-card__mpaa-rating">
-        PG-13
-      </div>
-              <div class="movie-card__average-rating">
-        
 
 <div class="average-rating">
   <ul class="average-rating__stars" data-rating="3">
@@ -94,13 +67,7 @@
       </li>
       </ul>
     <p class="average-rating__text">Average Rating: 3 out of 5 stars</p>
-</div>      </div>
-              <div class="movie-card__synopsis">
-        Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.
-      </div>
-      </div>
-</article>
-
+</div>
                     </div>
                                       </div>
 
@@ -109,59 +76,22 @@
                         <dt class="kss-item__markup-example-title">Markup Details</dt>
                         <dd class="kss-item__markup-example-content kss-syntax-wrapper">
                           <pre>
-                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/movie-card&#039;) }}
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/average-rating&#039;) }}
 
-&lt;article class=&quot;movie-card {{ attributes ? attributes.class }}&quot;{{ attributes ? attributes|without(class) }}&gt;
-  {{ title_prefix }}
-  {{ title_suffix }}
-  {% if cover_image %}
-    &lt;div class=&quot;movie-card__cover-image&quot;&gt;
-      {{ cover_image }}
-    &lt;/div&gt;
-  {% endif %}
-  &lt;div class=&quot;movie-card__content&quot;&gt;
-    {% if heading %}
-      {%
-        include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-          &quot;heading&quot;: {
-            &quot;title&quot;: heading.title,
-            &quot;url&quot;: heading.url,
-            &quot;heading_level&quot;: heading.heading_level,
-            &quot;classes&quot;: &#039;movie-card__heading&#039;
-          }
-        } only
-      %}
-    {% endif %}
-    &lt;div class=&quot;movie-card__favorites-toggle&quot;&gt;
-      {% block favorites_toggle %}
-        {%
-          include &#039;@nitflex_theme/add-to-favorites/add-to-favorites.twig&#039; with {
-            url: &#039;#&#039;,
-          } only
-        %}
-      {% endblock %}
-    &lt;/div&gt;
-    {% if mpaa_rating %}
-      &lt;div class=&quot;movie-card__mpaa-rating&quot;&gt;
-        {{ mpaa_rating }}
-      &lt;/div&gt;
-    {% endif %}
-    {% if average_rating %}
-      &lt;div class=&quot;movie-card__average-rating&quot;&gt;
-        {% include &#039;@nitflex_theme/average-rating/average-rating.twig&#039; with {
-            count: average_rating
-          } only 
-        %}
-      &lt;/div&gt;
-    {% endif %}
-    {% if synopsis %}
-      &lt;div class=&quot;movie-card__synopsis&quot;&gt;
-        {{ synopsis }}
-      &lt;/div&gt;
-    {% endif %}
-  &lt;/div&gt;
-&lt;/article&gt;
-</code>
+&lt;div class=&quot;average-rating&quot;&gt;
+  &lt;ul class=&quot;average-rating__stars&quot; data-rating=&quot;{{ count }}&quot;&gt;
+    {% for i in 1..5 %}
+      &lt;li class=&quot;average-rating__star&quot;&gt;
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;30px&quot; height=&quot;30px&quot; viewBox=&quot;0 0 30 30&quot;&gt;
+          &lt;polygon points=&quot;15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 &quot;/&gt;
+          &lt;polyline points=&quot;15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 &quot;/&gt;
+        &lt;/svg&gt;
+      &lt;/li&gt;
+    {% endfor %}
+  &lt;/ul&gt;
+    &lt;p class=&quot;average-rating__text&quot;&gt;{{ &#039;Average Rating:&#039;|t }} {{ count }} {{ &#039;out of 5 stars&#039;|t }}&lt;/p&gt;
+&lt;/div&gt;</code>
                           </pre>
                         </dd>
                       </dl>                    </div>
