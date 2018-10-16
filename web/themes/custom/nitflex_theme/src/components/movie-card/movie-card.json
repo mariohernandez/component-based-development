@@ -4,12 +4,10 @@
    "title": "Movie title goes here",
    "url": "#",
    "heading_level": 4,
-   "classes": ""
+   "classes": "movie-card__heading"
  },
- "average_rating": "8/10",
- "mpaa_rating": "pg13",
- "genre": "action",
- "promo_sentence": "Opening this fall",
+ "average_rating": "3",
+ "mpaa_rating": "PG-13",
  "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.",
  "add_button": {
    "text": "Add to watch list",

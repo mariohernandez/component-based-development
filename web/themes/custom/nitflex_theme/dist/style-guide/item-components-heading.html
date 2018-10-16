@@ -29,9 +29,7 @@
                       
 
 
-
-<h2 class="heading">
-      <a href="#">Back to being BAD</a>
+<h2 class="heading ">    <a href="#">Back to being BAD</a>
   </h2>
 
                     </div>
@@ -45,15 +43,15 @@
                             <code data-language="html">{{ attach_library(&#039;nitflex_theme/heading&#039;) }}
 
 {# Default to h2 (heading level 2) if no heading level is supplied. #}
-{% set heading_level = heading.heading_level | default(2) %}
-
-&lt;h{{ heading_level }} class=&quot;heading&quot;&gt;
+&lt;h{{ heading.heading_level|default(&#039;2&#039;) }} class=&quot;heading {{ heading.classes ? &#039; &#039; ~ heading.classes }}
+  {{- heading.attributes ? heading.attributes.class -}}&quot;
+  {{- heading.attributes ? heading.attributes|without(class) -}}&gt;
   {% if heading.url %}
     &lt;a href=&quot;{{ heading.url }}&quot;&gt;{{ heading.title }}&lt;/a&gt;
   {% else %}
     {{ heading.title }}
   {% endif %}
-&lt;/h{{ heading_level }}&gt;
+&lt;/h{{ heading.heading_level|default(&#039;2&#039;) }}&gt;
 </code>
                           </pre>
                         </dd>

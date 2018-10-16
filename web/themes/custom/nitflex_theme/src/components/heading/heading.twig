@@ -1,12 +1,12 @@
 {{ attach_library('nitflex_theme/heading') }}
 
 {# Default to h2 (heading level 2) if no heading level is supplied. #}
-{% set heading_level = heading.heading_level | default(2) %}
-
-<h{{ heading_level }} class="heading">
+<h{{ heading.heading_level|default('2') }} class="heading {{ heading.classes ? ' ' ~ heading.classes }}
+  {{- heading.attributes ? heading.attributes.class -}}"
+  {{- heading.attributes ? heading.attributes|without(class) -}}>
   {% if heading.url %}
     <a href="{{ heading.url }}">{{ heading.title }}</a>
   {% else %}
     {{ heading.title }}
   {% endif %}
-</h{{ heading_level }}>
+</h{{ heading.heading_level|default('2') }}>

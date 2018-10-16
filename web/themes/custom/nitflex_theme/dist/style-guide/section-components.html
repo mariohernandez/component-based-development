@@ -21,12 +21,12 @@
                                                     </div>
 
                               </div>
-                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-add-to-watch-list">
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-add-to-favorites">
 
                 <div class="kss-item__overview-wrapper">
-                  <h2 class="kss-item__title"><a href="item-components-add-to-watch-list.html" target="_blank" aria-label="View standalone page of Add to Watch List in a new tab.">Add to Watch List</a></h2>
+                  <h2 class="kss-item__title"><a href="item-components-add-to-favorites.html" target="_blank" aria-label="View standalone page of Add to Favorites Button in a new tab.">Add to Favorites Button</a></h2>
                                       <div class="kss-item__description">
-                      <p>This is the Add To Watch List component.</p>
+                      <p>This is the Add To Favorites component.</p>
 
                     </div>
                                                     </div>
@@ -35,10 +35,104 @@
                     <div class="kss-item__example">
                       
 
-<button class="add-to-watch-list button" type="sumit" aria-label="Add movie to my watch list">
-  Add to my watch list
-</button>
+<div class="add-to-favorites ">
+  <a href="#" class="add-to-favorites__link">
+    Add to favorites
+  </a>
+</div>
 
+                    </div>
+                                          <div class="kss-item__modifier-details">
+                        <div class="kss-item__modifier-name">
+                          .add-to-favorites--added
+                        </div>
+                        <div class="kss-item__modifier-description">
+                          Button in &quot;added&quot; state.
+                        </div>
+                      </div>
+                      <div class="kss-item__example kss-item__example--modifier">
+                        
+
+<div class="add-to-favorites add-to-favorites--added">
+  <a href="#" class="add-to-favorites__link">
+    Add to favorites
+  </a>
+</div>
+
+                      </div>
+                                      </div>
+
+                  <div class="kss-item__details-wrapper">
+                      <dl class="kss-item__markup-example">
+                        <dt class="kss-item__markup-example-title">Markup Details</dt>
+                        <dd class="kss-item__markup-example-content kss-syntax-wrapper">
+                          <pre>
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/add-to-favorites&#039;) }}
+
+&lt;div class=&quot;add-to-favorites {{ modifier_class }}&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;add-to-favorites__link&quot;&gt;
+    {{ text|default(&#039;Add to favorites&#039;|t) }}
+  &lt;/a&gt;
+&lt;/div&gt;
+</code>
+                          </pre>
+                        </dd>
+                      </dl>                    </div>
+                                                </div>
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-average-rating">
+
+                <div class="kss-item__overview-wrapper">
+                  <h2 class="kss-item__title"><a href="item-components-average-rating.html" target="_blank" aria-label="View standalone page of Average Rating in a new tab.">Average Rating</a></h2>
+                                      <div class="kss-item__description">
+                      <p>This is the average rating component.</p>
+
+                    </div>
+                                                    </div>
+
+                                  <div class="kss-item__example-wrapper">
+                    <div class="kss-item__example">
+                      
+
+<div class="average-rating">
+  <ul class="average-rating__stars" data-rating="3">
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+      </ul>
+    <p class="average-rating__text">Average Rating: 3 out of 5 stars</p>
+</div>
                     </div>
                                       </div>
 
@@ -47,12 +141,22 @@
                         <dt class="kss-item__markup-example-title">Markup Details</dt>
                         <dd class="kss-item__markup-example-content kss-syntax-wrapper">
                           <pre>
-                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/add-to-watch-list&#039;) }}
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/average-rating&#039;) }}
 
-&lt;button class=&quot;add-to-watch-list button&quot; type=&quot;sumit&quot; aria-label=&quot;Add movie to my watch list&quot;&gt;
-  {{ add_text }}
-&lt;/button&gt;
-</code>
+&lt;div class=&quot;average-rating&quot;&gt;
+  &lt;ul class=&quot;average-rating__stars&quot; data-rating=&quot;{{ count }}&quot;&gt;
+    {% for i in 1..5 %}
+      &lt;li class=&quot;average-rating__star&quot;&gt;
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;30px&quot; height=&quot;30px&quot; viewBox=&quot;0 0 30 30&quot;&gt;
+          &lt;polygon points=&quot;15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 &quot;/&gt;
+          &lt;polyline points=&quot;15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 &quot;/&gt;
+        &lt;/svg&gt;
+      &lt;/li&gt;
+    {% endfor %}
+  &lt;/ul&gt;
+    &lt;p class=&quot;average-rating__text&quot;&gt;{{ &#039;Average Rating:&#039;|t }} {{ count }} {{ &#039;out of 5 stars&#039;|t }}&lt;/p&gt;
+&lt;/div&gt;</code>
                           </pre>
                         </dd>
                       </dl>                    </div>
@@ -181,9 +285,7 @@
             
 
 
-
-<h1 class="heading">
-      BADCamp 2018
+<h1 class="heading ">    BADCamp 2018
   </h1>
           
         </div>
@@ -333,9 +435,7 @@
                       
 
 
-
-<h2 class="heading">
-      <a href="#">Back to being BAD</a>
+<h2 class="heading ">    <a href="#">Back to being BAD</a>
   </h2>
 
                     </div>
@@ -349,15 +449,15 @@
                             <code data-language="html">{{ attach_library(&#039;nitflex_theme/heading&#039;) }}
 
 {# Default to h2 (heading level 2) if no heading level is supplied. #}
-{% set heading_level = heading.heading_level | default(2) %}
-
-&lt;h{{ heading_level }} class=&quot;heading&quot;&gt;
+&lt;h{{ heading.heading_level|default(&#039;2&#039;) }} class=&quot;heading {{ heading.classes ? &#039; &#039; ~ heading.classes }}
+  {{- heading.attributes ? heading.attributes.class -}}&quot;
+  {{- heading.attributes ? heading.attributes|without(class) -}}&gt;
   {% if heading.url %}
     &lt;a href=&quot;{{ heading.url }}&quot;&gt;{{ heading.title }}&lt;/a&gt;
   {% else %}
     {{ heading.title }}
   {% endif %}
-&lt;/h{{ heading_level }}&gt;
+&lt;/h{{ heading.heading_level|default(&#039;2&#039;) }}&gt;
 </code>
                           </pre>
                         </dd>
@@ -378,38 +478,77 @@
                       
 
 <article class="movie-card ">
-  <div class="movie-card__cover-image">
-    <img src='../assets/action-3.jpg' alt='' />
-    <button class="movie-card__icon js-add-to-list" aria-label="Add to watch list">
-    </button>
-  </div>
+  
+  
+      <div class="movie-card__cover-image">
+      <img src='../assets/action-3.jpg' alt='' />
+    </div>
     <div class="movie-card__content">
           
-        
 
 
+<h4 class="heading  movie-card__heading">    <a href="#">Movie title goes here</a>
+  </h4>
+        <div class="movie-card__favorites-toggle">
+              
 
-<h3 class="heading">
-      <a href="#">Movie title goes here</a>
-  </h3>
-      
-              <div class="movie-card__promo">
-        Opening this fall
-      </div>
-                <div class="movie-card__genre">
-        action
-      </div>
-              <div class="movie-card__mpaa-rating">
-        pg13
+<div class="add-to-favorites ">
+  <a href="#" class="add-to-favorites__link">
+    Add to favorites
+  </a>
+</div>
+          </div>
+          <div class="movie-card__mpaa-rating">
+        PG-13
       </div>
               <div class="movie-card__average-rating">
-        8/10
-      </div>
+        
+
+<div class="average-rating">
+  <ul class="average-rating__stars" data-rating="3">
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+      </ul>
+    <p class="average-rating__text">Average Rating: 3 out of 5 stars</p>
+</div>      </div>
               <div class="movie-card__synopsis">
         Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.
       </div>
       </div>
- </article>
+</article>
 
                     </div>
                                       </div>
@@ -422,39 +561,35 @@
                             <code data-language="html">{{ attach_library(&#039;nitflex_theme/movie-card&#039;) }}
 
 &lt;article class=&quot;movie-card {{ attributes ? attributes.class }}&quot;{{ attributes ? attributes|without(class) }}&gt;
-{% if cover_image %}
-  &lt;div class=&quot;movie-card__cover-image&quot;&gt;
-    {{ cover_image }}
-    &lt;button class=&quot;movie-card__icon js-add-to-list&quot; aria-label=&quot;Add to watch list&quot;&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
- {% endif %}
- {% if heading or average_rating or genre or synopsis or mpaa_rating or promo_sentence %}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if cover_image %}
+    &lt;div class=&quot;movie-card__cover-image&quot;&gt;
+      {{ cover_image }}
+    &lt;/div&gt;
+  {% endif %}
   &lt;div class=&quot;movie-card__content&quot;&gt;
     {% if heading %}
-      {{ title_prefix }}
+      {%
+        include &#039;@nitflex_theme/heading/heading.twig&#039; with {
+          &quot;heading&quot;: {
+            &quot;title&quot;: heading.title,
+            &quot;url&quot;: heading.url,
+            &quot;heading_level&quot;: heading.heading_level,
+            &quot;classes&quot;: &#039;movie-card__heading&#039;
+          }
+        } only
+      %}
+    {% endif %}
+    &lt;div class=&quot;movie-card__favorites-toggle&quot;&gt;
+      {% block favorites_toggle %}
         {%
-          include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-            &quot;heading&quot;: {
-              &quot;title&quot;: heading.title,
-              &quot;url&quot;: &quot;#&quot;,
-              &quot;heading_level&quot;: 3,
-              &quot;classes&quot;: &#039;movie-card__heading&#039;
-            }
+          include &#039;@nitflex_theme/add-to-favorites/add-to-favorites.twig&#039; with {
+            url: &#039;#&#039;,
           } only
         %}
-      {{ title_suffix }}
-    {% endif %}
-    {% if promo_sentence %}
-      &lt;div class=&quot;movie-card__promo&quot;&gt;
-        {{ promo_sentence }}
-      &lt;/div&gt;
-    {% endif %}
-      {% if genre %}
-      &lt;div class=&quot;movie-card__genre&quot;&gt;
-        {{ genre }}
-      &lt;/div&gt;
-    {% endif %}
+      {% endblock %}
+    &lt;/div&gt;
     {% if mpaa_rating %}
       &lt;div class=&quot;movie-card__mpaa-rating&quot;&gt;
         {{ mpaa_rating }}
@@ -462,7 +597,10 @@
     {% endif %}
     {% if average_rating %}
       &lt;div class=&quot;movie-card__average-rating&quot;&gt;
-        {{ average_rating }}
+        {% include &#039;@nitflex_theme/average-rating/average-rating.twig&#039; with {
+            count: average_rating
+          } only 
+        %}
       &lt;/div&gt;
     {% endif %}
     {% if synopsis %}
@@ -471,7 +609,6 @@
       &lt;/div&gt;
     {% endif %}
   &lt;/div&gt;
- {% endif %}
 &lt;/article&gt;
 </code>
                           </pre>
