@@ -51,7 +51,6 @@ button:
     component:
       dist/css/button.css: {}
 
-
 eyebrow:
   css:
     component:
@@ -71,11 +70,16 @@ movie-card:
   css:
     component:
       dist/css/movie-card.css: {}
-  js:
-    dist/js/movie-card.js: {}
-  dependencies:
-    - core/drupal
-    - core/jquery
+
+movie-card-collection:
+  css:
+    component:
+      dist/css/movie-card-collection.css: {}
+
+movie-list:
+  css:
+    component:
+      dist/css/movie-list.css: {}
 
 tabs:
   css:

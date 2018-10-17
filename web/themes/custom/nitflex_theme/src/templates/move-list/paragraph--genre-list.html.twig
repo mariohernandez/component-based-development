@@ -38,18 +38,13 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
+{% embed '@nitflex_theme/movie-list/movie-list.twig' with {
+    attributes: attributes,
+    list_title: content.field_list_title|render|trim is not empty ? content.field_list_title,
+    list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
+  }
 %}
-{% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-  </div>
-{% endblock paragraph %}
+  {% block list %}
+    {{ list }}
+  {% endblock %}
+{% endembed %}

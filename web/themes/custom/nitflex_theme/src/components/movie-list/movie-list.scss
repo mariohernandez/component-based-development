@@ -1,0 +1,39 @@
+// Movie List
+//
+// This is the movie list component.
+//
+// Markup: movie-list.twig
+//
+// Classes: kss-full-width
+//
+// Style guide: Components.Movie List
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.movie-list {
+  background-color: $color-black;
+  padding: 30px 10px 20px;
+
+  @include breakpoint($bp-md) {
+    padding: 50px 5px 40px;
+  }
+}
+
+.movie-list__title {
+  color: $color-white;
+  padding: 0 5px;
+  text-align: center;
+  text-transform: uppercase;
+
+  .heading {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    margin: 0;
+  }
+
+  @include breakpoint($bp-lg) {
+    text-align: left;
+  }
+}

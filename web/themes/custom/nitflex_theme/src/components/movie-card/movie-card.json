@@ -1,5 +1,5 @@
 {
- "cover_image": "<img src='../assets/action-3.jpg' alt='' />",
+ "cover_image": "<img src=\"../assets/action-3.jpg\" alt=\"\" />",
  "heading": {
    "title": "Movie title goes here",
    "url": "#",

@@ -53,9 +53,10 @@
     width: auto; }
 
 .movie-card__heading {
+  font-size: 2.2rem;
   font-weight: 400;
   margin: 0 0 12px;
-  line-height: 1.1;
+  line-height: 1;
   width: 100%; }
 
 .movie-card__favorites-toggle,
@@ -65,11 +66,20 @@
 .movie-card__mpaa-rating {
   font-family: 'Times', sans-serif;
   font-weight: 400;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border: 1px solid #FFF;
-  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
   font-weight: 700;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   line-height: 1;
-  padding: 8px 12px; }
+  padding: 0 10px; }
 
 .movie-card__average-rating {
   -webkit-box-align: center;
@@ -77,12 +87,13 @@
   align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 6px 0; }
 
 .movie-card__synopsis {
   font-size: 1.4rem;
-  padding: 12px 0; }
-  @media (min-width: 55em) {
+  padding: 8px 0; }
+  @media (min-width: 768px) {
     .movie-card__synopsis {
       font-size: 1.6rem; } }
 

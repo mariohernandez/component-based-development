@@ -74,9 +74,10 @@
 }
 
 .movie-card__heading {
+  font-size: 2.2rem;
   font-weight: $font-weight-regular;
   margin: 0 0 12px;
-  line-height: 1.1;
+  line-height: 1;
   width: 100%;
 }
 
@@ -87,21 +88,25 @@
 
 .movie-card__mpaa-rating {
   @include font-stack-secondary;
+  align-items: center;
   border: 1px solid $color-white;
-  font-size: 2rem;
+  display: flex;
+  font-size: 1.6rem;
   font-weight: $font-weight-bold;
+  justify-content: center;
   line-height: 1;
-  padding: 8px 12px;
+  padding: 0 10px;
 }
 
 .movie-card__average-rating {
   align-items: center;
   display: flex;
+  padding: 6px 0;
 }
 
 .movie-card__synopsis {
   font-size: 1.4rem;
-  padding: 12px 0;
+  padding: 8px 0;
 
   @include breakpoint($bp-sm) {
     font-size: 1.6rem;

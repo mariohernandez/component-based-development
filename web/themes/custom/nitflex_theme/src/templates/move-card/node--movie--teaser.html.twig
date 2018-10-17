@@ -70,6 +70,8 @@
  *   in different view modes.
  */
 #}
+{# Trigger full content render. #}
+{% set rendered_content = content|render %}
 {%
   set heading = {
     title: label,

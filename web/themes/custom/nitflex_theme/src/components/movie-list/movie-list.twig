@@ -1,0 +1,32 @@
+{{ attach_library('nitflex_theme/movie-list') }}
+
+<section class="movie-list
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <div class="movie-list__title">
+    {%
+      include '@nitflex_theme/heading/heading.twig' with {
+        "heading": {
+          "title": list_title,
+          "heading_level": '3'
+        }
+      } only
+    %}
+  </div>
+  {% block list %}
+    {% embed '@nitflex_theme/movie-card-collection/movie-card-collection.twig' %}
+      {% block collection %}
+        {% for item in items %}
+          {% include '@nitflex_theme/movie-card/movie-card.twig' with {
+              cover_image: item.cover_image,
+              heading: item.heading,
+              mpaa_rating: item.mpaa_rating,
+              average_rating: item.average_rating,
+              synopsis: item.synopsis
+            }
+          %}
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+</section>

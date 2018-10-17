@@ -1,9 +1,13 @@
 .page {
   overflow: hidden; }
+  .page-node-type-landing-page .page,
+  .page-node-type-landing-page .page {
+    background-color: #000; }
 
 .page__container {
   margin: 0 auto;
   max-width: 1200px; }
 
 .page__help {
+  background-color: #FFF;
   padding: 0 20px; }
