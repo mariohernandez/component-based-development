@@ -32,7 +32,8 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
+  font-weight: 400;
   margin: 0;
   font-size: 1.4rem;
   line-height: 1.15;
@@ -60,7 +61,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: 'Times', sans-serif;
+  font-weight: 400;
   font-size: 2rem;
   margin: 0 0 1rem; }
 
