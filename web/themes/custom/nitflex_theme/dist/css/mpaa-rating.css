@@ -1,0 +1,19 @@
+.mpaa-rating {
+  font-family: 'Times', sans-serif;
+  font-weight: 400;
+  border: 1px solid #000;
+  color: #000;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 10px; }
+
+.mpaa-rating__text {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }

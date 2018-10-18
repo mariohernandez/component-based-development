@@ -87,15 +87,11 @@
 }
 
 .movie-card__mpaa-rating {
-  @include font-stack-secondary;
-  align-items: center;
-  border: 1px solid $color-white;
-  display: flex;
-  font-size: 1.6rem;
-  font-weight: $font-weight-bold;
-  justify-content: center;
-  line-height: 1;
-  padding: 0 10px;
+
+  .mpaa-rating {
+    border-color: $color-white;
+    color: $color-white;
+  }
 }
 
 .movie-card__average-rating {

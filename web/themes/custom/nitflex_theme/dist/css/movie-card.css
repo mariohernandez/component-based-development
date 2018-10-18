@@ -63,23 +63,9 @@
 .movie-card__mpaa-rating {
   margin-right: 10px; }
 
-.movie-card__mpaa-rating {
-  font-family: 'Times', sans-serif;
-  font-weight: 400;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px solid #FFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.6rem;
-  font-weight: 700;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  padding: 0 10px; }
+.movie-card__mpaa-rating .mpaa-rating {
+  border-color: #FFF;
+  color: #FFF; }
 
 .movie-card__average-rating {
   -webkit-box-align: center;

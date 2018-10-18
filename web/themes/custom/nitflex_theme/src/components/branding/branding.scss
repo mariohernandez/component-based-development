@@ -1,0 +1,66 @@
+// Site branding.
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.branding {
+  align-items: center;
+  background-color: $color-black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+
+  > {
+    padding: 0 10px;
+  }
+
+}
+
+.branding__site-name {
+  color: $color-pacific-blue;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+
+  @include breakpoint($bp-sm) {
+    font-size: 56px;
+  }
+
+  &:focus,
+  &:hover {
+    color: $color-rio-grande;
+  }
+}
+
+.branding__navigation {
+
+  ul:not(.contextual-links) {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    color: $color-white;
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    list-style: none;
+    margin: 5px 0;
+    padding: 0 10px;
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      color: $color-rio-grande;
+    }
+  }
+}

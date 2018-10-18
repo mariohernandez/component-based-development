@@ -1,16 +1,16 @@
 {
-  "cover_image": "<img src='../assets/circusman.png' alt='Alt text' />",
-  "title": "BADCamp 2018",
+  "cover_image": "<img src=\"../assets/circusman.png\" alt=\"Alt text\" />",
+  "heading": {
+    "title": "BADCamp 2018",
+    "url": "#",
+    "heading_level": 2
+  },
   "promo_text": "Be part of th 12th season this fall",
-  "mpaa_rating": "PG13",
-  "average_rating": "6/10",
+  "mpaa_rating": "PG-13",
+  "average_rating": "5",
   "synopsis": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
   "watch_button": {
     "text": "Watch now",
     "url": "#"
-  },
-  "add_button": {
-    "text": "Add to watch list",
-    "classes": ""
   }
 }

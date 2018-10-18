@@ -30,7 +30,10 @@
     </div>
     {% if mpaa_rating %}
       <div class="movie-card__mpaa-rating">
-        {{ mpaa_rating }}
+        {% include '@nitflex_theme/mpaa-rating/mpaa-rating.twig' with {
+            rating: mpaa_rating
+          } only 
+        %}
       </div>
     {% endif %}
     {% if average_rating %}

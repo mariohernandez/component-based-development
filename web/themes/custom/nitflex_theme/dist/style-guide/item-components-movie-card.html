@@ -50,7 +50,11 @@
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG-13
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG-13</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -141,7 +145,10 @@
     &lt;/div&gt;
     {% if mpaa_rating %}
       &lt;div class=&quot;movie-card__mpaa-rating&quot;&gt;
-        {{ mpaa_rating }}
+        {% include &#039;@nitflex_theme/mpaa-rating/mpaa-rating.twig&#039; with {
+            rating: mpaa_rating
+          } only 
+        %}
       &lt;/div&gt;
     {% endif %}
     {% if average_rating %}

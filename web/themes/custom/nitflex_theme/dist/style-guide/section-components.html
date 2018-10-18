@@ -176,9 +176,7 @@
                       
 
 
-  <button
-    type="submit"
-    class="button ">
+  <button type="submit" class="button ">
     Watch now
   </button
 
@@ -195,9 +193,7 @@
                         
 
 
-  <button
-    type="submit"
-    class="button button--primary">
+  <button type="submit" class="button button--primary">
     Watch now
   </button
 
@@ -218,9 +214,7 @@
   &lt;/a&gt;
 {# Otherwise render as a button. #}
 {% else %}
-  &lt;button
-    type=&quot;{{ button.type|default(&#039;submit&#039;) }}&quot;
-    class=&quot;button {{ modifier_class }}{{ classes|default(&#039;&#039;) }}&quot;&gt;
+  &lt;button type=&quot;{{ button.type|default(&#039;submit&#039;) }}&quot; class=&quot;button {{ modifier_class }}{{ classes|default(&#039;&#039;) }}&quot;&gt;
     {{ button.text }}
   &lt;/button
 {% endif %}
@@ -261,7 +255,7 @@
                         </dd>
                       </dl>                    </div>
                                                 </div>
-                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-featured-movie">
+                          <div class="kss-item kss-item--depth-2 kss-full-width" id="kss-ref-components-featured-movie">
 
                 <div class="kss-item__overview-wrapper">
                   <h2 class="kss-item__title"><a href="item-components-featured-movie.html" target="_blank" aria-label="View standalone page of Featured Movie in a new tab.">Featured Movie</a></h2>
@@ -276,54 +270,99 @@
                       
 
 <section class="featured-movie ">
+  
+  
       <div class="featured-movie__cover-image">
-      <img src='../assets/circusman.png' alt='Alt text' />
+      <img src="../assets/circusman.png" alt="Alt text" />
     </div>
-        <div class="featured-movie__meta">
-              <div class="featured-image__title">
-          
-            
+    <div class="featured-movie__meta">
+    <div class="featured-movie__title">
+      
 
 
-<h1 class="heading ">    BADCamp 2018
-  </h1>
-          
-        </div>
-                    <div class="featured-movie__promo">
-          
-
-<p class="eyebrow ">Be part of th 12th season this fall</p>
-        </div>
-                    <div class="featured-movie__mpaa-rating">
-          <span>Rated </span>
-          
-
-<p class="eyebrow ">PG13</p>
-        </div>
-                  <div class="featured-movie__average-rating">
+<h2 class="heading ">    BADCamp 2018
+  </h2>
+    </div>
+          <div class="featured-movie__promo">
         
 
-<p class="eyebrow ">6/10</p>
+<p class="eyebrow ">Be part of th 12th season this fall</p>
       </div>
-                          <div class="featured-movie__ctas">
-                      
+        <div class="featured-movie__settings">
+      <div class="featured-movie__favorites-toggle">
+                  
+
+<div class="add-to-favorites ">
+  <a href="#" class="add-to-favorites__link">
+    Add to favorites
+  </a>
+</div>
+              </div>
+              <div class="featured-movie__mpaa-rating">
+          
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG-13</span>
+</div>
+        </div>
+                    <div class="featured-movie__average-rating">
+          
+
+<div class="average-rating">
+  <ul class="average-rating__stars" data-rating="5">
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+          <li class="average-rating__star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30">
+          <polygon points="15,0 11.3,11.2 0,11.5 9,18.6 5.7,30 15,23.2 24.3,30 21,18.6 30,11.5 18.7,11.2 15,0 "/>
+          <polyline points="15,5.2 17.2,11.7 17.5,12.8 18.7,12.8 25.5,13 20,17.4 19.1,18 19.4,19.1 21.4,25.9 16,21.9 
+            15,21.2 14,21.9 8.6,25.9 10.6,19.1 10.9,18 10,17.4 4.5,13 11.3,12.8 12.5,12.8 12.8,11.7 15,5.2 "/>
+        </svg>
+      </li>
+      </ul>
+    <p class="average-rating__text">Average Rating: 5 out of 5 stars</p>
+</div>        </div>
+          </div>
+          <div class="featured-movie__synopsis">
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+      </div>
+              <div class="featured-movie__cta">
+        
 
 
   <a href="#" class="button ">
     Watch now
   </a>
 
-                                
-
-
-  <button
-    type="submit"
-    class="button ">
-    Add to watch list
-  </button
-                  </div>
-          </div>
-  </section>
+      </div>
+      </div>
+</section>
 
                     </div>
                                       </div>
@@ -336,84 +375,76 @@
                             <code data-language="html">{{ attach_library(&#039;nitflex_theme/featured-movie&#039;) }}
 
 &lt;section class=&quot;featured-movie {{ attributes ? attributes.class }}&quot;{{ attributes ? attributes|without(class) }}&gt;
+  {{ title_prefix }}
+  {{ title_suffix }}
   {% if cover_image %}
     &lt;div class=&quot;featured-movie__cover-image&quot;&gt;
       {{ cover_image }}
     &lt;/div&gt;
   {% endif %}
-  {% if title or mpaa_rating or average_rating or promo_text or sypnosis %}
-    &lt;div class=&quot;featured-movie__meta&quot;&gt;
-      {% if title %}
-        &lt;div class=&quot;featured-image__title&quot;&gt;
-          {{ title_prefix }}
-            {%
-              include &#039;@nitflex_theme/heading/heading.twig&#039; with {
-                &quot;heading&quot;: {
-                  &quot;title&quot;: title,
-                  &quot;heading_level&quot;: 1,
-                  &quot;url&quot;: &quot;&quot;
-                }
-              } only
-            %}
-          {{ title_suffix }}
-        &lt;/div&gt;
-      {% endif %}
-      {% if promo_text %}
-        &lt;div class=&quot;featured-movie__promo&quot;&gt;
+  &lt;div class=&quot;featured-movie__meta&quot;&gt;
+    &lt;div class=&quot;featured-movie__title&quot;&gt;
+      {%
+        include &#039;@nitflex_theme/heading/heading.twig&#039; with {
+          heading: {
+            title: heading.title,
+            heading_level: heading.heading_level,
+          }
+        } only
+      %}
+    &lt;/div&gt;
+    {% if promo_text %}
+      &lt;div class=&quot;featured-movie__promo&quot;&gt;
+        {%
+          include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
+            eyebrow: promo_text
+          }
+        %}
+      &lt;/div&gt;
+    {% endif %}
+    &lt;div class=&quot;featured-movie__settings&quot;&gt;
+      &lt;div class=&quot;featured-movie__favorites-toggle&quot;&gt;
+        {% block favorites_toggle %}
           {%
-            include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
-              &quot;eyebrow&quot;: promo_text
-            }
+            include &#039;@nitflex_theme/add-to-favorites/add-to-favorites.twig&#039; with {
+              url: &#039;#&#039;,
+            } only
           %}
-        &lt;/div&gt;
-      {% endif %}
+        {% endblock %}
+      &lt;/div&gt;
       {% if mpaa_rating %}
         &lt;div class=&quot;featured-movie__mpaa-rating&quot;&gt;
-          &lt;span&gt;{{ &#039;Rated &#039;|t }}&lt;/span&gt;
           {%
-            include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
-              &quot;eyebrow&quot;: mpaa_rating
+            include &#039;@nitflex_theme/mpaa-rating/mpaa-rating.twig&#039; with {
+              rating: mpaa_rating
             }
           %}
         &lt;/div&gt;
       {% endif %}
       {% if average_rating %}
-      &lt;div class=&quot;featured-movie__average-rating&quot;&gt;
-        {%
-          include &#039;@nitflex_theme/eyebrow/eyebrow.twig&#039; with {
-            &quot;eyebrow&quot;: average_rating
-          }
-        %}
-      &lt;/div&gt;
-      {% endif %}
-      {% if sypnosis %}
-      &lt;div class=&quot;featured-movie__synopsis&quot;&gt;
-        {{ sypnosis }}
-      &lt;/div&gt;
-      {% endif %}
-      {% if watch_button or add_button %}
-        &lt;div class=&quot;featured-movie__ctas&quot;&gt;
-          {% if watch_button %}
-            {%
-              include &#039;@nitflex_theme/button/button.twig&#039; with {
-                &quot;button&quot;: watch_button
-              } only
-            %}
-          {% endif %}
-          {% if add_button %}
-            {%
-              include &#039;@nitflex_theme/button/button.twig&#039; with {
-                &quot;button&quot;: {
-                  &quot;text&quot;: add_button.text,
-                  &quot;classes&quot;: &#039;button--primary&#039;
-                }
-              } only
-            %}
-          {% endif %}
+        &lt;div class=&quot;featured-movie__average-rating&quot;&gt;
+          {% include &#039;@nitflex_theme/average-rating/average-rating.twig&#039; with {
+              count: average_rating
+            } only 
+          %}
         &lt;/div&gt;
       {% endif %}
     &lt;/div&gt;
-  {% endif %}
+    {% if synopsis %}
+      &lt;div class=&quot;featured-movie__synopsis&quot;&gt;
+        {{ synopsis }}
+      &lt;/div&gt;
+    {% endif %}
+    {% if watch_button %}
+      &lt;div class=&quot;featured-movie__cta&quot;&gt;
+        {%
+          include &#039;@nitflex_theme/button/button.twig&#039; with {
+            button: watch_button
+          } only
+        %}
+      &lt;/div&gt;
+    {% endif %}
+  &lt;/div&gt;
 &lt;/section&gt;
 </code>
                           </pre>
@@ -499,7 +530,11 @@
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG-13
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG-13</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -590,7 +625,10 @@
     &lt;/div&gt;
     {% if mpaa_rating %}
       &lt;div class=&quot;movie-card__mpaa-rating&quot;&gt;
-        {{ mpaa_rating }}
+        {% include &#039;@nitflex_theme/mpaa-rating/mpaa-rating.twig&#039; with {
+            rating: mpaa_rating
+          } only 
+        %}
       &lt;/div&gt;
     {% endif %}
     {% if average_rating %}
@@ -650,7 +688,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        G
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">G</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -724,7 +766,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -798,7 +844,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        R
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">R</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -872,7 +922,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG-13
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG-13</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -946,7 +1000,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -1070,7 +1128,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        G
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">G</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -1144,7 +1206,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -1218,7 +1284,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        R
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">R</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -1292,7 +1362,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG-13
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG-13</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -1366,7 +1440,11 @@ of movie cards.</p>
 </div>
           </div>
           <div class="movie-card__mpaa-rating">
-        PG
+        
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG</span>
+</div>
       </div>
               <div class="movie-card__average-rating">
         
@@ -1458,6 +1536,42 @@ of movie cards.</p>
     {% endembed %}
   {% endblock %}
 &lt;/section&gt;
+</code>
+                          </pre>
+                        </dd>
+                      </dl>                    </div>
+                                                </div>
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-mpaa-rating">
+
+                <div class="kss-item__overview-wrapper">
+                  <h2 class="kss-item__title"><a href="item-components-mpaa-rating.html" target="_blank" aria-label="View standalone page of MPAA Rating in a new tab.">MPAA Rating</a></h2>
+                                      <div class="kss-item__description">
+                      <p>This is the MPAA rating component.</p>
+
+                    </div>
+                                                    </div>
+
+                                  <div class="kss-item__example-wrapper">
+                    <div class="kss-item__example">
+                      
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG</span>
+</div>
+
+                    </div>
+                                      </div>
+
+                  <div class="kss-item__details-wrapper">
+                      <dl class="kss-item__markup-example">
+                        <dt class="kss-item__markup-example-title">Markup Details</dt>
+                        <dd class="kss-item__markup-example-content kss-syntax-wrapper">
+                          <pre>
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/mpaa-rating&#039;) }}
+
+&lt;div class=&quot;mpaa-rating&quot;&gt;
+  &lt;span class=&quot;mpaa-rating__text&quot;&gt;{{ &#039;Rated:&#039;|t }}&lt;/span&gt; &lt;span class=&quot;mpaa-rating__rating&quot;&gt;{{ rating|default(&#039;PG&#039;) }}&lt;/span&gt;
+&lt;/div&gt;
 </code>
                           </pre>
                         </dd>

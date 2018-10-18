@@ -14,33 +14,24 @@
             <main class="kss-layout__main js-open" aria-label="Content">
         <section class="kss-layout__content-wrapper">
           <article role="main" class="kss-layout__content">
-                          <div class="kss-item kss-item--depth-2" id="kss-ref-general-typography">
+                          <div class="kss-item kss-item--depth-2" id="kss-ref-components-mpaa-rating">
 
                 <div class="kss-item__overview-wrapper">
-                  <h2 class="kss-item__title"><a href="item-general-typography.html" target="_blank" aria-label="View standalone page of Typography in a new tab.">Typography</a></h2>
+                  <h2 class="kss-item__title"><a href="item-components-mpaa-rating.html" target="_blank" aria-label="View standalone page of MPAA Rating in a new tab.">MPAA Rating</a></h2>
                                       <div class="kss-item__description">
-                      <p>Custom fonts are loaded via Google fonts.</p>
+                      <p>This is the MPAA rating component.</p>
 
                     </div>
                                                     </div>
 
                                   <div class="kss-item__example-wrapper">
                     <div class="kss-item__example">
-                      <h2>Base</h2>
-<p><code>font-stack-base</code></p>
-<div style="font: 20px/2 'Helvetica'"> Helvetica</div>
-<div style="font: italic 20px/2 'Helvetica'"> Helvetica italic</div>
-<div style="font: 700 20px/2 'Helvetica'"> Helvetica </div>
-<div style="font: 700 italic 20px/2 'Helvetica'"> Helvetica italic </div>
-<hr />
-<h2>Secondary</h2>
-<p><code>font-stack-secondary</code></p>
-<div style="font: 20px/2 'Times'"> Times</div>
-<div style="font: italic 20px/2 'Times'"> Times italic</div>
-<div style="font: 700 20px/2 'Times'"> Times Bold</div>
-<div style="font: 700 20px/2 'Times'"> Times Bold italic</div>
-<div style="font: 900 20px/2 'Times'"> Times Black </div>
-<div style="font: 900 italic 20px/2 'Times'"> Times Black italic</div>
+                      
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">Rated:</span> <span class="mpaa-rating__rating">PG</span>
+</div>
+
                     </div>
                                       </div>
 
@@ -49,21 +40,12 @@
                         <dt class="kss-item__markup-example-title">Markup Details</dt>
                         <dd class="kss-item__markup-example-content kss-syntax-wrapper">
                           <pre>
-                            <code data-language="html">&lt;h2&gt;Base&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;font-stack-base&lt;/code&gt;&lt;/p&gt;
-&lt;div style=&quot;font: 20px/2 &#039;Helvetica&#039;&quot;&gt; Helvetica&lt;/div&gt;
-&lt;div style=&quot;font: italic 20px/2 &#039;Helvetica&#039;&quot;&gt; Helvetica italic&lt;/div&gt;
-&lt;div style=&quot;font: 700 20px/2 &#039;Helvetica&#039;&quot;&gt; Helvetica &lt;/div&gt;
-&lt;div style=&quot;font: 700 italic 20px/2 &#039;Helvetica&#039;&quot;&gt; Helvetica italic &lt;/div&gt;
-&lt;hr /&gt;
-&lt;h2&gt;Secondary&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;font-stack-secondary&lt;/code&gt;&lt;/p&gt;
-&lt;div style=&quot;font: 20px/2 &#039;Times&#039;&quot;&gt; Times&lt;/div&gt;
-&lt;div style=&quot;font: italic 20px/2 &#039;Times&#039;&quot;&gt; Times italic&lt;/div&gt;
-&lt;div style=&quot;font: 700 20px/2 &#039;Times&#039;&quot;&gt; Times Bold&lt;/div&gt;
-&lt;div style=&quot;font: 700 20px/2 &#039;Times&#039;&quot;&gt; Times Bold italic&lt;/div&gt;
-&lt;div style=&quot;font: 900 20px/2 &#039;Times&#039;&quot;&gt; Times Black &lt;/div&gt;
-&lt;div style=&quot;font: 900 italic 20px/2 &#039;Times&#039;&quot;&gt; Times Black italic&lt;/div&gt;</code>
+                            <code data-language="html">{{ attach_library(&#039;nitflex_theme/mpaa-rating&#039;) }}
+
+&lt;div class=&quot;mpaa-rating&quot;&gt;
+  &lt;span class=&quot;mpaa-rating__text&quot;&gt;{{ &#039;Rated:&#039;|t }}&lt;/span&gt; &lt;span class=&quot;mpaa-rating__rating&quot;&gt;{{ rating|default(&#039;PG&#039;) }}&lt;/span&gt;
+&lt;/div&gt;
+</code>
                           </pre>
                         </dd>
                       </dl>                    </div>
