@@ -1,10 +1,10 @@
-uuid: d045c76b-d975-4557-be26-489818918c77
+uuid: e01d6e35-58b7-4052-85b6-b733f0721a2a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.hero
-label: Hero
+id: node.featured_movie
+label: 'Featured Movie'
 targetEntityType: node
 cache: true
