@@ -10,5 +10,7 @@
 @import '../../global/utils/init';
 
 .heading {
+  @include font-stack-base;
+  font-weight: $font-weight-bold;
   line-height: 1.3;
 }
