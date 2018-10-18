@@ -1,16 +1,17 @@
 .button {
-  background: #000;
+  background-color: #000;
   border: 2px solid #464646;
   border-radius: 44px;
   color: #FFF;
+  cursor: pointer;
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
   padding: 14px 40px;
   text-decoration: none;
-  -webkit-transition: border 0.125s ease, background 0.125s ease;
-  -o-transition: border 0.125s ease, background 0.125s ease;
-  transition: border 0.125s ease, background 0.125s ease;
+  -webkit-transition: border 0.125s ease, background-color 0.125s ease;
+  -o-transition: border 0.125s ease, background-color 0.125s ease;
+  transition: border 0.125s ease, background-color 0.125s ease;
   white-space: nowrap; }
   .button:hover, .button:focus {
     border-color: #FFF; }
