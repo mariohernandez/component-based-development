@@ -4,7 +4,7 @@
   padding: 20px 0;
   position: relative; }
 
-@media (min-width: 55em) {
+@media (min-width: 768px) {
   .tabs.primary::after {
     background-color: #bbb;
     bottom: 20px;
@@ -22,7 +22,7 @@
   font-weight: 700;
   margin: 0 0 10px;
   padding: 0; }
-  @media (min-width: 55em) {
+  @media (min-width: 768px) {
     .tabs.primary li {
       display: inline-block;
       margin: 0 10px 0 0; } }
@@ -34,7 +34,7 @@
   display: block;
   padding: 10px 20px;
   text-decoration: none; }
-  @media (min-width: 55em) {
+  @media (min-width: 768px) {
     .tabs.primary a {
       border-bottom: 0; } }
 
@@ -43,7 +43,7 @@
   background-color: #FFF;
   border: 1px solid #bbb;
   color: #000; }
-  @media (min-width: 55em) {
+  @media (min-width: 768px) {
     .tabs.primary a:focus,
     .tabs.primary a:hover {
       border-bottom: 0; } }
@@ -51,7 +51,7 @@
 .tabs.primary .is-active a {
   background-color: #FFF;
   color: #000; }
-  @media (min-width: 55em) {
+  @media (min-width: 768px) {
     .tabs.primary .is-active a {
       border-bottom: 0; } }
 

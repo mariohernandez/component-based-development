@@ -29,9 +29,7 @@
                       
 
 
-  <button
-    type="submit"
-    class="button ">
+  <button type="submit" class="button ">
     Watch now
   </button
 
@@ -48,9 +46,7 @@
                         
 
 
-  <button
-    type="submit"
-    class="button button--primary">
+  <button type="submit" class="button button--primary">
     Watch now
   </button
 
@@ -71,9 +67,7 @@
   &lt;/a&gt;
 {# Otherwise render as a button. #}
 {% else %}
-  &lt;button
-    type=&quot;{{ button.type|default(&#039;submit&#039;) }}&quot;
-    class=&quot;button {{ modifier_class }}{{ classes|default(&#039;&#039;) }}&quot;&gt;
+  &lt;button type=&quot;{{ button.type|default(&#039;submit&#039;) }}&quot; class=&quot;button {{ modifier_class }}{{ classes|default(&#039;&#039;) }}&quot;&gt;
     {{ button.text }}
   &lt;/button
 {% endif %}

@@ -6,13 +6,11 @@ global:
     # base, layout, component, state, theme
     base:
       dist/css/global.css: {}
+      dist/css/body-text.css: {}
     layout:
       dist/css/page.css: {}
-
-fonts:
-  css:
-    theme:
-      'https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Open+Sans:400,700': { type: external, minified: true }
+    component:
+      dist/css/branding.css: {}
 
 # Example external library.
 # webfonts:
@@ -51,7 +49,6 @@ button:
     component:
       dist/css/button.css: {}
 
-
 eyebrow:
   css:
     component:
@@ -71,11 +68,21 @@ movie-card:
   css:
     component:
       dist/css/movie-card.css: {}
-  js:
-    dist/js/movie-card.js: {}
-  dependencies:
-    - core/drupal
-    - core/jquery
+
+movie-card-collection:
+  css:
+    component:
+      dist/css/movie-card-collection.css: {}
+
+movie-list:
+  css:
+    component:
+      dist/css/movie-list.css: {}
+
+mpaa-rating:
+  css:
+    component:
+      dist/css/mpaa-rating.css: {}
 
 tabs:
   css:

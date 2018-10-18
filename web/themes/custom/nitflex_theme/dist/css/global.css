@@ -33,7 +33,7 @@ html {
  */
 body {
   font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   font-size: 1.4rem;
   line-height: 1.15;
@@ -429,25 +429,25 @@ li {
 h1 {
   font-size: 35px;
   font-weight: 600; }
-  @media (min-width: 64em) {
+  @media (min-width: 1025px) {
     h1 {
       font-size: 75px;
       font-weight: 900; } }
 
 h2 {
   font-size: 25px; }
-  @media (min-width: 64em) {
+  @media (min-width: 1025px) {
     h2 {
       font-size: 45px; } }
 
 h3 {
   font-size: 20px; }
-  @media (min-width: 64em) {
+  @media (min-width: 1025px) {
     h3 {
       font-size: 30px; } }
 
 h4 {
   font-size: 18px; }
-  @media (min-width: 64em) {
+  @media (min-width: 1025px) {
     h4 {
       font-size: 25px; } }

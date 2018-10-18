@@ -1,0 +1,20 @@
+.movie-list {
+  background-color: #000;
+  padding: 30px 10px 20px; }
+  @media (min-width: 1025px) {
+    .movie-list {
+      padding: 50px 5px 40px; } }
+
+.movie-list__title {
+  color: #FFF;
+  padding: 0 5px;
+  text-align: center;
+  text-transform: uppercase; }
+  .movie-list__title .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0; }
+  @media (min-width: 1200px) {
+    .movie-list__title {
+      text-align: left; } }

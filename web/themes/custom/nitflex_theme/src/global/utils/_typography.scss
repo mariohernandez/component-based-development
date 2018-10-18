@@ -5,30 +5,35 @@
 // Markup:
 // <h2>Base</h2>
 // <p><code>font-stack-base</code></p>
-// <div style="font: 20px/2 'Open Sans'"> Open Sans</div>
-// <div style="font: italic 20px/2 'Open Sans'"> Open Sans italic</div>
-// <div style="font: 700 20px/2 'Open Sans'"> Open Sans </div>
-// <div style="font: 700 italic 20px/2 'Open Sans'"> Open Sans italic </div>
+// <div style="font: 20px/2 'Helvetica'"> Helvetica</div>
+// <div style="font: italic 20px/2 'Helvetica'"> Helvetica italic</div>
+// <div style="font: 700 20px/2 'Helvetica'"> Helvetica </div>
+// <div style="font: 700 italic 20px/2 'Helvetica'"> Helvetica italic </div>
 // <hr />
 // <h2>Secondary</h2>
 // <p><code>font-stack-secondary</code></p>
-// <div style="font: 20px/2 'Montserrat'"> Montserrat</div>
-// <div style="font: italic 20px/2 'Montserrat'"> Montserrat italic</div>
-// <div style="font: 700 20px/2 'Montserrat'"> Montserrat Bold</div>
-// <div style="font: 700 20px/2 'Montserrat'"> Montserrat Bold italic</div>
-// <div style="font: 900 20px/2 'Montserrat'"> Montserrat Black </div>
-// <div style="font: 900 italic 20px/2 'Montserrat'"> Montserrat Black italic</div>
+// <div style="font: 20px/2 'Times'"> Times</div>
+// <div style="font: italic 20px/2 'Times'"> Times italic</div>
+// <div style="font: 700 20px/2 'Times'"> Times Bold</div>
+// <div style="font: 700 20px/2 'Times'"> Times Bold italic</div>
+// <div style="font: 900 20px/2 'Times'"> Times Black </div>
+// <div style="font: 900 italic 20px/2 'Times'"> Times Black italic</div>
 //
 // Weight: 999
 //
 // Style guide: General.typography
 
-@mixin font-stack-base {
-  font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
-   font-weight: 300;
-}
-
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 $font-weight-x-bold: 800;
 $font-italic: italic;
+
+@mixin font-stack-base {
+  font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
+   font-weight: $font-weight-regular;
+}
+
+@mixin font-stack-secondary {
+  font-family: 'Times', sans-serif;
+  font-weight: $font-weight-regular;
+}

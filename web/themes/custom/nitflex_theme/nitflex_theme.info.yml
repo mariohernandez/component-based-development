@@ -11,7 +11,7 @@
 
 name: Nitflex Theme
 type: theme
-description: Drupal 8 theme built with Mediacurrent&#39;s theme generator.
+description: Custom Drupal 8 theme created with Mediacurrent&#39;s Theme Generator
 package: Other
 core: 8.x
 # Classy vs. Stable as a base theme: https://www.lullabot.com/articles/a-tale-of-two-base-themes-in-drupal-8-core
@@ -48,7 +48,6 @@ base theme: stable
 # The "libraries:" section will add a library to _all_ pages.
 libraries:
   - nitflex_theme/global
-  - nitflex_theme/fonts
   # Example adding the webfonts library to every page.
   # See nitflex_theme.libraries.yml for more info.
   #- nitflex_theme/webfonts

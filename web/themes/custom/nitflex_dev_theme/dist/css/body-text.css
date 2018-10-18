@@ -1,0 +1,11 @@
+.body-text {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .body-text {
+      padding: 40px; } }
+  .body-text p {
+    font-size: 2.0rem;
+    line-height: 1.5;
+    margin-bottom: 36px; }

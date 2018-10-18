@@ -37,32 +37,9 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {{ title }}
-  {{ title_suffix }}
-
-  {% if header %}
-    <header>
-      {{ header }}
-    </header>
-  {% endif %}
-
-  {{ exposed }}
-  {{ attachment_before }}
-
-  {{ rows }}
-  {{ empty }}
-  {{ pager }}
-
-  {{ attachment_after }}
-  {{ more }}
-
-  {% if footer %}
-    <footer>
-      {{ footer }}
-    </footer>
-  {% endif %}
-
-  {{ feed_icons }}
-</div>
+{% set attributes = attributes.addClass(classes) %}
+{% embed '@nitflex_theme/movie-card-collection/movie-card-collection.twig' %}
+  {% block collection %}
+    {{ rows }}
+  {% endblock %}
+{% endembed %}

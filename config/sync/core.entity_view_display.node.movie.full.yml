@@ -1,0 +1,70 @@
+uuid: 3dbb85be-8d48-44dd-a5c3-30500be0399a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.movie.body
+    - field.field.node.movie.field_average_viewer_rating
+    - field.field.node.movie.field_genres
+    - field.field.node.movie.field_main_image
+    - field.field.node.movie.field_mpaa_rating
+    - field.field.node.movie.field_promo_sentence
+    - node.type.movie
+    - responsive_image.styles.hero
+  module:
+    - options
+    - responsive_image
+    - text
+    - user
+id: node.movie.full
+targetEntityType: node
+bundle: movie
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_average_viewer_rating:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_main_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: hero
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_mpaa_rating:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_promo_sentence:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  flag_favorites:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_genres: true
+  links: true

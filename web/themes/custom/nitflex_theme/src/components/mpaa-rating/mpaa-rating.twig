@@ -1,0 +1,5 @@
+{{ attach_library('nitflex_theme/mpaa-rating') }}
+
+<div class="mpaa-rating">
+  <span class="mpaa-rating__text">{{ 'Rated:'|t }}</span> <span class="mpaa-rating__rating">{{ rating|default('PG') }}</span>
+</div>

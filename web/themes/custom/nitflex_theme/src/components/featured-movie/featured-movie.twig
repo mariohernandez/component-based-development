@@ -1,82 +1,74 @@
 {{ attach_library('nitflex_theme/featured-movie') }}
 
 <section class="featured-movie {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
   {% if cover_image %}
     <div class="featured-movie__cover-image">
       {{ cover_image }}
     </div>
   {% endif %}
-  {% if title or mpaa_rating or average_rating or promo_text or sypnosis %}
-    <div class="featured-movie__meta">
-      {% if title %}
-        <div class="featured-image__title">
-          {{ title_prefix }}
-            {%
-              include '@nitflex_theme/heading/heading.twig' with {
-                "heading": {
-                  "title": title,
-                  "heading_level": 1,
-                  "url": ""
-                }
-              } only
-            %}
-          {{ title_suffix }}
-        </div>
-      {% endif %}
-      {% if promo_text %}
-        <div class="featured-movie__promo">
+  <div class="featured-movie__meta">
+    <div class="featured-movie__title">
+      {%
+        include '@nitflex_theme/heading/heading.twig' with {
+          heading: {
+            title: heading.title,
+            heading_level: heading.heading_level,
+          }
+        } only
+      %}
+    </div>
+    {% if promo_text %}
+      <div class="featured-movie__promo">
+        {%
+          include '@nitflex_theme/eyebrow/eyebrow.twig' with {
+            eyebrow: promo_text
+          }
+        %}
+      </div>
+    {% endif %}
+    <div class="featured-movie__settings">
+      <div class="featured-movie__favorites-toggle">
+        {% block favorites_toggle %}
           {%
-            include '@nitflex_theme/eyebrow/eyebrow.twig' with {
-              "eyebrow": promo_text
-            }
+            include '@nitflex_theme/add-to-favorites/add-to-favorites.twig' with {
+              url: '#',
+            } only
           %}
-        </div>
-      {% endif %}
+        {% endblock %}
+      </div>
       {% if mpaa_rating %}
         <div class="featured-movie__mpaa-rating">
-          <span>{{ 'Rated '|t }}</span>
           {%
-            include '@nitflex_theme/eyebrow/eyebrow.twig' with {
-              "eyebrow": mpaa_rating
+            include '@nitflex_theme/mpaa-rating/mpaa-rating.twig' with {
+              rating: mpaa_rating
             }
           %}
         </div>
       {% endif %}
       {% if average_rating %}
-      <div class="featured-movie__average-rating">
-        {%
-          include '@nitflex_theme/eyebrow/eyebrow.twig' with {
-            "eyebrow": average_rating
-          }
-        %}
-      </div>
-      {% endif %}
-      {% if sypnosis %}
-      <div class="featured-movie__synopsis">
-        {{ sypnosis }}
-      </div>
-      {% endif %}
-      {% if watch_button or add_button %}
-        <div class="featured-movie__ctas">
-          {% if watch_button %}
-            {%
-              include '@nitflex_theme/button/button.twig' with {
-                "button": watch_button
-              } only
-            %}
-          {% endif %}
-          {% if add_button %}
-            {%
-              include '@nitflex_theme/button/button.twig' with {
-                "button": {
-                  "text": add_button.text,
-                  "classes": 'button--primary'
-                }
-              } only
-            %}
-          {% endif %}
+        <div class="featured-movie__average-rating">
+          {% include '@nitflex_theme/average-rating/average-rating.twig' with {
+              count: average_rating
+            } only 
+          %}
         </div>
       {% endif %}
     </div>
-  {% endif %}
+    {% if synopsis %}
+      <div class="featured-movie__synopsis">
+        {{ synopsis }}
+      </div>
+    {% endif %}
+    {% if watch_button %}
+      <div class="featured-movie__cta">
+        {%
+          include '@nitflex_theme/button/button.twig' with {
+            button: watch_button
+          } only
+        %}
+      </div>
+    {% endif %}
+  </div>
 </section>

@@ -7,9 +7,7 @@
   </a>
 {# Otherwise render as a button. #}
 {% else %}
-  <button
-    type="{{ button.type|default('submit') }}"
-    class="button {{ modifier_class }}{{ classes|default('') }}">
+  <button type="{{ button.type|default('submit') }}" class="button {{ modifier_class }}{{ classes|default('') }}">
     {{ button.text }}
   </button
 {% endif %}

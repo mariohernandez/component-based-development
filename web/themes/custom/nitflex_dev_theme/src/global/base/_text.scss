@@ -1,0 +1,50 @@
+@mixin heading1 {
+  font-size: 35px;
+  font-weight: 600;
+
+  @include breakpoint($bp-md) {
+    font-size: 75px;
+    font-weight: 900;
+  }
+}
+
+@mixin heading2 {
+  font-size: 25px;
+
+  @include breakpoint($bp-md) {
+    font-size: 45px;
+  }
+}
+
+@mixin heading3 {
+  font-size: 20px;
+
+  @include breakpoint($bp-md) {
+    font-size: 30px;
+  }
+}
+
+@mixin heading4 {
+  font-size: 18px;
+
+  @include breakpoint($bp-md) {
+    font-size: 25px;
+  }
+}
+
+
+h1 {
+  @include heading1;
+}
+
+h2 {
+  @include heading2;
+}
+
+h3 {
+  @include heading3;
+}
+
+h4 {
+  @include heading4;
+}

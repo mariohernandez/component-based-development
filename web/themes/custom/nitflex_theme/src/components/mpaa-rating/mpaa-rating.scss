@@ -1,0 +1,27 @@
+// MPAA Rating
+//
+// This is the MPAA rating component.
+//
+// Markup: mpaa-rating.twig
+//
+// Style guide: Components.MPAA Rating
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.mpaa-rating {
+  @include font-stack-secondary;
+  border: 1px solid $color-black;
+  color: $color-black;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+.mpaa-rating__text {
+  @include element-invisible;
+}
