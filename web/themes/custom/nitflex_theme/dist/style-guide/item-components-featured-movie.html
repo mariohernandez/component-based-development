@@ -115,7 +115,7 @@
         
 
 
-  <a href="#" class="button ">
+  <a href="#" class="button button--primary">
     Watch now
   </a>
 
@@ -198,7 +198,8 @@
       &lt;div class=&quot;featured-movie__cta&quot;&gt;
         {%
           include &#039;@nitflex_theme/button/button.twig&#039; with {
-            button: watch_button
+            button: watch_button,
+            modifier_class: &#039;button--primary&#039;
           } only
         %}
       &lt;/div&gt;

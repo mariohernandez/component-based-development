@@ -594,16 +594,19 @@ h4 {
     padding: 0 10px; }
 
 .branding__site-name {
-  color: #0099cc;
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 700;
+  background-image: url("../assets/nitflex-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  min-width: 260px;
+  margin: 0 10px;
+  padding: 70px 0 0;
   text-decoration: none; }
-  @media (min-width: 768px) {
-    .branding__site-name {
-      font-size: 56px; } }
   .branding__site-name:focus, .branding__site-name:hover {
-    color: #c4d600; }
+    text-decoration: none; }
 
 .branding__navigation ul:not(.contextual-links) {
   -webkit-box-align: center;
@@ -621,7 +624,7 @@ h4 {
   font-size: 20px;
   font-weight: 700;
   list-style: none;
-  margin: 5px 0;
+  margin: 10px 0;
   padding: 0 10px; }
   .branding__navigation li a {
     color: #FFF;

@@ -57,13 +57,24 @@ Although we highly encourage you to use the already tested setup above, you are 
 
 1. [Download or clone the provided repo](https://github.com/mariohernandez/component-based-development) to access the assets you will need to follow along.
 
-2. Copy **web/themes/custom/nitflex_dev_theme** into your own Drupal themes location (i.e. /web/themes/).
+2. Copy **`web/themes/custom/nitflex_dev_theme`** into your own Drupal themes location (i.e. web/themes/custom/).
 
-3. Copy all images from this repo's `/assets/imgs` into your Drupal's files directory (i.e. web/sites/default/files/).
+3. Copy all images from this repo's **`/assets/imgs/`** into your Drupal's files directory (i.e. web/sites/default/files/).
 
-4. Import **drupal8.export.gz** (found in the root of this repo) into your own drupal database. **WARNING: this will override your current database**.  This creates all the drupal infrastructure we need for the training (content types, views, view modes, image styles, etc.).  This would be an extremely time consuming process if you opt to do it by hand so we highly recommend you use the provided database dump.
+4. Make sure the following modules are installed:
+ * [Admin Toolbar](https://www.drupal.org/project/admin_toolbar)
+ * [Twig Field Value](https://www.drupal.org/project/twig_field_value) 
+ * [Devel](https://www.drupal.org/project/devel)
+ * [Flag](https://www.drupal.org/project/flag)
+ * [Component Libraries](https://www.drupal.org/project/components)
+ * [Path Auto](https://www.drupal.org/project/pathauto)
+ * [Token](https://www.drupal.org/project/token)
+ * [Yaml Content](https://www.drupal.org/project/yaml_content)
+ * [Paragraphs](https://www.drupal.org/project/paragraphs)
 
-5. If you successfully followed all the steps, you can login to your site using `admin` and `admin` as username/password.
+5. Import **drupal8.export.gz** (found in the root of this repo) into your own Drupal database. **WARNING: this will override your current database**.  This creates all the Drupal infrastructure we need for the training (content types, views, view modes, image styles, etc.), plus some sample content. For more advanced users, you can find site configuration files in `/config/sync/`, but you will be on your own for generating sample content. This would be an extremely time consuming process if you opt to do it by hand so we highly recommend you use the provided database dump.
+
+6. If you successfully followed all the steps, you can login to your site using `admin` and `admin` as username/password.
 
 <!-- TODO: Commenting for now until documentation is complete. -->
 <!-- ## Workshop exercises:

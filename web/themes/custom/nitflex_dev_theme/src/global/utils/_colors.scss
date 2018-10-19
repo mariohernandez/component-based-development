@@ -6,6 +6,9 @@
 //
 // Markup:
 // <h3>Primary</h3>
+// <div class="kss-swatch" style="background-color: #b81d24">
+//   <div class="kss-swatch__hex">$color-bright-red<br>#b81d24</div>
+// </div>
 // <div class="kss-swatch" style="background-color: #0099cc">
 //   <div class="kss-swatch__hex">$color-pacific-blue<br>#0099cc</div>
 // </div>
@@ -43,6 +46,7 @@
 // Style guide: General.colors
 
 // Primary
+$color-bright-red: #b81d24;
 $color-pacific-blue: #0099cc;
 $color-rio-grande: #c4d600;
 $color-oslo-gray: #888b8d;
