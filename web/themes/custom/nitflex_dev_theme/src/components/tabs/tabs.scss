@@ -20,10 +20,10 @@
       content: '';
       display: block;
       height: 1px;
-      left: 0;
+      left: -100vw;
       position: absolute;
-      width: 100%;
-      z-index: $zi-below-ground;
+      width: 200vw;
+      z-index: $zi-ground;
     }
   }
 
@@ -33,6 +33,8 @@
     font-weight: $font-weight-bold;
     margin: 0 0 10px;
     padding: 0;
+    position: relative;
+    z-index: $zi-lowest;
 
     @include breakpoint($bp-sm) {
       display: inline-block;
