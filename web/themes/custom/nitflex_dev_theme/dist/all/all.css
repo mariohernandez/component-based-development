@@ -546,17 +546,19 @@ h4 {
     content: '';
     display: block;
     height: 1px;
-    left: 0;
+    left: -100vw;
     position: absolute;
-    width: 100%;
-    z-index: -1; } }
+    width: 200vw;
+    z-index: 0; } }
 
 .tabs.primary li {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 10px;
-  padding: 0; }
+  padding: 0;
+  position: relative;
+  z-index: 10; }
   @media (min-width: 768px) {
     .tabs.primary li {
       display: inline-block;

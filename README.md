@@ -61,7 +61,7 @@ Although we highly encourage you to use the already tested setup above, you are 
 
 3. Copy all images from this repo's **`/assets/imgs/`** into your Drupal's files directory (i.e. web/sites/default/files/).
 
-4. Make sure the following modules are installed:
+4. Make sure the following modules (plus their dependencies) are installed:
  * [Admin Toolbar](https://www.drupal.org/project/admin_toolbar)
  * [Twig Field Value](https://www.drupal.org/project/twig_field_value) 
  * [Devel](https://www.drupal.org/project/devel)
