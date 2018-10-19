@@ -50,6 +50,21 @@ After following these steps, you should have an unstyled Drupal site available l
 
 **NOTE**:  This is a full class and assistance with your local environment may be limited. We are leveraging Lando to help streamline the setup of a consistent local development environment.
 
+
+## Not using Lando?
+
+Although we highly encourage you to use the already tested setup above, you are free to use your existing Drupal development workflow.  This however will require you complete several manual tasks so you can be up to speed and ready to follow along during training.
+
+1. [Download or clone the provided repo](https://github.com/mariohernandez/component-based-development) to access the assets you will need to follow along.
+
+2. Copy **web/themes/custom/nitflex_dev_theme** into your own Drupal themes location (i.e. /web/themes/).
+
+3. Copy all images from this repo's `/assets/imgs` into your Drupal's files directory (i.e. web/sites/default/files/).
+
+4. Import **drupal8.export.gz** (found in the root of this repo) into your own drupal database. **WARNING: this will override your current database**.  This creates all the drupal infrastructure we need for the training (content types, views, view modes, image styles, etc.).  This would be an extremely time consuming process if you opt to do it by hand so we highly recommend you use the provided database dump.
+
+5. If you successfully followed all the steps, you can login to your site using `admin` and `admin` as username/password.
+
 <!-- TODO: Commenting for now until documentation is complete. -->
 <!-- ## Workshop exercises:
 
