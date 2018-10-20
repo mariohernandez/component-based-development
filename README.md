@@ -23,7 +23,7 @@ Lando is a free, open source, cross-platform, local development environment tool
 
 - `cd component-based-development`
 
-- `lando start`<br />_This will set up Lando, plus pull down Drupal and required contrib modules._
+- `lando start`<br />_This will set up Lando, plus pull down Drupal and required contrib modules.  This process could take a few minutes to complete._
 
 - `lando drush si -y config_installer --account-name=admin --account-pass=admin --db-url='mysql://drupal8:drupal8@database/drupal8'`<br />_This will do a basic installation of Drupal with some custom configuration._
 
@@ -44,11 +44,6 @@ After following these steps, you should have an unstyled Drupal site available l
 ### Log into the site and preview the final results
 - Go to: [http://nitflex.lndo.site:8000/user](http://nitflex.lndo.site:8000/user) and log in with username: `admin`, pw: `admin`.<br />**IMPORTANT**: _Your Drupal site URL my be different.  In some instances the `:8000` part of the URL is not needed_.
 
-<!-- Removing this for now.  We may just do a demo during training of the complete theme. -->
-<!-- - Go to: [http://nitflex.lndo.site:8000/admin/appearance](http://nitflex.lndo.site:8000/admin/appearance) and set the default theme to be the **Nitflex** theme. Return to the homepage.
-- You should now see a styled version of the site! Switch the site back to the Nitflex **DEV** theme, and now let's get crackin' making it look as pretty as the finished Nitflex theme! -->
-
-**NOTE**:  This is a full class and assistance with your local environment may be limited. We are leveraging Lando to help streamline the setup of a consistent local development environment.
 
 # You are done! 🙌 🔥 👊
 
@@ -78,6 +73,8 @@ Although we highly encourage you to use the already tested setup above, you are 
 
 6. If you successfully followed all the steps, you can login to your site using `admin` and `admin` as username/password.
 
+---
+**NOTE**:  This is a full class and assistance with your local environment may be limited. We are leveraging Lando to help streamline the setup of a consistent local development environment.
 <!-- TODO: Commenting for now until documentation is complete. -->
 <!-- ## Workshop exercises:
 
