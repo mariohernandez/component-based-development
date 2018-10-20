@@ -50,6 +50,8 @@ After following these steps, you should have an unstyled Drupal site available l
 
 **NOTE**:  This is a full class and assistance with your local environment may be limited. We are leveraging Lando to help streamline the setup of a consistent local development environment.
 
+# You are done! 🙌 🔥 👊
+
 
 ## Not using Lando?
 
@@ -63,7 +65,7 @@ Although we highly encourage you to use the already tested setup above, you are 
 
 4. Make sure the following modules (plus their dependencies) are installed:
  * [Admin Toolbar](https://www.drupal.org/project/admin_toolbar)
- * [Twig Field Value](https://www.drupal.org/project/twig_field_value) 
+ * [Twig Field Value](https://www.drupal.org/project/twig_field_value)
  * [Devel](https://www.drupal.org/project/devel)
  * [Flag](https://www.drupal.org/project/flag)
  * [Component Libraries](https://www.drupal.org/project/components)
