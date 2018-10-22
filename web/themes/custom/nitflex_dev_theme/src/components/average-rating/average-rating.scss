@@ -1,0 +1,88 @@
+// Average Rating
+//
+// This is the average rating component.
+//
+// Markup: average-rating.twig
+//
+// Style guide: Components.average-rating
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.average-rating {
+  overflow: hidden;
+  position: relative;
+}
+
+.average-rating__stars {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.average-rating__star {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  + .average-rating__star {
+    margin-left: 5px;
+  }
+
+  svg {
+    height: 20px;
+    width: 20px;
+
+    polygon {
+      fill: $color-silver;
+    }
+
+    polyline {
+      fill: $color-white;
+    }
+  }
+}
+
+[data-rating='5'] .average-rating__star {
+
+  svg polyline {
+    fill: $color-rio-grande;
+  }
+}
+
+[data-rating='4'] .average-rating__star:nth-child(-n+4) {
+
+  svg polyline {
+    fill: $color-rio-grande;
+  }
+}
+
+[data-rating='3'] .average-rating__star:nth-child(-n+3) {
+
+  svg polyline {
+    fill: $color-rio-grande;
+  }
+}
+
+[data-rating='2'] .average-rating__star:nth-child(-n+2) {
+
+  svg polyline {
+    fill: $color-rio-grande;
+  }
+}
+
+[data-rating='1'] .average-rating__star:nth-child(-n+1) {
+
+  svg polyline {
+    fill: $color-rio-grande;
+  }
+}
+
+.average-rating__text {
+  height: 0;
+  left: -1000em;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}
