@@ -1,0 +1,62 @@
+.add-to-favorites > div {
+  display: none; }
+
+.add-to-favorites__link {
+  background-color: #000;
+  border: 2px solid #FFF;
+  border-radius: 50px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 1rem;
+  height: 0;
+  line-height: 1;
+  overflow: hidden;
+  padding: 30px 0 0;
+  position: relative;
+  width: 34px; }
+  .add-to-favorites__link::after, .add-to-favorites__link::before {
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    content: '';
+    display: block;
+    height: 20px;
+    width: 3px; }
+  .add-to-favorites__link::after {
+    height: 3px;
+    width: 20px; }
+  .add-to-favorites__link:focus::before, .add-to-favorites__link:hover::before {
+    left: auto;
+    right: 11px;
+    top: 4px;
+    -webkit-transform: rotate(36deg);
+    -ms-transform: rotate(36deg);
+    transform: rotate(36deg); }
+  .add-to-favorites__link:focus::after, .add-to-favorites__link:hover::after {
+    left: 4px;
+    -webkit-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
+    width: 10px; }
+
+.add-to-favorites--added .add-to-favorites__link {
+  background-color: #0099cc;
+  border-color: #0099cc; }
+  .add-to-favorites--added .add-to-favorites__link::before {
+    left: auto;
+    right: 11px;
+    top: 4px;
+    -webkit-transform: rotate(36deg);
+    -ms-transform: rotate(36deg);
+    transform: rotate(36deg); }
+  .add-to-favorites--added .add-to-favorites__link::after {
+    left: 4px;
+    -webkit-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
+    width: 10px; }
