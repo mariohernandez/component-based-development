@@ -34,6 +34,21 @@ global:
 #     - nitflex_dev_theme/clearfix
 #     - nitflex_dev_theme/visually-hidden
 
+add-to-favorites:
+  css:
+    component:
+      dist/css/add-to-favorites.css: {}
+
+average-rating:
+  css:
+    component:
+      dist/css/average-rating.css: {}
+
+mpaa-rating:
+  css:
+    component:
+      dist/css/mpaa-rating.css: {}
+
 tabs: 
   css:
     component:
