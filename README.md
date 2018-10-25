@@ -75,7 +75,6 @@ Although we highly encourage you to use the already tested setup above, you are 
 
 ---
 **NOTE**:  This is a full class and assistance with your local environment may be limited. We are leveraging Lando to help streamline the setup of a consistent local development environment.
-<!-- TODO: Commenting for now until documentation is complete. -->
-<!-- ## Workshop exercises:
 
-[Component based development exercises](https://mariohernandez.gitbooks.io/components-training/). -->
+
+[Component based development exercises](https://mariohernandez.gitbooks.io/components-training/).
