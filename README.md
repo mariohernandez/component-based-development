@@ -45,9 +45,9 @@ After following these steps, you should have an unstyled Drupal site available l
 - Go to: [http://nitflex.lndo.site:8000/user](http://nitflex.lndo.site:8000/user) and log in with username: `admin`, pw: `admin`.<br />**IMPORTANT**: _Your Drupal site URL my be different.  In some instances the `:8000` part of the URL is not needed_.
 
 
-# You are done! 🙌 🔥 👊
+    ## Done!  🙌 🔥 👊
 
-## Training Exercises
+# Training Exercises
 Follow these [training exercises](https://mariohernandez.gitbooks.io/components-training/) to build the full project covered during training.
 
 
