@@ -5,7 +5,7 @@ The component based development training is broken down into 3 parts:
 
 2. Building Drupal's back-end.
 
-2. Integrating the components with Drupal.
+3. Integrating the components with Drupal.
 
 ## Local Development Environment Setup
 
@@ -47,7 +47,11 @@ After following these steps, you should have an unstyled Drupal site available l
 
 # You are done! 🙌 🔥 👊
 
+## Training Exercises
+Follow these [training exercises](https://mariohernandez.gitbooks.io/components-training/) to build the full project covered during training.
 
+
+---
 ## Not using Lando?
 
 Although we highly encourage you to use the already tested setup above, you are free to use your existing Drupal development workflow.  This however will require you complete several manual tasks so you can be up to speed and ready to follow along during training.
