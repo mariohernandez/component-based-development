@@ -1,0 +1,92 @@
+// .movie-card {
+//   background: $black;
+//   color: $white;
+//   height: 250px;
+//   max-width: 420px;
+//   overflow: hidden;
+//   position: relative;
+//   transition: transform 1s ease-in-out;
+// ​
+//   a {
+//     color: $white;
+//     text-decoration: none;
+//   }
+
+//   &::after {
+//     background: transparent;
+//     bottom: 0;
+//     content: '';
+//     display: block;
+//     left: 0;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//   }
+// ​
+//   &:hover,
+//   &:focus {
+// ​
+//     .movie-card__cover-image img {
+//       height: 110%;
+//     }
+// ​
+//     // Dark overlay.
+//     &::after {
+//       background: rgba($black, 0.5);
+//     }
+// ​
+//     // On hover the text content fades into view.
+//     .movie-card__content {
+//       margin-top: 0;
+//       opacity: 1;
+//     }
+//   }
+// }
+// ​
+// .movie-card__cover-image {
+//   height: 100%;
+//   left: 0;
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+// ​
+//   img {
+//     // @include center-align(absolute);
+//     display: block;
+//     max-width: none;
+//     transition: height 0.25s ease-in-out;
+//     height: 100%;
+//     width: auto;
+//   }
+// }
+// ​
+// .movie-card__heading {
+//   font-size: 2.2rem;
+//   margin: 0 0 12px;
+//   line-height: 1;
+//   width: 100%;
+// }
+// ​
+// .movie-card__favorites-toggle,
+// .movie-card__mpaa-rating {
+//   margin-right: 10px;
+// }
+// ​
+// .movie-card__mpaa-rating {
+// ​
+//   .mpaa-rating {
+//     border-color: $white;
+//     color: $white;
+//   }
+// }
+// ​
+// .movie-card__average-rating {
+//   align-items: center;
+//   display: flex;
+//   padding: 6px 0;
+// }
+// ​
+// .movie-card__synopsis {
+//   font-size: 1.4rem;
+//   padding: 8px 0;
+// }

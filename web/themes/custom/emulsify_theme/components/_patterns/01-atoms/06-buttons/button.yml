@@ -1,0 +1,9 @@
+button_content:
+  "Watch now"
+button_link:
+  "#"
+button_attributes:
+  type:
+    submit
+  href:
+    "#"

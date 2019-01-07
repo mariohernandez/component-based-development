@@ -1,0 +1,26 @@
+{#
+/**
+ * Available variables:
+ * - eyebrow_content - the content of the link (typically text)
+ * - eyebrow_url - the url this link should poing to
+ * - eyebrow_attributes - array of attribute,value pairs
+ * - eyebrow_base_class - the base class name
+ * - eyebrow_modifiers - array of modifiers to add to the base classname
+ * - eyebrow_blockname - blockname prepended to the base classname
+ *
+ * Available blocks:
+ * - eyebrow_content - used to replace the content of the link
+ *     Example: to insert the image component
+ */
+#}
+{% set eyebrow_base_class = eyebrow_base_class|default('eyebrow') %}
+
+<span {{ bem(eyebrow_base_class, eyebrow_blockname) }}>
+  {% if eyebrow_url %}
+    <a href="{{ eyebrow_url }}">
+      {{ eyebrow_content }}
+    </a>
+  {% else %}
+    {{ eyebrow_content }}
+  {% endif %}
+</span>

@@ -1,0 +1,23 @@
+card_modifiers:
+  1:
+    bg
+
+# Title
+card_title:
+  'This is a card-bg title'
+
+# Subtitle
+card_subtitle:
+
+# Link
+card_link_url:
+
+# Button
+# button
+card_button_content:
+  "Watch now"
+card_button_link:
+  "#"
+card_button_attributes:
+  href:
+    "#"

@@ -32,6 +32,7 @@
         "drupal/viewsreference": "^1.2",
         "drupal/yaml_content": "^1.0@alpha",
         "drush/drush": "^9.0.0",
+        "fourkitchens/emulsify": "^3.1",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"

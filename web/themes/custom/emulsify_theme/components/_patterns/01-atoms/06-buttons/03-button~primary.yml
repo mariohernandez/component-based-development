@@ -1,0 +1,7 @@
+button_url:
+  "#"
+button_content:
+  "Button primary"
+button_modifiers:
+  1:
+    "primary"

@@ -1,0 +1,33 @@
+.button {
+  background-color: $black;
+  border: 2px solid $gray-dark;
+  border-radius: 44px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 40px;
+  text-decoration: none;
+  transition: border 0.125s ease, background-color 0.125s ease;
+  white-space: nowrap;
+
+  &.button--primary {
+    border-color: red;
+
+    &:hover,
+    &:focus {
+      border-color: $white;
+      background-color: red;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $white;
+
+    .button--primary & {
+      background-color: red;
+    }
+  }
+}

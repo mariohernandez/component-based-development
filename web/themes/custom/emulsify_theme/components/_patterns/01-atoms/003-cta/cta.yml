@@ -1,0 +1,10 @@
+button_content:
+  "Watch now"
+button_link:
+  "#"
+button_attributes:
+  type:
+    submit
+button_modifiers:
+  1:
+    primary
