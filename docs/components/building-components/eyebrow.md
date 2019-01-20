@@ -66,11 +66,11 @@ Now that we have written all the necessary code to build the Eyebrow component, 
     lando npm run build
     ```
 
-### :question: What does this command do?
+### ❓What does this command do?
 _The command above runs all gulp tasks found inside the gulp-tasks directory in the theme.  Keep in mind, we are using the word **lando** because our local environment was built with lando.  Typically the build command would be **npm run build**._
 
 ## Viewing the component
 * Open your Drupal site and point to the URL below:
-http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/
+[http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Eyebrow component.
