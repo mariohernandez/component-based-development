@@ -9,4 +9,4 @@ aux_links:
       - "//github.com/mariohernandez/component-based-development"
 
 # Color scheme currently only supports "dark" or nil (default)
-color_scheme: "dark"
+color_scheme: "nil"
