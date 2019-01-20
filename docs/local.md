@@ -70,7 +70,7 @@ Now that the repo has been cloned, let's build the local environment using the p
 
 ## 5. Login and Preview the site
 
-Go to: http://nitflex.lndo.site/user and log in with username: `admin`, pw: `admin`
+Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: **admin**, pw: **admin**
 
 # DONE 🙌 👏 🍺
 
