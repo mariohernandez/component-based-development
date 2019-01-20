@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Building Components
-parent: Building Components
+grand_parent: Components
 nav_order: 5
 has_children: true
 permalink: /docs/components/building-components
