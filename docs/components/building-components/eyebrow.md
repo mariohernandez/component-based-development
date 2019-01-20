@@ -66,8 +66,10 @@ Now that we have written all the necessary code to build the Eyebrow component, 
     lando npm run build
     ```
 
-### ❓What does this command do?
-_The command above runs all gulp tasks found inside the gulp-tasks directory in the theme.  Keep in mind, we are using the word **lando** because our local environment was built with lando.  Typically the build command would be **npm run build**._
+    **What does this command do?**
+
+    _The command above runs all gulp tasks found inside the gulp-tasks directory in the theme.  Keep in mind, we are using the word **lando** because our local environment was built with lando.  Typically the build command would be **npm run build**._
+
 
 ## Viewing the component
 * Open your Drupal site and point to the URL below:

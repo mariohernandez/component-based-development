@@ -5,6 +5,17 @@ nav_order: 2
 ---
 
 # Local Setup
+{:.no_toc}
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+# Local Setup
 
 This training workshop is most effective when following along with the exercises.  In an effort to provide a seamless and bug free development environment, we have put together an automated environment which will build everything for you including a container-based development environment running on [Lando](https://docs.devwithlando.io/), latest Drupal core and required modules, as well as all the front-end tools needed to compile code and other automated tasks.
 
@@ -14,11 +25,13 @@ Lando is a free, open source, cross-platform, local development environment tool
 
 * [Install Lando and Docker]*(https://docs.devwithlando.io/installation/installing.html)
 
-**NOTE**
+**IMPORTANT**
 * **Docker is required**
+
   Docker makes it possible to build containers for any of the third party integrations required in your environment.  If you already have Docker installed you don't need to install it again as part of Lando's installation.
 
 * **A word about OSX**
+
   If you are using Mac OS, you may need to install OSX's Command Line Tools.
 
 ## 2. Clone the repo
