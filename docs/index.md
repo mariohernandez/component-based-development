@@ -25,7 +25,8 @@ Contrary to the top-to-bottom theming we have been doing for years, components a
 ### Style-guide
 Style-guides are nothing new, they have been around for years, but now they are essential for documenting your component building process and showcasing your component's library. In this training we will use Pattern Lab, a modern design system.  Pattern Lab allows us to create a living style guide which we will use to catalog components. These components will be the single source of truth for markup, styles and javascript behaviors which later Drupal will use to render the site's content.
 
-Twig: Drupal 8's new templating system is a themer's best friend. Twig's easy to read and learn syntax can be leveraged to write powerful logic in your theme without resorting to traditional PHP templates.
+### Twig
+Drupal 8's new templating system is a themer's best friend. Twig's easy to read and learn syntax can be leveraged to write powerful logic in your theme without resorting to traditional PHP templates.
 
 ### BEM and SMACSS
 While building components we are given the opportunity to architecture markup in the best way possible to ensure our components are as flexible and lightweight as possible. By using BEM to name our CSS classes and SMACSS for structuring our theme we can achieve tremendous control and organization of our themes, markup and styles.
