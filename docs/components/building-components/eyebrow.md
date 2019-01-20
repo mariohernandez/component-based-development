@@ -2,6 +2,7 @@
 layout: default
 title: Eyebrow
 parent: Building Components
+grand_parent: Components
 nav_order: 1
 ---
 

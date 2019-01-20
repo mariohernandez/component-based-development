@@ -5,7 +5,7 @@ parent: Components
 nav_order: 1
 ---
 
-# Architecture
+# Components Architecture
 {:.no_toc}
 
 ## Table of contents
