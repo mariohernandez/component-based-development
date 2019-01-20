@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Components architecture
+title: Components Architecture
 parent: Components
 nav_order: 1
 ---
