@@ -33,29 +33,38 @@ The clone we have put together includes everything you need to complete the trai
 
 Now that the repo has been cloned, let's build the local environment using the power of Lando.
 
-1. In your command line, change directory to the newly cloned repo location ( cd component-based-development)
+1. In your command line, change directory to the newly cloned repo location:
+
+    `cd component-based-development`
 
 2. Run `lando start`
-  This will set up Lando, plus pull down Drupal and required contrib modules. This process could take a few minutes to complete.
+
+    This will set up Lando, plus pull down Drupal and required contrib modules. This process could take a few minutes to complete.
 
 3. Run
-  ```lando drush si -y config_installer --account-name=admin --account-pass=admin --db-url='mysql://drupal8:drupal8@database/drupal8'```
-  _This will do a basic installation of Drupal with some custom configuration._
+
+    ```lando drush si -y config_installer --account-name=admin --account-pass=admin --db-url='mysql://drupal8:drupal8@database/drupal8'```
+
+    _This will do a basic installation of Drupal with some custom configuration._
 
 4. Run `cp -r assets/imgs/. web/sites/default/files/.`
-  _This will copy our sample image assets to the default files directory for your local installation of Drupal._
+
+    _This will copy our sample image assets to the default files directory for your local installation of Drupal._
 
 5. Run `lando db-import drupal8.export.gz`
-  _This will import a custom database that includes placeholder content for the demo site we'll use in the training exercises._
+
+    _This will import a custom database that includes placeholder content for the demo site we'll use in the training exercises._
 
 6. Run `lando drush cr`
-  _This will clear the Drupal caches._
 
-  After following these steps, you should have an unstyled Drupal site available locally at: http://nitflex.lndo.site.
+    _This will clear the Drupal caches._
+
+    After following these steps, you should have an unstyled Drupal site available locally at: http://nitflex.lndo.site.
 
 ## 4. Install the Front-End tooling
 
 * Run `cd web/themes/custom/nitflex_dev_theme`
+
 * Run `lando npm install`
   _This will install the required front end tools (Node, Gulp, etc.)_
 
@@ -64,3 +73,9 @@ Now that the repo has been cloned, let's build the local environment using the p
 Go to: http://nitflex.lndo.site/user and log in with username: `admin`, pw: `admin`
 
 # DONE 🙌 👏 🍺
+
+---
+
+#### Don't want to use Lando?
+
+The environment we have put together has been fully tested and we expect everyone to use it during this training workshop.  If you wish to use your own development environment you are on your own as we will not support or provide assistance if issues arise.
