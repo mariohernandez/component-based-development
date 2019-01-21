@@ -34,8 +34,8 @@ We just created a JSON object with a key of text and value of Action and Adventu
 1. Inside the _eyebrow_ directory create a new file called **eyebrow.twig**.
 2. Inside _eyebrow.twig_ copy the following code:
 
-```html
-<p class="eyebrow">{{ text }}</p>
+```php
+<p class="eyebrow">{{{ text }}}</p>
 ```
 
 With Twig we not only write the custom markup we need, but we are also able to pass data from the YAML file we created above.  Although we can technically write the data directly in the twig template, it is best to use YAML as the source of data as this will become handy once we start nesting and integrating components.  More on this later.
