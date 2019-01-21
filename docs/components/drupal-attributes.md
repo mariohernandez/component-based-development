@@ -22,6 +22,7 @@ In some cases this may not be an issue for you, but in general it's best to plan
 Since the `attributes` variable can include class, id, and data attributes in one variable, we need to make sure we only combine Drupal’s classes with ours, and let the other attributes render without Drupal classes. This can be accomplished on the main wrapper of the component template.
 
 ```php
+{% raw %}
 <article class="card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
   {{ title_prefix }}
   {{ title_suffix }}
@@ -31,6 +32,7 @@ Since the `attributes` variable can include class, id, and data attributes in on
     </div>
   {% endif %}
 </article>
+{% endraw %}
 ```
 
 Note that the `without` twig filter in this example is a Drupal-specific filter, so for the style guide we'll want to make sure we’re using one that supports Drupal’s custom filters.  Pattern Lab have configuration options that support Drupal twig filters.
