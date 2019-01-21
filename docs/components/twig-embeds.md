@@ -25,9 +25,11 @@ The challenge we face is having control of the markup while adhering to Drupal's
   {{ title_prefix }}
   {{ title_suffix }}
   ...
-  {% block card_content %}
-    {{ card_content }}
-  {% endblock %}
+  {% raw %}
+    {% block card_content %}
+      {{ card_content }}
+    {% endblock %}
+  {% endraw %}
 </article>
 {% endhighlight %}
 
