@@ -18,7 +18,7 @@ nav_order: 4
 
 The challenge we face is having control of the markup while adhering to Drupal's best practices for rendering content.  When the time to integrate a component with Drupal comes, often times using `include` statements will do the job, but there are times when we want to modify content or markup before Drupal renders it and include statements don't allow for this.  We could use the extend statements but these could also be limiting.  In these situations the best option is to use Twig's `embed` statements, which combines both, include and extend functionality.  Let's see an example.
 
-```twig
+{% highlight php linenos %}
 <article class="card
   {{ attributes ? attributes.class }}"
   {{ attributes ? attributes|without(class) }}>
@@ -29,7 +29,7 @@ The challenge we face is having control of the markup while adhering to Drupal's
     {{ card_content }}
   {% endblock %}
 </article>
-```
+{% endhighlight %}
 
 We've declared a [twig block](https://twig.symfony.com/doc/2.x/tags/extends.html) (not the same as Drupal's blocks), in which we are passing the card_content variable to print some content.  The block on its own does nothing.  Content will be rendered normally even if we do nothing with the block.  The advantages of the twig block come when it's time to integrate the card component with Drupal.
 
