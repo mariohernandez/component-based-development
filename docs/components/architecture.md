@@ -25,11 +25,11 @@ Here's a typical architecture of a component. Your particular workflow may vary.
 |
 |-- components
 |   |-- button
-|       |-- button.js
+|       |-- button.es6.js
 |       |-- buttons.md
 |       |-- button.twig
 |       |-- button.scss
-|       +-- button.es6.yml
+|       +-- button.yml
 |
 +-- ..
 ```
