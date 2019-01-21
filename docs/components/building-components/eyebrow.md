@@ -34,7 +34,7 @@ We just created a JSON object with a key of text and value of Action and Adventu
 1. Inside the _eyebrow_ directory create a new file called **eyebrow.twig**.
 2. Inside _eyebrow.twig_ copy the following code:
 
-```twig
+```html
 <p class="eyebrow">{{ text }}</p>
 ```
 
