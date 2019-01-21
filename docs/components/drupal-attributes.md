@@ -35,4 +35,4 @@ Since the `attributes` variable can include class, id, and data attributes in on
 {% endraw %}
 ```
 
-Note that the `without` twig filter in this example is a Drupal-specific filter, so for the style guide we'll want to make sure we’re using one that supports Drupal’s custom filters.  Pattern Lab have configuration options that support Drupal twig filters.
+>Note that the `without` twig filter in this example is a Drupal-specific filter, so for the style guide we'll want to make sure we’re using one that supports Drupal’s custom filters.  Pattern Lab have configuration options that support Drupal twig filters.

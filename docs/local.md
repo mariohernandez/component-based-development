@@ -87,6 +87,6 @@ Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in
 
 ---
 
-**Don't want to use Lando?**
-
-The environment we have put together has been fully tested and we expect everyone to use it during this training workshop.  If you wish to use your own development environment you are on your own as we will not support or provide assistance if issues arise.
+>**Don't want to use Lando?**
+>
+>The environment we have put together has been fully tested and we expect everyone to use it during this training workshop.  If you wish to use your own development environment you are on your own as we will not support or provide assistance if issues arise.
