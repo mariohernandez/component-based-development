@@ -5,7 +5,13 @@ So you get the idea, inside the Components directory we create a new directory t
 1. Inside **nitflex_dev_theme/src/components/** create a new directory called **button**.
 2. Inside the button directory create a new file called **button.json**.
 3. Inside `button.json` copy the following code:
-
+```yaml
+  button:
+    modifier: ~
+    text: "Watch now"
+    type: ~
+    url: "#"
+ ```
 
 4. Inside the button directory create a new file called **button.twig**.
 5. Inside `button.twig` copy the following code:
