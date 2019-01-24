@@ -8,7 +8,7 @@ So you get the idea, inside the Components directory we create a new directory t
 
    {% code-tabs %}
    {% code-tabs-item title="button.json" %}
-   ```yml
+   ```json
    {
      "button": {
        "text": "Watch now",
