@@ -11,23 +11,23 @@ So you get the idea, inside the Components directory we create a new directory t
 5. Inside `button.twig` copy the following code:
 
 
-   {% code-tabs %}
-   {% code-tabs-item title="button.twig" %}
-   ```php
-   {% if button.url %}
-     <a href="{{ button.url }}" class="button">
-       {{ button.text }}
-     </a>
-   {% else %}
-     <button
-       type="{{ button.type|default('submit') }}"
-       class="button">
-       {{ button.text }}
-     </button>
-   {% endif %}
-   ```
-   {% endcode-tabs-item %}
-   {% endcode-tabs %}
+{% code-tabs %}
+{% code-tabs-item title="button.twig" %}
+```php
+{% if button.url %}
+  <a href="{{ button.url }}" class="button">
+    {{ button.text }}
+  </a>
+{% else %}
+  <button
+    type="{{ button.type|default('submit') }}"
+    class="button">
+    {{ button.text }}
+  </button>
+{% endif %}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 {% hint style="info" %}
 We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if a URL is passed, we use a `<a>` with the class of **button**, otherwise we use a `<button>` tag.  This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand.  A &lt;a&gt; tag will allow us to be directed to another page or a section within the same page, whereas a button will allow us to perform an action such as submit content or anything else where a click event is needed.
@@ -89,7 +89,7 @@ lando npm run build
 
 Open your Drupal site and point to the URL below:
 
-```text
+```
 http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 ```
 
