@@ -6,20 +6,18 @@ So you get the idea, inside the Components directory we create a new directory t
 2. Inside the button directory create a new file called **button.json**.
 3. Inside `button.json` copy the following code:
 
-   {% code-tabs %}
-   {% code-tabs-item title="button.json" %}
-   ```json
-   {
-     "button": {
-       "text": "Watch now",
-       "url": "",
-       "type": "",
-       "classes": ""
-     }
-   }
-   ```
-   {% endcode-tabs-item %}
-   {% endcode-tabs %}
+  {% code-tabs %}
+  {% code-tabs-item title="button.json" %}
+  ```yaml
+  ---
+  button:
+    modifier: ~
+    text: "Watch now"
+    type: ~
+    url: "#"
+  ```
+  {% endcode-tabs-item %}
+  {% endcode-tabs %}
 
 4. Inside the button directory create a new file called **button.twig**.
 5. Inside `button.twig` copy the following code:
