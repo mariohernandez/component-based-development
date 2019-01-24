@@ -8,7 +8,7 @@ So you get the idea, inside the Components directory we create a new directory t
 
    {% code-tabs %}
    {% code-tabs-item title="button.json" %}
-   ```yaml
+   ```yml
    {
      "button": {
        "text": "Watch now",
@@ -52,7 +52,7 @@ We've added some logic to the button to ensure we render the right HTML element 
 
 {% code-tabs %}
 {% code-tabs-item title="button.scss" %}
-```css
+```scss
 // Button
 //
 // This is the button component.
