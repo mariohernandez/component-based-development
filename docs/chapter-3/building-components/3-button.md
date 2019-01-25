@@ -18,9 +18,7 @@ So you get the idea, inside the Components directory we create a new directory t
 4. Inside the button directory create a new file called **button.twig**.
 5. Inside `button.twig` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="button.twig" %}
-```php
+```twig
 {% if button.url %}
   <a href="{{ button.url }}" class="button">
     {{ button.text }}
@@ -33,19 +31,13 @@ So you get the idea, inside the Components directory we create a new directory t
   </button>
 {% endif %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="info" %}
 We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if a URL is passed, we use a `<a>` with the class of **button**, otherwise we use a `<button>` tag. This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand. A &lt;a&gt; tag will allow us to be directed to another page or a section within the same page, whereas a button will allow us to perform an action such as submit content or anything else where a click event is needed.
-{% endhint %}
 
 1. Inside the button directory create a new file called **button.scss**.+
 2. Inside `button.scss` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="button.scss" %}
-```css
+```scss
 // Button
 //
 // This is the button component.
@@ -79,8 +71,6 @@ We've added some logic to the button to ensure we render the right HTML element 
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ## Compiling the style-guide
 
@@ -103,4 +93,3 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Button component.
-

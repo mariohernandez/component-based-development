@@ -10,8 +10,6 @@ Let's start with our usual process of creating some files and adding the respect
 2. Inside the **movie-card-collection** directory create these files: `movie-card-collection.json`, `movie-card-collection.scss`, and `movie-card-collection.twig`
 3. Inside `movie-card-collection.json` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="movie-card-collection.json" %}
 ```yaml
 {
   "items": [
@@ -66,16 +64,12 @@ Let's start with our usual process of creating some files and adding the respect
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 We created an array called **items**. The array contains multiple items each of which has the fields found in a movie card \(heading, synopsis, cover\_image, etc.\).
 
 * Inside `movie-card-collection.twig` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="movie-card-collection.twig" %}
-```php
+```twig
 {{ attach_library('nitflex_dev_theme/movie-card-collection') }}
 
 <div class="movie-card-collection
@@ -83,7 +77,7 @@ We created an array called **items**. The array contains multiple items each of 
   {{- attributes ? attributes|without(class) -}}>
   {% block collection %}
     {% for item in items %}
-      {% 
+      {%
         include '@nitflex_dev_theme/movie-card/movie-card.twig' with {
           cover_image: item.cover_image,
           heading: item.heading,
@@ -96,14 +90,10 @@ We created an array called **items**. The array contains multiple items each of 
   {% endblock %}
 </div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="warning" %}
 **Important**
 
 Create the **movie-card-collection** library.
-{% endhint %}
 
 We are now introducing the concept of Twig Blocks, \`
 
@@ -117,9 +107,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 
 * Now paste the component's styles below into **movie-card-collection.scss**:
 
-{% code-tabs %}
-{% code-tabs-item title="movie-card-collection.scss" %}
-```css
+```scss
 // Movie Card Collection
 //
 // This is the movie card collection component which represents a grouping
@@ -160,8 +148,6 @@ Inside the block, we loop through the _items_ array and for each item we loop th
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ## Compiling the style-guide  <a id="compiling-the-style-guide"></a>
 
@@ -184,4 +170,3 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Movie Card Collection component.
-

@@ -16,11 +16,9 @@ Before we dive into the more advance stuff, let's start by creating a super simp
 
 We just created a JSON object with a key of **text** and value of **Action and Adventure**. We will get deeper into JSON objects when we build more advance components.
 
-{% hint style="info" %}
 ### Things you should know about JSON code format
 
 JSON code format requirements are very specific and strict. Code indentation needs to be consistent, use underscores in multi-word key names instead of hyphens, and ensure the last item does not contain a trailing comma.
-{% endhint %}
 
 ## Component's markup
 

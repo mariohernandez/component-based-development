@@ -9,8 +9,6 @@ Let's start by creating the usual files for building the component:
    * `featured-movie.json`, `featured-movie.scss`, and `featured-movie.twig`
 3. Copy the following code snippet into **featured-movie.json**:
 
-{% code-tabs %}
-{% code-tabs-item title="featured-movie.json" %}
 ```yaml
 {
   "cover_image": "<img src=\"/sites/default/files/action-1.jpg\" alt=\"Alt text\" />",
@@ -29,14 +27,10 @@ Let's start by creating the usual files for building the component:
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 * Copy the following code snippet into **featured-movie.twig**:
 
-{% code-tabs %}
-{% code-tabs-item title="featured-movie.twig" %}
-```php
+```twig
 {{ attach_library('nitflex_dev_theme/featured-movie') }}
 
 <section class="featured-movie {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
@@ -113,14 +107,10 @@ Let's start by creating the usual files for building the component:
   </div>
 </section>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 1. Finally, Add the following code to **featured-movie.scss**:
 
-{% code-tabs %}
-{% code-tabs-item title="featured-movie.scss" %}
-```css
+```scss
 // Featured Movie
 //
 // This is the featured movie component.
@@ -275,14 +265,10 @@ Let's start by creating the usual files for building the component:
   width: 100%;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="warning" %}
 ### Important
 
 Be sure to create the **featured-movie** library.
-{% endhint %}
 
 ## Breaking it down
 
@@ -313,4 +299,3 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Featured Movie component.
-

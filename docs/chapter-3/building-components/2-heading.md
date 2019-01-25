@@ -6,28 +6,20 @@ Now that we have some basic idea of the various pieces for building a component,
 2. Inside the **heading** directory create a new file called **heading.json**.
 3. Inside `heading.json` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="heading.json" %}
 ```yaml
 {
   "title": "I love movies"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 We just created a JSON object for the heading with a key of **title** and value of **I love movies**.
 
 1. Inside the heading directory create a new file called **heading.twig**.
 2. Inside `heading.twig` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="heading.twig" %}
 ```php
 <h1 class="heading">{{ title }}</h1>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 We created a **H1** heading in which we pass the value of `title` from the JSON object.
 
@@ -36,7 +28,7 @@ We created a **H1** heading in which we pass the value of `title` from the JSON 
 
 {% code-tabs %}
 {% code-tabs-item title="heading.scss" %}
-```css
+```scss
 // Heading
 //
 // This is the heading component.
@@ -53,8 +45,6 @@ We created a **H1** heading in which we pass the value of `title` from the JSON 
   line-height: 1.3;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Just like we did with the Eyebrow component, the comments in the SCSS file allows KSS Node to create this component in the style-guide.
 
@@ -68,20 +58,16 @@ Let's rework the heading component so we make it more dynamic and we have the ab
 
 Update `heading.json` to look like this:
 
-{% code-tabs %}
-{% code-tabs-item title="heading.json" %}
 ```yaml
-{  
-  "heading": {    
-    "title": "I love movies",    
-    "url": "#",    
-    "heading_level": "",    
-    "classes": ""  
+{
+  "heading": {
+    "title": "I love movies",
+    "url": "#",
+    "heading_level": "",
+    "classes": ""
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 In addition to the `title` key, we've added `url`, `heading_level`, and `classes`. These three new keys will make the component more dynamic.
 
@@ -93,8 +79,6 @@ In addition to the `title` key, we've added `url`, `heading_level`, and `classes
 
 Update your twig file code to look like this:
 
-{% code-tabs %}
-{% code-tabs-item title="heading.twig" %}
 ```php
 <h{{ heading.heading_level|default('2') }} class="heading {{ heading.classes ? ' ' ~ heading.classes }}
   {{- heading.attributes ? heading.attributes.class -}}"
@@ -106,8 +90,6 @@ Update your twig file code to look like this:
   {% endif %}
 </h{{ heading.heading_level|default('2') }}>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Let's break things down to explain what's happening here since the twig code has significantly changed:
 
@@ -127,11 +109,9 @@ Now that we have written all the necessary code to build the Heading component, 
    lando npm run build
    ```
 
-{% hint style="info" %}
 ### What does the command do?  <a id="what-does-the-command-do"></a>
 
 The command above runs all gulp tasks found inside the **gulp-tasks** directory in the theme. Keep in mind, we are using the word **lando** because our local environment was built with lando. Typically the build command would be `npm run build.`
-{% endhint %}
 
 ## Viewing the component  <a id="viewing-the-eyebrow-component"></a>
 
@@ -144,4 +124,3 @@ http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Heading component.
-

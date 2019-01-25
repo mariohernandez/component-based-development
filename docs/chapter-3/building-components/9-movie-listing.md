@@ -8,8 +8,6 @@ Let's start with our usual process of creating some files and adding the respect
 2. Inside the **movie-list** directory create these files: `movie-list.json`, `movie-list.scss`, and `movie-list.twig`
 3. Inside `movie-list.json` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="movie-list.json" %}
 ```yaml
 {
   "list_title": "Action and Adventure",
@@ -65,16 +63,12 @@ Let's start with our usual process of creating some files and adding the respect
   ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Same as in the Movie Card Collection component, we created an `items[ ]` array. The array contains multiple instances of a movie card which we will use to render a collection of movie cards.
 
 * Paste the following code snippet into **movie-list.twig**:
 
-{% code-tabs %}
-{% code-tabs-item title="movie-list.twig" %}
-```php
+```twig
 {{ attach_library('nitflex_dev_theme/movie-list') }}
 
 <section class="movie-list
@@ -94,7 +88,7 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
     {% embed '@nitflex_dev_theme/movie-card-collection/movie-card-collection.twig' %}
       {% block collection %}
         {% for item in items %}
-          {% 
+          {%
             include '@nitflex_dev_theme/movie-card/movie-card.twig' with {
               cover_image: item.cover_image,
               heading: item.heading,
@@ -109,14 +103,10 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
   {% endblock %}
 </section>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="warning" %}
 **Important**
 
 Create the **movie-list** library.
-{% endhint %}
 
 * First, notice we are using the very helpful **include** statement to nest the heading component in order to print a title for each collection.
 * Then we have declared `{% block list %}` so we are able to alter how content is rendered when we integrate this component with Drupal.
@@ -133,9 +123,7 @@ This is also a new concept being introduced here and to keep it simple, embeds c
 
 * Now paste the component's styles below into **movie-listig.scss**:
 
-{% code-tabs %}
-{% code-tabs-item title="movie-list.scss" %}
-```css
+```scss
 // Movie List
 //
 // This is the movie list component.
@@ -176,8 +164,6 @@ This is also a new concept being introduced here and to keep it simple, embeds c
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ### Compiling the style-guide  <a id="compiling-the-style-guide"></a>
 
@@ -202,4 +188,3 @@ _Depending on your setup, you may not need to enter ":8000". Also if you did not
 Under the Components category you should see the new Movie List Collection component.
 
 ## And with that, We are done building components 🔥 🙌 🏆 🍻
-

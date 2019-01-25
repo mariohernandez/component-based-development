@@ -6,9 +6,7 @@ Based on our prototype, we have at least two types of buttons. One with red outl
 
 * Let's start by updating the **button.scss** file like this \(Commented area only\):
 
-{% code-tabs %}
-{% code-tabs-item title="button.scss" %}
-```css
+```scss
 // Button
 //
 // This is the button component.
@@ -44,16 +42,12 @@ Based on our prototype, we have at least two types of buttons. One with red outl
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Notice at the top of the file above \(commented section\), we added a new line: `// .button--primary - A red version of button.`
 
 What we are doing here is telling KSS Node that we want a new component variation with the class of `.button--primary`. The button--primary will inherit all the attributes and styles from the `.button` component and will create a new variation with the classes `.button .button--primary`.
 
-{% code-tabs %}
-{% code-tabs-item title="button.scss" %}
-```css
+```scss
 // Button
 //
 // This is the button component.
@@ -99,16 +93,12 @@ What we are doing here is telling KSS Node that we want a new component variatio
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 The new code starts at line **36** \(`&.button--primary`\). This means **.button** and **.button--primary** classes will be together \(i.e. `<a class="button button--primary">...</a>`\), and when they do we are changing background, text and border color to red.
 
 Before we can see the new variation in action, we need to let twig know that there may be times when this component will accept a modifier class to create variations.
 
-{% code-tabs %}
-{% code-tabs-item title="button.twig" %}
-```php
+```twig
 {% if button.url %}
   <a href="{{ button.url }}" class="button {{ modifier_class }}{{ classes|default('') }}">
     {{ button.text }}
@@ -121,14 +111,10 @@ Before we can see the new variation in action, we need to let twig know that the
   </button>
 {% endif %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Notice we added the `{{ modifier_class }}` variable placeholder within the class attribute. This instructs KSS Node to capture the new class we provided in **button.scss** and place append it to the classes the button already has.
 
-{% hint style="info" %}
 The `{{ modifier_class }}` tag is only for style-guide purposes. It has no effect when we render the component in Drupal. For Drupal we have added `{{ classes|default('') }}.`
-{% endhint %}
 
 ## Compiling the style-guide
 
@@ -153,4 +139,3 @@ _Depending on your setup, you may not need to enter ":8000". Also if you did not
 Under the Components category you should see the new Button component, but this time you will notice there are two components. The second one is the variation we just created.
 
 If you inspect the code, you will see that in addition to the class `button`, the new variation also has the class of `button--primary`.
-

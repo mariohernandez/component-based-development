@@ -8,8 +8,6 @@ By now you should know the drill, inside **src/components/** create a new direct
 2. Inside the **movie-card** directory create a new file called **movie-card.json**.
 3. Inside `movie-card.json` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="movie-card.json" %}
 ```yaml
 {
   "cover_image": "<img src='/sites/default/files/action-3.jpg' alt='' />",
@@ -29,14 +27,10 @@ By now you should know the drill, inside **src/components/** create a new direct
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 By looking at the prototype we see that the landing page shows a listing of movies. Given the hierarchy of content we see the page already has a **h1** and **h2** in the featured movie section. Each movie category also uses a heading which will be h3, so using a h4 as the heading\_level for the title of the movie in the card makes sense.
 
-{% code-tabs %}
-{% code-tabs-item title="movie-card.scss" %}
-```css
+```scss
 // Movie Card
 //
 // This is the movie card component which represents a single movie in our app.
@@ -163,16 +157,12 @@ By looking at the prototype we see that the landing page shows a listing of movi
   z-index: 2;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Quite the styles huh?
 
 * Inside the **movie-card** directory create a new file called **movie-card.twig**.
 
-{% code-tabs %}
-{% code-tabs-item title="movie-card.twig" %}
-```php
+```twig
 <article class="movie-card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
   {{ title_prefix }}
   {{ title_suffix }}
@@ -227,19 +217,14 @@ Quite the styles huh?
   </div>
 </article>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 * Notice we are using **include** statements to nest existing components into the movie-card .  This is a simple example of how we can reuse previously built components.
 * The image and rest of content has been split into different containers \(`movie-card__cover-image` & `movie-card__content`\). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
 * You notice we are reusing the heading component and simply changing its heading level and applying a unique class when inside the movie card. This provides context and allows us to style this heading independently of other headings in the page.
 * Finally, we are introducing the concept of [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html), \(not the same as Drupal blocks\), to provide a way to change how content is passed or rendered when we integrate this component with Drupal. More on how Twig Blocks give us more flexibility at time of rendering content later.
 
-{% hint style="info" %}
 **IMPORTANT**: There is a bug with **includes** in the latest twig.js \(which is what KSS Node uses\).[Read more about here](https://github.com/kss-node/kss-node/issues/467).
-{% endhint %}
 
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
-
