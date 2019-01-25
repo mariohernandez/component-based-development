@@ -26,8 +26,6 @@ We created a **H1** heading in which we pass the value of `title` from the JSON 
 1. Inside the heading directory create a new file called **heading.scss**.
 2. Inside `heading.scss` copy this code:
 
-{% code-tabs %}
-{% code-tabs-item title="heading.scss" %}
 ```scss
 // Heading
 //
@@ -79,7 +77,7 @@ In addition to the `title` key, we've added `url`, `heading_level`, and `classes
 
 Update your twig file code to look like this:
 
-```php
+```twig
 <h{{ heading.heading_level|default('2') }} class="heading {{ heading.classes ? ' ' ~ heading.classes }}
   {{- heading.attributes ? heading.attributes.class -}}"
   {{- heading.attributes ? heading.attributes|without(class) -}}>
