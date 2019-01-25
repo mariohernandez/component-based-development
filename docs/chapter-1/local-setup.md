@@ -48,7 +48,6 @@ _Depending on your setup, you may not need port_ `:8000`_\)_
 
 _**Done!** 🙌 🤜🤛 🏆_
 
-{% hint style="danger" %}
 **Don't want to use Lando?**
 
 The environment we have put together has been fully tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own as we will not support or provide assistance.
