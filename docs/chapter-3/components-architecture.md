@@ -11,14 +11,14 @@ Here's a typical architecture of a component. Your particular workflow may vary.
 │      ├── card/
 │        ├── card.scss
 │        ├── card.es6.js
-│        ├── card.json
+│        ├── card.yml
 │        └── card.twig
 ```
 
 A component is typically broken down in four parts:
 
 1. **Markup:** Markup for a component is written using Twig, Drupal's new templating engine. Naming convention for a component twig template looks like this: **card.twig** \(where **card** is the name of the component\).
-2. **Data:** For the purpose of the style-guide, we need dummy or stock data, which is normally provided in **JSON** format. 
+2. **Data:** For the purpose of the style-guide, we need dummy or stock data, which is normally provided in **YAML** format. 
 3. **Styles:** These are written in CSS or Sass.
 4. **Behavior/animation:** The component's behaviors are usually handled with JavaScript.
 
