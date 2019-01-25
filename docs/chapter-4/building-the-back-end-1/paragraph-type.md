@@ -1,6 +1,6 @@
 # Paragraph Type
 
-To create the list of movies for each category we will use a paragraph type.  The movie collection will in fact be a collection of paragraphs.
+To create the list of movies for each category we will use a paragraph type. The movie collection will in fact be a collection of paragraphs.
 
 Using the table below, create a new paragraph type called **Movie Genre List**.
 

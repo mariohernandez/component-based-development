@@ -14,7 +14,7 @@ In the context of the project we are building, we are going to create a library 
 
 As for Javascript, how are we applying it to the style-guide? Even a better question. You are good! 😄 This unfortunately is a manual step, but not a difficult one. We'll do this shortly.
 
-### Structure of a library
+## Structure of a library
 
 In your editor, open `nitflex_dev_theme.libraries.yml` \(located in your theme's root\). You will notice the global library already declared which includes all of the global theme styles that apply to all pages on the site \(i.e. font color, font-size, font-family, line-height, etc.\). The global library looks something like this:
 
@@ -31,12 +31,12 @@ global:
 4. **The path**:  The path to the asset in relation to the root of the theme. All assets in the **nitflex\_dev\_theme** theme are compiled into `dist/css` or `dist/js`. This means for each component we will have an asset stylesheet \(i.e. `dist/css/heading.css`\), and if we have a Javascript behavior for the heading component we will also have a JS assets in `dist/js/heading.js`.
 
 {% hint style="info" %}
-**IMPORTANT**: The structure of the `nitflex_dev_theme.libraries.yml` file is very specific and indentation needs to be correct for Drupal to properly read its content. Usually there is a 2 space indentation for each line in a library and if this is not consistent you may run into issues when rendering your components.  Learn more about YAML content format for more details.
+**IMPORTANT**: The structure of the `nitflex_dev_theme.libraries.yml` file is very specific and indentation needs to be correct for Drupal to properly read its content. Usually there is a 2 space indentation for each line in a library and if this is not consistent you may run into issues when rendering your components. Learn more about YAML content format for more details.
 {% endhint %}
 
 There is a lot more to Drupal libraries and we encouorage you to learn more about them in the URL above.
 
-### Creating the Movie Card component's library
+## Creating the Movie Card component's library
 
 1. In your editor open `nitflex_dev_theme.libraries.yml`
 2. Add the following code \(anywhere after the global library\):
@@ -56,7 +56,7 @@ Libraries are great because Drupal only loads what we need when we needed to avo
 Don't forget to clear your caches when adding new libraries to your theme.
 {% endhint %}
 
-### Attaching a library
+## Attaching a library
 
 Now that the Movie Card component's library is ready, we need to make Drupal aware of it so it can use it.
 
@@ -71,10 +71,10 @@ The `attach_library` function takes a path parameter which we are declaring by u
 
 With the code above, we are telling Drupal that whenever we render the Movie Card component, its library should be attached so the styles for the component can be applied.
 
-### Adding Javascript to KSS
+## Adding Javascript to KSS
 
 {% hint style="info" %}
-So far we have not written any javascript.  The instructions below only apply when a component needs javascript.
+So far we have not written any javascript. The instructions below only apply when a component needs javascript.
 {% endhint %}
 
 As explained before, Drupal libraries have no effect on KSS Node or the style-guide. In order for the components to make use of the javascript we've written we need to manually add the script to the style-guide.
@@ -91,10 +91,9 @@ Example of a custom script to add to the style-guide:
 
 As you can see adding a new script to KSS node is nothing more than specifying the script tags with a path to the javascript file. The Compile Gulp tasks automatically compiles all javascript code found in the components into individual files inside `dist/js`.
 
-**Note**: Confirm the right path for your scripts.  
+**Note**: Confirm the right path for your scripts.
 
-
-### Creating libraries for each component
+## Creating libraries for each component
 
 Now that we know how Drupal Libraries work and how to create them, go ahead and create a new library for each component you have built thus far, then attach each library to the corresponding component.
 
@@ -102,7 +101,7 @@ Now that we know how Drupal Libraries work and how to create them, go ahead and 
 Ordering libraries alphabetically is helpful to quickly find the right library as your components catalog grows.
 {% endhint %}
 
-### Resources
+## Resources
 
 Mediacurrent's Director of Front-End Development, Zack Hawkins, explains libraries in detail: [https://www.youtube.com/watch?v=V8hnfxSx4Ck](https://www.youtube.com/watch?v=V8hnfxSx4Ck)
 

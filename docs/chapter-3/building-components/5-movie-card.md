@@ -239,7 +239,7 @@ Quite the styles huh?
 **IMPORTANT**: There is a bug with **includes** in the latest twig.js \(which is what KSS Node uses\).[Read more about here](https://github.com/kss-node/kss-node/issues/467).
 {% endhint %}
 
-### Working with Drupal Libraries
+## Working with Drupal Libraries
 
-Let's take a break from building components for a moment to learn about Drupal Libraries.  Drupal libraries is how we add CSS and Javascript to content in Drupal.  Proceed to Drupal Libraries.
+Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
 

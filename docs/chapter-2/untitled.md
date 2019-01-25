@@ -4,15 +4,13 @@ In a fast moving industry like ours, it is imperative that we have tools that al
 
 The Mediacurrent's theme generator is a scaffolding tool which has evolved with the years to provide a production-ready Drupal 8 theme out of the box.
 
-### Working with the theme generator
+## Working with the theme generator
 
 Although the local environment we provide for this training already includes a fully functional drupal 8 theme created with the theme generator, we are including the resources below in the event you would like to try the generator in your next project.
 
-#### Resources:
+### Resources:
 
 1. Repo: `https://github.com/mediacurrent/theme_generator_8`
 2. [Introduction and walkthrough blog post](https://www.mediacurrent.com/blog/mediacurrents-drupal-theme-generator/)
 3. [Video introduction and advantages](https://www.mediacurrent.com/blog/friday-5-5-features-theme-generator/)
-
-
 

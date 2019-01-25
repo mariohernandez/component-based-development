@@ -1,6 +1,6 @@
 # Components architecture
 
-Components are typically saved in a project's theme and although they will work regardless of where in your theme they are stored, It is recommended to group them in folders. This not only provides organization as your catalog of components grows, but it also makes each component completely reusable and even portable as all the pieces of a  component are encapsulated in a single folder.
+Components are typically saved in a project's theme and although they will work regardless of where in your theme they are stored, It is recommended to group them in folders. This not only provides organization as your catalog of components grows, but it also makes each component completely reusable and even portable as all the pieces of a component are encapsulated in a single folder.
 
 Here's a typical architecture of a component. Your particular workflow may vary.
 

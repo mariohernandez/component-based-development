@@ -17,11 +17,11 @@ We are going to follow the exact same steps for using view modes as we did when 
 
 So we just indicated to Drupal which fields we want to display when using the **Full content** view mode and which we want to hide.
 
-### Template suggestions
+## Template suggestions
 
-The template suggestion for the **Full content** view mode of the movie content type has already been created for you \(see: `nitflex_dev_theme/src/templates/movie/node--movie--full.html.twig`\). But if you were doing this on your own, follow the same steps that we took for creating the template suggestion for the Teaser view mode in the [Movie card](movie-card.md#template-suggestions) integration instructions, but this time the  template suggestion should be **node--movie--full.html.twig**.
+The template suggestion for the **Full content** view mode of the movie content type has already been created for you \(see: `nitflex_dev_theme/src/templates/movie/node--movie--full.html.twig`\). But if you were doing this on your own, follow the same steps that we took for creating the template suggestion for the Teaser view mode in the [Movie card](movie-card.md#template-suggestions) integration instructions, but this time the template suggestion should be **node--movie--full.html.twig**.
 
-### Integrating the full view of a movie
+## Integrating the full view of a movie
 
 We are now ready to integrate the full view of a movie:
 
