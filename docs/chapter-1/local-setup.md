@@ -3,7 +3,6 @@
 **Follow the steps below to setup your local environment**
 
 We highly encourage you to setup your local environment prior to arriving for training. In addition, the provided development environment is the only environment supported in this training.
-{% endhint %}
 
 This training workshop is most effective when following along with the exercises. In an effort to provide a seamless and bug free development environment, we have put together an automated environment which will build everything for you including a container-based development environment running on [Lando](https://docs.devwithlando.io/), latest Drupal core and required modules, as well as all the front-end tools needed to compile code and other automated tasks.
 
@@ -53,6 +52,5 @@ _**Done!** 🙌 🤜🤛 🏆_
 **Don't want to use Lando?**
 
 The environment we have put together has been fully tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own as we will not support or provide assistance.
-{% endhint %}
 
 Should you still want to go your own way, here are some steps you must take: [Read more](https://github.com/mariohernandez/component-based-development#not-using-lando).
