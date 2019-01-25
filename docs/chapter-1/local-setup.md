@@ -1,6 +1,5 @@
 # Local Setup
 
-{% hint style="warning" %}
 **Follow the steps below to setup your local environment**
 
 We highly encourage you to setup your local environment prior to arriving for training.  In addition, the provided development environment is the only environment supported in this training.
@@ -10,12 +9,12 @@ This training workshop is most effective when following along with the exercises
 
 ### 1. Installing Lando
 
-Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology. 
+Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
 
 * [Install Lando and Docker](https://docs.devwithlando.io/installation/installing.html)
 
 {% hint style="warning" %}
-1. **Docker is required** Docker makes it possible to build containers for any of the third party integrations required in your environment.  If you already have Docker installed you don't need to install it again as part of Lando's installation. 
+1. **Docker is required** Docker makes it possible to build containers for any of the third party integrations required in your environment.  If you already have Docker installed you don't need to install it again as part of Lando's installation.
 2. **A word about OSX** If you are using **Mac OS**, you may need to install OSX's [Command Line Tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
 {% endhint %}
 
@@ -37,7 +36,7 @@ Now that the repo has been cloned, let's build the local environment using the p
 5. Run __`lando db-import drupal8.export.gz` _This will import a custom database that includes placeholder content for the demo site we'll use in the training exercises._
 6. Run `lando drush cr` _This will clear the Drupal caches._
 
-After following these steps, you should have an unstyled Drupal site available locally at: [http://nitflex.lndo.site:8000/](http://nitflex.lndo.site:8000/)  
+After following these steps, you should have an unstyled Drupal site available locally at: [http://nitflex.lndo.site:8000/](http://nitflex.lndo.site:8000/)
 _Depending on your setup, you may not need port `:8000`\)_
 
 ### 4. Install Front End Tooling
@@ -47,7 +46,7 @@ _Depending on your setup, you may not need port `:8000`\)_
 
 #### Log into the site and preview the final results
 
-* Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site:8000/user) and log in with username: `admin`, pw: `admin`_Depending on your setup, you may not need to enter ":8000"._ 
+* Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site:8000/user) and log in with username: `admin`, pw: `admin`_Depending on your setup, you may not need to enter ":8000"._
 
 _**Done!** 🙌 🤜🤛 🏆_
 
@@ -58,4 +57,3 @@ The environment we have put together has been fully tested and we expect everyon
 {% endhint %}
 
 Should you still want to go your own way, here are some steps you must take:  [Read more](https://github.com/mariohernandez/component-based-development#not-using-lando).
-
