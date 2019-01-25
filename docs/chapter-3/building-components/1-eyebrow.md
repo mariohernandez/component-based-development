@@ -25,7 +25,7 @@ JSON code format requirements are very specific and strict. Code indentation nee
 1. Inside the **eyebrow** directory create a new file called **eyebrow.twig**.
 2. Inside `eyebrow.twig` copy the following code:
 
-```twig
+```text
 <p class="eyebrow">{{ text }}</p>
 ```
 
@@ -36,7 +36,7 @@ With Twig we not only write the custom markup we need, but we are also able to p
 1. Inside the **eyebrow** directory create a new file called **eyebrow.scss**.
 2. Inside `eyebrow.scss` copy this code:
 
-```scss
+```css
 // Eyebrow
 //
 // This is the eyebrow component.
@@ -83,7 +83,7 @@ Now that we have written all the necessary code to build the Eyebrow component, 
 
 The command above runs all gulp tasks found inside the **gulp-tasks** directory in the theme. Keep in mind, we are using the word **lando** because our local environment was built with lando. Typically the build command would be `npm run build.`
 
-## Viewing the component  <a id="viewing-the-eyebrow-component"></a>
+## Viewing the component   <a id="viewing-the-eyebrow-component"></a>
 
 Open your Drupal site and point to the URL below:
 
@@ -94,3 +94,4 @@ http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Eyebrow component.
+

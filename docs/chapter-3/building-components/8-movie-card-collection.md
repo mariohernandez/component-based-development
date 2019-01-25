@@ -69,7 +69,7 @@ We created an array called **items**. The array contains multiple items each of 
 
 * Inside `movie-card-collection.twig` copy the following code:
 
-```twig
+```text
 {{ attach_library('nitflex_dev_theme/movie-card-collection') }}
 
 <div class="movie-card-collection
@@ -107,7 +107,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 
 * Now paste the component's styles below into **movie-card-collection.scss**:
 
-```scss
+```css
 // Movie Card Collection
 //
 // This is the movie card collection component which represents a grouping
@@ -149,7 +149,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 }
 ```
 
-## Compiling the style-guide  <a id="compiling-the-style-guide"></a>
+## Compiling the style-guide   <a id="compiling-the-style-guide"></a>
 
 Now that we have written all the necessary code to build the Movie Card Collection component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -159,7 +159,7 @@ Now that we have written all the necessary code to build the Movie Card Collecti
 lando npm run build
 ```
 
-## Viewing the Movie Card Collection component  <a id="viewing-the-featured-movie-component"></a>
+## Viewing the Movie Card Collection component   <a id="viewing-the-featured-movie-component"></a>
 
 Open your Drupal site and point to the URL below:
 
@@ -170,3 +170,4 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Movie Card Collection component.
+

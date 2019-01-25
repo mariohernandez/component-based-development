@@ -6,7 +6,7 @@ Based on our prototype, we have at least two types of buttons. One with red outl
 
 * Let's start by updating the **button.scss** file like this \(Commented area only\):
 
-```scss
+```css
 // Button
 //
 // This is the button component.
@@ -47,7 +47,7 @@ Notice at the top of the file above \(commented section\), we added a new line: 
 
 What we are doing here is telling KSS Node that we want a new component variation with the class of `.button--primary`. The button--primary will inherit all the attributes and styles from the `.button` component and will create a new variation with the classes `.button .button--primary`.
 
-```scss
+```css
 // Button
 //
 // This is the button component.
@@ -98,7 +98,7 @@ The new code starts at line **36** \(`&.button--primary`\). This means **.button
 
 Before we can see the new variation in action, we need to let twig know that there may be times when this component will accept a modifier class to create variations.
 
-```twig
+```text
 {% if button.url %}
   <a href="{{ button.url }}" class="button {{ modifier_class }}{{ classes|default('') }}">
     {{ button.text }}
@@ -139,3 +139,4 @@ _Depending on your setup, you may not need to enter ":8000". Also if you did not
 Under the Components category you should see the new Button component, but this time you will notice there are two components. The second one is the variation we just created.
 
 If you inspect the code, you will see that in addition to the class `button`, the new variation also has the class of `button--primary`.
+

@@ -12,7 +12,6 @@ Lando is a free, open source, cross-platform, local development environment tool
 
 * [Install Lando and Docker](https://docs.devwithlando.io/installation/installing.html)
 
-
 1. **Docker is required** Docker makes it possible to build containers for any of the third party integrations required in your environment.  If you already have Docker installed you don't need to install it again as part of Lando's installation.
 2. **A word about OSX** If you are using **Mac OS**, you may need to install OSX's [Command Line Tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
 
@@ -31,11 +30,10 @@ Now that the repo has been cloned, let's build the local environment using the p
 2. Run `lando start`  _This will set up Lando, plus pull down Drupal and required contrib modules. This process could take a few minutes to complete._
 3. Run `lando drush si -y config_installer --account-name=admin --account-pass=admin --db-url='mysql://drupal8:drupal8@database/drupal8'` _This will do a basic installation of Drupal with some custom configuration._
 4. Run `cp -r assets/imgs/. web/sites/default/files/.` _This will copy our sample image assets to the default files directory for your local installation of Drupal._
-5. Run _\__`lando db-import drupal8.export.gz` _\_This will import a custom database that includes placeholder content for the demo site we'll use in the training exercises._
+5. Run _\_\__`lando db-import drupal8.export.gz` __\_This will import a custom database that includes placeholder content for the demo site we'll use in the training exercises.\_
 6. Run `lando drush cr` _This will clear the Drupal caches._
 
-After following these steps, you should have an unstyled Drupal site available locally at: [http://nitflex.lndo.site:8000/](http://nitflex.lndo.site:8000/)
-_Depending on your setup, you may not need port_ `:8000`_\)_
+After following these steps, you should have an unstyled Drupal site available locally at: [http://nitflex.lndo.site:8000/](http://nitflex.lndo.site:8000/) _Depending on your setup, you may not need port_ `:8000`_\)_
 
 ## 4. Install Front End Tooling
 
@@ -53,3 +51,4 @@ _**Done!** 🙌 🤜🤛 🏆_
 The environment we have put together has been fully tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own as we will not support or provide assistance.
 
 Should you still want to go your own way, here are some steps you must take: [Read more](https://github.com/mariohernandez/component-based-development#not-using-lando).
+

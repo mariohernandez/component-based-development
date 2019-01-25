@@ -30,7 +30,7 @@ Let's start by creating the usual files for building the component:
 
 * Copy the following code snippet into **featured-movie.twig**:
 
-```twig
+```text
 {{ attach_library('nitflex_dev_theme/featured-movie') }}
 
 <section class="featured-movie {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
@@ -110,7 +110,7 @@ Let's start by creating the usual files for building the component:
 
 1. Finally, Add the following code to **featured-movie.scss**:
 
-```scss
+```css
 // Featured Movie
 //
 // This is the featured movie component.
@@ -299,3 +299,4 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Featured Movie component.
+

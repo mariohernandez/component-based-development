@@ -30,7 +30,7 @@ By now you should know the drill, inside **src/components/** create a new direct
 
 By looking at the prototype we see that the landing page shows a listing of movies. Given the hierarchy of content we see the page already has a **h1** and **h2** in the featured movie section. Each movie category also uses a heading which will be h3, so using a h4 as the heading\_level for the title of the movie in the card makes sense.
 
-```scss
+```css
 // Movie Card
 //
 // This is the movie card component which represents a single movie in our app.
@@ -162,7 +162,7 @@ Quite the styles huh?
 
 * Inside the **movie-card** directory create a new file called **movie-card.twig**.
 
-```twig
+```text
 <article class="movie-card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
   {{ title_prefix }}
   {{ title_suffix }}
@@ -228,3 +228,4 @@ Quite the styles huh?
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
+

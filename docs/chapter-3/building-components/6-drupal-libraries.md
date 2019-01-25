@@ -57,7 +57,7 @@ Now that the Movie Card component's library is ready, we need to make Drupal awa
 1. In your editor, open `src/components/movie-card/movie-card.twig`
 2. Edit the file by adding the following code at the first line in the file:
 
-```twig
+```text
 {{ attach_library('nitflex_dev_theme/movie-card') }}
 ```
 
@@ -94,3 +94,4 @@ Ordering libraries alphabetically is helpful to quickly find the right library a
 ## Resources
 
 Mediacurrent's Director of Front-End Development, Zack Hawkins, explains libraries in detail: [https://www.youtube.com/watch?v=V8hnfxSx4Ck](https://www.youtube.com/watch?v=V8hnfxSx4Ck)
+
