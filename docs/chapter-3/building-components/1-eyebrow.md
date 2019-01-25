@@ -8,15 +8,11 @@ Before we dive into the more advance stuff, let's start by creating a super simp
 2. Inside the **eyebrow** directory create a new file called **eyebrow.json**.
 3. Inside `eyebrow.json` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="eyebrow.json" %}
 ```yaml
-{ 
+{
   "text": "Action and Adventure"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 We just created a JSON object with a key of **text** and value of **Action and Adventure**. We will get deeper into JSON objects when we build more advance components.
 
@@ -31,13 +27,9 @@ JSON code format requirements are very specific and strict. Code indentation nee
 1. Inside the **eyebrow** directory create a new file called **eyebrow.twig**.
 2. Inside `eyebrow.twig` copy the following code:
 
-{% code-tabs %}
-{% code-tabs-item title="eyebrow.twig" %}
-```php
+```twig
 <p class="eyebrow">{{ text }}</p>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 With Twig we not only write the custom markup we need, but we are also able to pass data from the JSON object we created above. Although we can technically write the data directly in the twig template, it is best to use JSON as the source of data as this will become handy once we start nesting and integrating components. More on this later.
 
@@ -46,9 +38,7 @@ With Twig we not only write the custom markup we need, but we are also able to p
 1. Inside the **eyebrow** directory create a new file called **eyebrow.scss**.
 2. Inside `eyebrow.scss` copy this code:
 
-{% code-tabs %}
-{% code-tabs-item title="eyebrow.scss" %}
-```css
+```scss
 // Eyebrow
 //
 // This is the eyebrow component.
@@ -68,14 +58,10 @@ With Twig we not only write the custom markup we need, but we are also able to p
   white-space: nowrap;
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="info" %}
 ### What are those comments in the SCSS file?
 
 In addition to the component's styles, you may have noticed the commented code at the top of the file. These comments are what KSS Node uses to build the component in the style-guide. You can learn more about how [KSS Node works here](https://github.com/kss-node/kss-node).
-{% endhint %}
 
 ### Basics of KSS from file above
 
@@ -88,18 +74,16 @@ In addition to the component's styles, you may have noticed the commented code a
 
 Now that we have written all the necessary code to build the Eyebrow component, it's time to see the component in the style-guide. Let's compile our project first.
 
-1. In your command line, navigate to `/themes/custom/nitflex_dev_theme` 
+1. In your command line, navigate to `/themes/custom/nitflex_dev_theme`
 2. Run this command:
 
    ```bash
    lando npm run build
    ```
 
-{% hint style="info" %}
 ### What does the command do?
 
 The command above runs all gulp tasks found inside the **gulp-tasks** directory in the theme. Keep in mind, we are using the word **lando** because our local environment was built with lando. Typically the build command would be `npm run build.`
-{% endhint %}
 
 ## Viewing the component  <a id="viewing-the-eyebrow-component"></a>
 
@@ -112,4 +96,3 @@ http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Eyebrow component.
-
