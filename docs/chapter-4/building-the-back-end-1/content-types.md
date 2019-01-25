@@ -4,20 +4,20 @@ In the previous set of exercises we built all the components our movie site need
 
 ## Content models
 
-Below you will see the content models for Movie and Landing Page content types.  Using the step by step instructions at the bottom of this page, create both content types using the fields details outlined in the respective content model tables.
+Below you will see the content models for Movie and Landing Page content types. Using the step by step instructions at the bottom of this page, create both content types using the fields details outlined in the respective content model tables.
 
 {% tabs %}
 {% tab title="Movie content type" %}
 | Label | Type | Machine name | Allowed \# values |
 | :--- | :--- | :--- | :--- |
-| Synopsis | Text \(formatted, long, with summary\) | `body`  | Limited 1 |
+| Synopsis | Text \(formatted, long, with summary\) | `body` | Limited 1 |
 | Cover Image | Image | `field_cover_image` | Limited 1 |
 | Avg. viewer rating | List \(Integer\) | `field_average_viewer_rating` | Limited 1 |
 | Genre | Entity Reference | `field_genre` | Unlimited |
 | MPAA Rating | List \(Text\) | `field_mpaa_rating` | Limited 1 |
 | Promo Sentence | Text | `field_promo_sentence` | Limited 1 |
 
-#### **Average Viewer Rating** allowed values
+### **Average Viewer Rating** allowed values
 
 ```text
 1|1 Star
@@ -29,13 +29,13 @@ Below you will see the content models for Movie and Landing Page content types. 
 
 _Make 3 Stars the default value._
 
-#### **Genre settings**
+### **Genre settings**
 
 | **Entity to reference** | Referenced type |
 | :--- | :--- |
 | Taxonomy term | Genre vocabulary |
 
-#### **MPAA Rating** allowed values
+### **MPAA Rating** allowed values
 
 ```text
 G|G
@@ -51,10 +51,10 @@ _Make PG the default value._
 {% tab title="Landing Page content type" %}
 | Label | Type | Machine name | Allowed \# values |
 | :--- | :--- | :--- | :--- |
-| Featured Movie | Entity Reference | `field_featured_movie`  | Limited 1 |
+| Featured Movie | Entity Reference | `field_featured_movie` | Limited 1 |
 | Movie List | Entity Reference Revisions | `field_movie_list` | Unlimited |
 
-#### **Featured Movie &** Movie List settings \(respectively\)
+### **Featured Movie &** Movie List settings \(respectively\)
 
 | **Type to reference** | Reference type |
 | :--- | :--- |

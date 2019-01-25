@@ -4,16 +4,16 @@ When we built the Movie card component the intention was to use it to display an
 
 Before we can begin integrating the movie card however, we need to prepare a few things in Drupal. If we look at the project's prototype we see that the movie nodes are displayed in different ways. In the listing page each node is displayed with minimum content/fields, whereas the full node displays all the fields in the content type. This means we need to create a couple of view modes which will allow us to filter the fields we want to display depending on where things are being displayed.
 
-### View modes
+## View modes
 
 View modes are great ways to display content in different ways by managing whether fields of an entity are to be shown or hidden.
 
 By default Drupal comes with a hand-full of view modes. We are interested in using the Full/Default and Teaser view modes. By using view modes we let Drupal add all the logic for how to show/hide your content fields.
 
-A typical view mode to display a minimal version of your nodes is the **Teaser** view mode. This is perfect to only show the fields we want using the Movie card component. 
+A typical view mode to display a minimal version of your nodes is the **Teaser** view mode. This is perfect to only show the fields we want using the Movie card component.
 
 {% hint style="info" %}
-_**Note:**  The Teaser view mode is already setup for this project, but for the purpose of the training here are the steps to setting it up from scratch._
+_**Note:** The Teaser view mode is already setup for this project, but for the purpose of the training here are the steps to setting it up from scratch._
 {% endhint %}
 
 1. If you haven't already, login to the site with admin access
@@ -32,15 +32,15 @@ _**Note:**  The Teaser view mode is already setup for this project, but for the 
 
 So we just indicated to Drupal which fields we want to display when using the **Teaser** view mode and which we want to hide.
 
-### Updating Twig templates for Movie Card
+## Updating Twig templates for Movie Card
 
 By default Drupal uses specific templates for rendering different kind of entities/content. For example, to render a node \(regardless of what type of node\), Drupal uses `node.html.twig`, to render a page it uses `page.html.twig`, and so on. This means if we want to change how nodes or pages display we can change those templates. However, any changes we make to those template will apply to all content that uses them. This may not be what we want. In addition, the golden rule in Drupal is _"Never hack core"_. If we change node.html.twig or page.html.twig in Drupal core, we are breaking the golden rule. That's where template suggestion come in.
 
-### Template Suggestions
+## Template Suggestions
 
 [Template suggestions](https://www.drupal.org/docs/8/theming/twig/working-with-twig-templates) are copies of the original core templates. Template suggestions are saved within the theme you are working on typically inside the `/templates` directory in your theme. This is where Drupal knows to look for twig templates when rendering content. If it finds twig templates it uses those over the ones in core when rendering content.
 
-### Naming template suggestions
+## Naming template suggestions
 
 If you have been using Drupal for a while you may be well familiar with where to get templates from or what to name them. However there is an easy way to do this and that's called _turning on Twig debugging_. Lucky for us the `nitflex_dev_theme` already has twig debugging on and we will make use of it now.
 
@@ -55,14 +55,14 @@ If you look at the screenshot above, you will see a few things that are extremel
 * Just above that line, there is a list of files all of which begin with **node--**. This list is what we mean when we say _Template suggestions_.
 * The file name with an **"x"** to the left of it is the file Drupal is currently using to render the movie node.
 
-### Creating new template suggestions
+## Creating new template suggestions
 
 1. Within the `src/templates/` directory create a new directory named `movie-card`.
 2. Navigate to the path of the Drupal core theme shown in the twig debug comment to locate the node template \(e.g, `core/themes/stable/templates/content/node.html.twig`\).
 3. Copy the _node.html.twig_ template into `src/templates/movie-card`
 
 {% hint style="info" %}
-_**Note:** The node template we want has already been placed into the correct location for the `nitflex_dev_theme` theme, the steps below are for training purposes only._
+_**Note:** The node template we want has already been placed into the correct location for the_ `nitflex_dev_theme` _theme, the steps below are for training purposes only._
 {% endhint %}
 
 With the debugging information above we have all we need to create our first template suggestion for the movie nodes.
@@ -77,13 +77,13 @@ With the debugging information above we have all we need to create our first tem
 
 ![Movie template suggestion using teaser view mode](../../.gitbook/assets/node-teaser.png)
 
-Notice there is an **"x"** next to `node--movie--teaser.html.twig`, which means Drupal is now using our custom twig template suggestion.  Also notice the path of the template. It's our own theme's template directory. 
+Notice there is an **"x"** next to `node--movie--teaser.html.twig`, which means Drupal is now using our custom twig template suggestion. Also notice the path of the template. It's our own theme's template directory.
 
 {% hint style="info" %}
 **TIP**: If I know I will be creating multiple template suggestions of the same kind \(i.e. node\), I would normally leave the unchanged copy of node.html.twig in my theme and make copies of it every time I need a new template. This way I don't have to copy the same template over and over again from Drupal core \(I'm lazy\).
 {% endhint %}
 
-### Integrating the Movie content type
+## Integrating the Movie content type
 
 We are now finally at a point where we can integrate the Movie card component with the Movie content type using the newly created template suggestion.
 
@@ -132,7 +132,7 @@ Let's go over what we are doing here:
 * Notice how with the average viewer rating field we are making use of the `field_value` filter that's provided by the [Twig Field Value](https://www.drupal.org/project/twig_field_value) module to pass in the raw value of that field. This is because in our template for the Average Viewer Rating component we're expecting a simple number for a data attribute, so if it were to include any markup it would break our component!
 * Finally we make use of the `favorites_toggle` twig block tag that we set up in the movie card component to swap out what is output in that area of the component. We're instead letting Drupal render the flag field as provided by the flag module. It's like we're telling Drupal "Use **our** component with your field values, except for the add-to-favorites button -- take care of that one for us, would ya?"
 
-#### Clear Drupal's caches.
+### Clear Drupal's caches.
 
 {% hint style="info" %}
 **INFO**: Learn more about [Twig's embed](https://twig.symfony.com/doc/2.x/tags/embed.html) statements to extend and include twig templates.

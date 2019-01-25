@@ -2,19 +2,19 @@
 
 This is a training workshop intended to teach you everything you need to know to successfully build and integrate components with Drupal 8.
 
-Component based development is typically broken down in 3 parts: 
+Component based development is typically broken down in 3 parts:
 
 1. Building stand-alone components in Twig using KSS Node.
 2. Building Drupal's back-end
 3. Integrating components with Drupal.
 
-### Why Components? <a id="why-components"></a>
+## Why Components?  <a id="why-components"></a>
 
 Building a website using the component-based approach can dramatically improve collaboration among teams, making code more reusable, flexibility, and long term maintenance of your website becomes easier. We will work on building a living style guide which will become the single source of truth for markup, styles and javascript behaviors.
 
 Components promote re-usability which in turn eliminates code repetition. Think of components as building blocks or legos which you will build once and be able to use them over and over throughout your website.
 
-### Topics this training covers <a id="topics-this-training-covers"></a>
+## Topics this training covers  <a id="topics-this-training-covers"></a>
 
 **Components**: Contrary to the top-to-bottom theming we have been doing for years, components allow us to build and theme our websites by breaking it down into pieces. This presents several advantages over traditional theming including reusability, better CSS structure, limited CSS nesting, less risk of regressions and more.
 
@@ -30,11 +30,11 @@ It’s worth noting that the scaffold provided by the theme generator can also b
 
 **NPM, Node and Gulp**: The theme generator is built on Node and offers the latest plugins for today’s front-end applications including: Node Package Manager \(NPM\), Gulp, ESLint, Babel, and many more.
 
-### Who is this training for? <a id="who-is-this-training-for"></a>
+## Who is this training for?  <a id="who-is-this-training-for"></a>
 
 This training is intended for front and back-end developers who are building websites in Drupal 8. A good understanding of HTML, Twig, CSS/Sass and command line is recommended. After this training, you will have a solid understanding of how to build and theme components in a living style guide and be able to integrate those components with Drupal with a single source of truth for markup, styles, and javascript.
 
-### Training requirements <a id="training-requirements"></a>
+## Training requirements  <a id="training-requirements"></a>
 
 * Laptop computer with latest versions of your favorite browser
 * Text editor of your choice

@@ -20,6 +20,5 @@ Example:
 </article>
 ```
 
-Note that the `without` twig filter in this example is a Drupal-specific filter, so for the style guide we'll want to make sure we’re using one that supports Drupal’s custom filters \(both KSS node, and Pattern Lab have configuration options that support Drupal twig filters\).  
-
+Note that the `without` twig filter in this example is a Drupal-specific filter, so for the style guide we'll want to make sure we’re using one that supports Drupal’s custom filters \(both KSS node, and Pattern Lab have configuration options that support Drupal twig filters\).
 

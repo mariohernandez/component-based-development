@@ -58,13 +58,13 @@ We created a **H1** heading in which we pass the value of `title` from the JSON 
 
 Just like we did with the Eyebrow component, the comments in the SCSS file allows KSS Node to create this component in the style-guide.
 
-### Improving the heading component
+## Improving the heading component
 
 The heading component looks good and it will work great as long as we always want to use a H1. However, the component is pretty static and it does not offer much flexibility. What if we wanted to use a h2 or h3, etc.? Then the heading component would probably not work because we have no way of changing the heading level from h1 to any other level.
 
 Let's rework the heading component so we make it more dynamic and we have the ability to choose a different heading level when is time to use it.
 
-#### Rewriting the JSON object <a id="rewriting-the-json-object"></a>
+### Rewriting the JSON object  <a id="rewriting-the-json-object"></a>
 
 Update `heading.json` to look like this:
 
@@ -89,7 +89,7 @@ In addition to the `title` key, we've added `url`, `heading_level`, and `classes
 * The **heading\_level** is something we will use later as we start nesting the heading component into other components. This will allows us to change the headings from say h1 to h2 if we need to. More on this later.
 * Finally, the **classes** key is a placeholder so we can pass a modifier CSS class when we make use of this component. The modifier class will make it possible for us to apply different styles to headings.
 
-#### Rewriting the Twig code
+### Rewriting the Twig code
 
 Update your twig file code to look like this:
 
@@ -116,7 +116,7 @@ Let's break things down to explain what's happening here since the twig code has
 * In addition, we are preparing for when we integrate this component with Drupal by applying the attributes array which will provide us with Drupal's specific functionality. More on this later.
 * Finally, as previously mentioned, if a url is present when populating the heading field, we wrap the title in a `<a>` tag, otherwise print the title as plain text.
 
-### Compiling the code <a id="compiling-the-code"></a>
+## Compiling the code  <a id="compiling-the-code"></a>
 
 Now that we have written all the necessary code to build the Heading component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -128,12 +128,12 @@ Now that we have written all the necessary code to build the Heading component, 
    ```
 
 {% hint style="info" %}
-#### What does the command do? <a id="what-does-the-command-do"></a>
+### What does the command do?  <a id="what-does-the-command-do"></a>
 
 The command above runs all gulp tasks found inside the **gulp-tasks** directory in the theme. Keep in mind, we are using the word **lando** because our local environment was built with lando. Typically the build command would be `npm run build.`
 {% endhint %}
 
-### Viewing the component <a id="viewing-the-eyebrow-component"></a>
+## Viewing the component  <a id="viewing-the-eyebrow-component"></a>
 
 Open your Drupal site and point to the URL below:
 

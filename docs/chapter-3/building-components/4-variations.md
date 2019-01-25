@@ -102,7 +102,7 @@ What we are doing here is telling KSS Node that we want a new component variatio
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-The new code starts at line **36** \(`&.button--primary`\).  This means **.button** and **.button--primary** classes will be together \(i.e. `<a class="button button--primary">...</a>`\), and when they do we are  changing background, text and border color to red.
+The new code starts at line **36** \(`&.button--primary`\). This means **.button** and **.button--primary** classes will be together \(i.e. `<a class="button button--primary">...</a>`\), and when they do we are changing background, text and border color to red.
 
 Before we can see the new variation in action, we need to let twig know that there may be times when this component will accept a modifier class to create variations.
 
@@ -130,7 +130,7 @@ Notice we added the `{{ modifier_class }}` variable placeholder within the class
 The `{{ modifier_class }}` tag is only for style-guide purposes. It has no effect when we render the component in Drupal. For Drupal we have added `{{ classes|default('') }}.`
 {% endhint %}
 
-### Compiling the style-guide
+## Compiling the style-guide
 
 Now that we have written all the necessary code to create a variation of the Button component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -140,7 +140,7 @@ Now that we have written all the necessary code to create a variation of the But
 lando npm run build
 ```
 
-### Viewing the Button component
+## Viewing the Button component
 
 Open your Drupal site and point to the URL below
 

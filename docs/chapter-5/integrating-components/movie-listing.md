@@ -2,7 +2,7 @@
 
 The same way we built the movie card collection and movie listing components in two parts, we will also integrate them in two parts. We already integrated the collection of cards and now we are going to integrate the full movie listing, which would include the collection of cards, and the title of the list.
 
-### Template suggestions
+## Template suggestions
 
 Within Drupal, the movie listing is set up as a **Movie Genre List** paragraph type which includes a title field and a views reference field. The views reference field uses the `movie_list` view that we integrated as the **movie-card-collection** in the previous exercise. The same way we created a new twig template suggestion for previous components, we are going to repeat that process for the movie-listing, targeting the paragraph template for Movie Genre List paragraph type.
 
@@ -13,7 +13,7 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
 
 ![Paragraph template suggestion](../../.gitbook/assets/paragraph-border.png)
 
-### Integrate the Movie Listing
+## Integrate the Movie Listing
 
 1. Open`paragraph--genre-list.html.twig`in your text editor
 2. Remove all code in the file but leave all comments.

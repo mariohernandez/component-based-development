@@ -2,7 +2,7 @@
 
 We are now ready to integrate the featured movie component with Drupal. Lucky for us, we have already done something very similar when we integrated the movie card component with the movie content type. Let's start.
 
-### View modes
+## View modes
 
 We are going to follow the exact same steps for using view modes as we did when we integrated the [movie card component](https://mariohernandez.gitbooks.io/components-training/content/chapter5/integrate/movie.html). However, this time we're going to use a view mode called **Featured Movie**. This view mode is already set up, but here are the steps to create it should you want to practice:
 
@@ -20,11 +20,11 @@ Next Steps:
 * For step 8 enable the following fields \(move them outside of **Disabled** section\):
   * _Cover Image_, _Promo Sentence_, _MPAA Rating_, _Average Viewer Rating_, _Flag: Favorites_, and _Synopsis_. All other fields should be under **Disabled**.
 
-### Template suggestions
+## Template suggestions
 
 The template suggestion for the **Featured Movie** view mode has already been created for you, but if you were doing this on your own, follow the same steps that we took for creating the template suggestion for the Teaser view mode in the [Movie card](https://mariohernandez.gitbooks.io/components-training/content/chapter5/integrate/movie.html) integration instructions, but this time our template suggestion should be **node--movie--featured-movie.html.twig**.
 
-### Integrating Featured Movie component
+## Integrating Featured Movie component
 
 We are now finally at a point where we can integrate the Featured Movie component with the Movie content type using the newly created template suggestion.
 
@@ -115,7 +115,7 @@ This reduces the template down to just outputting the field's value that's wrapp
 
 Now our promo sentence in a featured movie will have the correct markup.
 
-#### Clear Drupal's caches.
+### Clear Drupal's caches.
 
 If you refresh the homepage you should see that the featured movie now inherits the styles we wrote when we created the component.
 

@@ -112,7 +112,6 @@ Let's start by creating the usual files for building the component:
     {% endif %}
   </div>
 </section>
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -280,12 +279,12 @@ Let's start by creating the usual files for building the component:
 {% endcode-tabs %}
 
 {% hint style="warning" %}
-#### Important
+### Important
 
 Be sure to create the **featured-movie** library.
 {% endhint %}
 
-### Breaking it down
+## Breaking it down
 
 By now you should have a good understanding of what we are doing here.
 
@@ -293,7 +292,7 @@ By now you should have a good understanding of what we are doing here.
 2. Next we wrote the markup in twig which makes use of the data from the JSON object. Most of this data is being passed to the component in the way of twig includes which makes use of previously built components such as heading, eyebrow and button.
 3. Finally we wrote the css styles to give the featured movie component the look and feel we want.
 
-### Compiling the style-guide
+## Compiling the style-guide
 
 Now that we have written all the necessary code to build the Featured Movie component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -303,7 +302,7 @@ Now that we have written all the necessary code to build the Featured Movie comp
 lando npm run build
 ```
 
-### Viewing the Featured Movie component
+## Viewing the Featured Movie component
 
 Open your Drupal site and point to the URL below:
 

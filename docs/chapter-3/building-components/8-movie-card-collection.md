@@ -105,13 +105,15 @@ We created an array called **items**. The array contains multiple items each of 
 Create the **movie-card-collection** library.
 {% endhint %}
 
-We are now introducing the concept of Twig Blocks, `{% block collection %}` so we are able to alter how content is rendered when we integrate this component with Drupal.
+We are now introducing the concept of Twig Blocks, \`
+
+\` so we are able to alter how content is rendered when we integrate this component with Drupal.
 
 Inside the block, we loop through the _items_ array and for each item we loop through we include a _movie-card_ component. This means we will end up with as many cards as items in the **items** array.
 
-### Twig blocks
+## Twig blocks
 
-[Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks are regions in which you can insert any kind of content. 
+[Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks are regions in which you can insert any kind of content.
 
 * Now paste the component's styles below into **movie-card-collection.scss**:
 
@@ -161,7 +163,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Compiling the style-guide <a id="compiling-the-style-guide"></a>
+## Compiling the style-guide  <a id="compiling-the-style-guide"></a>
 
 Now that we have written all the necessary code to build the Movie Card Collection component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -171,7 +173,7 @@ Now that we have written all the necessary code to build the Movie Card Collecti
 lando npm run build
 ```
 
-### Viewing the Movie Card Collection component <a id="viewing-the-featured-movie-component"></a>
+## Viewing the Movie Card Collection component  <a id="viewing-the-featured-movie-component"></a>
 
 Open your Drupal site and point to the URL below:
 
