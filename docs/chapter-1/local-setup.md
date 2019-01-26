@@ -1,6 +1,6 @@
 This training workshop is most effective when following along with the exercises.  In an effort to provide a seamless and bug free development environment, we have put together an automated environment which will build everything for you including a container-based development environment running on [Lando](https://docs.devwithlando.io/), latest Drupal core and required modules, as well as all the front-end tools needed to compile code and other automated tasks.
 
-## About Lando
+## 1. Install Lando
 
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
 
@@ -12,10 +12,10 @@ Sorry, this is only going to work if you have a fairly new computer.  According 
 * Linux (with kernel version 4.x or higher)
 So far, we have tested only with macOS 10.13 (High Sierra) and 10.14 (Mojave).
 
-Run the installer.  At least on a Mac, this installs Lando along with Docker for Mac.  Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
-
-## 1. Install Lando
+### Run the installer
 * [Install Lando and Docker](https://docs.devwithlando.io/installation/installing.html)
+
+At least on a Mac, this installs Lando along with Docker.  Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
 
 **IMPORTANT**
 * **Docker is required**
