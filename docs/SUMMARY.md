@@ -8,7 +8,7 @@
 
 ## Chapter 2
 
-* [Drupal Theme Generator](chapter-2/untitled.md)
+* [Drupal Theme Generator](chapter-2/theme-generator.md)
 
 ## Chapter 3
 
@@ -49,4 +49,3 @@
 ## Chapter 6
 
 * [Resources](chapter-6/resources.md)
-
