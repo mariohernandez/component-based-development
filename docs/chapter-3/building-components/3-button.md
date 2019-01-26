@@ -37,16 +37,6 @@ We've added some logic to the button to ensure we render the right HTML element 
 2. Inside `button.scss` copy the following code:
 
 ```scss
-// Button
-//
-// This is the button component.
-//
-// Markup: button.twig
-//
-// Classes: kss-bg-dark
-//
-// Style guide: Components.Button
-
 // Import site utilities.
 @import '../../global/utils/init';
 
@@ -86,7 +76,7 @@ lando npm run build
 Open your Drupal site and point to the URL below:
 
 ```text
-http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
+http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/
 ```
 
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
