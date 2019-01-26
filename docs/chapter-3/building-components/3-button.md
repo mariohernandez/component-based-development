@@ -8,10 +8,10 @@ So you get the idea, inside the Components directory we create a new directory t
 
 ```yaml
 button:
-modifier: ~
-text: "Watch now"
-type: ~
-url: "#"
+  modifier: ~
+  text: "Watch now"
+  type: ~
+  url: "#"
 ```
 
 4. Inside the button directory create a new file called **button.twig**.
