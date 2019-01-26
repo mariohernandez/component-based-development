@@ -1,40 +1,50 @@
-# Button
-
 So you get the idea, inside the Components directory we create a new directory that matches the name of the component we want to create and then create a few files inside that directory. Let's repeat this process for the Button component.
 
-1. Inside **nitflex\_dev\_theme/src/components/** create a new directory called **button**.
-2. Inside the button directory create a new file called **button.json**.
-3. Inside `button.json` copy the following code:
+## Component's data
+1. Inside `nitflex_dev_theme/src/components`/ create a new directory called **button**.
+
+2. Inside the _button_ directory create a new file called **button.yml**.
+
+3. Inside _button.yml_ copy the following code:
 
 ```yaml
 button:
-  modifier: ~
   text: "Watch now"
-  type: ~
   url: "#"
+  type:
+  modifier:
 ```
+We just created an object for the button with key/value **text**, **url**, **type**, and **modifier**.
 
-4. Inside the button directory create a new file called **button.twig**.
-5. Inside `button.twig` copy the following code:
+
+1. Inside the **button** directory create a new file called **button.twig**.
+
+1. Inside `button.twig` copy the following code:
 
 ```php
 {% if button.url %}
   <a href="{{ button.url }}" class="button">
     {{ button.text }}
   </a>
+{% elseif button.type %}
+  <input
+    type="{{ button.type|default('submit') }}"
+    class="button">
+    {{ button.text }}
+  </input>
 {% else %}
   <button
-    type="{{ button.type|default('submit') }}"
     class="button">
     {{ button.text }}
   </button>
 {% endif %}
 ```
 
-We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if a URL is passed, we use a `<a>` with the class of **button**, otherwise we use a `<button>` tag. This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand. A &lt;a&gt; tag will allow us to be directed to another page or a section within the same page, whereas a button will allow us to perform an action such as submit content or anything else where a click event is needed.
+We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if an URL is passed, we use an `<a>` with the class of **button**.  If we have a value for **type** we render an `<input>` element and pass the type provided, otherwise we use a `<button>` tag.  This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand.  An `<a>` tag will allow us to be directed to another page or a section within the same page, whereas a `<button>` or `<input>` element will allow us to perform an action such as submit content.
 
-1. Inside the button directory create a new file called **button.scss**.+
-2. Inside `button.scss` copy the following code:
+1. Inside the **button** directory create a new file called **button.scss**.
+
+1. Inside `button.scss` copy this code:
 
 ```scss
 // Import site utilities.
@@ -61,24 +71,24 @@ We've added some logic to the button to ensure we render the right HTML element 
 }
 ```
 
-## Compiling the style-guide
+## Compiling the code
+Now that we have written all the necessary code to build the component, it's time to see the component in the style-guide. Let's compile our project first.
 
-Now that we have written all the necessary code to build the Button component, it's time to see the component in the style-guide. Let's compile our project first.
+* In your command line, navigate to `/themes/custom/nitflex_dev_theme`.
 
-* In your terminal or command line, navigate to `/themes/custom/nitflex_dev_theme` and run the following command:
+* Run this command:
 
 ```bash
 lando npm run build
 ```
 
-## Viewing the Button component
+**What does this command do?**
 
-Open your Drupal site and point to the URL below:
+_The command above runs all gulp tasks found inside the gulp-tasks directory in the theme.  Keep in mind, we are using the word **lando** because our local environment was built with lando.  Typically the build command would be **npm run build**._
 
-```text
-http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/
-```
 
-_Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
+## Viewing the component
+* Open your Drupal site and point to the URL below:
+[http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
-Under the Components category you should see the new Button component.
+  Under the Components category you should see the new Heading component.

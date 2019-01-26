@@ -43,7 +43,7 @@ With Twig we not only write the custom markup we need, but we are also able to p
 ```
 
 ## Compiling the code
-Now that we have written all the necessary code to build the Eyebrow component, it's time to see the component in the style-guide. Let's compile our project first.
+Now that we have written all the necessary code to build the component, it's time to see the component in the style-guide. Let's compile our project first.
 
 * In your command line, navigate to `/themes/custom/nitflex_dev_theme`.
 
