@@ -1,4 +1,4 @@
-# Component based development
+## Component based development
 _A training workshop by [Mediacurrent](https://mediacurrent.com)_.
 
 This is a training workshop intended to teach you everything you need to know to successfully build and integrate components with Drupal 8.
