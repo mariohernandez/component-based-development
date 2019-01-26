@@ -1,27 +1,36 @@
 This training workshop is most effective when following along with the exercises.  In an effort to provide a seamless and bug free development environment, we have put together an automated environment which will build everything for you including a container-based development environment running on [Lando](https://docs.devwithlando.io/), latest Drupal core and required modules, as well as all the front-end tools needed to compile code and other automated tasks.
 
-## 1. Install Lando
+## About Lando
+
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
 
+### System requirements
+Sorry, this is only going to work if you have a fairly new computer.  According to the [Lando documentation](https://docs.devwithlando.io/installation/system-requirements.html#operating-system) you will need one of the following:
+
+* macOS 10.10+ (May need to install command line tools)
+* Windows 10 Pro+ (or equivalent) with Hyper-V running
+* Linux (with kernel version 4.x or higher)
+So far, we have tested only with macOS 10.13 (High Sierra) and 10.14 (Mojave).
+
+Run the installer.  At least on a Mac, this installs Lando along with Docker for Mac.  Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
+
+## 1. Install Lando
 * [Install Lando and Docker](https://docs.devwithlando.io/installation/installing.html)
 
 **IMPORTANT**
 * **Docker is required**
-
   Docker makes it possible to build containers for any of the third party integrations required in your environment.  If you already have Docker installed you don't need to install it again as part of Lando's installation.
 
-* **A word about OSX**
-
-  If you are using Mac OS, you may need to install OSX's Command Line Tools.
-
 ## 2. Clone the repo
+
 The clone we have put together includes everything you need to complete the training.  This includes latest Drupal core with working theme, required modules (See below), and front-end building tools such as NodeJS, Gulp, KSS Node, Linters, and more.
 
 1. Open the command line tool of your choice and change directory to any directory  of your choice (i.e. Desktop or Sites).
 
 2. Run `git clone git@github.com:mariohernandez/component-based-development.git`
 
-## 3. Build the environment
+## 3. Building the environment
+
 Now that the repo has been cloned, let's build the local environment using the power of Lando.
 
 1. In your command line, change directory to the newly cloned repo location:
@@ -30,7 +39,7 @@ Now that the repo has been cloned, let's build the local environment using the p
 
 2. Run `lando start`
 
-    _This will set up Lando, plus pull down Drupal and required contrib modules. This process could take a few minutes to complete._
+    This will set up Lando, plus pull down Drupal and required contrib modules. This process could take a few minutes to complete.
 
 3. Run
 
@@ -53,10 +62,10 @@ Now that the repo has been cloned, let's build the local environment using the p
     After following these steps, you should have an unstyled Drupal site available locally at: http://nitflex.lndo.site.
 
 ## 4. Install the Front-End tooling
+
 * Run `cd web/themes/custom/nitflex_dev_theme`
 
 * Run `lando npm install`
-
   _This will install the required front end tools (Node, Gulp, etc.)_
 
 ## 5. Login and Preview the site
