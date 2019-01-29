@@ -9,23 +9,21 @@ By now you should know the drill, inside **src/components/** create a new direct
 3. Inside `movie-card.json` copy the following code:
 
 ```yaml
-{
-  "cover_image": "<img src='/sites/default/files/action-3.jpg' alt='' />",
-    "heading": {
-      "title": "Movie title goes here",
-      "url": "#",
-      "heading_level": 4,
-      "classes": "movie-card__heading"
-    },
-  "average_rating": "3",
-  "mpaa_rating": "PG-13",
-  "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-  "add_button": {
-    "text": "Add to watch list",
-    "type": "submit",
-    "classes": ""
-  }
-}
+movie_card:
+  cover_image: <img src='/sites/default/files/action-3.jpg' alt='' />
+  heading:
+    title: "I love this movie"
+    url: "#"
+    heading_level: 4
+    modifier:
+      movie-card__header
+  average_rating: "3"
+  mpaa_rating: "PG-13"
+  synopsis: "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
+  button:
+    text: "Add to watch list"
+    type: "submit"
+    modifier:
 ```
 
 By looking at the prototype we see that the landing page shows a listing of movies. Given the hierarchy of content we see the page already has a **h1** and **h2** in the featured movie section. Each movie category also uses a heading which will be h3, so using a h4 as the heading\_level for the title of the movie in the card makes sense.
@@ -228,4 +226,3 @@ Quite the styles huh?
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
-
