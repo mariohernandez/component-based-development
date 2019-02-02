@@ -16,9 +16,12 @@ This workshop is hands-on and we have put together a series of exercises which w
 | [Movie Card Collection](8-movie-card-collection.md) | A movie collection is a group of movies organized by various categories \(i.e. Horror, Action, Comedy, etc.\). |
 | [Movie Listing](9-movie-listing.md) | A multi-row listing of movies organized by movie genre. |
 
-### Additional pre-built components 
+### Additional pre-built components
 
 In the interest of time, we have provided a hand-full of pre-built components which will be used in this training.  These components include:
 
-
-
+| Component | Description |
+| :--- | :--- |
+| Favorites | Allows us to add movies to our play list. |
+| MPAA Rating | Provides the MPAA rating info (i.e. PG-13).   |
+| Average Rating | Provides a 5 star rating mechanism.   |
