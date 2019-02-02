@@ -25,12 +25,16 @@ We just created key/value pair for the heading with a key of **title** and **val
 
 3. Inside the **heading** directory create a new file called **heading.scss**.
 4. Inside `heading.scss` copy this code:
+  ```scss
+  // Import site utilities.
+  @import '../../global/utils/init';
 
-   \`\`\`scss // Import site utilities. @import '../../global/utils/init';
+  .heading {
+    font-weight: bold;
+    line-height: 1.3;
+  }
+```
 
-.heading { font-weight: bold; line-height: 1.3; }
-
-```text
 ## Improving the heading component
 The heading component looks good and it will work great as long as we always want to use a H1. However, the component is pretty static and it does not offer much flexibility. What if we wanted to use a h2 or h3, etc.? Then the heading component would probably not work because we have no way of changing the heading level from h1 to any other level.
 Let's re-work the heading component so we make it more dynamic and we have the ability to choose a different heading level when is time to use it.
@@ -91,4 +95,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
-
