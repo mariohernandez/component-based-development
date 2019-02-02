@@ -29,24 +29,24 @@ Now that we have a new button variaton let's add css styles to it.
 
 * Edit the `button.scss` so the styles look like this:
 
-  ```css
+  ```scss
   .button {
-  ...
+    ...
 
-  &:hover,
-  &:focus {
-    border-color: $color-white;
-  }
-
-  // Updates color and other styles for primary button.
-  &.button--primary {
-    border-color: $color-bright-red;
-  ​
     &:hover,
     &:focus {
-      background: $color-bright-red;
+      border-color: $color-white;
     }
-  }
+
+    // Updates color and other styles for primary button.
+    &.button--primary {
+      border-color: $color-bright-red;
+    ​
+      &:hover,
+      &:focus {
+        background: $color-bright-red;
+      }
+    }
   }
   ```
 
@@ -56,20 +56,20 @@ The new code starts at `&.button--primary`. This means .button and .button--prim
 
   ```php
   {% if button.url %}
-  <a href="{{ button.url }}" class="button{% if button.modifier %} {{ button.modifier }}{% endif %}">
-    {{ button.text }}
-  </a>
+    <a href="{{ button.url }}" class="button{% if button.modifier %} {{ button.modifier }}{% endif %}">
+      {{ button.text }}
+    </a>
   {% elseif button.type %}
-  <input
-    type="{{ button.type|default('submit') }}"
-    class="button{% if button.modifier %} {{ button.modifier }}{% endif %}">
-    {{ button.text }}
-  </input>
+    <input
+      type="{{ button.type|default('submit') }}"
+      class="button{% if button.modifier %} {{ button.modifier }}{% endif %}">
+      {{ button.text }}
+    </input>
   {% else %}
-  <button
-    class="button{% if button.modifier %} {{ button.modifier }}{% endif %}">
-    {{ button.text }}
-  </button>
+    <button
+      class="button{% if button.modifier %} {{ button.modifier }}{% endif %}">
+      {{ button.text }}
+    </button>
   {% endif %}
   ```
 
@@ -95,4 +95,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
-

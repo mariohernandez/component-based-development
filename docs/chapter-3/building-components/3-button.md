@@ -45,7 +45,7 @@ We've added some logic to the button to ensure we render the right HTML element 
 1. Inside the **button** directory create a new file called **button.scss**.
 2. Inside `button.scss` copy this code:
 
-```css
+```scss
 // Import site utilities.
 @import '../../global/utils/init';
 
@@ -90,4 +90,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
-

@@ -39,7 +39,8 @@ We just created key/value pair for the heading with a key of **title** and **val
 The heading component looks good and it will work great as long as we always want to use a H1. However, the component is pretty static and it does not offer much flexibility. What if we wanted to use a h2 or h3, etc.? Then the heading component would probably not work because we have no way of changing the heading level from h1 to any other level.
 Let's re-work the heading component so we make it more dynamic and we have the ability to choose a different heading level when is time to use it.
 
-### Update `heading.yml` to look like this:
+* Update `heading.yml` to look like this:
+
 ```yaml
 heading:
   title: "DrupalCon Seattle 2019"
@@ -54,7 +55,7 @@ We just created an object for the button with key/value **title**, **url**, **he
 * The **heading\_level** is something we will use later as we start nesting the heading component into other components. This will allows us to change the headings from say h1 to h2 if we need to.
 * Finally, the **modifier** key allows us to pass a modifier CSS class when we make use of this component. The modifier class will make it possible for us to style the heading differently.
 
-### Update the twig code to look like this:
+* Update the twig code to look like this:
 
 ```php
 <h{{ heading.heading_level|default('2') }} class="heading {{ heading.modifier ? ' ' ~ heading.modifier }}
