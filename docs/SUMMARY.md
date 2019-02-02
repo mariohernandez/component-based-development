@@ -49,3 +49,4 @@
 ## Chapter 6
 
 * [Resources](chapter-6/resources.md)
+

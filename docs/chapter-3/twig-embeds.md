@@ -1,4 +1,6 @@
-The challenge we face is having control of the markup while adhering to Drupal's best practices for rendering content.  When the time to integrate a component with Drupal comes, often times using `include` statements will do the job, but there are times when we want to modify content or markup before Drupal renders it and include statements don't allow for this.  We could use the extend statements but these could also be limiting.  In these situations the best option is to use Twig's `embed` statements, which combines both, include and extend functionality.  Let's see an example.
+# Twig embeds
+
+The challenge we face is having control of the markup while adhering to Drupal's best practices for rendering content. When the time to integrate a component with Drupal comes, often times using `include` statements will do the job, but there are times when we want to modify content or markup before Drupal renders it and include statements don't allow for this. We could use the extend statements but these could also be limiting. In these situations the best option is to use Twig's `embed` statements, which combines both, include and extend functionality. Let's see an example.
 
 ```php
 <article class="card
@@ -13,7 +15,7 @@ The challenge we face is having control of the markup while adhering to Drupal's
 </article>
 ```
 
-We've declared a [twig block](https://twig.symfony.com/doc/2.x/tags/extends.html) (not the same as Drupal's blocks), in which we are passing the card_content variable to print some content.  The block on its own does nothing.  Content will be rendered normally even if we do nothing with the block.  The advantages of the twig block come when it's time to integrate the card component with Drupal.
+We've declared a [twig block](https://twig.symfony.com/doc/2.x/tags/extends.html) \(not the same as Drupal's blocks\), in which we are passing the card\_content variable to print some content. The block on its own does nothing. Content will be rendered normally even if we do nothing with the block. The advantages of the twig block come when it's time to integrate the card component with Drupal.
 
 ```php
 {% embed '@components/card/card.twig' with {
@@ -32,4 +34,5 @@ We've declared a [twig block](https://twig.symfony.com/doc/2.x/tags/extends.html
 {% endembed %}
 ```
 
-This is a simple example of how we can use twig blocks to alter or update content within a block before rendering.  In this example we've added a new title above the `card_content` which the original component did not provide.  There are so many other things we can do when we wrap things in twig blocks which gives us tremendous flexibility and control.
+This is a simple example of how we can use twig blocks to alter or update content within a block before rendering. In this example we've added a new title above the `card_content` which the original component did not provide. There are so many other things we can do when we wrap things in twig blocks which gives us tremendous flexibility and control.
+
