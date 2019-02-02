@@ -4,13 +4,21 @@ This workshop is hands-on and we have put together a series of exercises which w
 
 ## Components we will build in this chapter
 
-1. [Eyebrow](1-eyebrow.md)
-2. [Heading](2-heading.md)
-3. [Button](3-button.md)
-4. [Components Variations](4-variations.md)
-5. [Movie Card](5-movie-card.md)
-6. [Drupal Libraries](6-drupal-libraries.md)
-7. [Featured Movie](7-featured-movie.md)
-8. [Movie Card Collection](8-movie-card-collection.md)
-9. [Movie Listing](9-movie-listing.md)
+| Component | Description |
+| :--- | :--- |
+| [Eyebrow](1-eyebrow.md) | Renders a string of text.  Typically used to label or tag content. |
+| [Heading](2-heading.md) | Used as section's or page's titles.  It uses an optional url and provides mechanism for changing heading level \(h1 - h6\). |
+| [Button](3-button.md) | Used as Call To Action \(CTA\) throughout the website.  It offers an optional URL or it can be rendered as a `<button>` element. |
+| [Variations](4-variations.md) | A variations is a new instance of a component with small or big changes.  They inherit all attributes from original component but offer a way to be changed independently of the original component by using CSS modifier classes. |
+| [Movie Card](5-movie-card.md) | A movie card is a teaser view of a full movie node.  It contains an image, title, teaser, rating and links to the the full movie node.  They are used to displayed as a collection of movies organized by genre.   |
+| [Drupal Libraries](6-drupal-libraries.md) | Drupal libraries is how we add CSS and Javascript to a Drupal site or page. |
+| [Featured Movie](7-featured-movie.md) | The featured movie is a large version of a movie card which is displayed on the homepage.  Think of this component as a hero. |
+| [Movie Card Collection](8-movie-card-collection.md) | A movie collection is a group of movies organized by various categories \(i.e. Horror, Action, Comedy, etc.\). |
+| [Movie Listing](9-movie-listing.md) | A multi-row listing of movies organized by movie genre. |
+
+### Additional pre-built components 
+
+In the interest of time, we have provided a hand-full of pre-built components which will be used in this training.  These components include:
+
+
 

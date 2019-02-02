@@ -2,6 +2,12 @@
 
 This training workshop is most effective when following along with the exercises. In an effort to provide a seamless and bug free development environment, we have put together an automated environment which will build everything for you including a container-based development environment running on [Lando](https://docs.devwithlando.io/), latest Drupal core and required modules, as well as all the front-end tools needed to compile code and other automated tasks.
 
+{% hint style="warning" %}
+#### VERY IMPORTANT!
+
+Your local environment should be setup prior to arriving for training.
+{% endhint %}
+
 ## 1. Install Lando
 
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
@@ -26,7 +32,7 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 
 * **Docker is required**
 
-  Docker makes it possible to build containers for any of the third party integrations required in your environment.  If you already have Docker installed you don't need to install it again as part of Lando's installation.
+  Docker makes it possible to build containers for any of the third party integrations required in your environment. If you already have Docker installed you don't need to install it again as part of Lando's installation.
 
 ## 2. Clone the repo
 
@@ -78,9 +84,9 @@ Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in
 
 **DONE** 🙌 👏 🍺
 
----
 {% hint style="info" %}
 #### Don't want to use Lando?
 
-The environment we have put together has been extensively tested and we expect everyone to use it during this training workshop.  If you wish to use your own development environment you are on your own and we will not support or provide assistance if issues arise.
+The environment we have put together has been extensively tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own and we will not support or provide assistance if issues arise.
 {% endhint %}
+
