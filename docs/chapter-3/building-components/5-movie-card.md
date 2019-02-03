@@ -28,7 +28,7 @@ movie_card:
 
 By looking at the prototype we see that the landing page shows a listing of movies. Given the hierarchy of content we see the page already has a **h1** and **h2** in the featured movie section. Each movie category also uses a heading which will be h3, so using a h4 as the heading\_level for the title of the movie in the card makes sense.
 
-```css
+```scss
 // Import site utilities.
 @import '../../global/utils/init';
 
@@ -152,7 +152,7 @@ Quite the styles huh?
 
 * Inside the **movie-card** directory create a new file called **movie-card.twig**.
 
-{% embed https://gist.github.com/mariohernandez/fa3a6a277b15f7d85d1ae6f5bbce2294 %}
+{% embed embed url="https://gist.github.com/mariohernandez/fa3a6a277b15f7d85d1ae6f5bbce2294" %}
 
 * Notice we are using **include** statements to nest existing components into the movie-card.  This is a simple example of how we can reuse previously built components.
 * The image and rest of content has been split into different containers \(`movie-card__cover-image` & `movie-card__content`\). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
