@@ -219,11 +219,11 @@ Quite the styles huh?
 ```
 
 * Notice we are using **include** statements to nest existing components into the movie-card.  This is a simple example of how we can reuse previously built components.
-* The image and rest of content has been split into different containers (`movie-card__cover-image` & `movie-card__content`). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
+* The image and rest of content has been split into different containers \(`movie-card__cover-image` & `movie-card__content`\). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
 * Also notice we are reusing the heading component and simply changing its heading level and applying a unique class when inside the movie card. This provides context and allows us to style this heading independently of other headings in the page.
-* Finally, we are introducing the concept of [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html), (not the same as Drupal blocks), to provide a way to change how content is rendered when we integrate this component with Drupal. More on how Twig Blocks give us more flexibility at time of rendering content later.
-
+* Finally, we are introducing the concept of [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html), \(not the same as Drupal blocks\), to provide a way to change how content is rendered when we integrate this component with Drupal. More on how Twig Blocks give us more flexibility at time of rendering content later.
 
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
+

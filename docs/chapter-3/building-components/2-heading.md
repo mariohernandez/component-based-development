@@ -25,19 +25,20 @@ We just created key/value pair for the heading with a key of **title** and **val
 
 3. Inside the **heading** directory create a new file called **heading.scss**.
 4. Inside `heading.scss` add this code:
-  ```scss
-  // Import site utilities.
-  @import '../../global/utils/init';
 
-  .heading {
+   ```css
+   // Import site utilities.
+   @import '../../global/utils/init';
+
+   .heading {
     font-weight: bold;
     line-height: 1.3;
-  }
-```
+   }
+   ```
 
 ## Improving the heading component
-The heading component looks good and it will work great as long as we always want to use a H1. However, the component is pretty static and it does not offer much flexibility. What if we wanted to use a h2 or h3, etc.? Then the heading component would probably not work because we have no way of changing the heading level from h1 to any other level.
-Let's re-work the heading component so we make it more dynamic and we have the ability to choose a different heading level when is time to use it.
+
+The heading component looks good and it will work great as long as we always want to use a H1. However, the component is pretty static and it does not offer much flexibility. What if we wanted to use a h2 or h3, etc.? Then the heading component would probably not work because we have no way of changing the heading level from h1 to any other level. Let's re-work the heading component so we make it more dynamic and we have the ability to choose a different heading level when is time to use it.
 
 * Update `heading.yml` to look like this:
 
@@ -54,7 +55,6 @@ We just created an object for the button with key/value **title**, **url**, **he
 * The **url** key, if present, will allow us to wrap the title in an `<a>` tag, otherwise the title will be printed as plain text.
 * The **heading\_level** is something we will use later as we start nesting the heading component into other components. This will allows us to change the headings from say h1 to h2 if we need to.
 * Finally, the **modifier** key allows us to pass a modifier CSS class when we make use of this component. The modifier class will make it possible for us to style the heading differently.
-
 * Update the twig code to look like this:
 
 ```php
@@ -96,3 +96,4 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
+

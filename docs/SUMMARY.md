@@ -10,7 +10,7 @@
 
 * [Drupal Theme Generator](chapter-2/theme-generator.md)
 
-## Chapter 3
+## Exercises
 
 * [Components architecture](chapter-3/components-architecture.md)
 * [Best practices](chapter-3/best-practices.md)
