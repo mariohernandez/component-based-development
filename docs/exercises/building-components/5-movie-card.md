@@ -10,7 +10,7 @@ By now you should know the drill, inside **src/components/** create a new direct
 2. Inside the **movie-card** directory create a new file called **movie-card.yml**.
 3. Inside `movie-card.yml` add the following code:
 
-{% embed url="https://gist.github.com/mariohernandez/8cebe40f5cd6c5e274278896adb3c08f" caption="" %}
+{% embed url="https://gist.github.com/mariohernandez/8cebe40f5cd6c5e274278896adb3c08f" caption="movie-card.yml" %}
 
 By looking at the prototype we see that the landing page shows a listing of movies. Given the hierarchy of content we see the page already has a **h1** and **h2** in the featured movie section. Each movie category also uses a heading which will be h3, so using a h4 as the heading\_level for the title of the movie in the card makes sense.
 
@@ -19,14 +19,14 @@ By looking at the prototype we see that the landing page shows a listing of movi
 1. Inside the **movie-card** directory create a new file called **movie-card.scss**.
 2. Inside `movie-card.scss` add the following code:
 
-{% embed url="https://gist.github.com/mariohernandez/1ac91281710715139eb8226c18649962" caption="" %}
+{% embed url="https://gist.github.com/mariohernandez/1ac91281710715139eb8226c18649962" caption="movie-card.scss" %}
 
 Quite the styles huh? 😄
 
 1. Inside the **movie-card** directory create a new file called **movie-card.twig**.
 2. Add the following code:
 
-{% embed url="https://gist.github.com/mariohernandez/fa3a6a277b15f7d85d1ae6f5bbce2294" caption="" %}
+{% embed url="https://gist.github.com/mariohernandez/fa3a6a277b15f7d85d1ae6f5bbce2294" caption="movie-card.twig" %}
 
 * Notice we are using **include** statements to nest existing components into the movie-card.  This is a simple example of how we can reuse previously built components.
 * The image and rest of content has been split into different containers \(`movie-card__cover-image` & `movie-card__content`\). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
@@ -36,4 +36,3 @@ Quite the styles huh? 😄
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
-
