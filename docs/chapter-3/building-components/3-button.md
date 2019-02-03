@@ -4,9 +4,9 @@ So you get the idea, inside the Components directory we create a new directory t
 
 ## Component's data
 
-1. Inside `nitflex_dev_theme/src/components`/ create a new directory called **button**.
+1. Inside `nitflex_dev_theme/src/components/` create a new directory called **button**.
 2. Inside the _button_ directory create a new file called **button.yml**.
-3. Inside _button.yml_ copy the following code:
+3. Inside _button.yml_ add the following code:
 
 ```yaml
 button:
@@ -19,7 +19,7 @@ button:
 We just created an object for the button with key/value **text**, **url**, **type**, and **modifier**.
 
 1. Inside the **button** directory create a new file called **button.twig**.
-2. Inside `button.twig` copy the following code:
+2. Inside `button.twig` add the following code:
 
 ```php
 {% if button.url %}
@@ -43,7 +43,7 @@ We just created an object for the button with key/value **text**, **url**, **typ
 We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if an URL is passed, we use an `<a>` with the class of **button**. If we have a value for **type** we render an `<input>` element and pass the type provided, otherwise we use a `<button>` tag. This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand. An `<a>` tag will allow us to be directed to another page or a section within the same page, whereas a `<button>` or `<input>` element will allow us to perform an action such as submit content.
 
 1. Inside the **button** directory create a new file called **button.scss**.
-2. Inside `button.scss` copy this code:
+2. Inside `button.scss` add this code:
 
 ```scss
 // Import site utilities.

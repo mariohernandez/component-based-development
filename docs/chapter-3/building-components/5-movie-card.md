@@ -160,8 +160,10 @@ Quite the styles huh?
 
 * Inside the **movie-card** directory create a new file called **movie-card.twig**.
 
-```text
-<article class="movie-card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
+```php
+<article class="movie-card {{ modifier_class }}"
+  {{ attributes ? attributes.class }}"
+  {{ attributes ? attributes|without(class) }}>
   {{ title_prefix }}
   {{ title_suffix }}
   {% if cover_image %}
@@ -216,14 +218,12 @@ Quite the styles huh?
 </article>
 ```
 
-* Notice we are using **include** statements to nest existing components into the movie-card .  This is a simple example of how we can reuse previously built components.
-* The image and rest of content has been split into different containers \(`movie-card__cover-image` & `movie-card__content`\). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
-* You notice we are reusing the heading component and simply changing its heading level and applying a unique class when inside the movie card. This provides context and allows us to style this heading independently of other headings in the page.
-* Finally, we are introducing the concept of [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html), \(not the same as Drupal blocks\), to provide a way to change how content is passed or rendered when we integrate this component with Drupal. More on how Twig Blocks give us more flexibility at time of rendering content later.
+* Notice we are using **include** statements to nest existing components into the movie-card.  This is a simple example of how we can reuse previously built components.
+* The image and rest of content has been split into different containers (`movie-card__cover-image` & `movie-card__content`). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
+* Also notice we are reusing the heading component and simply changing its heading level and applying a unique class when inside the movie card. This provides context and allows us to style this heading independently of other headings in the page.
+* Finally, we are introducing the concept of [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html), (not the same as Drupal blocks), to provide a way to change how content is rendered when we integrate this component with Drupal. More on how Twig Blocks give us more flexibility at time of rendering content later.
 
-**IMPORTANT**: There is a bug with **includes** in the latest twig.js \(which is what KSS Node uses\).[Read more about here](https://github.com/kss-node/kss-node/issues/467).
 
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
-

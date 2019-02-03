@@ -4,9 +4,9 @@ Now that we have some basic idea of the various pieces for building a component,
 
 ## Component's data
 
-1. Inside `nitflex_dev_theme/src/components`/ create a new directory called **heading**.
+1. Inside `nitflex_dev_theme/src/components/` create a new directory called **heading**.
 2. Inside the _heading_ directory create a new file called **heading.yml**.
-3. Inside _heading.yml_ copy the following code:
+3. Inside _heading.yml_ add the following code:
 
 ```yaml
 title: "DrupalCon Seattle 2019"
@@ -15,7 +15,7 @@ title: "DrupalCon Seattle 2019"
 We just created key/value pair for the heading with a key of **title** and **value** of _DrupalCon Seattle 2019_.
 
 1. Inside the **heading** directory create a new file called **heading.twig**.
-2. Inside `heading.twig` copy the following code:
+2. Inside `heading.twig` add the following code:
 
    ```php
    <h1 class="heading">{{ title }}</h1>
@@ -24,7 +24,7 @@ We just created key/value pair for the heading with a key of **title** and **val
    We created a **h1** heading in which we pass the value of title from the YAML file.
 
 3. Inside the **heading** directory create a new file called **heading.scss**.
-4. Inside `heading.scss` copy this code:
+4. Inside `heading.scss` add this code:
   ```scss
   // Import site utilities.
   @import '../../global/utils/init';

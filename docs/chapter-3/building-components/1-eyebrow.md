@@ -4,9 +4,9 @@ Before we dive into the more advance stuff, let's start by creating a super simp
 
 ## Component's data
 
-1. Inside `nitflex_dev_theme/src/components`/ create a new directory called **eyebrow**.
+1. Inside `nitflex_dev_theme/src/components/` create a new directory called **eyebrow**.
 2. Inside the _eyebrow_ directory create a new file called **eyebrow.yml**.
-3. Inside _eyebrow.yml_ copy the following code:
+3. Inside _eyebrow.yml_ add the following code:
 
 ```yaml
 text: "Action and Adventure"
@@ -17,7 +17,7 @@ We just created a key/value pair in YAML format. This will serve as the Eyebrow'
 ## Component's markup
 
 1. Inside the _eyebrow_ directory create a new file called **eyebrow.twig**.
-2. Inside _eyebrow.twig_ copy the following code:
+2. Inside _eyebrow.twig_ add the following code:
 
 ```php
 <p class="eyebrow">{{ text }}</p>
@@ -28,7 +28,7 @@ With Twig we not only write the custom markup we need, but we are also able to p
 ## Component's styles
 
 1. Inside the _eyebrow_ directory create a new file called **eyebrow.scss**.
-2. Inside _eyebrow.scss_ copy this code:
+2. Inside _eyebrow.scss_ add this code:
 
 ```scss
 // Import site utilities.
