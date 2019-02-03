@@ -152,63 +152,7 @@ Quite the styles huh?
 
 * Inside the **movie-card** directory create a new file called **movie-card.twig**.
 
-```php
-<article class="movie-card {{ modifier_class }}"
-  {{ attributes ? attributes.class }}"
-  {{ attributes ? attributes|without(class) }}>
-  {{ title_prefix }}
-  {{ title_suffix }}
-  {% if cover_image %}
-    <div class="movie-card__cover-image">
-      {{ cover_image }}
-    </div>
-  {% endif %}
-  <div class="movie-card__content">
-    {% if heading %}
-      {%
-        include '@nitflex_dev_theme/heading/heading.twig' with {
-          "heading": {
-            "title": heading.title,
-            "url": heading.url,
-            "heading_level": heading.heading_level,
-            "classes": 'movie-card__heading'
-          }
-        } only
-      %}
-    {% endif %}
-    <div class="movie-card__favorites-toggle">
-      {% block favorites_toggle %}
-        {%
-          include '@nitflex_dev_theme/add-to-favorites/add-to-favorites.twig' with {
-            url: '#',
-          } only
-        %}
-      {% endblock %}
-    </div>
-    {% if mpaa_rating %}
-      <div class="movie-card__mpaa-rating">
-        {% include '@nitflex_dev_theme/mpaa-rating/mpaa-rating.twig' with {
-            rating: mpaa_rating
-          } only
-        %}
-      </div>
-    {% endif %}
-    {% if average_rating %}
-      <div class="movie-card__average-rating">
-        {% include '@nitflex_dev_theme/average-rating/average-rating.twig' with {
-            count: average_rating
-          } only
-        %}
-      </div>
-    {% endif %}
-    {% if synopsis %}
-      <div class="movie-card__synopsis">
-        {{ synopsis }}
-      </div>
-    {% endif %}
-  </div>
-</article>
-```
+{% embed https://gist.github.com/mariohernandez/fa3a6a277b15f7d85d1ae6f5bbce2294 %}
 
 * Notice we are using **include** statements to nest existing components into the movie-card.  This is a simple example of how we can reuse previously built components.
 * The image and rest of content has been split into different containers \(`movie-card__cover-image` & `movie-card__content`\). This is always a good practice as it provides flexibility to move multiple content fields around at once should we have the need to do so.
@@ -218,4 +162,3 @@ Quite the styles huh?
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
-
