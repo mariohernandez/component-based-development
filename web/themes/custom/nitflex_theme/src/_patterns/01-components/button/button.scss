@@ -1,0 +1,33 @@
+// Import site utilities.
+@import '../../00-global/base/utils/init';
+
+
+.button {
+  background-color: $color-black;
+  border: 2px solid $color-tundora;
+  border-radius: 44px;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 40px;
+  text-decoration: none;
+  transition: border 0.125s ease, background-color 0.125s ease;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    border-color: $color-white;
+  }
+
+  // Updates color and other styles for primary button.
+  &.button--primary {
+    border-color: #e50914;
+
+    &:hover,
+    &:focus {
+      background: #e50914;
+    }
+  }
+}

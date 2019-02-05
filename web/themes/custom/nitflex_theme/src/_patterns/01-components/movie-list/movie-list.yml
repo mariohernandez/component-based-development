@@ -1,0 +1,52 @@
+list_title: Action & Adventure
+items:
+  -
+    cover_image: <img src="../../images/action-3.jpg" alt="" />
+    heading:
+      title: Mattis Magna Mollis Pellentesque
+      url: "#"
+      heading_level: 4
+      classes: movie-card__heading
+    average_rating: 3
+    mpaa_rating: PG
+    synopsis: Aenean lacinia bibendum nulla sed consectetur.
+  -
+    cover_image: <img src="../../images/action-3.jpg" alt="" />
+    heading:
+      title: Ipsum Inceptos Sem
+      url: "#"
+      heading_level: 4
+      classes: movie-card__heading
+    average_rating: 4
+    mpaa_rating: R
+    synopsis: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  -
+    cover_image: <img src="../../images/action-3.jpg" alt="" />
+    heading:
+      title: Sit Fermentum Magna Justo
+      url: "#"
+      heading_level: 4
+      classes: movie-card__heading
+    average_rating: 2
+    mpaa_rating: PG-13
+    synopsis: Sed posuere consectetur est at lobortis.
+  -
+    cover_image: <img src="../../images/action-3.jpg" alt="" />
+    heading:
+      title: Bibendum Vestibulum Magna Condimentum
+      url: "#"
+      heading_level: 4
+      classes: movie-card__heading
+    average_rating: 5
+    mpaa_rating: PG
+    synopsis: Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+  -
+    cover_image: <img src="../../images/action-3.jpg" alt="" />
+    heading:
+      title: Risus Ullamcorper Aenean
+      url: "#"
+      heading_level: 4
+      classes: movie-card__heading
+    average_rating: 3
+    mpaa_rating: G
+    synopsis: Donec id elit non mi porta gravida at eget metus.

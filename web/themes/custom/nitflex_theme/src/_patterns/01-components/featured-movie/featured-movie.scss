@@ -1,0 +1,143 @@
+// Import site utilities.
+@import '../../00-global/base/utils/init';
+
+.featured-movie {
+  align-items: center;
+  background: $color-black;
+  display: flex;
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint($bp-sm) {
+    height: 640px;
+  }
+
+  @include breakpoint($bp-lg) {
+    height: 740px;
+  }
+}
+
+.featured-movie__cover-image {
+  background-color: $color-black;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &::after {
+
+    @include breakpoint($bp-md) {
+      background-image: linear-gradient(to right, $color-black 15%, rgba($color-black, 0) 100%);
+      content: '';
+      display: block;
+      height: 100%;
+      opacity: 0.85;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  img {
+    @include center-align($position: absolute);
+    height: 110%;
+    opacity: 0.35;
+    max-width: none;
+    width: auto;
+    z-index: $zi-ground;
+
+    @include breakpoint($bp-md) {
+      opacity: 1;
+    }
+
+    @include breakpoint($bp-lg) {
+      height: auto;
+      max-width: none;
+      width: 110%;
+    }
+  }
+}
+
+.featured-movie__meta {
+  color: $color-white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  position: relative;
+
+  @include breakpoint($bp-sm) {
+    padding: 20px 40px;
+  }
+
+  @include breakpoint($bp-md) {
+    padding: 40px 50px;
+    max-width: 50%;
+  }
+}
+
+.featured-movie__title {
+  width: 100%;
+
+  .heading {
+    font-size: 4.8rem;
+    line-height: 1;
+
+    @include breakpoint($bp-lg) {
+      font-size: 6rem;
+    }
+  }
+}
+
+.featured-movie__promo {
+  font-size: 1.8rem;
+  font-weight: $font-weight-bold;
+  padding: 12px 0;
+  width: 100%;
+
+  @include breakpoint($bp-md) {
+    font-size: 2.4rem;
+  }
+
+  .eyebrow {
+    text-transform: none;
+    white-space: normal;
+  }
+}
+
+.featured-movie__settings {
+  align-items: center;
+  display: flex;
+  padding: 12px 0;
+}
+
+.featured-movie__favorites-toggle {
+  margin-right: 10px;
+}
+
+.featured-movie__mpaa-rating {
+  margin-right: 10px;
+
+  .mpaa-rating {
+    border-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.featured-movie__synopsis {
+  font-size: 1.4rem;
+  padding: 12px 0;
+  width: 100%;
+
+  @include breakpoint($bp-sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.featured-movie__cta {
+  padding: 12px 0;
+  width: 100%;
+}

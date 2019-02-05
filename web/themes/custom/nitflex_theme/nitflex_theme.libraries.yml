@@ -49,6 +49,11 @@ button:
     component:
       dist/css/button.css: {}
 
+card-collection:
+  css:
+    component:
+      dist/css/card-collection.css: {}
+
 eyebrow:
   css:
     component:
@@ -68,11 +73,6 @@ movie-card:
   css:
     component:
       dist/css/movie-card.css: {}
-
-movie-card-collection:
-  css:
-    component:
-      dist/css/movie-card-collection.css: {}
 
 movie-list:
   css:

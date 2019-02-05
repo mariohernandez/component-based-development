@@ -1,0 +1,9 @@
+cover_image: <img src="../../images/action-3.jpg" alt="" />
+heading:
+  title: Movie title goes here
+  url: "#"
+  heading_level: 4
+  classes: movie-card__heading
+average_rating: 3
+mpaa_rating: PG-13
+synopsis: Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.
