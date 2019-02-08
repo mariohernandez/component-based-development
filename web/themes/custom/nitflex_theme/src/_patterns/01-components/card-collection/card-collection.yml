@@ -1,3 +1,4 @@
+test: link.button
 items:
   -
     cover_image: <img src="../../images/action-3.jpg" alt="" />

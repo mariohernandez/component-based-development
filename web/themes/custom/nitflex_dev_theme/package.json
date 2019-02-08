@@ -1,5 +1,5 @@
 {
-  "name": "nitflex_dev_theme",
+  "name": "nitflex_theme",
   "version": "1.0.0",
   "scripts": {
     "build": "gulp",
@@ -45,14 +45,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.0",
     "gulp-imagemin": "^3.3.0",
-    "gulp-order": "^1.1.1",
+    "gulp-order": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-lint": "^1.3.2",
+    "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^2.6.0",
-    "kss": "^3.0.0-beta.20",
-    "run-sequence": "^2.0.0",
-    "singularitygs": "^1.8.0",
-    "twig": "RobLoach/twig.js#compile"
+    "run-sequence": "^2.0.0"
   }
 }

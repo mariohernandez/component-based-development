@@ -96,7 +96,7 @@ gulp.task('compress', function() {
 
 gulp.task('styleguide', [], function() {
   return gulp.src('./', {read: false})
-    .pipe(shell('lando php patternlab/core/console --generate'));
+    .pipe(shell('php patternlab/core/console --generate'));
 });
 
 //-----------------------------
@@ -109,7 +109,7 @@ gulp.task('concat', function () {
 //-----------------------------
 // Clean all directories.
 //-----------------------------
-gulp.task('clean', ['clean:css', 'clean:js', 'clean:styleguide']);
+gulp.task('clean', ['clean:css', 'clean:js']);
 
 // Clean style guide files.
 gulp.task('clean:styleguide', function () {
