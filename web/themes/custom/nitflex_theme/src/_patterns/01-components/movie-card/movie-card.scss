@@ -1,0 +1,117 @@
+// Import site utilities.
+@import '../../00-global/base/utils/init';
+
+.movie-card {
+  background: $color-black;
+  color: $color-white;
+  height: 250px;
+  max-width: 420px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 1s ease-in-out;
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  // By defalt image overlay is not visible until
+  // hover is active.
+  &::after {
+    background: transparent;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover,
+  &:focus {
+
+    .movie-card__cover-image img {
+      height: 110%;
+    }
+
+    // Dark overlay.
+    &::after {
+      background: rgba($color-black, 0.5);
+    }
+
+    // On hover the text content fades into view.
+    .movie-card__content {
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.movie-card__cover-image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  img {
+    @include center-align(absolute);
+    display: block;
+    max-width: none;
+    transition: height 0.25s ease-in-out;
+    height: 100%;
+    width: auto;
+  }
+}
+
+.movie-card__heading {
+  font-size: 2.2rem;
+  font-weight: $font-weight-regular;
+  margin: 0 0 12px;
+  line-height: 1;
+  width: 100%;
+}
+
+.movie-card__favorites-toggle,
+.movie-card__mpaa-rating {
+  margin-right: 10px;
+}
+
+.movie-card__mpaa-rating {
+
+  .mpaa-rating {
+    border-color: $color-white;
+    color: $color-white;
+  }
+}
+
+.movie-card__average-rating {
+  align-items: center;
+  display: flex;
+  padding: 6px 0;
+}
+
+.movie-card__synopsis {
+  font-size: 1.4rem;
+  padding: 8px 0;
+
+  @include breakpoint($bp-sm) {
+    font-size: 1.6rem;
+  }
+}
+
+.movie-card__content {
+  @include vertical-align(absolute);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 300;
+  left: 20px;
+  margin-top: 200px;
+  right: 20px;
+  transition: margin 0.5s ease 0.125s, opacity 0.5s ease 0.25s;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 2;
+}

@@ -1,0 +1,28 @@
+// Import site utilities.
+@import '../../00-global/base/utils/init';
+
+.card-collection {
+  padding: 20px 0;
+
+  @include breakpoint($bp-sm) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .movie-card {
+    margin: 0 auto 10px;
+    width: 100%;
+
+    @include breakpoint($bp-sm) {
+      justify-content: center;
+      width: calc(50% - 5px);
+    }
+
+    @include breakpoint($bp-lg) {
+      justify-content: space-between;
+      margin: 0;
+      width: calc(20% - 5px);
+    }
+  }
+}

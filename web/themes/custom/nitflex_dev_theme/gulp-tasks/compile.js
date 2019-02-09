@@ -27,7 +27,7 @@ module.exports = {
 
   // Compile Sass.
   sass: function() {
-    return gulp.src('./src/{global,layout,components}/**/*.scss')
+    return gulp.src('./src/{layout,_patterns}/**/*.scss')
       .pipe(
         sass({ outputStyle: 'nested' })
           .on('error', handleError)
@@ -46,7 +46,7 @@ module.exports = {
   // Compile JavaScript.
   js: function() {
     return gulp.src([
-      './src/{global,layout,components}/**/*.es6.js'
+      './src/{layout,_patterns}/**/*.es6.js'
     ], { base: './' })
       .pipe(sourcemaps.init())
       .pipe(

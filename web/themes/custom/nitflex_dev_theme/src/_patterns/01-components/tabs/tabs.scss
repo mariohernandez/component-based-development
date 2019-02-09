@@ -1,0 +1,109 @@
+// Import site utilities.
+@import '../../00-global/base/utils/init';
+
+.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  position: relative;
+}
+
+.tabs.primary {
+
+  @include breakpoint($bp-sm) {
+
+    &::after {
+      background-color: $color-silver;
+      bottom: 20px;
+      content: '';
+      display: block;
+      height: 1px;
+      left: -100vw;
+      position: absolute;
+      width: 200vw;
+      z-index: $zi-ground;
+    }
+  }
+
+  li {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: $font-weight-bold;
+    margin: 0 0 10px;
+    padding: 0;
+    position: relative;
+    z-index: $zi-lowest;
+
+    @include breakpoint($bp-sm) {
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  a {
+    background-color: $color-gallery;
+    border: 1px solid $color-silver;
+    color: $color-silver;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    @include breakpoint($bp-sm) {
+      border-bottom: 0;
+    }
+  }
+
+  a:focus,
+  a:hover {
+    background-color: $color-white;
+    border: 1px solid $color-silver;
+    color: $color-black;
+
+    @include breakpoint($bp-sm) {
+      border-bottom: 0;
+    }
+  }
+
+  .is-active a {
+    background-color: $color-white;
+    color: $color-black;
+
+    @include breakpoint($bp-sm) {
+      border-bottom: 0;
+    }
+  }
+}
+
+.tabs.secondary {
+
+  li {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin: 10px 20px 5px 0;
+  }
+
+  a {
+    background-color: transparent;
+    border-bottom: 2px solid $color-alto;
+    color: $color-silver;
+    display: block;
+    padding: 10px 15px 5px;
+  }
+
+  .is-active a,
+  a:focus,
+  a:hover {
+    background-color: transparent;
+    border-color: $color-black;
+    color: $color-black;
+    text-decoration: none;
+  }
+}
+
+.tabs__local-actions {
+  padding: 20px 0;
+}
+
+.tabs__local-actions-links {
+  margin: 0;
+}

@@ -1,0 +1,66 @@
+// Import site utilities.
+@import '../../00-global/base/utils/init';
+
+.branding {
+  align-items: center;
+  background-color: $color-black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+
+  > {
+    padding: 0 10px;
+  }
+
+}
+
+.branding__site-name {
+  background-image: url('../assets/nitflex-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  min-width: 260px;
+  margin: 0 10px;
+  padding: 70px 0 0;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.branding__navigation {
+
+  ul:not(.contextual-links) {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    color: $color-white;
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    list-style: none;
+    margin: 10px 0;
+    padding: 0 10px;
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      color: $color-rio-grande;
+    }
+  }
+}
