@@ -4,7 +4,7 @@ So you get the idea, inside the Components directory we create a new directory t
 
 ## Component's data
 
-1. Inside `nitflex_dev_theme/src/components/` create a new directory called **button**.
+1. Inside `nitflex_dev_theme/src/_patterns/01-components/` create a new directory called **button**.
 2. Inside the _button_ directory create a new file called **button.yml**.
 3. Inside _button.yml_ add the following code:
 
@@ -78,7 +78,7 @@ Now that we have written all the necessary code to build the component, it's tim
 * Run this command:
 
 ```bash
-lando npm run build
+lando npm run build && lando php patternlab/core/console --generate
 ```
 
 **What does this command do?**

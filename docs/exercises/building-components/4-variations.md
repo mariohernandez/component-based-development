@@ -83,7 +83,7 @@ Now that we have written all the necessary code to build the button' variations,
 * Run this command:
 
 ```bash
-lando npm run build
+lando npm run build && lando php patternlab/core/console --generate
 ```
 
 **What does this command do?**
