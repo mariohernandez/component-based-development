@@ -6,8 +6,8 @@ Let's start by creating the usual files for building the component:
 
 1. Inside **nitflex\_dev\_theme/src/components/** create a new directory called **featured-movie**
 2. Inside the **featured-movie** directory create these files:
-   * `featured-movie.json`, `featured-movie.scss`, and `featured-movie.twig`
-3. Copy the following code snippet into **featured-movie.json**:
+   * `featured-movie.yml`, `featured-movie.scss`, and `featured-movie.twig`
+3. Copy the following code snippet into **featured-movie.yml**:
 
 ```yaml
 {
@@ -299,4 +299,3 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Featured Movie component.
-
