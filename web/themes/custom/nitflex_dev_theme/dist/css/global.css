@@ -425,29 +425,3 @@ li {
   margin: 0;
   padding: 0;
   list-style: none; }
-
-h1 {
-  font-size: 35px;
-  font-weight: 600; }
-  @media (min-width: 1025px) {
-    h1 {
-      font-size: 75px;
-      font-weight: 900; } }
-
-h2 {
-  font-size: 25px; }
-  @media (min-width: 1025px) {
-    h2 {
-      font-size: 45px; } }
-
-h3 {
-  font-size: 20px; }
-  @media (min-width: 1025px) {
-    h3 {
-      font-size: 30px; } }
-
-h4 {
-  font-size: 18px; }
-  @media (min-width: 1025px) {
-    h4 {
-      font-size: 25px; } }
