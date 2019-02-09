@@ -1,0 +1,11 @@
+/*
+ * YOUR STYLES HERE
+ */
+
+ .sg-pattern-page {
+   padding: 20px;
+ }
+
+.sg-pattern-page--wide {
+  padding: 20px 0;
+}

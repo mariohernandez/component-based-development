@@ -1,0 +1,13 @@
+{% for section in colors %}
+  <h2>{{ section.section }}</h2>
+  <ul class="sg-colors">
+    {% for color in section.colors %}
+      <li>
+        <span class="sg-swatch" style="background: {{ color.hex }};"></span>
+        <span class="sg-label">
+          {{ color.hex }}<br />{{ color.var }}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

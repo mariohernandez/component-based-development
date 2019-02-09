@@ -1,0 +1,19 @@
+// Import site utilities.
+@import '../../00-global/base/utils/init';
+
+.mpaa-rating {
+  @include font-stack-secondary;
+  border: 1px solid $color-black;
+  color: $color-black;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+.mpaa-rating__text {
+  @include element-invisible;
+}
