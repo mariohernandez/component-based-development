@@ -172,7 +172,7 @@ Now that we have written all the necessary code to build the Movie List componen
 * In your terminal or command line, navigate to `/themes/custom/nitflex_dev_theme` and run the following command:
 
 ```bash
-lando npm run build
+lando npm run build && lando php patternlab/core/console --generate
 ```
 
 ### Viewing the Movie List Collection component   <a id="viewing-the-featured-movie-component"></a>
