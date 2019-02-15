@@ -11,14 +11,40 @@ Component based development is typically broken down into 3 parts:
 
 This repo includes everything you need to set up a [Lando-based](https://docs.devwithlando.io/) local Drupal development environment, along with the required front end tools (Node, Pattern Lab, Gulp, etc.). For best results, follow these steps to get your environment setup.
 
-### 1. Install Lando and Docker
-Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology. [See the documentation](https://docs.devwithlando.io/installation/installing.html).
+### 1. Install Lando and Docker (Beta 47)
+Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
+
+### System requirements
+
+This is only going to work if you have a fairly new computer. According to the [Lando documentation](https://docs.devwithlando.io/installation/system-requirements.html#operating-system) you will need one of the following:
+
+* macOS 10.10+ \(May need to install command line tools\)
+* Windows 10 Pro+ \(or equivalent\) with Hyper-V running
+* Linux \(with kernel version 4.x or higher\)
+
+  So far, we have tested only with macOS 10.13 \(High Sierra\) and 10.14 \(Mojave\).
+
+### Run the installer
+
+* [Install Lando and Docker](https://github.com/lando/lando/releases/tag/v3.0.0-beta.47) (v3.0.0-beta.47)
+
+At least on a Mac, this installs Lando along with Docker. Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
+
+**IMPORTANT**
+
+* **Docker is required**
+
+  Docker makes it possible to build containers for any of the third party integrations required in your environment. If you already have Docker installed you don't need to install it again as part of Lando's installation.
 
 **NOTE**: If you are using OSX, you may need to install XCode's Command Line Tools.
 
 ### 2. Clone this repo anywhere in you local system
 * In your preferred terminal app, run the following command:<br />
 ```git clone git@github.com:mariohernandez/component-based-development.git```
+
+* If you experience issues with the command above, try this one:<br />
+```git clone https://github.com/mariohernandez/component-based-development.git```
+
 
 ### 3. After cloning this repo, run the following commands from the root level of the repository:
 

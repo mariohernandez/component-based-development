@@ -8,7 +8,7 @@ This training workshop is most effective when following along with the exercises
 Your local environment should be setup prior to arriving for training.
 {% endhint %}
 
-## 1. Install Lando
+## 1. Install Lando and Docker
 
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
 
@@ -24,7 +24,7 @@ Sorry, this is only going to work if you have a fairly new computer. According t
 
 ### Run the installer
 
-* [Install Lando and Docker](https://docs.devwithlando.io/installation/installing.html)
+* [Install Lando and Docker](https://github.com/lando/lando/releases/tag/v3.0.0-beta.47)
 
 At least on a Mac, this installs Lando along with Docker. Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
 
@@ -34,12 +34,14 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 
   Docker makes it possible to build containers for any of the third party integrations required in your environment. If you already have Docker installed you don't need to install it again as part of Lando's installation.
 
-## 2. Clone the repo
-
+## 2. Clone this repo anywhere in you local system
 The clone we have put together includes everything you need to complete the training. This includes latest Drupal core with working theme, required modules \(See below\), and front-end building tools such as NodeJS, Gulp, KSS Node, Linters, and more.
 
 1. Open the command line tool of your choice and change directory to any directory of your choice \(i.e. Desktop or Sites\).
 2. Run `git clone git@github.com:mariohernandez/component-based-development.git`
+  * If you experience issues with the command above, try this one:<br />
+  `git clone https://github.com/mariohernandez/component-based-development.git`
+
 
 ## 3. Building the environment
 
@@ -89,4 +91,3 @@ Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in
 
 The environment we have put together has been extensively tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own and we will not support or provide assistance if issues arise.
 {% endhint %}
-
