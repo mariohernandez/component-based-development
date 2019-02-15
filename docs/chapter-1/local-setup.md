@@ -39,7 +39,7 @@ The clone we have put together includes everything you need to complete the trai
 
 1. Open the command line tool of your choice and change directory to any directory of your choice \(i.e. Desktop or Sites\).
 2. Run `git clone git@github.com:mariohernandez/component-based-development.git`
-  * If you experience issues with the command above, try this one:<br />
+    * If you experience issues with the command above, try this one:<br />
   `git clone https://github.com/mariohernandez/component-based-development.git`
 
 
