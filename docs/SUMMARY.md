@@ -16,19 +16,22 @@
 * [Best practices](chapter-3/best-practices.md)
 * [Drupal attributes](chapter-3/drupal-attributes.md)
 * [Twig embeds](chapter-3/twig-embeds.md)
-* [Building Components](chapter-3/building-components/README.md)
-  * [Eyebrow](chapter-3/building-components/1-eyebrow.md)
-  * [Heading](chapter-3/building-components/2-heading.md)
-  * [Button](chapter-3/building-components/3-button.md)
-  * [Components Variations](chapter-3/building-components/4-variations.md)
-  * [Movie Card](chapter-3/building-components/5-movie-card.md)
-  * [Drupal Libraries](chapter-3/building-components/6-drupal-libraries.md)
-  * [Featured Movie](chapter-3/building-components/7-featured-movie.md)
-  * [Movie Card Collection](chapter-3/building-components/8-movie-card-collection.md)
-  * [Movie List](chapter-3/building-components/9-movie-listing.md)
-  * [Other components](chapter-3/building-components/other-components.md)
 
 ## Chapter 4
+
+* [Building Components](chapter-4-1/building-components/README.md)
+  * [Eyebrow](chapter-4-1/building-components/1-eyebrow.md)
+  * [Heading](chapter-4-1/building-components/2-heading.md)
+  * [Button](chapter-4-1/building-components/3-button.md)
+  * [Components Variations](chapter-4-1/building-components/4-variations.md)
+  * [Movie Card](chapter-4-1/building-components/5-movie-card.md)
+  * [Drupal Libraries](chapter-4-1/building-components/6-drupal-libraries.md)
+  * [Featured Movie](chapter-4-1/building-components/7-featured-movie.md)
+  * [Movie Card Collection](chapter-4-1/building-components/8-movie-card-collection.md)
+  * [Movie List](chapter-4-1/building-components/9-movie-listing.md)
+  * [Other components](chapter-4-1/building-components/other-components.md)
+
+## Chapter 5
 
 * [Building the back-end](chapter-4/building-the-back-end-1/README.md)
   * [Taxonomy](chapter-4/building-the-back-end-1/taxonomy-vocabulary.md)
@@ -37,16 +40,16 @@
   * [View](chapter-4/building-the-back-end-1/movie-list-view.md)
   * [Paragraph Type](chapter-4/building-the-back-end-1/paragraph-type.md)
 
-## Chapter 5
-
-* [Integrating components](chapter-5/integrating-components/README.md)
-  * [Movie Card](chapter-5/integrating-components/movie-card.md)
-  * [Featured Movie](chapter-5/integrating-components/featured-movie.md)
-  * [Movie Card Collection](chapter-5/integrating-components/movie-card-collection.md)
-  * [Movie List](chapter-5/integrating-components/movie-listing.md)
-  * [Movie full view](chapter-5/integrating-components/movie-full-view.md)
-
 ## Chapter 6
 
-* [Resources](chapter-6/resources.md)
+* [Integrating components](chapter-6/integrating-components/README.md)
+  * [Movie Card](chapter-6/integrating-components/movie-card.md)
+  * [Featured Movie](chapter-6/integrating-components/featured-movie.md)
+  * [Movie Card Collection](chapter-6/integrating-components/movie-card-collection.md)
+  * [Movie List](chapter-6/integrating-components/movie-listing.md)
+  * [Movie full view](chapter-6/integrating-components/movie-full-view.md)
+
+## Chapter 7
+
+* [Resources](chapter-7/resources.md)
 
