@@ -43,11 +43,12 @@ The heading component looks good and it will work great as long as we always wan
 * Update `heading.yml` to look like this:
 
 ```yaml
+---
 heading:
+  heading_level: ~
+  modifier: ~
   title: "DrupalCon Seattle 2019"
   url: "#"
-  heading_level:
-  modifier:
 ```
 
 We just created an object for the button with key/value **title**, **url**, **heading\_level**, and **modifier**.
@@ -96,4 +97,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
-
