@@ -165,7 +165,7 @@ This is also a new concept being introduced here and to keep it simple, embeds c
 }
 ```
 
-### Compiling the style-guide   <a id="compiling-the-style-guide"></a>
+### Compiling the style-guide    <a id="compiling-the-style-guide"></a>
 
 Now that we have written all the necessary code to build the Movie List component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -175,7 +175,7 @@ Now that we have written all the necessary code to build the Movie List componen
 lando npm run build && lando php patternlab/core/console --generate
 ```
 
-### Viewing the Movie List Collection component   <a id="viewing-the-featured-movie-component"></a>
+### Viewing the Movie List Collection component    <a id="viewing-the-featured-movie-component"></a>
 
 Open your Drupal site and point to the URL below:
 

@@ -10,23 +10,23 @@
 
 * [Drupal Theme Generator](chapter-2/theme-generator.md)
 
-## Exercises
+## Chapter 3
 
-* [Components architecture](exercises/components-architecture.md)
-* [Best practices](exercises/best-practices.md)
-* [Drupal attributes](exercises/drupal-attributes.md)
-* [Twig embeds](exercises/twig-embeds.md)
-* [Building Components](exercises/building-components/README.md)
-  * [Eyebrow](exercises/building-components/1-eyebrow.md)
-  * [Heading](exercises/building-components/2-heading.md)
-  * [Button](exercises/building-components/3-button.md)
-  * [Components Variations](exercises/building-components/4-variations.md)
-  * [Movie Card](exercises/building-components/5-movie-card.md)
-  * [Drupal Libraries](exercises/building-components/6-drupal-libraries.md)
-  * [Featured Movie](exercises/building-components/7-featured-movie.md)
-  * [Movie Card Collection](exercises/building-components/8-movie-card-collection.md)
-  * [Movie List](exercises/building-components/9-movie-listing.md)
-  * [Other components](exercises/building-components/other-components.md)
+* [Components architecture](chapter-3/components-architecture.md)
+* [Best practices](chapter-3/best-practices.md)
+* [Drupal attributes](chapter-3/drupal-attributes.md)
+* [Twig embeds](chapter-3/twig-embeds.md)
+* [Building Components](chapter-3/building-components/README.md)
+  * [Eyebrow](chapter-3/building-components/1-eyebrow.md)
+  * [Heading](chapter-3/building-components/2-heading.md)
+  * [Button](chapter-3/building-components/3-button.md)
+  * [Components Variations](chapter-3/building-components/4-variations.md)
+  * [Movie Card](chapter-3/building-components/5-movie-card.md)
+  * [Drupal Libraries](chapter-3/building-components/6-drupal-libraries.md)
+  * [Featured Movie](chapter-3/building-components/7-featured-movie.md)
+  * [Movie Card Collection](chapter-3/building-components/8-movie-card-collection.md)
+  * [Movie List](chapter-3/building-components/9-movie-listing.md)
+  * [Other components](chapter-3/building-components/other-components.md)
 
 ## Chapter 4
 
