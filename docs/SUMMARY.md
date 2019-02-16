@@ -33,7 +33,7 @@
 
 ## Chapter 5
 
-* [Building the back-end](chapter-5/building-the-back-end-1/README.md)
+* [Building the back-end](chapter-5/building-the-back-end/README.md)
   * [Taxonomy](chapter-5/building-the-back-end-1/taxonomy-vocabulary.md)
   * [Image Styles](chapter-5/building-the-back-end-1/image-styles.md)
   * [Content Types](chapter-5/building-the-back-end-1/content-types.md)
@@ -52,4 +52,3 @@
 ## Chapter 7
 
 * [Resources](chapter-7/resources.md)
-
