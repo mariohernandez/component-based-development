@@ -9,6 +9,7 @@ By now you should know the drill, inside **src/components/** create a new direct
 1. Inside **nitflex\_dev\_theme/src/components/** create a new directory called **movie-card**
 2. Inside the **movie-card** directory create a new file called **movie-card.yml**.
 3. Inside `movie-card.yml` add the following code:
+
 ```yaml
 ---
 cover_image: <img src='/sites/default/files/action-3.jpg' alt='' />
@@ -34,6 +35,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
 
 1. Inside the **movie-card** directory create a new file called **movie-card.twig**.
 2. Add the following code:
+
 ```php
 <article class="movie-card {{ modifier_class }}"
   {{ attributes ? attributes.class }}"
@@ -101,6 +103,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
 
 1. Inside the **movie-card** directory create a new file called **movie-card.scss**.
 2. Inside `movie-card.scss` add the following code:
+
 ```scss
 // Import site utilities.
 @import '../../global/utils/init';
