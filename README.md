@@ -11,7 +11,7 @@ Component based development is typically broken down into 3 parts:
 
 This repo includes everything you need to set up a [Lando-based](https://docs.devwithlando.io/) local Drupal development environment, along with the required front end tools (Node, Pattern Lab, Gulp, etc.). For best results, follow these steps to get your environment setup.
 
-## 1. Install Lando and Docker (Beta 47)
+## 1. Install Lando and Docker
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
 
 ### System requirements
