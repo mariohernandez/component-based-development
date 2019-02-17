@@ -80,7 +80,9 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 
 - To access PatternLab, which where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_theme/dist/style-guide/)
 
+
 You are done! 🙌 🔥 👊
+
 ---
 {% hint style="info" %}
 ### Don't want to use Lando?
