@@ -65,6 +65,9 @@ We just created an object for the button with key/value **title**, **url**, **he
 * The **url** key, if present, will allow us to wrap the title in an `<a>` tag, otherwise the title will be printed as plain text.
 * The **heading\_level** is something we will use later as we start nesting the heading component into other components. This will allows us to change the headings from say h1 to h2 if we need to.
 * Finally, the **modifier** key allows us to pass a modifier CSS class when we make use of this component. The modifier class will make it possible for us to style the heading differently.
+
+### Update the heading's markup and logic
+
 * Update the twig code to look like this:
 
 ```php
@@ -103,6 +106,15 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
 ## Viewing the component
 
+
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
+
+
+**Just For fun**
+
+* Try changing the heading level to anything other than h2 and recompile your code.
+* Inspec your code to see your changes to the heading level.
+
+💥
