@@ -43,7 +43,6 @@ The heading component looks good and it will work great as long as we always wan
 * Update `heading.yml` to look like this:
 
 ```yaml
----
 heading:
   heading_level: ~
   modifier: ~

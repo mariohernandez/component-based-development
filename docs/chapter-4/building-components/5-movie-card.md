@@ -11,7 +11,6 @@ By now you should know the drill, inside **src/components/** create a new direct
 3. Inside `movie-card.yml` add the following code:
 
 ```yaml
----
 cover_image: <img src='/sites/default/files/action-3.jpg' alt='' />
 heading:
   title: "I love this movie"

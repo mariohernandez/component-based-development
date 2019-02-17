@@ -9,11 +9,10 @@ So you get the idea, inside the Components directory we create a new directory t
 3. Inside _button.yml_ add the following code:
 
 ```yaml
----
 button:
-  modifier: ~
+  modifier:
   text: "Watch now"
-  type: ~
+  type:
   url: "#"
 ```
 

@@ -9,7 +9,6 @@ Before we dive into the more advance stuff, let's start by creating a super simp
 3. Inside _eyebrow.yml_ add the following code:
 
 ```yaml
----
 text: "Action and Adventure"
 ```
 
@@ -66,4 +65,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory. Ke
   [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
 Under the Components category you should see the new Eyebrow component.
-

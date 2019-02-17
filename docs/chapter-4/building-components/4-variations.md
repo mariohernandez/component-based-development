@@ -8,11 +8,10 @@ Based on our prototype, we have at least two different buttons. One with red out
 2. Inside `button~primary.yml` add the following code:
 
 ```yaml
----
 button:
   modifier: button--primary
   text: "Primary button"
-  type: ~
+  type:
   url: "#"
 ```
 
