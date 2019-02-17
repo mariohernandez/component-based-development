@@ -8,7 +8,7 @@ This training workshop is most effective when following along with the exercises
 Your local environment should be setup prior to arriving for training.
 {% endhint %}
 
-## 1. Install Lando and Docker (Beta 47)
+## 1. Install Lando and Docker
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
 
 ### System requirements
