@@ -104,8 +104,8 @@ By looking at the prototype we see that the landing page shows a listing of movi
 2. Inside `movie-card.scss` add the following code:
 
 ```css
-// Import site utilities.
-@import '../../global/utils/init';
+// Import site utilities
+@import '../../00-global/utils/init';
 
 .movie-card {
   background: $color-black;

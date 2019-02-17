@@ -108,19 +108,8 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 * Now paste the component's styles below into **movie-card-collection.scss**:
 
 ```css
-// Movie Card Collection
-//
-// This is the movie card collection component which represents a grouping
-// of movie cards.
-//
-// Markup: movie-card-collection.twig
-//
-// Classes: kss-full-width
-//
-// Style guide: Components.Movie Card Collection
-
-// Import site utilities.
-@import '../../global/utils/init';
+// Import site utilities
+@import '../../00-global/utils/init';
 
 .movie-card-collection {
   padding: 20px 0;

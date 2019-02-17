@@ -111,18 +111,8 @@ Let's start by creating the usual files for building the component:
 1. Finally, Add the following code to **featured-movie.scss**:
 
 ```css
-// Featured Movie
-//
-// This is the featured movie component.
-//
-// Markup: featured-movie.twig
-//
-// Classes: kss-full-width
-//
-// Style guide: Components.Featured Movie
-
-// Import site utilities.
-@import '../../global/utils/init';
+// Import site utilities
+@import '../../00-global/utils/init';
 
 .featured-movie {
   align-items: center;

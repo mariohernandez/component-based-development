@@ -124,18 +124,8 @@ This is also a new concept being introduced here and to keep it simple, embeds c
 * Now paste the component's styles below into **movie-listig.scss**:
 
 ```css
-// Movie List
-//
-// This is the movie list component.
-//
-// Markup: movie-list.twig
-//
-// Classes: kss-full-width
-//
-// Style guide: Components.Movie List
-
-// Import site utilities.
-@import '../../global/utils/init';
+// Import site utilities
+@import '../../00-global/utils/init';
 
 .movie-list {
   background-color: $color-black;
