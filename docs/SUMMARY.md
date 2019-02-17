@@ -8,6 +8,7 @@
 
 ## Chapter 2
 
+* [Drupal theme and Front-End Tools](chapter-2/drupal-theme-and-front-end-tools.md)
 * [Drupal Theme Generator](chapter-2/theme-generator.md)
 
 ## Chapter 3
@@ -34,11 +35,11 @@
 ## Chapter 5
 
 * [Building the back-end](chapter-5/building-the-back-end/README.md)
-  * [Taxonomy](chapter-5/building-the-back-end-1/taxonomy-vocabulary.md)
-  * [Image Styles](chapter-5/building-the-back-end-1/image-styles.md)
-  * [Content Types](chapter-5/building-the-back-end-1/content-types.md)
-  * [View](chapter-5/building-the-back-end-1/movie-list-view.md)
-  * [Paragraph Type](chapter-5/building-the-back-end-1/paragraph-type.md)
+  * [Taxonomy](chapter-5/building-the-back-end/taxonomy.md)
+  * [Image Styles](chapter-5/building-the-back-end/image-styles.md)
+  * [Content Types](chapter-5/building-the-back-end/content-types.md)
+  * [View](chapter-5/building-the-back-end/view.md)
+  * [Paragraph Type](chapter-5/building-the-back-end/paragraph-type.md)
 
 ## Chapter 6
 
@@ -52,3 +53,4 @@
 ## Chapter 7
 
 * [Resources](chapter-7/resources.md)
+
