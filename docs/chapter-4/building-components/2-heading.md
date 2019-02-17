@@ -26,15 +26,15 @@ We just created key/value pair for the heading with a key of **title** and **val
 3. Inside the **heading** directory create a new file called **heading.scss**.
 4. Inside `heading.scss` add this code:
 
-   ```css
-   // Import site utilities.
-   @import '../../global/utils/init';
+```scss
+// Import site utilities
+@import '../../00-global/utils/init';
 
-   .heading {
-    font-weight: bold;
-    line-height: 1.3;
-   }
-   ```
+.heading {
+  font-weight: bold;
+  line-height: 1.3;
+}
+```
 
 ## Improving the heading component
 
@@ -96,4 +96,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
-
