@@ -65,3 +65,4 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory. Ke
   [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
 Under the Components category you should see the new Eyebrow component.
+

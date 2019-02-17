@@ -103,7 +103,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
 1. Inside the **movie-card** directory create a new file called **movie-card.scss**.
 2. Inside `movie-card.scss` add the following code:
 
-```scss
+```css
 // Import site utilities.
 @import '../../global/utils/init';
 
@@ -228,3 +228,4 @@ Quite the styles huh? 😄
 ## Working with Drupal Libraries
 
 Let's take a break from building components for a moment to learn about Drupal Libraries. Drupal libraries is how we add CSS and Javascript to content in Drupal. Proceed to Drupal Libraries.
+
