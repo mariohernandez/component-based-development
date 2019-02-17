@@ -26,7 +26,7 @@ We just created key/value pair for the heading with a key of **title** and **val
 3. Inside the **heading** directory create a new file called **heading.scss**.
 4. Inside `heading.scss` add this code:
 
-```scss
+```css
 // Import site utilities
 @import '../../00-global/utils/init';
 
@@ -35,6 +35,7 @@ We just created key/value pair for the heading with a key of **title** and **val
   line-height: 1.3;
 }
 ```
+
 ### Compiling the code
 
 Let's take a look at the Heading component by compiling our code and building the style-guide.
@@ -106,15 +107,14 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
 ## Viewing the component
 
-
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
 
+{% hint style="info" %}
+**Just For fun** 💥
 
-**Just For fun**
+* Try changing the heading level in **heading.yml** to anything other than h2 and recompile your code.
+* Inspect your code to see your changes to the heading level.
+{% endhint %}
 
-* Try changing the heading level to anything other than h2 and recompile your code.
-* Inspec your code to see your changes to the heading level.
-
-💥

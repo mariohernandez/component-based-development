@@ -9,7 +9,6 @@
 ## Chapter 2
 
 * [Drupal theme and Front-End Tools](chapter-2/drupal-theme-and-front-end-tools.md)
-<!-- * [Drupal Theme Generator](chapter-2/theme-generator.md) -->
 
 ## Chapter 3
 
@@ -53,3 +52,4 @@
 ## Chapter 7
 
 * [Resources](chapter-7/resources.md)
+

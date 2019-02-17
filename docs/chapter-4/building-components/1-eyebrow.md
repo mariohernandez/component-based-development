@@ -30,7 +30,7 @@ With Twig we not only write the custom markup we need, but we are also able to p
 1. Inside the _eyebrow_ directory create a new file called **eyebrow.scss**.
 2. Inside _eyebrow.scss_ add this code:
 
-```scss
+```css
 // Import site utilities
 @import '../../00-global/utils/init';
 ​
@@ -65,3 +65,4 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory. Ke
   [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
 Under the Components category you should see the new Eyebrow component.
+
