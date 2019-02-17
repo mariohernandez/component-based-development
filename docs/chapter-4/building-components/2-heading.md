@@ -35,6 +35,16 @@ We just created key/value pair for the heading with a key of **title** and **val
   line-height: 1.3;
 }
 ```
+### Compiling the code
+
+Let's take a look at the Heading component by compiling our code and building the style-guide.
+
+* In your command line, navigate to `/themes/custom/nitflex_dev_theme`.
+* Run this command:
+
+```bash
+lando npm run build && lando php patternlab/core/console --generate
+```
 
 ## Improving the heading component
 
@@ -44,8 +54,8 @@ The heading component looks good and it will work great as long as we always wan
 
 ```yaml
 heading:
-  heading_level: ~
-  modifier: ~
+  heading_level:
+  modifier:
   title: "DrupalCon Seattle 2019"
   url: "#"
 ```
