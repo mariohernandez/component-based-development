@@ -61,9 +61,9 @@ component-libraries:
   nitflex_theme:
     paths:
       - src/templates
-  components:
+  patterns:
     paths:
-      - src/_patterns/01-components
+      - src/_patterns/01-patterns
 
 # This section lists the regions defined in the theme (our base theme) default
 # page.html.twig and maintenance-page.html.twig files. The name before

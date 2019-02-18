@@ -1,0 +1,19 @@
+{{ attach_library('nitflex_theme/movie-list') }}
+
+<section class="movie-list
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <div class="movie-list__title">
+    {%
+      include '@patterns/heading/heading.twig' with {
+        "heading": {
+          "title": list_title,
+          "heading_level": '3'
+        }
+      } only
+    %}
+  </div>
+  {% block list %}
+    {% include '@patterns/card-collection/card-collection.twig' %}
+  {% endblock %}
+</section>

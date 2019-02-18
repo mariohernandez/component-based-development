@@ -1,0 +1,75 @@
+{{ attach_library('nitflex_theme/featured-movie') }}
+
+<section class="featured-movie {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if cover_image %}
+    <div class="featured-movie__cover-image">
+      {{ cover_image }}
+    </div>
+  {% endif %}
+  <div class="featured-movie__meta">
+    <div class="featured-movie__title">
+      {%
+        include '@patterns/heading/heading.twig' with {
+          heading: {
+            title: heading.title,
+            heading_level: heading.heading_level,
+          }
+        } only
+      %}
+    </div>
+    {% if promo_text %}
+      <div class="featured-movie__promo">
+        {%
+          include '@patterns/eyebrow/eyebrow.twig' with {
+            eyebrow: promo_text
+          }
+        %}
+      </div>
+    {% endif %}
+    <div class="featured-movie__settings">
+      <div class="featured-movie__favorites-toggle">
+        {% block favorites_toggle %}
+          {%
+            include '@patterns/add-to-favorites/add-to-favorites.twig' with {
+              url: '#',
+            } only
+          %}
+        {% endblock %}
+      </div>
+      {% if mpaa_rating %}
+        <div class="featured-movie__mpaa-rating">
+          {%
+            include '@patterns/mpaa-rating/mpaa-rating.twig' with {
+              rating: mpaa_rating
+            }
+          %}
+        </div>
+      {% endif %}
+      {% if average_rating %}
+        <div class="featured-movie__average-rating">
+          {% include '@patterns/average-rating/average-rating.twig' with {
+              count: average_rating
+            } only 
+          %}
+        </div>
+      {% endif %}
+    </div>
+    {% if synopsis %}
+      <div class="featured-movie__synopsis">
+        {{ synopsis }}
+      </div>
+    {% endif %}
+    {% if watch_button %}
+      <div class="featured-movie__cta">
+        {%
+          include '@patterns/button/button.twig' with {
+            button: watch_button,
+            modifier_class: 'button--primary'
+          } only
+        %}
+      </div>
+    {% endif %}
+  </div>
+</section>

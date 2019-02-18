@@ -38,7 +38,7 @@
  * @ingroup themeable
  */
 #}
-{% embed '@components/movie-list/movie-list.twig' with {
+{% embed '@patterns/movie-list/movie-list.twig' with {
     attributes: attributes,
     list_title: content.field_list_title|render|trim is not empty ? content.field_list_title,
     list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
