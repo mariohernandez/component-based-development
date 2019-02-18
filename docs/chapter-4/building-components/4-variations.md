@@ -28,14 +28,30 @@ Now that we have a new button variaton let's add css styles to it.
 
 * Edit `button.scss` so the styles look like this :
 
-  ```css
+  ```scss
   .button {
-    // keep all previous code.
+    background-color: $color-black;
+    border: 2px solid $color-tundora;
+    border-radius: 44px;
+    color: $color-white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 40px;
+    text-decoration: none;
+    transition: border 0.125s ease, background-color 0.125s ease;
+    white-space: nowrap;
 
-    // Add this new code to update border color and hover states.
+    &:hover,
+    &:focus {
+      border-color: $color-white;
+    }
+
+    // Primary button styles begin here.
     &.button--primary {
       border-color: $color-bright-red;
-    ​
+
       &:hover,
       &:focus {
         background: $color-bright-red;
@@ -48,28 +64,24 @@ The new code starts at `&.button--primary`. This means .button and .button--prim
 
 * Now let's edit the twig file to look like this:
 
-  ```php
-  {% if button.modifier %}
-    {% set modifier_class = button.modifier|clean_class %}
-  {% endif %}
-
-  {% if button.url %}
-    <a href="{{ button.url }}" class="button {{ modifier_class }}">
-      {{ button.text }}
-    </a>
-  {% elseif button.type %}
-    <input
-      type="{{ button.type|default('submit') }}"
-      class="button {{ modifier_class }}">
-      {{ button.text }}
-    </input>
-  {% else %}
-    <button
-      class="button {{ modifier_class }}">
-      {{ button.text }}
-    </button>
-  {% endif %}
-  ```
+```php
+{% if button.url %}
+  <a href="{{ button.url }}"
+    class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
+    {{ button.text }}
+  </a>
+{% elseif button.type %}
+  <input
+    type="{{ button.type }}"
+    class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}"
+    value="{{ button.text }}" />
+{% else %}
+  <button
+    class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
+    {{ button.text }}
+  </button>
+{% endif %}
+```
 
   * First we check whether the **modifier** key has a value, and if it does we create a new variable with that value \(i.e. `modifier_class`\).
   * Then we pass the `{{ modifier_class }}` variable within the class attribute.
@@ -94,4 +106,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
-
