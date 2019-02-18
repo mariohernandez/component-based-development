@@ -2,10 +2,10 @@
 
 Components variations are new instances of a component with small or big changes. Variations are great ways to use an existing component and extend it to change its look and/or behavior. [More on components variations here](http://bradfrost.com/blog/post/pattern-variations/).
 
-Based on our prototype, we have at least two different buttons. One with red outline and one with white outline. Text color and background color on hover is also different between the two. We will write the required styles for each button, but we will relay on Pattern Lab to create variations for us. This is a huge advantage of using tools like Pattern Lab because it does all the heavy lifting for us. Without Pattern Lab we would need to create a new version of the button component which would require we duplicate a lot of the code we already wrote, but Pattern Lab takes the code we wrote in the previous exercise and extends it for the new variation. Let's take a look at how this works.
+Based on our prototype, we have at least two different buttons. One with red outline and one with white outline. Text color and background color on hover is also different between the two. We will write the required styles for each button, but we will rely on Pattern Lab to create variations for us. This is a huge advantage of using tools like Pattern Lab because it does all the heavy lifting for us. Without Pattern Lab we would need to create a new version of the button component which would require we duplicate a lot of the code we already wrote, but Pattern Lab takes the code we wrote in the previous exercise and extends it for the new variation. Let's take a look at how this works.
 
-1. Inside the **button** directory create a new file called **button~primary.yml**. \(Notice the "`~`" in the file name\).
-2. Inside `button~primary.yml` add the following code:
+1. Inside the **button** directory create a new file called **button~primary.yml**. \(Notice the tilde \("`~`"\) in the file name\).
+2. Update`button~primary.yml` as follows:
 
 ```yaml
 button:
