@@ -28,7 +28,7 @@ Now that we have a new button variation let's add css styles to it.
 
 * Edit `button.scss` so the styles look like this :
 
-  ```scss
+  ```css
   .button {
     background-color: $color-black;
     border: 2px solid $color-tundora;
@@ -60,7 +60,7 @@ Now that we have a new button variation let's add css styles to it.
   }
   ```
 
-The new code starts at `&.button--primary`. This means .button and .button--primary classes will be together \(i.e. `<a class="button button--primary">My button</a>`\), and when they do we are changing background, text and border color to red. Before we can see the new variation in action, we need to update the pattern's twig template so it's aware when a variation is needed.
+Styles for `.button--primary` start on line **20** above.  These styles will apply when both, `button` and `button--primary` classes are present \(i.e. `<a class="button button--primary">My button</a>`\), and when they do we are changing background and border color to red. Before we can see the new variation in action, we need to update the pattern's twig template so it's aware when a variation is needed.
 
 * Now let's edit the twig file to look like this:
 
@@ -83,8 +83,7 @@ The new code starts at `&.button--primary`. This means .button and .button--prim
 {% endif %}
 ```
 
-  * First we check whether the **modifier** key has a value, and if it does we create a new variable with that value \(i.e. `modifier_class`\).
-  * Then we pass the `{{ modifier_class }}` variable within the class attribute.
+* First we check whether the **modifier** key has a value, and if it does we pass the value to the button \(i.e. `{% if button.modifier %} {{ button.modifier|lower }}{% endif %}`\).
 
 ## Compiling the code
 
@@ -106,3 +105,4 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
+
