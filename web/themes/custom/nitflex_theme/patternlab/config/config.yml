@@ -5,6 +5,8 @@ ie:
     - less
     - scss
 id:
+    - templates
+    - layout
     - scss
     - .svn
     - .sass-cache
