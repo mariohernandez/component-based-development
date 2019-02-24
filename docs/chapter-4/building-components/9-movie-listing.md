@@ -4,7 +4,7 @@ Just when you thought "I got this!", we are now going to build a new component t
 
 Let's start with our usual process of creating some files and adding the respective code to each file. We will explain everything once these steps are done.
 
-1. Inside **nitflex\_dev\_theme/src/_patterns/01-patterns/** create a new directory called **movie-list**
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **movie-list**
 2. Inside the **movie-list** directory create these files: `movie-list.json`, `movie-list.scss`, and `movie-list.twig`
 3. Inside `movie-list.json` copy the following code:
 
