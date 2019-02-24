@@ -4,10 +4,9 @@ In the interest of time, there are several other components we will not build du
 
 Here's a list of the pre-built components.
 
-* Add to favorite
-* Average rating
-* Body text
-* Branding
-* Icons
-* and MPAA rating
-
+* Add to favorite: Allows us to add movies to our playlist.
+* Average rating: Allows us to rate movies from 1 - 5.
+* Body text: A simple pattern to render plain text.
+* Branding: Site's logo.
+* Icons: Icons system for our theme.
+* and MPAA rating: To rate movies using mpaa rating (i.e. PG-13).
