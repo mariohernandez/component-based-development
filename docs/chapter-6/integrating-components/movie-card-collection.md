@@ -80,7 +80,7 @@ As we read in the excerpt above, there are usually two views templates using whe
 {% endcode-tabs %}
 
 * There is very little going on here. We've stripped most of the code from the original template, but why? Well, if you look at the **movie card collection** component, you will see that we already have everything we need as far as Drupal requirements for rendering content and Drupal specific attributes. So in this template we are simply cleaning up the code to avoid printing any extra stuff we don't need.
-* As you may recall, in the **movie card collection** component, the data for individual **movie cards** is stored in an `items[ ]` array in the component's `.json` file. We loop through that array, and for each item we do an `include` of a **movie-card** and pass in the data from the item we're currently iterating over. This gives us a list of movie cards inside our markup for the **movie card collection** component.
+* As you may recall, in the **movie card collection** component, the data for individual **movie cards** is stored in an `items[ ]` array in the component's `.yml` file. We loop through that array, and for each item we do an `include` of a **movie-card** and pass in the data from the item we're currently iterating over. This gives us a list of movie cards inside our markup for the **movie card collection** component.
 * Views is essentially doing the same thing. The `movie_listing` view is set up to show a list of movie nodes displayed in the teaser view mode. Since we already integrated the **movie-card** with the teaser view of movie nodes, the end result is the same: a simple list of movie cards.
 
 ### Clear Drupal's caches.

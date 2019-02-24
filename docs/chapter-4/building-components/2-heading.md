@@ -117,4 +117,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Try changing the heading level in **heading.yml** to anything other than h2 and recompile your code.
 * Inspect your code to see your changes to the heading level.
 {% endhint %}
-

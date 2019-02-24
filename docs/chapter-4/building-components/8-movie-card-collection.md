@@ -7,8 +7,8 @@ There are two parts to creating the list. First we need to create a collection o
 Let's start with our usual process of creating some files and adding the respective code to each file.
 
 1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **movie-card-collection**
-2. Inside the **movie-card-collection** directory create these files: `movie-card-collection.json`, `movie-card-collection.scss`, and `movie-card-collection.twig`
-3. Inside `movie-card-collection.json` copy the following code:
+2. Inside the **movie-card-collection** directory create these files: `movie-card-collection.yml`, `movie-card-collection.scss`, and `movie-card-collection.twig`
+3. Inside `movie-card-collection.yml` copy the following code:
 
 ```yaml
 items:
