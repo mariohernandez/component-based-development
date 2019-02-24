@@ -35,7 +35,7 @@ As we read in the excerpt above, there are usually two views templates using whe
    * You can find a View's machine name on the main views admin page \(/admin/structure/views\)
 3. Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
 4. If you reload the homepage, you will not see any visual changes on the content but if you inspect the page again you will notice that Drupal is now using the newly created template suggestions.
-5. In your editor open **views-view--movie-list.html.twig** and paste the following code overriding the existing code in the template \(except for the comments as we would like to keep the comments intact\):
+5. In your editor open **views-view--movie-list.html.twig** and add the following code overriding the existing code in the template \(except for the comments as we would like to keep the comments intact\):
 
 {% code-tabs %}
 {% code-tabs-item title="views-view--movie-list.twig" %}
@@ -67,7 +67,7 @@ As we read in the excerpt above, there are usually two views templates using whe
 1. * First, we're keeping the the `dom-id` class that views adds, and updating the `attributes`variable for the view to include that class. This will help keep classes intact that views and/or other modules may rely on.
    * Next, we're using the twig embed tag again to map the content of this view to our **Movie Card Collection** component, and passing in Drupal attributes so that they'll be output with our component's markup.
    * For the twig block we named `collection` in the **Movie Card Collection** component, we output the `rows` variable that views provides, which is basically the content of this view, plus the `title_prefix` and `title_suffix` variables.
-2. In your editor open **views-view-unformatted--movie-listing.html.twig** and paste the following code overriding the existing code in the template \(except for the comments as we would like to keep the comments intact\):
+2. In your editor open **views-view-unformatted--movie-listing.html.twig** and add the following code overriding the existing code in the template \(except for the comments as we would like to keep the comments intact\):
 
 {% code-tabs %}
 {% code-tabs-item title="views-view-unformatted--movie-listing.thml.twig" %}

@@ -14,7 +14,7 @@ Let's start with our usual process of creating some files and adding the respect
 items:
   -
     average_rating: 5
-    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
     heading:
       heading_level: 3
       modifier: ~
@@ -28,7 +28,7 @@ items:
       url: "#"
   -
     average_rating: 5
-    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
     heading:
       heading_level: 3
       modifier: ~
@@ -42,7 +42,7 @@ items:
       url: "#"
   -
     average_rating: 5
-    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
     heading:
       heading_level: 3
       modifier: ~
@@ -56,7 +56,7 @@ items:
       url: "#"
   -
     average_rating: 5
-    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
     heading:
       heading_level: 3
       modifier: ~
@@ -70,7 +70,7 @@ items:
       url: "#"
   -
     average_rating: 5
-    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
     heading:
       heading_level: 3
       modifier: ~
@@ -114,9 +114,7 @@ We created an array called **items**. The array contains multiple items each of 
 
 Create the **movie-card-collection** library.
 
-We are now introducing the concept of Twig Blocks, \`
-
-\` so we are able to alter how content is rendered when we integrate this component with Drupal.
+We are now introducing the concept of **Twig Blocks (not the same as Drupal blocks), so we are able to alter how content is rendered when we integrate this component with Drupal.
 
 Inside the block, we loop through the _items_ array and for each item we loop through we include a _movie-card_ component. This means we will end up with as many cards as items in the **items** array.
 
@@ -124,7 +122,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 
 [Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks are regions in which you can insert any kind of content.
 
-* Now paste the component's styles below into **movie-card-collection.scss**:
+* Now add the component's styles below into **movie-card-collection.scss**:
 
 ```css
 // Import site utilities

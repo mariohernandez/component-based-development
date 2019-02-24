@@ -89,7 +89,7 @@ We are now finally at a point where we can integrate the Movie card component wi
 
 1. Open `node--movie--teaser.html.twig` in your text editor
 2. Remove all code in the file but leave all comments. It is good to leave the comments untouched as they provide helpful information regarding available variables and other useful Drupal-specific details.
-3. Paste the following code at the bottom of the template:
+3. add the following code at the bottom of the template:
 
 {% code-tabs %}
 {% code-tabs-item title="node--movie--teaser.html.twig" %}

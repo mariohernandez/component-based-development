@@ -17,7 +17,7 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
 
 1. Open`paragraph--genre-list.html.twig`in your text editor
 2. Remove all code in the file but leave all comments.
-3. Paste the following code at the bottom of the template:
+3. add the following code at the bottom of the template:
 
 {% code-tabs %}
 {% code-tabs-item title="paragraph--genre-listing.html.twig" %}
@@ -50,7 +50,7 @@ So far things are looking good, but we've got one issue: just like with the feat
 
 ![Genre list title template suggestion](../../.gitbook/assets/paragraph-field-title.png)
 
-Now, open the `field--paragraph--field-list-title--genre-list.html.twig` file, remove all code in the file but leave all comments, and paste in:
+Now, open the `field--paragraph--field-list-title--genre-list.html.twig` file, remove all code in the file but leave all comments, and add in:
 
 {% code-tabs %}
 {% code-tabs-item title="field--paragraph--field-list-title--genre-list.html.twig" %}

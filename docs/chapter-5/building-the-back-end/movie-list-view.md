@@ -5,7 +5,7 @@ Use the code below to create a new view to list movies by category.
 * While logged in with admin access, click **Configuration \| Development \| Configuration Synchronization \| Import**
 * **Click Single Item** from menu options.
 * Under _Configuration type_, select **View** from the dropdown.
-* Paste the code below under _Paste your configuration here_ box.
+* add the code below under _add your configuration here_ box.
 * Click **Import**
 
 {% hint style="info" %}

@@ -30,7 +30,7 @@ We are now finally at a point where we can integrate the Featured Movie componen
 
 1. Open `node--movie--featured-movie.html.twig` in your text editor
 2. Remove all code in the file but leave all comments. It is good to leave the comments untouched as this provides helpful information regarding available variables and other useful Drupal specific details.
-3. Paste the following code at the bottom of the template
+3. add the following code at the bottom of the template
 
 {% code-tabs %}
 {% code-tabs-item title="node--movie--featured-movie.html.twig" %}
@@ -99,7 +99,7 @@ To fix this, we'll create a custom field template suggestion file for the promo 
 
 ![Field template suggestion](../../.gitbook/assets/featured-movie-title-field.png)
 
-Now, open the `field--node--field-promo-sentence--movie.html.twig` file, remove all code in the file but leave all comments, and paste in:
+Now, open the `field--node--field-promo-sentence--movie.html.twig` file, remove all code in the file but leave all comments, and add in:
 
 {% code-tabs %}
 {% code-tabs-item title="field--node--field-promo-sentence--movie.html.twig" %}

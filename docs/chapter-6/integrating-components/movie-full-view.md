@@ -27,7 +27,7 @@ We are now ready to integrate the full view of a movie:
 
 1. Open `node--movie--full.html.twig` in your text editor
 2. Remove all code in the file but leave all comments.
-3. Paste the following code at the bottom of the template
+3. add the following code at the bottom of the template
 
 {% code-tabs %}
 {% code-tabs-item title="node--movie--full.html.twig" %}

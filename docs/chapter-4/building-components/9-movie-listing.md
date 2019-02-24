@@ -6,67 +6,86 @@ Let's start with our usual process of creating some files and adding the respect
 
 1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **movie-list**
 2. Inside the **movie-list** directory create these files: `movie-list.json`, `movie-list.scss`, and `movie-list.twig`
-3. Inside `movie-list.json` copy the following code:
+3. Inside `movie-list.json` add the following code:
 
 ```yaml
-{
-  "list_title": "Action and Adventure",
-  "items": [
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Mattis Magna Mollis Pellentesque",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    },
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Bibendum Euismod Mollis Quam Egestas",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    },
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Mattis Magna Mollis Pellentesque",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    },
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Bibendum Euismod Mollis Quam Egestas",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    }
-  ]
-}
+list_title: "Action and Adventure"
+items:
+  -
+    average_rating: 5
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    heading:
+      heading_level: 3
+      modifier: ~
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  -
+    average_rating: 5
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    heading:
+      heading_level: 3
+      modifier: ~
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  -
+    average_rating: 5
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    heading:
+      heading_level: 3
+      modifier: ~
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  -
+    average_rating: 5
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    heading:
+      heading_level: 3
+      modifier: ~
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  -
+    average_rating: 5
+    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    heading:
+      heading_level: 3
+      modifier: ~
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
+    watch_button:
+      text: "Watch now"
+      url: "#"
 ```
 
 Same as in the Movie Card Collection component, we created an `items[ ]` array. The array contains multiple instances of a movie card which we will use to render a collection of movie cards.
 
-* Paste the following code snippet into **movie-list.twig**:
+* Add the following code snippet into **movie-list.twig**:
 
 ```php
 {{ attach_library('nitflex_dev_theme/movie-list') }}
@@ -121,7 +140,7 @@ Create the **movie-list** library.
 
 This is also a new concept being introduced here and to keep it simple, embeds combines the advantages of _includes_ and _extends_ twig statements into one. They allow us to include an existing component and give us the option to alter the data or how data is printed/rendered. Our own [Eric Huffman](https://www.mediacurrent.com/who-we-are/team/eric-huffman/) has written a [great blog post which explains Twig blocks, Embeds, Includes](https://www.mediacurrent.com/blog/accommodating-drupal-your-components/) and more in detail.
 
-* Now paste the component's styles below into **movie-listig.scss**:
+* Now add the component's styles below into **movie-listig.scss**:
 
 ```css
 // Import site utilities
