@@ -12,68 +12,73 @@ Let's start with our usual process of creating some files and adding the respect
 
 ```yaml
 items:
-  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+  -
+    average_rating: 5
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
     heading:
       heading_level: 3
-      modifier:
+      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
-    promo_text: Be part of th 12th season this fall,
-    mpaa_rating: PG-13,
-    average_rating: 5,
-    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
     watch_button:
       text: "Watch now"
       url: "#"
-  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+  -
+    average_rating: 5
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
     heading:
       heading_level: 3
-      modifier:
+      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
-    promo_text: Be part of th 12th season this fall,
-    mpaa_rating: PG-13,
-    average_rating: 5,
-    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
     watch_button:
       text: "Watch now"
       url: "#"
-  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+  -
+    average_rating: 5
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
     heading:
       heading_level: 3
-      modifier:
+      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
-    promo_text: Be part of th 12th season this fall,
-    mpaa_rating: PG-13,
-    average_rating: 5,
-    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
     watch_button:
       text: "Watch now"
       url: "#"
-  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+  -
+    average_rating: 5
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
     heading:
       heading_level: 3
-      modifier:
+      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
-    promo_text: Be part of th 12th season this fall,
-    mpaa_rating: PG-13,
-    average_rating: 5,
-    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
     watch_button:
       text: "Watch now"
       url: "#"
-  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+  -
+    average_rating: 5
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />"
     heading:
       heading_level: 3
-      modifier:
+      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
-    promo_text: Be part of th 12th season this fall,
-    mpaa_rating: PG-13,
-    average_rating: 5,
-    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
     watch_button:
       text: "Watch now"
       url: "#"
