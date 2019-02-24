@@ -4,10 +4,10 @@ The Featured Movie component, much like the Movie Card, presents similar require
 
 Let's start by creating the usual files for building the component:
 
-1. Inside **nitflex\_dev\_theme/src/components/** create a new directory called **featured-movie**
+1. Inside **nitflex\_dev\_theme/src/\_patterns/01-components/** create a new directory called **featured-movie**
 2. Inside the **featured-movie** directory create these files:
    * `featured-movie.yml`, `featured-movie.scss`, and `featured-movie.twig`
-3. Copy the following code snippet into **featured-movie.yml**:
+3. Add the following code snippet into **featured-movie.yml**:
 
 ```yaml
 {
@@ -28,7 +28,7 @@ Let's start by creating the usual files for building the component:
 }
 ```
 
-* Copy the following code snippet into **featured-movie.twig**:
+* Add the following code snippet into **featured-movie.twig**:
 
 ```text
 {{ attach_library('nitflex_dev_theme/featured-movie') }}
@@ -256,9 +256,11 @@ Let's start by creating the usual files for building the component:
 }
 ```
 
-### Important
+{% hint style="warning" %}
+**Featured Movie Library**
 
-Be sure to create the **featured-movie** library.
+Be sure to create the **featured-movie** library and attach it to the component.
+{% endhint %}
 
 ## Breaking it down
 
