@@ -49,7 +49,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
   <div class="movie-card__content">
     {% if heading %}
       {%
-        include '@patterns/01-components/heading/heading.twig' with {
+        include '@patterns/heading/heading.twig' with {
           "heading": {
             "title": heading.title,
             "url": heading.url,
@@ -62,7 +62,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
     <div class="movie-card__favorites-toggle">
       {% block favorites_toggle %}
         {%
-          include '@patterns/01-components/add-to-favorites/add-to-favorites.twig' with {
+          include '@patterns/add-to-favorites/add-to-favorites.twig' with {
             url: '#',
           } only
         %}
@@ -70,7 +70,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
     </div>
     {% if mpaa_rating %}
       <div class="movie-card__mpaa-rating">
-        {% include '@patterns/01-components/mpaa-rating/mpaa-rating.twig' with {
+        {% include '@patterns/mpaa-rating/mpaa-rating.twig' with {
             rating: mpaa_rating
           } only
         %}
@@ -78,7 +78,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
     {% endif %}
     {% if average_rating %}
       <div class="movie-card__average-rating">
-        {% include '@patterns/01-components/average-rating/average-rating.twig' with {
+        {% include '@patterns/average-rating/average-rating.twig' with {
             count: average_rating
           } only
         %}

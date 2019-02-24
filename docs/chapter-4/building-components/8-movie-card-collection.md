@@ -97,7 +97,7 @@ We created an array called **items**. The array contains multiple items each of 
   {% block collection %}
     {% for item in items %}
       {%
-        include '@patterns/01-components/movie-card/movie-card.twig' with {
+        include '@patterns/movie-card/movie-card.twig' with {
           cover_image: item.cover_image,
           heading: item.heading,
           mpaa_rating: item.mpaa_rating,

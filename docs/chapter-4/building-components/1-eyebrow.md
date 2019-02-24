@@ -4,7 +4,7 @@ Before we dive into the more advance stuff, let's start by creating a super simp
 
 ## Component's data
 
-1. Inside `nitflex_dev_theme/src/_patterns/01-components/` create a new directory called **eyebrow**.
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **eyebrow**.
 2. Inside the _eyebrow_ directory create a new file called **eyebrow.yml**.
 3. Inside _eyebrow.yml_ add the following code:
 

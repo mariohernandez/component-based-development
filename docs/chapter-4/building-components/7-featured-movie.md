@@ -41,7 +41,7 @@ watch_button:
   <div class="featured-movie__meta">
     <div class="featured-movie__title">
       {%
-        include '@patterns/01-components/heading/heading.twig' with {
+        include '@patterns/heading/heading.twig' with {
           heading: {
             title: heading.title,
             heading_level: heading.heading_level,
@@ -52,7 +52,7 @@ watch_button:
     {% if promo_text %}
       <div class="featured-movie__promo">
         {%
-          include '@patterns/01-components/eyebrow/eyebrow.twig' with {
+          include '@patterns/eyebrow/eyebrow.twig' with {
             text: promo_text
           }
         %}
@@ -62,7 +62,7 @@ watch_button:
       <div class="featured-movie__favorites-toggle">
         {% block favorites_toggle %}
           {%
-            include '@patterns/01-components/add-to-favorites/add-to-favorites.twig' with {
+            include '@patterns/add-to-favorites/add-to-favorites.twig' with {
               url: '#',
             } only
           %}
@@ -71,7 +71,7 @@ watch_button:
       {% if mpaa_rating %}
         <div class="featured-movie__mpaa-rating">
           {%
-            include '@patterns/01-components/mpaa-rating/mpaa-rating.twig' with {
+            include '@patterns/mpaa-rating/mpaa-rating.twig' with {
               rating: mpaa_rating
             }
           %}
@@ -79,7 +79,7 @@ watch_button:
       {% endif %}
       {% if average_rating %}
         <div class="featured-movie__average-rating">
-          {% include '@patterns/01-components/average-rating/average-rating.twig' with {
+          {% include '@patterns/average-rating/average-rating.twig' with {
               count: average_rating
             } only
           %}
@@ -94,7 +94,7 @@ watch_button:
     {% if watch_button %}
       <div class="featured-movie__cta">
         {%
-          include '@patterns/01-components/button/button.twig' with {
+          include '@patterns/button/button.twig' with {
             button: watch_button,
             modifier_class: 'button--primary'
           } only

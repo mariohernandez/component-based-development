@@ -4,7 +4,7 @@ Now that we have some basic idea of the various pieces for building a component,
 
 ## Component's data
 
-1. Inside `nitflex_dev_theme/src/_patterns/01-components/` create a new directory called **heading**.
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **heading**.
 2. Inside the _heading_ directory create a new file called **heading.yml**.
 3. Inside _heading.yml_ add the following code:
 

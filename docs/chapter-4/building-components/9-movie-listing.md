@@ -76,7 +76,7 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
   {{- attributes ? attributes|without(class) -}}>
   <div class="movie-list__title">
     {%
-      include '@patterns/01-components/heading/heading.twig' with {
+      include '@patterns/heading/heading.twig' with {
         "heading": {
           "title": list_title,
           "heading_level": '3'
@@ -85,11 +85,11 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
     %}
   </div>
   {% block list %}
-    {% embed '@patterns/01-components/movie-card-collection/movie-card-collection.twig' %}
+    {% embed '@patterns/movie-card-collection/movie-card-collection.twig' %}
       {% block collection %}
         {% for item in items %}
           {%
-            include '@patterns/01-components/movie-card/movie-card.twig' with {
+            include '@patterns/movie-card/movie-card.twig' with {
               cover_image: item.cover_image,
               heading: item.heading,
               mpaa_rating: item.mpaa_rating,

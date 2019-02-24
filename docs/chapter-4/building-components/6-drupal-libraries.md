@@ -56,7 +56,7 @@ Don't forget to clear your caches when adding new libraries to your theme.
 
 Now that the Movie Card component's library is ready, we need to make Drupal aware of it so it can use it.
 
-1. In your editor, open `src/_patterns/01-components/movie-card/movie-card.twig`
+1. In your editor, open `src/_patterns/01-patterns/movie-card/movie-card.twig`
 2. Edit the file by adding the following code at the first line in the file:
 
 ```text
@@ -73,7 +73,7 @@ So far we have not written any javascript. The instructions below only apply whe
 
 As explained before, Drupal libraries have no effect on KSS Node or the style-guide. In order for the components to make use of the javascript we've written we need to manually add the script to the style-guide.
 
-1. In your text editor, open `nitflex_dev_theme/src/_meta/_01-foot.twig` 
+1. In your text editor, open `nitflex_dev_theme/src/_meta/_01-foot.twig`
 2. Scroll to the very bottom of the file where you will see other Javascripts references.
 3. A good place to add your newly created script is between the **START** and **END** of c**omponent JS** comments.
 

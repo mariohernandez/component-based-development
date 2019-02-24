@@ -4,7 +4,7 @@ So you get the idea, inside the **01-components** directory we create a new dire
 
 ## Component's data
 
-1. Inside `nitflex_dev_theme/src/_patterns/01-components/` create a new directory called **button**.
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **button**.
 2. Inside the _button_ directory create a new file called **button.yml**.
 3. Inside _button.yml_ add the following code:
 
