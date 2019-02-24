@@ -18,7 +18,7 @@ The process for discovering the templates Drupal's views are using is the same a
 
 1. Go to the site's homepage \(/homepage\), where the movie list is displayed
 2. Right-click on any of the movies within the list and select **Inspect** or **Inspect Element** depending on your browser.
-3. Within the code inspector, scroll up until you find template suggestions starting with **views-view--**. Example: 
+3. Within the code inspector, scroll up until you find template suggestions starting with **views-view--**. Example:
 
 ![Views template suggestions](../../.gitbook/assets/views.png)
 
@@ -48,8 +48,8 @@ As we read in the excerpt above, there are usually two views templates using whe
 
 {% set attributes = attributes.addClass(classes) %}
 
-{% 
-  embed '@nitflex_dev_theme/movie-card-collection/movie-card-collection.twig' with {
+{%
+  embed '@patterns/movie-card-collection/movie-card-collection.twig' with {
     attributes: attributes,
   }
 %}

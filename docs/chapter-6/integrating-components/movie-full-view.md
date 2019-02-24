@@ -52,7 +52,7 @@ We are now ready to integrate the full view of a movie:
         text: 'Watch now'|t,
       }
     %}
-    {% embed '@nitflex_dev_theme/featured-movie/featured-movie.twig' with {
+    {% embed '@patterns/featured-movie/featured-movie.twig' with {
         attributes: attributes,
         title_prefix: title_prefix,
         title_suffix: title_suffix,

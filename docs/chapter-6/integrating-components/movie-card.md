@@ -45,7 +45,7 @@ By default Drupal uses specific templates for rendering different kind of entiti
 If you have been using Drupal for a while you may be well familiar with where to get templates from or what to name them. However there is an easy way to do this and that's called _turning on Twig debugging_. Lucky for us the `nitflex_dev_theme` already has twig debugging on and we will make use of it now.
 
 1. In your browser go to `http://nitflex.lndo.site/homepage`
-2. Right-click on one of the small movie cards and select **Inspect** or **Inspect Element** \(depending on your browser\), from the context menu. You should now see the code inspector which shows all the markup that makes up the movie node. If you scroll up/down within the code inspector you will notice green text. This is twig debugging in action.  
+2. Right-click on one of the small movie cards and select **Inspect** or **Inspect Element** \(depending on your browser\), from the context menu. You should now see the code inspector which shows all the markup that makes up the movie node. If you scroll up/down within the code inspector you will notice green text. This is twig debugging in action.
 
 ![node template suggestion](../../.gitbook/assets/node.png)
 
@@ -73,7 +73,7 @@ With the debugging information above we have all we need to create our first tem
 
 1. Rename the newly copied template `node--movie--teaser.html.twig`. How do we know to use this name you may ask? If you look at the screenshot above, you see that the list of template suggestions shows teaser being one of them. This means that every time the Movie node is rendered in teaser view, this custom template will be used and not Drupal's core one.
 2. Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
-3. Reload the homepage again and inspect the code one more time.  
+3. Reload the homepage again and inspect the code one more time.
 
 ![Movie template suggestion using teaser view mode](../../.gitbook/assets/node-teaser.png)
 
@@ -103,8 +103,8 @@ We are now finally at a point where we can integrate the Movie card component wi
      attributes: title_attributes
  }
 %}
-{% 
-  embed '@nitflex_dev_theme/movie-card/movie-card.twig' with {
+{%
+  embed '@patterns/movie-card/movie-card.twig' with {
     attributes: attributes,
     title_prefix: title_prefix,
     title_suffix: title_suffix,

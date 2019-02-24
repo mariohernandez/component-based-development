@@ -4,7 +4,7 @@ Just when you thought "I got this!", we are now going to build a new component t
 
 Let's start with our usual process of creating some files and adding the respective code to each file. We will explain everything once these steps are done.
 
-1. Inside **nitflex\_dev\_theme/src/components/** create a new directory called **movie-list**
+1. Inside **nitflex\_dev\_theme/src/_patterns/01-patterns/** create a new directory called **movie-list**
 2. Inside the **movie-list** directory create these files: `movie-list.json`, `movie-list.scss`, and `movie-list.twig`
 3. Inside `movie-list.json` copy the following code:
 
@@ -68,7 +68,7 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
 
 * Paste the following code snippet into **movie-list.twig**:
 
-```text
+```php
 {{ attach_library('nitflex_dev_theme/movie-list') }}
 
 <section class="movie-list
@@ -76,7 +76,7 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
   {{- attributes ? attributes|without(class) -}}>
   <div class="movie-list__title">
     {%
-      include '@nitflex_dev_theme/heading/heading.twig' with {
+      include '@patterns/01-components/heading/heading.twig' with {
         "heading": {
           "title": list_title,
           "heading_level": '3'
@@ -85,11 +85,11 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
     %}
   </div>
   {% block list %}
-    {% embed '@nitflex_dev_theme/movie-card-collection/movie-card-collection.twig' %}
+    {% embed '@patterns/01-components/movie-card-collection/movie-card-collection.twig' %}
       {% block collection %}
         {% for item in items %}
           {%
-            include '@nitflex_dev_theme/movie-card/movie-card.twig' with {
+            include '@patterns/01-components/movie-card/movie-card.twig' with {
               cover_image: item.cover_image,
               heading: item.heading,
               mpaa_rating: item.mpaa_rating,
@@ -178,4 +178,3 @@ _Depending on your setup, you may not need to enter ":8000". Also if you did not
 Under the Components category you should see the new Movie List Collection component.
 
 ## And with that, We are done building components 🔥 🙌 🏆 🍻
-

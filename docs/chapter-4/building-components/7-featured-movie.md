@@ -10,27 +10,24 @@ Let's start by creating the usual files for building the component:
 3. Add the following code snippet into **featured-movie.yml**:
 
 ```yaml
-{
-  "cover_image": "<img src=\"/sites/default/files/action-1.jpg\" alt=\"Alt text\" />",
-  "heading": {
-    "title": "BADCamp 2018",
-    "url": "#",
-    "heading_level": 2
-  },
-  "promo_text": "Be part of th 12th season this fall",
-  "mpaa_rating": "PG-13",
-  "average_rating": "5",
-  "synopsis": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-  "watch_button": {
-    "text": "Watch now",
-    "url": "#"
-  }
-}
+cover_image: "<img src=\"/sites/default/files/action-1.jpg\" alt=\"Alt text\" />",
+heading:
+  heading_level: 2
+  modifier:
+  title: "DrupalCon Seattle 2019"
+  url: "#"
+promo_text: Be part of th 12th season this fall,
+mpaa_rating: PG-13,
+average_rating: 5,
+synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+watch_button:
+  text: "Watch now"
+  url: "#"
 ```
 
-* Add the following code snippet into **featured-movie.twig**:
+* Add the following code to **featured-movie.twig**:
 
-```text
+```php
 {{ attach_library('nitflex_dev_theme/featured-movie') }}
 
 <section class="featured-movie {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
@@ -44,7 +41,7 @@ Let's start by creating the usual files for building the component:
   <div class="featured-movie__meta">
     <div class="featured-movie__title">
       {%
-        include '@nitflex_dev_theme/heading/heading.twig' with {
+        include '@patterns/01-components/heading/heading.twig' with {
           heading: {
             title: heading.title,
             heading_level: heading.heading_level,
@@ -55,7 +52,7 @@ Let's start by creating the usual files for building the component:
     {% if promo_text %}
       <div class="featured-movie__promo">
         {%
-          include '@nitflex_dev_theme/eyebrow/eyebrow.twig' with {
+          include '@patterns/01-components/eyebrow/eyebrow.twig' with {
             text: promo_text
           }
         %}
@@ -65,7 +62,7 @@ Let's start by creating the usual files for building the component:
       <div class="featured-movie__favorites-toggle">
         {% block favorites_toggle %}
           {%
-            include '@nitflex_dev_theme/add-to-favorites/add-to-favorites.twig' with {
+            include '@patterns/01-components/add-to-favorites/add-to-favorites.twig' with {
               url: '#',
             } only
           %}
@@ -74,7 +71,7 @@ Let's start by creating the usual files for building the component:
       {% if mpaa_rating %}
         <div class="featured-movie__mpaa-rating">
           {%
-            include '@nitflex_dev_theme/mpaa-rating/mpaa-rating.twig' with {
+            include '@patterns/01-components/mpaa-rating/mpaa-rating.twig' with {
               rating: mpaa_rating
             }
           %}
@@ -82,7 +79,7 @@ Let's start by creating the usual files for building the component:
       {% endif %}
       {% if average_rating %}
         <div class="featured-movie__average-rating">
-          {% include '@nitflex_dev_theme/average-rating/average-rating.twig' with {
+          {% include '@patterns/01-components/average-rating/average-rating.twig' with {
               count: average_rating
             } only
           %}
@@ -97,7 +94,7 @@ Let's start by creating the usual files for building the component:
     {% if watch_button %}
       <div class="featured-movie__cta">
         {%
-          include '@nitflex_dev_theme/button/button.twig' with {
+          include '@patterns/01-components/button/button.twig' with {
             button: watch_button,
             modifier_class: 'button--primary'
           } only
@@ -291,4 +288,3 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Featured Movie component.
-

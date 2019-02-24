@@ -6,7 +6,7 @@ There are two parts to creating the list. First we need to create a collection o
 
 Let's start with our usual process of creating some files and adding the respective code to each file.
 
-1. Inside **nitflex\_dev\_theme/src/components/** create a new directory called **movie-card-collection**
+1. Inside **nitflex\_dev\_theme/src/_patterns/01-patterns/** create a new directory called **movie-card-collection**
 2. Inside the **movie-card-collection** directory create these files: `movie-card-collection.json`, `movie-card-collection.scss`, and `movie-card-collection.twig`
 3. Inside `movie-card-collection.json` copy the following code:
 
@@ -69,7 +69,7 @@ We created an array called **items**. The array contains multiple items each of 
 
 * Inside `movie-card-collection.twig` copy the following code:
 
-```text
+```php
 {{ attach_library('nitflex_dev_theme/movie-card-collection') }}
 
 <div class="movie-card-collection
@@ -78,7 +78,7 @@ We created an array called **items**. The array contains multiple items each of 
   {% block collection %}
     {% for item in items %}
       {%
-        include '@nitflex_dev_theme/movie-card/movie-card.twig' with {
+        include '@patterns/01-components/movie-card/movie-card.twig' with {
           cover_image: item.cover_image,
           heading: item.heading,
           mpaa_rating: item.mpaa_rating,
@@ -159,4 +159,3 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Movie Card Collection component.
-

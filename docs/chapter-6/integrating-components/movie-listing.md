@@ -22,7 +22,7 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
 {% code-tabs %}
 {% code-tabs-item title="paragraph--genre-listing.html.twig" %}
 ```php
-{% embed '@nitflex_dev_theme/movie-list/movie-list.twig' with {
+{% embed '@patterns/movie-list/movie-list.twig' with {
   attributes: attributes,
   list_title: content.field_list_title|render|trim is not empty ? content.field_list_title,
   list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,

@@ -53,8 +53,8 @@ We are now finally at a point where we can integrate the Featured Movie componen
   }
 %}
 
-{% 
-  embed '@nitflex_dev_theme/featured-movie/featured-movie.twig' with {
+{%
+  embed '@patterns/featured-movie/featured-movie.twig' with {
     attributes: attributes,
     title_prefix: title_prefix,
     title_suffix: title_suffix,
@@ -95,7 +95,7 @@ Things are looking good, but we've got one issue: in our **featured-movie** comp
 To fix this, we'll create a custom field template suggestion file for the promo sentence field. The template suggestion file has already been added to the `nitflex_dev_theme`, but if were adding it on your own you would:
 
 1. Use your browser inspector to view twig debug comments for the location of the default field template \(`modules/core/themes/stable/templates/field.html.twig`\)
-2. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/featured-movie`\) and rename it to `field--node--field-promo-sentence--movie.html.twig` 
+2. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/featured-movie`\) and rename it to `field--node--field-promo-sentence--movie.html.twig`
 
 ![Field template suggestion](../../.gitbook/assets/featured-movie-title-field.png)
 
