@@ -4,7 +4,7 @@ The Featured Movie component, much like the Movie Card, presents similar require
 
 Let's start by creating the usual files for building the component:
 
-1. Inside **nitflex\_dev\_theme/src/\_patterns/01-components/** create a new directory called **featured-movie**
+1. Inside **nitflex\_dev\_theme/src/_patterns/01-patterns/** create a new directory called **featured-movie**
 2. Inside the **featured-movie** directory create these files:
    * `featured-movie.yml`, `featured-movie.scss`, and `featured-movie.twig`
 3. Add the following code snippet into **featured-movie.yml**:

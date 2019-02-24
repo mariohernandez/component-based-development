@@ -2,11 +2,11 @@
 
 The Movie Card component is a more advanced component compared to the ones we've built thus far. Here we will start reusing previously built components by using twig's [Include](https://twig.symfony.com/doc/2.x/tags/include.html) and [Embed](https://twig.symfony.com/doc/2.x/tags/embed.html) statements.
 
-By now you should know the drill, inside **src/\_patterns/01-components/** create a new directory \(which matches the name of the component\), and inside that directory add some files.
+By now you should know the drill, inside **src/_patterns/01-patterns/** create a new directory (which matches the name of the component), and inside that directory add some files.
 
 ## Component Data
 
-1. Inside **nitflex\_dev\_theme/src/\_patterns/01-components/** create a new directory called **movie-card**
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **movie-card**
 2. Inside the **movie-card** directory create a new file called **movie-card.yml**.
 3. Inside `movie-card.yml` add the following code:
 
