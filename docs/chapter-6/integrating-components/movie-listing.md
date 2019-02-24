@@ -48,7 +48,7 @@ So far things are looking good, but we've got one issue: just like with the feat
 1. Use your browser inspector to view twig debug comments for the location of the default field template \(`modules/core/themes/stable/templates/field.html.twig`\)
 2. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/movie-list`\) and rename `field--paragraph--field-list-title--genre-list.html.twig`
 
-![Genre list title template suggestion](../../.gitbook/assets/paragraph-field-title.png)
+![Genre list title template suggestion](../../.gitbook/assets/paragraph-field-title%20%281%29.png)
 
 Now, open the `field--paragraph--field-list-title--genre-list.html.twig` file, remove all code in the file but leave all comments, and add in:
 

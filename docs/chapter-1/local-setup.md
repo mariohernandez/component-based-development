@@ -28,13 +28,15 @@ This is only going to work if you have a fairly new computer. According to the [
 
 At least on a Mac, this installs Lando along with Docker. Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
 
+{% hint style="danger" %}
 **IMPORTANT**
 
 * **Docker is required**
 
   Docker makes it possible to build containers for any of the third party integrations required in your environment. If you already have Docker installed you don't need to install it again as part of Lando's installation.
 
-**NOTE**: If you are using OSX, you may need to install XCode's Command Line Tools.
+* **About macOS** If you are using macOS you may need to install XCode's Command Line Tools.
+{% endhint %}
 
 ## 2. Clone this repo anywhere in you local system
 

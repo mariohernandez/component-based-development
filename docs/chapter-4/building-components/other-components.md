@@ -9,4 +9,5 @@ Here's a list of the pre-built components.
 * **Body text**: A simple pattern to render plain text.
 * **Branding**: Site's logo.
 * **Icons**: Icons system for our theme.
-* **and MPAA rating**: To rate movies using mpaa rating (i.e. PG-13).
+* **and MPAA rating**: To rate movies using mpaa rating \(i.e. PG-13\).
+

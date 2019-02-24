@@ -114,7 +114,7 @@ We created an array called **items**. The array contains multiple items each of 
 
 Create the **movie-card-collection** library.
 
-We are now introducing the concept of **Twig Blocks (not the same as Drupal blocks), so we are able to alter how content is rendered when we integrate this component with Drupal.
+We are now introducing the concept of \*\*Twig Blocks \(not the same as Drupal blocks\), so we are able to alter how content is rendered when we integrate this component with Drupal.
 
 Inside the block, we loop through the _items_ array and for each item we loop through we include a _movie-card_ component. This means we will end up with as many cards as items in the **items** array.
 
@@ -155,7 +155,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 }
 ```
 
-## Compiling the style-guide    <a id="compiling-the-style-guide"></a>
+## Compiling the style-guide     <a id="compiling-the-style-guide"></a>
 
 Now that we have written all the necessary code to build the Movie Card Collection component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -165,7 +165,7 @@ Now that we have written all the necessary code to build the Movie Card Collecti
 lando npm run build && lando php patternlab/core/console --generate
 ```
 
-## Viewing the Movie Card Collection component    <a id="viewing-the-featured-movie-component"></a>
+## Viewing the Movie Card Collection component     <a id="viewing-the-featured-movie-component"></a>
 
 Open your Drupal site and point to the URL below:
 
@@ -176,3 +176,4 @@ http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
 _Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
 
 Under the Components category you should see the new Movie Card Collection component.
+
