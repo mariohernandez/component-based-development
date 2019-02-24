@@ -31,14 +31,11 @@ This is only going to work if you have a fairly new computer. According to the [
 
 At least on a Mac, this installs Lando along with Docker. Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 **IMPORTANT**
 
 * **Docker is required**
-
-  Docker makes it possible to build containers for any of the third party integrations required in your environment. If you already have Docker installed you don't need to install it again as part of Lando's installation.
-
-* **About macOS** If you are using macOS you may need to install XCode's Command Line Tools.
+* **About macOS**:  You may need to install XCode's command line tools.
 {% endhint %}
 
 ## 2. Clone this repo anywhere in you local system
@@ -60,7 +57,6 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 1. `cd web/themes/custom/nitflex_dev_theme`
 2. Run: `lando npm install`  _This will install the required front end tools \(Node, Gulp, etc.\)_
 3. Move into the pattern-lab directory: `cd patternlab`
-
 4. Run: `lando composer install` _This will install PatternLab_
    * If/when prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**.
    * If/when prompted to `update the config option twigAutoescape`, reply with **Y**.
@@ -81,3 +77,4 @@ You are done! 🙌 🔥 👊
 
 The environment we have put together has been extensively tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own and we will not support or provide assistance if issues arise.
 {% endhint %}
+
