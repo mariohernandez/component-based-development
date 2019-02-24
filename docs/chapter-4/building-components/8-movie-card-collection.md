@@ -11,58 +11,72 @@ Let's start with our usual process of creating some files and adding the respect
 3. Inside `movie-card-collection.json` copy the following code:
 
 ```yaml
-{
-  "items": [
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Mattis Magna Mollis Pellentesque",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    },
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Bibendum Euismod Mollis Quam Egestas",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    },
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Mattis Magna Mollis Pellentesque",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    },
-    {
-      "cover_image": "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
-      "heading": {
-        "title": "Bibendum Euismod Mollis Quam Egestas",
-        "url": "#",
-        "heading_level": 4,
-        "classes": "movie-card__heading"
-      },
-      "average_rating": "3",
-      "mpaa_rating": "G",
-      "synopsis": "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    }
-  ]
-}
+items:
+  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+    heading:
+      heading_level: 3
+      modifier:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    promo_text: Be part of th 12th season this fall,
+    mpaa_rating: PG-13,
+    average_rating: 5,
+    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+    heading:
+      heading_level: 3
+      modifier:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    promo_text: Be part of th 12th season this fall,
+    mpaa_rating: PG-13,
+    average_rating: 5,
+    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+    heading:
+      heading_level: 3
+      modifier:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    promo_text: Be part of th 12th season this fall,
+    mpaa_rating: PG-13,
+    average_rating: 5,
+    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+    heading:
+      heading_level: 3
+      modifier:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    promo_text: Be part of th 12th season this fall,
+    mpaa_rating: PG-13,
+    average_rating: 5,
+    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    watch_button:
+      text: "Watch now"
+      url: "#"
+  - cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"\" />",
+    heading:
+      heading_level: 3
+      modifier:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+    promo_text: Be part of th 12th season this fall,
+    mpaa_rating: PG-13,
+    average_rating: 5,
+    synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+    watch_button:
+      text: "Watch now"
+      url: "#"
 ```
 
 We created an array called **items**. The array contains multiple items each of which has the fields found in a movie card \(heading, synopsis, cover\_image, etc.\).
