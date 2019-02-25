@@ -111,9 +111,10 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
   Under the Components category you should see the new Heading component.
 
-{% hint style="info" %}
-**Just For fun** 💥
+{% hint style="success" %}
+**Just for fun 💥**
 
-* Try changing the heading level in **heading.yml** to anything other than h2 and recompile your code.
-* Inspect your code to see your changes to the heading level.
+* Try changing the heading level in `heading.yml` to anything other than H2 and compile the code.
+* Inspect your code to see your changes to the heading pattern.
 {% endhint %}
+
