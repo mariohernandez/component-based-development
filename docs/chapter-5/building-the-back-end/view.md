@@ -2,11 +2,11 @@
 
 Use the code below to create a new view to list movies by category.
 
-* While logged in with admin access, click Configuration | Development | Configuration Synchronization | Import
-* Click Single Item from menu options.
-* Under Configuration type, select View from the dropdown.
+* While logged in with admin access, click **Configuration | Development | Configuration Synchronization | Import**
+* Click **Single Item** from menu options.
+* Under Configuration type, select **View** from the dropdown.
 * Paste the code below under Paste your configuration here box.
-* Click Import
+* Click **Import**
 
 {% hint type=info %}
 **Alternatively**
