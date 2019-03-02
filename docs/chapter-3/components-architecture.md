@@ -4,14 +4,15 @@ Components are typically saved in a project's theme and although they will work 
 
 ```text
 +-- ..
+|
 |-- _patterns/
 |   |-- 01-patterns/
-|       |-- card
+|       |-- card/
 |         |-- card.es6.js
 |         |-- card.md
 |         |-- card.twig
 |         |-- card.scss
-|         +-- card.yml
+|         |-- card.yml
 |
 +-- ..
 ```
