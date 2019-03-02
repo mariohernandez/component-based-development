@@ -104,7 +104,8 @@ We are now finally at a point where we can integrate the Movie card component wi
  }
 %}
 {%
-  embed '@patterns/movie-card/movie-card.twig' with {
+  embed '@patterns/movie-card/movie-card.twig' with
+  {
     attributes: attributes,
     title_prefix: title_prefix,
     title_suffix: title_suffix,
@@ -116,6 +117,7 @@ We are now finally at a point where we can integrate the Movie card component wi
     flag: content.flag_favorites
   } only
 %}
+
   {% block favorites_toggle %}
     {{ flag }}
   {% endblock %}
@@ -139,4 +141,3 @@ Let's go over what we are doing here:
 {% endhint %}
 
 If you refresh the homepage you will notice the movie cards now are inheriting the styles we wrote when we created the component.
-

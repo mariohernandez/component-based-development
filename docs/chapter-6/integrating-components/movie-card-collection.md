@@ -49,7 +49,8 @@ As we read in the excerpt above, there are usually two views templates using whe
 {% set attributes = attributes.addClass(classes) %}
 
 {%
-  embed '@patterns/movie-card-collection/movie-card-collection.twig' with {
+  embed '@patterns/movie-card-collection/movie-card-collection.twig' with
+  {
     attributes: attributes,
   }
 %}
@@ -86,4 +87,3 @@ As we read in the excerpt above, there are usually two views templates using whe
 ### Clear Drupal's caches.
 
 Now if you reload the homepage you should see the movie card collections in place. There is one more thing to do for the listing of movies and we will do that next.
-

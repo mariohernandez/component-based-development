@@ -29,8 +29,6 @@ We are now ready to integrate the full view of a movie:
 2. Remove all code in the file but leave all comments.
 3. add the following code at the bottom of the template
 
-{% code-tabs %}
-{% code-tabs-item title="node--movie--full.html.twig" %}
 ```php
 {% set rendered_content = content|render %}
 
@@ -52,7 +50,8 @@ We are now ready to integrate the full view of a movie:
         text: 'Watch now'|t,
       }
     %}
-    {% embed '@patterns/featured-movie/featured-movie.twig' with {
+    {% embed '@patterns/featured-movie/featured-movie.twig' with
+      {
         attributes: attributes,
         title_prefix: title_prefix,
         title_suffix: title_suffix,
@@ -64,6 +63,7 @@ We are now ready to integrate the full view of a movie:
         flag: content.flag_favorites
       } only
     %}
+
       {% block favorites_toggle %}
         {{ flag }}
       {% endblock %}
@@ -74,8 +74,6 @@ We are now ready to integrate the full view of a movie:
   </div>
 </article>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Let's go over what we are doing here:
 
@@ -87,4 +85,3 @@ And that's it! We already did the heavy lifting in the **Featured Movie** compon
 
 * Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
 * From the homepage, click the title of any movie listed \(or the Watch Now button on the featured movie.\) The full view of the movie should display just like a Featured Movie at the top of the page, with the full synopsis text below.
-
