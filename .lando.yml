@@ -5,7 +5,7 @@ config:
 
 services:
   node:
-    type: node:10
+    type: node
     globals:
       gulp-cli: "latest"
 
