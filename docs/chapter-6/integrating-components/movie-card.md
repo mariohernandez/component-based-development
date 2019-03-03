@@ -38,7 +38,7 @@ By default Drupal uses specific templates for rendering different kind of entiti
 
 ## Template Suggestions
 
-[Template suggestions](https://www.drupal.org/docs/8/theming/twig/working-with-twig-templates) are copies of the original core templates. Template suggestions are saved within the theme you are working on typically inside the `/templates` directory in your theme. This is where Drupal knows to look for twig templates when rendering content. If it finds twig templates it uses those over the ones in core when rendering content.
+[Template suggestions](https://www.drupal.org/docs/8/theming/twig/working-with-twig-templates) are copies of the original core templates. Template suggestions are saved in your theme's `/templates` directory. This is where Drupal knows to look for twig templates when rendering content. If it finds twig templates it uses those over the ones in core when rendering content.
 
 ## Naming template suggestions
 
@@ -47,23 +47,23 @@ If you have been using Drupal for a while you may be well familiar with where to
 1. In your browser go to `http://nitflex.lndo.site/homepage`
 2. Right-click on one of the small movie cards and select **Inspect** or **Inspect Element** \(depending on your browser\), from the context menu. You should now see the code inspector which shows all the markup that makes up the movie node. If you scroll up/down within the code inspector you will notice green text. This is twig debugging in action.
 
-![node template suggestion](../../.gitbook/assets/node.png)
+![node template suggestion](../../.gitbook/assets/node%20%282%29.png)
 
 If you look at the screenshot above, you will see a few things that are extremely helpful for creating the right template suggestions.
 
 * The last line of the green text \(`BEGIN OUTPUT...`\) shows where the template being used to render the movie node is located and what its name is. **Note:** The screenshot above demonstrates how to find the template within the Drupal core theme. The node template we want has already been placed into the correct location for the `nitflex_dev_theme` theme, so you should see a path to that theme.
 * Just above that line, there is a list of files all of which begin with **node--**. This list is what we mean when we say _Template suggestions_.
-* The file name with an **"x"** to the left of it is the file Drupal is currently using to render the movie node.
+* The file name with an **"x"** to the left of it is the template Drupal is currently using to render the movie node.
 
 ## Creating new template suggestions
+
+{% hint style="info" %}
+_**Note:** The template suggestions we need have already been placed into the /templates directory for_ `nitflex_dev_theme` _theme, the steps below are for training purposes only._
+{% endhint %}
 
 1. Within the `src/templates/` directory create a new directory named `movie-card`.
 2. Navigate to the path of the Drupal core theme shown in the twig debug comment to locate the node template \(e.g, `core/themes/stable/templates/content/node.html.twig`\).
 3. Copy the _node.html.twig_ template into `src/templates/movie-card`
-
-{% hint style="info" %}
-_**Note:** The node template we want has already been placed into the correct location for the_ `nitflex_dev_theme` _theme, the steps below are for training purposes only._
-{% endhint %}
 
 With the debugging information above we have all we need to create our first template suggestion for the movie nodes.
 
@@ -89,7 +89,7 @@ We are now finally at a point where we can integrate the Movie card component wi
 
 1. Open `node--movie--teaser.html.twig` in your text editor
 2. Remove all code in the file but leave all comments. It is good to leave the comments untouched as they provide helpful information regarding available variables and other useful Drupal-specific details.
-3. add the following code at the bottom of the template:
+3. Add the following code at the bottom of the template:
 
 ```php
 {% set rendered_content = content|render %}
@@ -124,7 +124,7 @@ We are now finally at a point where we can integrate the Movie card component wi
 Let's go over what we are doing here:
 
 * First, as mentioned in the introduction to Chapter 5, we're triggering a full render of the content variable.
-* Next, we are setting up a variable that will include the values for the **heading** of the movie card that are based on variables Drupal provides. If you notice starting around line 18 in the comments of our template file, the _label_ variable is the Node's title, and the _url_ variable is the node's URL. In addition, notice that the _heading_ variable we're creating is modeled after the [_heading_ component's JSON object](https://mariohernandez.gitbooks.io/components-training/content/chapter3/components/heading.html###Rewriting-the-JSON-object)
+* Next, we are setting up a variable that will include the values for the **heading** of the movie card that are based on variables Drupal provides. If you notice starting around line 18 in the comments of our template file, the _label_ variable is the Node's title, and the _url_ variable is the node's URL. In addition, notice that the _heading_ variable we're creating is modeled after the [_heading_ component's YAML object](https://mariohernandez.gitbooks.io/components-training/content/chapter3/components/heading.html###Rewriting-the-JSON-object).
 * Next we use an `embed` twig statement to integrate the Movie card component. In the embed we are mapping all the Movie card fields with Drupal's data. We also pass in Drupal-specific items such as _title\_prefix_, _title\_suffix_, _attributes_, etc.
 * Notice how with the average viewer rating field we are making use of the `field_value` filter that's provided by the [Twig Field Value](https://www.drupal.org/project/twig_field_value) module to pass in the raw value of that field. This is because in our template for the Average Viewer Rating component we're expecting a simple number for a data attribute, so if it were to include any markup it would break our component!
 * Finally we make use of the `favorites_toggle` twig block tag that we set up in the movie card component to swap out what is output in that area of the component. We're instead letting Drupal render the flag field as provided by the flag module. It's like we're telling Drupal "Use **our** component with your field values, except for the add-to-favorites button -- take care of that one for us, would ya?"
@@ -136,3 +136,4 @@ Let's go over what we are doing here:
 {% endhint %}
 
 If you refresh the homepage you will notice the movie cards now are inheriting the styles we wrote when we created the component.
+

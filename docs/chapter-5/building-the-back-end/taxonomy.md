@@ -1,6 +1,6 @@
 # Taxonomy
 
-We use a taxonomy vocabulary to label each movie with a specific category (Comedy, Horror, Action, etc.).
+We use a taxonomy vocabulary to label each movie with a specific category \(Comedy, Horror, Action, etc.\).
 
 Create a new taxonomy vocabulary called Genre and add the following terms:
 
@@ -8,3 +8,4 @@ Create a new taxonomy vocabulary called Genre and add the following terms:
 * Horror
 * Family
 * Sci-Fi
+

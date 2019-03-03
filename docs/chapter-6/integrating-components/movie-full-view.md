@@ -85,3 +85,4 @@ And that's it! We already did the heavy lifting in the **Featured Movie** compon
 
 * Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
 * From the homepage, click the title of any movie listed \(or the Watch Now button on the featured movie.\) The full view of the movie should display just like a Featured Movie at the top of the page, with the full synopsis text below.
+

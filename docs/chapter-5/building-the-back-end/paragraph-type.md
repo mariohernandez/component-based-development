@@ -20,3 +20,4 @@ For the Movie list view field, set the following configuration:
 | Type to reference | Default Value | View Display | Preselect view option |
 | :--- | :--- | :--- | :--- |
 | View | Movie List view, List via Term ID | Block | Movie list |
+

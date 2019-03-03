@@ -11,7 +11,7 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
 1. Use your browser inspector to view twig debug comments for the location of the default paragraph template \(`modules/contrib/paragraphs/templates/paragraph.html.twig`\)
 2. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/movie-list`\) and rename  `paragraph--genre-list.html.twig`
 
-![Paragraph template suggestion](../../.gitbook/assets/paragraph-border.png)
+![Paragraph template suggestion](../../.gitbook/assets/paragraph-border%20%281%29.png)
 
 ## Integrate the Movie Listing
 
@@ -45,7 +45,7 @@ So far things are looking good, but we've got one issue: just like with the feat
 1. Use your browser inspector to view twig debug comments for the location of the default field template \(`modules/core/themes/stable/templates/field.html.twig`\)
 2. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/movie-list`\) and rename `field--paragraph--field-list-title--genre-list.html.twig`
 
-![Genre list title template suggestion](../../.gitbook/assets/paragraph-field-title%20%281%29.png)
+![Genre list title template suggestion](../../.gitbook/assets/paragraph-field-title-1.png)
 
 Now, open the `field--paragraph--field-list-title--genre-list.html.twig` file, remove all code in the file but leave all comments, and add in:
 
@@ -58,3 +58,4 @@ Now, open the `field--paragraph--field-list-title--genre-list.html.twig` file, r
 This reduces the template down to just outputting the field's value that's wrapped with a `<span>` tag, which is where any Drupal-specific classes can go.
 
 Now the list title will have the correct markup.
+

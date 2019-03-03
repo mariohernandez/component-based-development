@@ -28,7 +28,7 @@
 | :--- | :--- |
 
 
-| Sizes | _`(min-width: 768px) 50vw, (min-width: 1025px) 25vw, 100vw`_ |
+| Sizes | `(min-width: 768px) 50vw, (min-width: 1025px) 25vw, 100vw` |
 | :--- | :--- |
 
 
@@ -49,8 +49,7 @@
     </tr>
   </thead>
   <tbody></tbody>
-</table>
-
-{% hint style="info" %}
+</table>{% hint style="info" %}
 The beauty of these image styles is that they are aspect ratio-based rather than specific image dimensions. When possible, this is recommended as this makes the image styles more reusable and therefore reduces the number of image styles to be created and maintained.
 {% endhint %}
+

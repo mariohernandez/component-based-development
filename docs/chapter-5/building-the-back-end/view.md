@@ -2,15 +2,14 @@
 
 Use the code below to create a new view to list movies by category.
 
-* While logged in with admin access, click **Configuration | Development | Configuration Synchronization | Import**
+* While logged in with admin access, click **Configuration \| Development \| Configuration Synchronization \| Import**
 * Click **Single Item** from menu options.
 * Under Configuration type, select **View** from the dropdown.
 * Paste the code below under Paste your configuration here box.
 * Click **Import**
 
-{% hint type=info %}
-**Alternatively**
-If you are using configuration management to manage your site's configuration, you can paste the code below into a file called views.view.movie_list.yml and place it in your site's config/sync directory to be imported.
+{% hint style="info" %}
+**Alternatively** If you are using configuration management to manage your site's configuration, you can paste the code below into a file called views.view.movie\_list.yml and place it in your site's config/sync directory to be imported.
 {% endhint %}
 
 ```yaml
@@ -250,3 +249,4 @@ display:
         - user.permissions
       tags: {  }
 ```
+

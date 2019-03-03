@@ -118,3 +118,4 @@ Now our promo sentence in a featured movie will have the correct markup.
 ### Clear Drupal's caches.
 
 If you refresh the homepage you should see that the featured movie now inherits the styles we wrote when we created the component.
+
