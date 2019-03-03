@@ -19,13 +19,12 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
 2. Remove all code in the file but leave all comments.
 3. add the following code at the bottom of the template:
 
-{% code-tabs %}
-{% code-tabs-item title="paragraph--genre-listing.html.twig" %}
 ```php
-{% embed '@patterns/movie-list/movie-list.twig' with {
-  attributes: attributes,
-  list_title: content.field_list_title|render|trim is not empty ? content.field_list_title,
-  list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
+{% embed '@patterns/movie-list/movie-list.twig' with
+  {
+    attributes: attributes,
+    list_title: content.field_list_title|render|trim is not empty ? content.field_list_title,
+    list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
   }
 %}
 
@@ -34,8 +33,6 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
   {% endblock %}
 {% endembed %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Let's go over what we are doing here:
 
@@ -52,17 +49,12 @@ So far things are looking good, but we've got one issue: just like with the feat
 
 Now, open the `field--paragraph--field-list-title--genre-list.html.twig` file, remove all code in the file but leave all comments, and add in:
 
-{% code-tabs %}
-{% code-tabs-item title="field--paragraph--field-list-title--genre-list.html.twig" %}
 ```php
 {% for item in items %}
   <span{{ attributes }}>{{ item.content }}</span>
 {% endfor %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 This reduces the template down to just outputting the field's value that's wrapped with a `<span>` tag, which is where any Drupal-specific classes can go.
 
 Now the list title will have the correct markup.
-

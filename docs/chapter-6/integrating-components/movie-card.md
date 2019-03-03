@@ -91,8 +91,6 @@ We are now finally at a point where we can integrate the Movie card component wi
 2. Remove all code in the file but leave all comments. It is good to leave the comments untouched as they provide helpful information regarding available variables and other useful Drupal-specific details.
 3. add the following code at the bottom of the template:
 
-{% code-tabs %}
-{% code-tabs-item title="node--movie--teaser.html.twig" %}
 ```php
 {% set rendered_content = content|render %}
 {%
@@ -103,8 +101,8 @@ We are now finally at a point where we can integrate the Movie card component wi
      attributes: title_attributes
  }
 %}
-{%
-  embed '@patterns/movie-card/movie-card.twig' with {
+{% embed '@patterns/movie-card/movie-card.twig' with
+  {
     attributes: attributes,
     title_prefix: title_prefix,
     title_suffix: title_suffix,
@@ -116,13 +114,12 @@ We are now finally at a point where we can integrate the Movie card component wi
     flag: content.flag_favorites
   } only
 %}
+
   {% block favorites_toggle %}
     {{ flag }}
   {% endblock %}
 {% endembed %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Let's go over what we are doing here:
 
@@ -139,4 +136,3 @@ Let's go over what we are doing here:
 {% endhint %}
 
 If you refresh the homepage you will notice the movie cards now are inheriting the styles we wrote when we created the component.
-
