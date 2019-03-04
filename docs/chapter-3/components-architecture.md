@@ -23,11 +23,10 @@ A component is typically broken down in four parts:
 
 **Data**: For the purpose of the style-guide, we need dummy or stock data, which is normally provided in YAML format.
 
-**Styles**: These are written in CSS or Sass.
+**Styles**: These are written in CSS or SCSS.
 
 **Behavior/interaction**: The component's behaviors are usually handled with JavaScript.
 
 **Annotations \(Optional\)**: Annotations are used to document the details of a component and are typically written in markdown format. This is extremely useful to developers because it outlines technical details of a pattern such as variable names, attributes, data structure, etc.
 
 > **NOTE**: Not every component will need a javascript file.
-

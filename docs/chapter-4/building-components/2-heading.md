@@ -94,7 +94,7 @@ Let's break things down to explain what's happening here since the twig code has
 
 Now that we have written all the necessary code to build the component, it's time to see the component in the style-guide. Let's compile our project first.
 
-* In your command line, navigate to `/themes/custom/nitflex_dev_theme`.
+* In your command line, navigate to `/themes/custom/nitflex_dev_theme`
 * Run this command:
 
 ```bash
@@ -107,7 +107,7 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
 ## Viewing the component
 
-* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
 
@@ -117,4 +117,3 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 * Try changing the heading level in `heading.yml` to anything other than H2 and compile the code.
 * Inspect your code to see your changes to the heading pattern.
 {% endhint %}
-
