@@ -26,19 +26,17 @@ As we read in the excerpt above, there are usually two views templates using whe
 
 ## Creating Views template suggestions
 
-**Note:** The screenshot above demonstrates how to find the template within the Drupal core theme. The node template we want has already been placed into the correct location for the `nitflex_dev_theme`theme, so you should see a path to that theme. If you were doing this on your own, you would follow the next steps. Otherwise, proceed to step 5 below.
+**Note:** The screenshot above demonstrates how to find the template within the Drupal core theme. The views templates we want have already been placed into our theme's /templates directory, so you should see a path to that theme. If you were doing this on your own, you would follow the next steps. Otherwise, proceed to step 5 below.
 
-1. Copy the `views-view.html.twig` and `views-view-unformatted.html.twig` files from `/core/themes/stable/templates/views/`, and place them into **/web/themes/custom/nitflex\_dev\_theme/templates/movie-card-collection/**
+1. Copy the `views-view.html.twig` and `views-view-unformatted.html.twig` files from `/core/themes/stable/templates/views/`, and place them into **/web/themes/custom/nitflex\_dev\_theme/src/templates/card-collection/**
 2. We need to rename the templates as follows:
-   * `views-view--movie-list.html.twig` and `views-view-unformatted--movie-list.html.twig`.
+   * `views-view--movie-list.html.twig` and `views-view-unformatted--movie-list.html.twig`
    * If you are wondering where **movie-list** comes from, that's the name of the view we created \(machine name `movie_list`\).
    * You can find a View's machine name on the main views admin page \(/admin/structure/views\)
 3. Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
 4. If you reload the homepage, you will not see any visual changes on the content but if you inspect the page again you will notice that Drupal is now using the newly created template suggestions.
 5. In your editor open **views-view--movie-list.html.twig** and add the following code overriding the existing code in the template \(except for the comments as we would like to keep the comments intact\):
 
-{% code-tabs %}
-{% code-tabs-item title="views-view--movie-list.twig" %}
 ```php
 {%
   set classes = [
@@ -48,8 +46,7 @@ As we read in the excerpt above, there are usually two views templates using whe
 
 {% set attributes = attributes.addClass(classes) %}
 
-{%
-  embed '@patterns/movie-card-collection/movie-card-collection.twig' with
+{% embed '@patterns/movie-card-collection/movie-card-collection.twig' with
   {
     attributes: attributes,
   }
@@ -62,23 +59,17 @@ As we read in the excerpt above, there are usually two views templates using whe
   {% endblock %}
 {% endembed %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-1. * First, we're keeping the the `dom-id` class that views adds, and updating the `attributes`variable for the view to include that class. This will help keep classes intact that views and/or other modules may rely on.
+1. * First, we're keeping the `dom-id` class that views adds, and updating the `attributes`variable for the view to include that class. This will help keep classes intact that views and/or other modules may rely on.
    * Next, we're using the twig embed tag again to map the content of this view to our **Movie Card Collection** component, and passing in Drupal attributes so that they'll be output with our component's markup.
    * For the twig block we named `collection` in the **Movie Card Collection** component, we output the `rows` variable that views provides, which is basically the content of this view, plus the `title_prefix` and `title_suffix` variables.
 2. In your editor open **views-view-unformatted--movie-listing.html.twig** and add the following code overriding the existing code in the template \(except for the comments as we would like to keep the comments intact\):
 
-{% code-tabs %}
-{% code-tabs-item title="views-view-unformatted--movie-listing.thml.twig" %}
 ```php
 {% for row in rows %}
   {{- row.content -}}
 {% endfor %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 * There is very little going on here. We've stripped most of the code from the original template, but why? Well, if you look at the **movie card collection** component, you will see that we already have everything we need as far as Drupal requirements for rendering content and Drupal specific attributes. So in this template we are simply cleaning up the code to avoid printing any extra stuff we don't need.
 * As you may recall, in the **movie card collection** component, the data for individual **movie cards** is stored in an `items[ ]` array in the component's `.yml` file. We loop through that array, and for each item we do an `include` of a **movie-card** and pass in the data from the item we're currently iterating over. This gives us a list of movie cards inside our markup for the **movie card collection** component.

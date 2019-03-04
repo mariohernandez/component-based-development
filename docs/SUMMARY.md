@@ -47,7 +47,7 @@
   * [Featured Movie](chapter-6/integrating-components/featured-movie.md)
   * [Movie Card Collection](chapter-6/integrating-components/movie-card-collection.md)
   * [Movie List](chapter-6/integrating-components/movie-listing.md)
-  * [Movie full view](chapter-6/integrating-components/movie-full-view.md)
+  * [Movie full display](chapter-6/integrating-components/movie-full-view.md)
 
 ## Chapter 7
 

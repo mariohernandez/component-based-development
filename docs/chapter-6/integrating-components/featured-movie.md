@@ -4,7 +4,7 @@ We are now ready to integrate the featured movie component with Drupal. Lucky fo
 
 ## View modes
 
-We are going to follow the exact same steps for using view modes as we did when we integrated the [movie card component](https://mariohernandez.gitbooks.io/components-training/content/chapter5/integrate/movie.html). However, this time we're going to use a view mode called **Featured Movie**. This view mode is already set up, but here are the steps to create it should you want to practice:
+We are going to follow the exact same steps for using view modes as we did when we integrated the [movie card component](https://mariohernandez.gitbook.io/components/chapter-6/integrating-components/movie-card#integrating-the-movie-content-type). However, this time we're going to use a view mode called **Featured Movie**. This view mode is already set up, but here are the steps to create it should you want to practice:
 
 1. Log into the site with admin access
 2. Click **Structure** \| **Display modes** \| **View modes**
@@ -22,7 +22,7 @@ Next Steps:
 
 ## Template suggestions
 
-The template suggestion for the **Featured Movie** view mode has already been created for you, but if you were doing this on your own, follow the same steps that we took for creating the template suggestion for the Teaser view mode in the [Movie card](https://mariohernandez.gitbooks.io/components-training/content/chapter5/integrate/movie.html) integration instructions, but this time our template suggestion should be **node--movie--featured-movie.html.twig**.
+The template suggestion for the **Featured Movie** view mode has already been created for you, but if you were doing this on your own, follow the same steps that we took for creating the template suggestion for the Teaser view mode in the [Movie card](https://mariohernandez.gitbook.io/components/~/drafts/-L_5auZz2Ggm-Z6dxctc/primary/chapter-6/integrating-components/movie-card#template-suggestions) integration instructions, but this time our template suggestion should be **node--movie--featured-movie.html.twig**.
 
 ## Integrating Featured Movie component
 
@@ -32,8 +32,6 @@ We are now finally at a point where we can integrate the Featured Movie componen
 2. Remove all code in the file but leave all comments. It is good to leave the comments untouched as this provides helpful information regarding available variables and other useful Drupal specific details.
 3. add the following code at the bottom of the template
 
-{% code-tabs %}
-{% code-tabs-item title="node--movie--featured-movie.html.twig" %}
 ```php
 {% set rendered_content = content|render %}
 
@@ -74,13 +72,11 @@ We are now finally at a point where we can integrate the Featured Movie componen
   {% endblock %}
 {% endembed %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 Let's go over what we are doing here:
 
 * First, as mentioned in the introduction to Chapter 5, we're triggering a full render of the content variable.
-* Next, we are setting up a variable that will include the values for the **heading** of the movie card that are based on variables Drupal provides. If you notice starting around line 18 in the comments of our template file, the _label_ variable is the Node's title, and the _url_ variable is the node's URL. In addition, notice that the _heading_ variable we are creating is modeled after the [_heading_ component's JSON object](https://mariohernandez.gitbooks.io/components-training/content/chapter3/components/heading.html###Rewriting-the-JSON-object).
+* Next, we are setting up a variable that will include the values for the **heading** of the movie card that are based on variables Drupal provides. If you notice starting around line 18 in the comments of our template file, the _label_ variable is the Node's title, and the _url_ variable is the node's URL. In addition, notice that the _heading_ variable we are creating is modeled after the _**heading**_ component's [YAML object](https://mariohernandez.gitbook.io/components/~/drafts/-L_4qJ97wL1R7eH6ZDkg/primary/chapter-4/building-components/2-heading#improving-the-heading-component).
 * Next we are setting up a variable that will include the values for the **button** \(Watch now button\).
 * Next we use an `embed` twig statement to integrate the Featured Movie component. In the embed we are mapping all the Featured Movie fields with Drupal's data. We also pass in Drupal-specific items such as _title\_prefix_, _title\_suffix_, _attributes_, etc.
 * Notice how with the average viewer rating field we are making use of the `field_value` filter that's provided by the [Twig Field Value](https://www.drupal.org/project/twig_field_value) module to pass in the raw value of that field. This is because in our template for the Average Viewer Rating component we're expecting a simple number for a data attribute, so if it were to include any markup it would break our component!
@@ -94,22 +90,19 @@ Things are looking good, but we've got one issue: in our **featured-movie** comp
 
 To fix this, we'll create a custom field template suggestion file for the promo sentence field. The template suggestion file has already been added to the `nitflex_dev_theme`, but if were adding it on your own you would:
 
-1. Use your browser inspector to view twig debug comments for the location of the default field template \(`modules/core/themes/stable/templates/field.html.twig`\)
-2. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/featured-movie`\) and rename it to `field--node--field-promo-sentence--movie.html.twig`
+1. Open the site's homepage \(i.e. `/homepage`\)
+2. Use your browser inspector to view twig debug comments for the location of the default field template \(`modules/core/themes/stable/templates/field.html.twig`\)
+3. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/featured-movie`\) and rename it to `field--node--field-promo-sentence--movie.html.twig`
 
 ![Field template suggestion](../../.gitbook/assets/featured-movie-title-field.png)
 
 Now, open the `field--node--field-promo-sentence--movie.html.twig` file, remove all code in the file but leave all comments, and add in:
 
-{% code-tabs %}
-{% code-tabs-item title="field--node--field-promo-sentence--movie.html.twig" %}
 ```php
 {% for item in items %}
   <span{{ attributes }}>{{ item.content }}</span>
 {% endfor %}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 This reduces the template down to just outputting the field's value that's wrapped with a `<span>` tag, which is where any Drupal-specific classes can go.
 

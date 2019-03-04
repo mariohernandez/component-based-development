@@ -107,13 +107,14 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
 ## Viewing the component
 
-* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
 
   Under the Components category you should see the new Heading component.
 
 {% hint style="success" %}
+
 **Just for fun 💥**
 
 * Try changing the heading level in `heading.yml` to anything other than H2 and compile the code.
 * Inspect your code to see your changes to the heading pattern.
-{% endhint %}
+

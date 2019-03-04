@@ -1,8 +1,8 @@
-# Movie full view
+# Movie full display
 
 Now that all components to that make the homepage have been integrated, let's finalize things by integrating the movie full node. For this we'll actually make use of the **Featured Movie** component for the upper part of the page, but leave out the synopsis text, and instead have that show up below. Let's get started.
 
-We are going to follow the exact same steps for using view modes as we did when we integrated the [**Movie Card**](https://mariohernandez.gitbooks.io/components-training/content/chapter5/integrate/movie.html) and [**Featured Movie**](https://mariohernandez.gitbooks.io/components-training/content/chapter5/integrate/featured-movie.html). However, this time we're going to use the **Full content** view mode. Like the **Teaser** view mode, this is one that Drupal provides by default. It has already been enabled, but if you were enabling it on your own you would follow these steps:
+We are going to follow the exact same steps for using view modes as we did when we integrated the [Movie Card](movie-card.md) and [Featured Movie](featured-movie.md). However, this time we're going to use the **Full content** view mode. Like the **Teaser** view mode, this is one that Drupal provides by default. It has already been enabled, but if you were enabling it on your own you would follow these steps:
 
 1. If you haven't already, login to the site with admin access
 2. Click **Structure** \| **Content Types** \| **Movie**
@@ -19,7 +19,7 @@ So we just indicated to Drupal which fields we want to display when using the **
 
 ## Template suggestions
 
-The template suggestion for the **Full content** view mode of the movie content type has already been created for you \(see: `nitflex_dev_theme/src/templates/movie/node--movie--full.html.twig`\). But if you were doing this on your own, follow the same steps that we took for creating the template suggestion for the Teaser view mode in the [Movie card](movie-card.md#template-suggestions) integration instructions, but this time the template suggestion should be **node--movie--full.html.twig**.
+The template suggestion for the **Full content** view mode of the movie content type has already been created for you \(see: `nitflex_dev_theme/src/templates/movie/node--movie--full.html.twig`\). But if you were doing this on your own, follow the same steps that we took for creating the template suggestion for the Teaser view mode in the [Movie card](movie-card.md) integration instructions, but this time the template suggestion should be **node--movie--full.html.twig**.
 
 ## Integrating the full view of a movie
 
@@ -77,11 +77,11 @@ We are now ready to integrate the full view of a movie:
 
 Let's go over what we are doing here:
 
-* First, as mentioned in the introduction to Chapter 5, we're triggering a full render of the content variable.
-* Next, we are keeping the `<article>` element as the outer wrapper for the full view of a movie, plus the `attributes` Drupal provides, but we're using the `addClass()` method to add our class to the ones that Drupal will output. You can learn more about this method, and others that are available for the `attributes` variable on the [Drupal 8 theming guide](https://www.drupal.org/docs/8/theming-drupal-8/using-attributes-in-templates). Note that we're also keeping the `title_prefix` and `title_suffix` variables.
-* The next part should be familiar to you. We're basically repeating what we did for the **Featured Movie** component, but note that we're _not_ including the synopsis text this time when we embed the component. This is because for the full view display of a movie the synopsis text field is set up to display the full text, and not a summary, so we output that after the embed of the featured movie component.
+* First, as mentioned in [best practices in Chapter 3](../../chapter-3/best-practices.md), we're triggering a full render of the content variable.
+* Next, we are keeping the `<article>` element as the outer wrapper for the full display of a movie, plus the `attributes` Drupal provides, but we're using the `addClass()` method to add our class to the ones that Drupal will output. You can learn more about this method, and others that are available for the `attributes` variable on the [Drupal 8 theming guide](https://www.drupal.org/docs/8/theming-drupal-8/using-attributes-in-templates). Note that we're also keeping the `title_prefix` and `title_suffix` variables.
+* The next part should be familiar to you. We're basically repeating what we did for the **Featured Movie** component, but note that we're _not_ including the synopsis text this time when we embed the component. This is because for the full display of a movie the synopsis text field is set up to display the full text, and not a summary, so we output that after the embed of the featured movie component.
 
-And that's it! We already did the heavy lifting in the **Featured Movie** component, so integrating the full view was a breeze. Final steps:
+And that's it! We already did the heavy lifting in the **Featured Movie** component, so integrating the full node display was a breeze. Final steps:
 
 * Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
 * From the homepage, click the title of any movie listed \(or the Watch Now button on the featured movie.\) The full view of the movie should display just like a Featured Movie at the top of the page, with the full synopsis text below.
