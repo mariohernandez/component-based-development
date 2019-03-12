@@ -12,7 +12,6 @@ So you get the idea, inside the **01-components** directory we create a new dire
 button:
   modifier:
   text: "Watch now"
-  type:
   url: "#"
 ```
 
@@ -26,11 +25,6 @@ We just created an object for the button with key/value **text**, **url**, **typ
   <a href="{{ button.url }}" class="button">
     {{ button.text }}
   </a>
-{% elseif button.type %}
-  <input
-    type="{{ button.type|default('submit') }}"
-    class="button"
-    value="{{ button.text }}" />
 {% else %}
   <button
     class="button">
@@ -39,7 +33,7 @@ We just created an object for the button with key/value **text**, **url**, **typ
 {% endif %}
 ```
 
-We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if an URL is passed, we use an `<a>` with the class of **button**. If we have a value for **type** we render an `<input>` element and pass the type provided, otherwise we use a `<button>` tag. This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand. An `<a>` tag will allow us to be directed to another page or a section within the same page, whereas a `<button>` or `<input>` element will allow us to perform an action such as submit content.
+We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if an URL is passed, we use an `<a>` with the class of **button**, otherwise we use a `<button>` tag. This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand. An `<a>` tag will allow us to be directed to another page or a section within the same page, whereas a `<button>` element will allow us to perform an action such as submit content.
 
 1. Inside the **button** directory create a new file called **button.scss**.
 2. Inside `button.scss` add this code:
@@ -86,7 +80,9 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
 ## Viewing the component
 
-* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
+* Open your Drupal site and point to the URL below:   
+  [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-button](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-button)
 
+  
   Under the Components category you should see the new Heading component.
 

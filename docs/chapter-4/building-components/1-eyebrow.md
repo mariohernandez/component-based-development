@@ -60,9 +60,7 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory. Ke
 
 ## Viewing the component
 
-* Open your Drupal site and point to the URL below:
-
-  [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-eyebrow](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-eyebrow)
 
 Under the Patterns category you should see the new Eyebrow pattern.
 

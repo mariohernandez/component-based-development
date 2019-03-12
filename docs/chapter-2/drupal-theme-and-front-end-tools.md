@@ -10,5 +10,4 @@ The local environment we provide for this training already includes a fully func
 * [NPM](https://www.npmjs.com/): Node Package Manager to manage node dependencies.
 * [Gulp](https://gulpjs.com/): Task runner to automate repetitive tasks such as code compile and more.
 * [BreakpointsJS](https://github.com/thecreation/breakpoints-js): Allows to generate breakpoints using media queries.
-* [Singularity GS](https://github.com/at-import/Singularity): Easy way to generate and manage a grid system for your app.
 
