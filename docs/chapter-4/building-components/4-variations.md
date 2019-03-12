@@ -29,6 +29,9 @@ Now that we have a new button variation let's add css styles to it.
 * Edit `button.scss` so the styles look like this :
 
   ```css
+  // Import site utilities
+  @import '../../00-global/utils/init';
+
   .button {
     background-color: $color-black;
     border: 2px solid $color-tundora;
@@ -70,11 +73,6 @@ Styles for `.button--primary` start on line **20** above.  These styles will app
     class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
     {{ button.text }}
   </a>
-{% elseif button.type %}
-  <input
-    type="{{ button.type }}"
-    class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}"
-    value="{{ button.text }}" />
 {% else %}
   <button
     class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
@@ -102,7 +100,10 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
 ## Viewing the component
 
-* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/public/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/public/)
+* Open your Drupal site and point to the URL below:   
+  [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-button](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-button)
 
-  Under the Components category you should see the new Heading component.
+
+
+  Under the Components category you should see the new Button component.
 

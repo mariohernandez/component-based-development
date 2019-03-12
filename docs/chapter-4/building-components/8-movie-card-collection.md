@@ -165,15 +165,9 @@ Now that we have written all the necessary code to build the Movie Card Collecti
 lando npm run build && lando php patternlab/core/console --generate
 ```
 
-## Viewing the Movie Card Collection component     <a id="viewing-the-featured-movie-component"></a>
+## Viewing the component <a id="viewing-the-component"></a>
 
-Open your Drupal site and point to the URL below:
-
-```text
-http://nitflex.lndo.site:8000/themes/custom/nitflex_dev_theme/dist/style-guide/
-```
-
-_Depending on your setup, you may not need to enter ":8000". Also if you did not use the provided Lando setup, ensure you are using your own custom URL._
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection)
 
 Under the Components category you should see the new Movie Card Collection component.
 

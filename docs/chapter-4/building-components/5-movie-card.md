@@ -11,21 +11,15 @@ By now you should know the drill, inside **src/\_patterns/01-patterns/** create 
 3. Inside `movie-card.yml` add the following code:
 
 ```yaml
-cover_image: <img src='/sites/default/files/action-3.jpg' alt='' />
+cover_image: "<img src='/sites/default/files/action-3.jpg' alt="" />"
 heading:
   title: "I love this movie"
   url: "#"
   heading_level: 4
-  modifier:
-    movie-card__header
+  modifier: "movie-card__header"
 average_rating: "3"
 mpaa_rating: "PG-13"
 synopsis: "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
-button:
-  text: "Add to watch list"
-  url:
-  type: "submit"
-  modifier:
 ```
 
 By looking at the prototype we see that the landing page shows a listing of movies. Given the hierarchy of content we see the page already has a **h1** and **h2** in the featured movie section. Each movie category also uses a heading which will be h3, so using a h4 as the **heading\_level** for the title of the movie in the card makes sense.
@@ -36,9 +30,9 @@ By looking at the prototype we see that the landing page shows a listing of movi
 2. Add the following code:
 
 ```php
-<article class="movie-card {{ modifier_class }}"
-  {{ attributes ? attributes.class }}"
-  {{ attributes ? attributes|without(class) }}>
+<article class="movie-card {{ modifier_class }}
+  {{- attributes ? attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}
   {% if cover_image %}
@@ -54,7 +48,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
             "title": heading.title,
             "url": heading.url,
             "heading_level": heading.heading_level,
-            "classes": 'movie-card__heading'
+            "modifier": 'movie-card__heading'
           }
         } only
       %}
@@ -224,6 +218,12 @@ By looking at the prototype we see that the landing page shows a listing of movi
 ```
 
 Quite the styles huh? 😄
+
+## Viewing the component <a id="viewing-the-component"></a>
+
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-card](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-card)
+
+   Under the Components category you should see the new Movie Card component.
 
 ## Working with Drupal Libraries
 
