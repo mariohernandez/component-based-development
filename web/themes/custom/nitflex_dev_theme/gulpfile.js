@@ -188,7 +188,9 @@ gulp.task('watch:styleguide', ['styleguide']);
 gulp.task('default', function(callback) {
   runSequence(
     'clean',
-    ['lint', 'compile', 'compress'],
+    // Removing lint task for dev theme.
+    // To re-enable, include 'lint' in the tasks below.
+    ['compile', 'compress'],
     'concat',
     callback
   );

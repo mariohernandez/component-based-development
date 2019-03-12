@@ -70,9 +70,9 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 3. Move into the patternlab directory:  `cd patternlab`
 
 4. Run: `lando composer install`<br />_This will install PatternLab_<br />
-    - If/when prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**.<br />
-    - If/when prompted to `update the config option twigAutoescape`, reply with **Y**.<br />
-    - If/when prompted to `update the config option styleguideKitPath`, reply with **Y**.
+    - When prompted to `update the config option twigAutoescape`, reply with **n**.<br />
+    - When prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**.<br />
+    - When prompted to `update the config option styleguideKitPath`, reply with **Y**.
 
 5. Run an initial build of the front end tools and PatternLab.<br />
     1. First, make sure you're at the root level of the theme (`cd ../`),<br />
