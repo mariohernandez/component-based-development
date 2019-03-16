@@ -11,7 +11,6 @@ Based on our prototype, we have at least two different buttons. One with red out
 button:
   modifier: button--primary
   text: "Primary button"
-  type:
   url: "#"
 ```
 

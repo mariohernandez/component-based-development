@@ -1,5 +1,7 @@
 # Movie List
 
+![Card List screenshot](../../.gitbook/assets/card-list.png)
+
 Just when you thought "I got this!", we are now going to build a new component that uses slightly different approach. For the most part, most component you'll built follow the same principles you've been following all along, however, there are other type of components that may deviate from those principles a little. When content needs to be displayed in some kind of list or collection of components, there are a few things we need to do differently.
 
 Let's start with our usual process of creating some files and adding the respective code to each file. We will explain everything once these steps are done.
