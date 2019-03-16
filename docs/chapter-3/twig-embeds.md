@@ -4,8 +4,8 @@ The challenge we face is having control of the markup while adhering to Drupal's
 
 ```php
 <article class="card
-  {{ attributes ? attributes.class }}"
-  {{ attributes ? attributes|without(class) }}>
+  {{- attributes ? attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}
   ...
@@ -18,7 +18,7 @@ The challenge we face is having control of the markup while adhering to Drupal's
 We've declared a [twig block](https://twig.symfony.com/doc/2.x/tags/extends.html) \(not the same as Drupal's blocks\), in which we are passing the card\_content variable to print some content. The block on its own does nothing. Content will be rendered normally even if we do nothing with the block. The advantages of the twig block come when it's time to integrate the card component with Drupal.
 
 ```php
-{% embed '@components/card/card.twig' with {
+{% embed '@patterns/card/card.twig' with {
     attributes: attributes,
     title_prefix: title_prefix,
     title_suffix: title_suffix,
@@ -34,5 +34,5 @@ We've declared a [twig block](https://twig.symfony.com/doc/2.x/tags/extends.html
 {% endembed %}
 ```
 
-This is a simple example of how we can use twig blocks to alter or update content within a block before rendering. In this example we've added a new title above the `card_content` which the original component did not provide. There are so many other things we can do when we wrap things in twig blocks which gives us tremendous flexibility and control.
+This is a simple example of how we can use twig blocks to alter or update content before rendering. In this example we've added a new title above the `card_content` which the original component did not provide. There are so many other things we can do when we wrap things in twig blocks which gives us tremendous flexibility and control.
 

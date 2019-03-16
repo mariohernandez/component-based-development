@@ -6,8 +6,8 @@ In some cases this may not be an issue for you, but in general it's best to plan
 
 ```php
 <article class="card
-  {{ attributes ? attributes.class }}"
-  {{ attributes ? attributes|without(class) }}>
+  {{- attributes ? attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}
   {% if cover_image %}
