@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [What you will build](what-you-will-build.md)
 
 ## Chapter 1
 
