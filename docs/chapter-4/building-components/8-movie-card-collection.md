@@ -1,5 +1,7 @@
 # Movie Card Collection
 
+![Card Collection screenshot](../../.gitbook/assets/card-collection.png)
+
 If we look at the project's prototype, we are using a collection of movie cards to display movies in different categories \(i.e. Action, Horror, Comedy, etc.\).
 
 There are two parts to creating the list. First we need to create a collection of movie cards where we simply grab a given number of cards and style them the same way shown in the prototype. Second, we create a list which would filter cards per movie type and include the type title on each collection. Although we could accomplish this with a single component, we are planning on building this list with Drupal Views and as you will see, it is best if we split this process in two parts.

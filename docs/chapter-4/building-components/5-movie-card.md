@@ -1,5 +1,7 @@
 # Movie Card
 
+![Movie card screenshot](../../.gitbook/assets/card.png)
+
 The Movie Card component is a more advanced component compared to the ones we've built thus far. Here we will start reusing previously built components by using twig's [Include](https://twig.symfony.com/doc/2.x/tags/include.html) and [Embed](https://twig.symfony.com/doc/2.x/tags/embed.html) statements.
 
 By now you should know the drill, inside **src/\_patterns/01-patterns/** create a new directory \(which matches the name of the component\), and inside that directory add some files.

@@ -1,5 +1,7 @@
 # Featured Movie
 
+![Featured Movie screenshot](../../.gitbook/assets/featured.png)
+
 The Featured Movie component, much like the Movie Card, presents similar requirements for field collections, which we will address pretty much the same way we did for the Movie card.
 
 Let's start by creating the usual files for building the component:
