@@ -26,7 +26,7 @@ This is only going to work if you have a fairly new computer. According to the [
 
 ### Run the installer
 
-* [Install Lando and Docker](https://github.com/lando/lando/releases/tag/v3.0.0-beta.47) (v3.0.0-beta.47)
+* [Install Lando and Docker](https://github.com/lando/lando/releases) (Select latest version)
 
 At least on a Mac, this installs Lando along with Docker. Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
 
