@@ -1,0 +1,37 @@
+---
+colors:
+  - section: 'Primary'
+    colors:
+      - hex: '#b81d24'
+        var: '$color-bright-red'
+
+      - hex: '#0099cc'
+        var: '$color-pacific-blue'
+
+      - hex: '#c4d600'
+        var: '$color-rio-grande'
+
+      - hex: '#888b8d'
+        var: '$color-oslo-gray'
+
+  - section: 'Base'
+    colors:
+      - hex: '#000'
+        var: '$color-black'
+
+      - hex: '#fff'
+        var: '$color-white'
+
+  - section: 'Grays'
+    colors:
+      - hex: '#464646'
+        var: '$color-tundora'
+
+      - hex: '#bbb'
+        var: '$color-alto'
+
+      - hex: '#eee'
+        var: '$color-gallery'
+
+      - hex: '#f7f7f7'
+        var: '$color-alabaster'

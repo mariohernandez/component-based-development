@@ -1,6 +1,7 @@
 {{ attach_library('nitflex_theme/movie-card') }}
-
-<article class="movie-card {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
+<article class="movie-card {{ modifier_class }}
+  {{- attributes.class ? attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}
   {% if cover_image %}
@@ -9,16 +10,13 @@
     </div>
   {% endif %}
   <div class="movie-card__content">
-    {%
-      include '@patterns/heading/heading.twig' with {
-        "heading": {
-          "title": heading.title,
-          "url": heading.url,
-          "heading_level": heading.heading_level,
-          "classes": 'movie-card__heading'
-        }
-      } only
-    %}
+    {% if heading %}
+      {%
+        include '@patterns/heading/heading.twig' with {
+          heading: heading
+        } only
+      %}
+    {% endif %}
     <div class="movie-card__favorites-toggle">
       {% block favorites_toggle %}
         {%
@@ -32,7 +30,7 @@
       <div class="movie-card__mpaa-rating">
         {% include '@patterns/mpaa-rating/mpaa-rating.twig' with {
             rating: mpaa_rating
-          } only 
+          } only
         %}
       </div>
     {% endif %}
@@ -40,7 +38,7 @@
       <div class="movie-card__average-rating">
         {% include '@patterns/average-rating/average-rating.twig' with {
             count: average_rating
-          } only 
+          } only
         %}
       </div>
     {% endif %}

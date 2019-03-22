@@ -426,32 +426,6 @@ li {
   padding: 0;
   list-style: none; }
 
-h1 {
-  font-size: 35px;
-  font-weight: 600; }
-  @media (min-width: 1025px) {
-    h1 {
-      font-size: 75px;
-      font-weight: 900; } }
-
-h2 {
-  font-size: 25px; }
-  @media (min-width: 1025px) {
-    h2 {
-      font-size: 45px; } }
-
-h3 {
-  font-size: 20px; }
-  @media (min-width: 1025px) {
-    h3 {
-      font-size: 30px; } }
-
-h4 {
-  font-size: 18px; }
-  @media (min-width: 1025px) {
-    h4 {
-      font-size: 25px; } }
-
 .add-to-favorites > div {
   display: none; }
 
@@ -651,9 +625,9 @@ h4 {
   .button:hover, .button:focus {
     border-color: #FFF; }
   .button.button--primary {
-    border-color: #e50914; }
+    border-color: #b81d24; }
     .button.button--primary:hover, .button.button--primary:focus {
-      background: #e50914; }
+      background: #b81d24; }
 
 .card-collection {
   padding: 20px 0; }
@@ -684,6 +658,8 @@ h4 {
         margin: 0;
         width: calc(20% - 5px); } }
 
+@charset "UTF-8";
+​
 .eyebrow {
   display: inline-block;
   letter-spacing: 0.15rem;
@@ -821,9 +797,7 @@ h4 {
   width: 100%; }
 
 .heading {
-  font-family: 'Helvetica Neue', Helvetica, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, 'Lucida Grande', sans-serif;
-  font-weight: 400;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.3; }
 
 

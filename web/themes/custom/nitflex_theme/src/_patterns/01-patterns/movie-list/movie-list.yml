@@ -1,52 +1,59 @@
-list_title: Action & Adventure
+list_title:
+  title: "Action and Adventure"
+  heading_level: 3
 items:
   -
-    cover_image: <img src="../../images/action-3.jpg" alt="" />
-    heading:
-      title: Mattis Magna Mollis Pellentesque
-      url: "#"
-      heading_level: 4
-      classes: movie-card__heading
-    average_rating: 3
-    mpaa_rating: PG
-    synopsis: Aenean lacinia bibendum nulla sed consectetur.
-  -
-    cover_image: <img src="../../images/action-3.jpg" alt="" />
-    heading:
-      title: Ipsum Inceptos Sem
-      url: "#"
-      heading_level: 4
-      classes: movie-card__heading
-    average_rating: 4
-    mpaa_rating: R
-    synopsis: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  -
-    cover_image: <img src="../../images/action-3.jpg" alt="" />
-    heading:
-      title: Sit Fermentum Magna Justo
-      url: "#"
-      heading_level: 4
-      classes: movie-card__heading
-    average_rating: 2
-    mpaa_rating: PG-13
-    synopsis: Sed posuere consectetur est at lobortis.
-  -
-    cover_image: <img src="../../images/action-3.jpg" alt="" />
-    heading:
-      title: Bibendum Vestibulum Magna Condimentum
-      url: "#"
-      heading_level: 4
-      classes: movie-card__heading
     average_rating: 5
-    mpaa_rating: PG
-    synopsis: Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-  -
-    cover_image: <img src="../../images/action-3.jpg" alt="" />
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      title: Risus Ullamcorper Aenean
+      title: "DrupalCon Seattle 2019"
       url: "#"
       heading_level: 4
-      classes: movie-card__heading
-    average_rating: 3
-    mpaa_rating: G
-    synopsis: Donec id elit non mi porta gravida at eget metus.
+      modifier: "movie-card__heading"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+  -
+    average_rating: 5
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    heading:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+  -
+    average_rating: 5
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    heading:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+  -
+    average_rating: 5
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    heading:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+  -
+    average_rating: 5
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    heading:
+      title: "DrupalCon Seattle 2019"
+      url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
+    mpaa_rating: "PG-13,"
+    promo_text: "Be part of th 12th season this fall,"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."

@@ -5,14 +5,15 @@
   {{- attributes ? attributes|without(class) -}}>
   {% block collection %}
     {% for item in items %}
-      {% include '@patterns/movie-card/movie-card.twig' with {
-        cover_image: item.cover_image,
-        heading: item.heading,
-        mpaa_rating: item.mpaa_rating,
-        average_rating: item.average_rating,
-        synopsis: item.synopsis
-      }
-    %}
+      {%
+        include '@patterns/movie-card/movie-card.twig' with {
+          cover_image: item.cover_image,
+          heading: item.heading,
+          mpaa_rating: item.mpaa_rating,
+          average_rating: item.average_rating,
+          synopsis: item.synopsis
+        }
+      %}
     {% endfor %}
   {% endblock %}
 </div>

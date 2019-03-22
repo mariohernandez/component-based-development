@@ -70,8 +70,8 @@
  *   in different view modes.
  */
 #}
-{# Trigger full content render. #}
 {% set rendered_content = content|render %}
+
 <article{{ attributes.addClass('movie') }}>
   {{ title_prefix }}
   {{ title_suffix }}
@@ -79,28 +79,19 @@
     {%
       set heading = {
         title: label,
-        url: url,
         heading_level: '1',
         attributes: title_attributes,
       }
     %}
-    {%
-      set watch_button = {
-        url: url,
-        text: 'Watch now'|t,
-      }
-    %}
-    {% embed '@patterns/featured-movie/featured-movie.twig' with {
-        attributes: attributes,
-        title_prefix: title_prefix,
-        title_suffix: title_suffix,
+    {% embed '@patterns/featured-movie/featured-movie.twig' with
+      {
         heading: heading,
         cover_image: content.field_main_image|render|trim is not empty ? content.field_main_image,
         mpaa_rating: content.field_mpaa_rating|render|trim is not empty ? content.field_mpaa_rating,
         promo_text: content.field_promo_sentence|render|trim is not empty ? content.field_promo_sentence,
         average_rating: content.field_average_viewer_rating|field_value,
         flag: content.flag_favorites
-      } only 
+      } only
     %}
       {% block favorites_toggle %}
         {{ flag }}

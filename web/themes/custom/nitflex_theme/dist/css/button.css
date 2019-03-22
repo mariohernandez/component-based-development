@@ -16,6 +16,6 @@
   .button:hover, .button:focus {
     border-color: #FFF; }
   .button.button--primary {
-    border-color: #e50914; }
+    border-color: #b81d24; }
     .button.button--primary:hover, .button.button--primary:focus {
-      background: #e50914; }
+      background: #b81d24; }
