@@ -1,6 +1,6 @@
 # Movie full display
 
-Now that all components to that make the homepage have been integrated, let's finalize things by integrating the movie full node. For this we'll actually make use of the **Featured Movie** component for the upper part of the page, but leave out the synopsis text, and instead have that show up below. Let's get started.
+Now that all components to that make the homepage have been integrated, let's finalize things by integrating the movie full node. For this we'll actually make use of the **Featured Movie** component for the upper part of the page, but leave out the watch button and synopsis text (the synopsis text will instead be output on the lower part of the page.) We also don't have to worry about passing in Drupal attributes or `title_prefix` / `title_suffix` variables since we're outputting those were the node template does it by default. Let's get started.
 
 We are going to follow the exact same steps for using view modes as we did when we integrated the [Movie Card](movie-card.md) and [Featured Movie](featured-movie.md). However, this time we're going to use the **Full content** view mode. Like the **Teaser** view mode, this is one that Drupal provides by default. It has already been enabled, but if you were enabling it on your own you would follow these steps:
 
@@ -39,22 +39,12 @@ We are now ready to integrate the full view of a movie:
     {%
       set heading = {
         title: label,
-        url: url,
         heading_level: '1',
         attributes: title_attributes,
       }
     %}
-    {%
-      set watch_button = {
-        url: url,
-        text: 'Watch now'|t,
-      }
-    %}
     {% embed '@patterns/featured-movie/featured-movie.twig' with
       {
-        attributes: attributes,
-        title_prefix: title_prefix,
-        title_suffix: title_suffix,
         heading: heading,
         cover_image: content.field_main_image|render|trim is not empty ? content.field_main_image,
         mpaa_rating: content.field_mpaa_rating|render|trim is not empty ? content.field_mpaa_rating,
@@ -63,7 +53,6 @@ We are now ready to integrate the full view of a movie:
         flag: content.flag_favorites
       } only
     %}
-
       {% block favorites_toggle %}
         {{ flag }}
       {% endblock %}

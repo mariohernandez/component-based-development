@@ -73,8 +73,7 @@ Styles for `.button--primary` start on line **20** above.  These styles will app
     {{ button.text }}
   </a>
 {% else %}
-  <button
-    class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
+  <button class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
     {{ button.text }}
   </button>
 {% endif %}

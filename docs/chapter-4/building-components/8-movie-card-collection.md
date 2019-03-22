@@ -8,92 +8,77 @@ There are two parts to creating the list. First we need to create a collection o
 
 Let's start with our usual process of creating some files and adding the respective code to each file.
 
-1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **movie-card-collection**
-2. Inside the **movie-card-collection** directory create these files: `movie-card-collection.yml`, `movie-card-collection.scss`, and `movie-card-collection.twig`
-3. Inside `movie-card-collection.yml` copy the following code:
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **card-collection**
+2. Inside the **card-collection** directory create these files: `card-collection.yml`, `card-collection.scss`, and `card-collection.twig`
+3. Inside `card-collection.yml` copy the following code:
 
 ```yaml
 items:
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
 ```
 
-We created an array called **items**. The array contains multiple items each of which has the fields found in a movie card \(heading, synopsis, cover\_image, etc.\).
+We created an array called **items**. The array contains multiple items each of which has the fields found in a movie card (heading, synopsis, cover image, etc.).
 
 * Inside `movie-card-collection.twig` copy the following code:
 
 ```php
-{{ attach_library('nitflex_dev_theme/movie-card-collection') }}
+{{ attach_library('nitflex_dev_theme/card-collection') }}
 
-<div class="movie-card-collection
+<div class="card-collection
   {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {% block collection %}
@@ -114,7 +99,7 @@ We created an array called **items**. The array contains multiple items each of 
 
 **Important**
 
-Create the **movie-card-collection** library.
+Create the **card-collection** library.
 
 We are now introducing the concept of \*\*Twig Blocks \(not the same as Drupal blocks\), so we are able to alter how content is rendered when we integrate this component with Drupal.
 
@@ -127,10 +112,10 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 * Now add the component's styles below into **movie-card-collection.scss**:
 
 ```css
-// Import site utilities
+// Import site utilities.
 @import '../../00-global/utils/init';
 
-.movie-card-collection {
+.card-collection {
   padding: 20px 0;
 
   @include breakpoint($bp-sm) {
@@ -169,7 +154,7 @@ lando npm run build && lando php patternlab/core/console --generate
 
 ## Viewing the component <a id="viewing-the-component"></a>
 
-* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection)
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-card-collection)
 
 Under the Components category you should see the new Movie Card Collection component.
 

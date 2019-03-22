@@ -12,12 +12,12 @@ Let's start by creating the usual files for building the component:
 3. Add the following code snippet into **featured-movie.yml**:
 
 ```yaml
-cover_image: "<img src="/sites/default/files/action-1.jpg" alt="Alt text" />",
+cover_image: <img src="/sites/default/files/action-1.jpg" alt="" />
 heading:
   heading_level: 2
   modifier:
   title: "DrupalCon Seattle 2019"
-  url: "#"
+  url:
 promo_text: Be part of th 12th season this fall,
 mpaa_rating: PG-13,
 average_rating: 5,
@@ -25,6 +25,7 @@ synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget 
 watch_button:
   text: "Watch now"
   url: "#"
+  modifier: "button--primary"
 ```
 
 * Add the following code to **featured-movie.twig**:
@@ -44,10 +45,7 @@ watch_button:
     <div class="featured-movie__title">
       {%
         include '@patterns/heading/heading.twig' with {
-          heading: {
-            title: heading.title,
-            heading_level: heading.heading_level,
-          }
+          heading: heading
         } only
       %}
     </div>
@@ -56,7 +54,7 @@ watch_button:
         {%
           include '@patterns/eyebrow/eyebrow.twig' with {
             text: promo_text
-          }
+          } only
         %}
       </div>
     {% endif %}
@@ -75,7 +73,7 @@ watch_button:
           {%
             include '@patterns/mpaa-rating/mpaa-rating.twig' with {
               rating: mpaa_rating
-            }
+            } only
           %}
         </div>
       {% endif %}
@@ -97,8 +95,7 @@ watch_button:
       <div class="featured-movie__cta">
         {%
           include '@patterns/button/button.twig' with {
-            button: watch_button,
-            modifier_class: 'button--primary'
+            button: watch_button
           } only
         %}
       </div>

@@ -67,15 +67,15 @@ The `attach_library` function takes a path parameter which we are declaring by u
 
 With the code above, we are telling Drupal that whenever we render the Movie Card component, its library should be attached so the styles for the component can be applied.
 
-## Adding Javascript to KSS
+## Adding Javascript to Pattern Lab
 
 So far we have not written any javascript. The instructions below only apply when a component needs javascript.
 
-As explained before, Drupal libraries have no effect on KSS Node or the style-guide. In order for the components to make use of the javascript we've written we need to manually add the script to the style-guide.
+As explained before, Drupal libraries have no effect on Pattern Lab. In order for the components to make use of the javascript we've written we need to manually add the script to the style guide.
 
 1. In your text editor, open `nitflex_dev_theme/src/_meta/_01-foot.twig`
 2. Scroll to the very bottom of the file where you will see other Javascripts references.
-3. A good place to add your newly created script is between the **START** and **END** of c**omponent JS** comments.
+3. A good place to add your newly created script is between the **START** and **END** of **component JS** comments.
 
 Example of a custom script to add to the style-guide:
 
