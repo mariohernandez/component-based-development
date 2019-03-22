@@ -13,12 +13,12 @@ By now you should know the drill, inside **src/\_patterns/01-patterns/** create 
 3. Inside `movie-card.yml` add the following code:
 
 ```yaml
-cover_image: "<img src='/sites/default/files/action-3.jpg' alt="" />"
+cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
 heading:
   title: "I love this movie"
   url: "#"
   heading_level: 4
-  modifier: "movie-card__header"
+  modifier: "movie-card__heading"
 average_rating: "3"
 mpaa_rating: "PG-13"
 synopsis: "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
@@ -46,12 +46,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
     {% if heading %}
       {%
         include '@patterns/heading/heading.twig' with {
-          "heading": {
-            "title": heading.title,
-            "url": heading.url,
-            "heading_level": heading.heading_level,
-            "modifier": 'movie-card__heading'
-          }
+          heading: heading
         } only
       %}
     {% endif %}

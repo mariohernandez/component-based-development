@@ -53,9 +53,9 @@ Run the following commands from the root level of the repository.
 2. Run: `lando npm install`   _This will install the required front end tools \(Node, Gulp, etc.\)_
 3. Move into the pattern-lab directory `cd patternalb`
 4. Run: `lando composer install`  _This will install PatternLab_
-   * If/when prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**.
-   * If/when prompted to `update the config option twigAutoescape`, reply with **Y**.
-   * If/when prompted to `update the config option styleguideKitPath`, reply with **Y**.
+   * When prompted to `update the config option twigAutoescape`, reply with **n**.
+   * When prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**
+   * When prompted to `update the config option styleguideKitPath`, reply with **Y**.
 5. Run an initial build of the front end tools and PatternLab.
    1. `cd ../` Make sure you're at the root level of the theme,
    2. then run `lando npm run build && lando php patternlab/core/console --generate`
@@ -63,7 +63,7 @@ Run the following commands from the root level of the repository.
 ### Login to the site and preview the final results
 
 * Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
-* To access PatternLab, which is where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex\_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_theme/dist/style-guide/)
+* To access PatternLab, which is where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/)
 
 You are done! 🙌 🔥 👊
 

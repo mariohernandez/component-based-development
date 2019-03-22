@@ -2,7 +2,7 @@
 
 ![Card List screenshot](../../.gitbook/assets/card-list.png)
 
-Just when you thought "I got this!", we are now going to build a new component that uses slightly different approach. For the most part, most component you'll built follow the same principles you've been following all along, however, there are other type of components that may deviate from those principles a little. When content needs to be displayed in some kind of list or collection of components, there are a few things we need to do differently.
+Just when you thought "I got this!", we are now going to build a new component that uses slightly different approach. For the most part, the majority of the components you've built follow the same principles you've been following all along, however, there are other type of components that may deviate from those principles a little. When content needs to be displayed in some kind of list or collection of components, there are a few things we need to do differently.
 
 Let's start with our usual process of creating some files and adding the respective code to each file. We will explain everything once these steps are done.
 
@@ -11,81 +11,68 @@ Let's start with our usual process of creating some files and adding the respect
 3. Inside `movie-list.yml` add the following code:
 
 ```yaml
-list_title: "Action and Adventure"
+list_title:
+  title: "Action and Adventure"
+  heading_level: 3
 items:
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: "<img src='/sites/default/files/action-3.jpg' alt='' />"
+    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
     heading:
-      heading_level: 3
-      modifier: ~
       title: "DrupalCon Seattle 2019"
       url: "#"
+      heading_level: 4
+      modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
-    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,"
-    watch_button:
-      text: "Watch now"
-      url: "#"
+    synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
 ```
 
-Same as in the Movie Card Collection component, we created an `items[ ]` array. The array contains multiple instances of a movie card which we will use to render a collection of movie cards.
+Same as in the Card Collection component, we created an `items[ ]` array. The array contains multiple instances of a movie card which we will use to render a collection of movie cards.
 
 * Add the following code snippet into **movie-list.twig**:
 
@@ -98,29 +85,12 @@ Same as in the Movie Card Collection component, we created an `items[ ]` array. 
   <div class="movie-list__title">
     {%
       include '@patterns/heading/heading.twig' with {
-        "heading": {
-          "title": list_title,
-          "heading_level": '3'
-        }
+        heading: list_title
       } only
     %}
   </div>
   {% block list %}
-    {% embed '@patterns/movie-card-collection/movie-card-collection.twig' %}
-      {% block collection %}
-        {% for item in items %}
-          {%
-            include '@patterns/movie-card/movie-card.twig' with {
-              cover_image: item.cover_image,
-              heading: item.heading,
-              mpaa_rating: item.mpaa_rating,
-              average_rating: item.average_rating,
-              synopsis: item.synopsis
-            }
-          %}
-        {% endfor %}
-      {% endblock %}
-    {% endembed %}
+    {% include '@patterns/card-collection/card-collection.twig' %}
   {% endblock %}
 </section>
 ```
@@ -131,16 +101,11 @@ Create the **movie-list** library.
 
 * First, notice we are using the very helpful **include** statement to nest the heading component in order to print a title for each collection.
 * Then we have declared `{% block list %}` so we are able to alter how content is rendered when we integrate this component with Drupal.
-* Inside the twig block, we are using an **embed** statements to include the previously built _movie-card-collection_ component.
-* Then we use the `{% block collection %}` twig block to insert a movie card per each item found in the **items\[ \]** array. So if the array has 10 items, we will end up with 10 movie cards in the collection.
+* Inside the twig block, we are simply including the _card-collection_ component as is, without having to map variables. This is because we provided a list of movie cards for it to use in our `movie-list.yml` file.
 
 ### Twig blocks
 
 [Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks are regions in which you can insert any kind of content.
-
-### Embed
-
-This is also a new concept being introduced here and to keep it simple, embeds combines the advantages of _includes_ and _extends_ twig statements into one. They allow us to include an existing component and give us the option to alter the data or how data is printed/rendered. Our own [Eric Huffman](https://www.mediacurrent.com/who-we-are/team/eric-huffman/) has written a [great blog post which explains Twig blocks, Embeds, Includes](https://www.mediacurrent.com/blog/accommodating-drupal-your-components/) and more in detail.
 
 * Now add the component's styles below into **movie-listig.scss**:
 

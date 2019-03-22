@@ -1,5 +1,5 @@
 button:
-  text: Watch now
-  url:
-  type:
-  classes:
+  modifier:
+  text: "Watch now"
+  url: "#"
+  

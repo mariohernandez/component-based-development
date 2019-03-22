@@ -1,12 +1,14 @@
-cover_image: <img src="../../images/circusman.png" alt="Alt text" />
+cover_image: <img src="/sites/default/files/action-1.jpg" alt="" />
 heading:
-  title: BADCamp 2018
-  url: "#"
-  heading_level: 2
-promo_text: Be part of th 12th season this fall
-mpaa_rating: PG-13
+  heading_level: 1
+  modifier: "featured-movie__title"
+  title: "DrupalCon Seattle 2019"
+  url: 
+promo_text: "Be part of th 12th season this fall"
+mpaa_rating: "PG-13"
 average_rating: 5
-synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
 watch_button:
-  text: Watch now
+  text: "Watch now"
   url: "#"
+  modifier: "button--primary"

@@ -4,14 +4,13 @@
   {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   <div class="movie-list__title">
-    {%
-      include '@patterns/heading/heading.twig' with {
-        "heading": {
-          "title": list_title,
-          "heading_level": '3'
-        }
-      } only
-    %}
+    {% block title %}
+      {%
+        include '@patterns/heading/heading.twig' with {
+          heading: list_title
+        } only
+      %}
+    {% endblock %}
   </div>
   {% block list %}
     {% include '@patterns/card-collection/card-collection.twig' %}
