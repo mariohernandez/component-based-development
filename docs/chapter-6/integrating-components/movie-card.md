@@ -131,6 +131,17 @@ Let's go over what we are doing here:
 
 ### Clear Drupal's caches.
 
+* Use the admin menu to flush all caches
+* Or run this command:
+
+```bash
+lando drush cr
+```
+
+### Twig Embed
+
+This is also a new concept being introduced here and to keep it simple: embeds combines the advantages of _includes_ and _extends_ twig statements into one. They allow us to include an existing component and give us the option to alter the data or how data is printed/rendered. Our own [Eric Huffman](https://www.mediacurrent.com/who-we-are/team/eric-huffman/) has written a [great blog post which explains Twig blocks, Embeds, Includes](https://www.mediacurrent.com/blog/accommodating-drupal-your-components/) and more in detail.
+
 {% hint style="info" %}
 **INFO**: Learn more about [Twig's embed](https://twig.symfony.com/doc/2.x/tags/embed.html) statements to extend and include twig templates.
 {% endhint %}

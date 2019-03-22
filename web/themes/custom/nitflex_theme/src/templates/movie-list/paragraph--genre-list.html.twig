@@ -38,11 +38,21 @@
  * @ingroup themeable
  */
 #}
-{% embed '@patterns/movie-list/movie-list.twig' with {
-    attributes: attributes,
-    list_title: content.field_list_title|render|trim is not empty ? content.field_list_title,
-    list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
+{% set rendered_content = content|render %}
+
+{%
+  set list_title = {
+    title: content.field_list_title|render|trim is not empty ? content.field_list_title,
+    heading_level: '2',
   }
+%}
+
+{% embed '@patterns/movie-list/movie-list.twig' with
+  {
+    attributes: attributes,
+    list_title: list_title,
+    list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
+  } only
 %}
   {% block list %}
     {{ list }}

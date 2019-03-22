@@ -81,7 +81,7 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 ### Login to the site and preview the final results
 - Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
 
-- To access PatternLab, which where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_theme/dist/style-guide/)
+- To access PatternLab, which where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/)
 
 # You are done! 🙌 🔥 👊
 

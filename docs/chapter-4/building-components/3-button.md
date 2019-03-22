@@ -26,8 +26,7 @@ We just created an object for the button with key/value **text**, **url**, **typ
     {{ button.text }}
   </a>
 {% else %}
-  <button
-    class="button">
+  <button class="button">
     {{ button.text }}
   </button>
 {% endif %}

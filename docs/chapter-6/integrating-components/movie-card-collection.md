@@ -43,18 +43,9 @@ As we read in the excerpt above, there are usually two views templates using whe
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
-
 {% set attributes = attributes.addClass(classes) %}
-
-{% embed '@patterns/movie-card-collection/movie-card-collection.twig' with
-  {
-    attributes: attributes,
-  }
-%}
-
+{% embed '@patterns/card-collection/card-collection.twig' %}
   {% block collection %}
-    {{ title_prefix }}
-    {{ title_suffix }}
     {{ rows }}
   {% endblock %}
 {% endembed %}
@@ -76,6 +67,13 @@ As we read in the excerpt above, there are usually two views templates using whe
 * Views is essentially doing the same thing. The `movie_listing` view is set up to show a list of movie nodes displayed in the teaser view mode. Since we already integrated the **movie-card** with the teaser view of movie nodes, the end result is the same: a simple list of movie cards.
 
 ### Clear Drupal's caches.
+
+* Use the admin menu to flush all caches
+* Or run this command:
+
+```bash
+lando drush cr
+```
 
 Now if you reload the homepage you should see the movie card collections in place. There is one more thing to do for the listing of movies and we will do that next.
 

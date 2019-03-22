@@ -13,21 +13,29 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
 
 ![Paragraph template suggestion](../../.gitbook/assets/paragraph-border%20%281%29.png)
 
-## Integrate the Movie Listing
+## Integrate the Movie List
 
 1. Open`paragraph--genre-list.html.twig`in your text editor
 2. Remove all code in the file but leave all comments.
 3. add the following code at the bottom of the template:
 
 ```php
-{% embed '@patterns/movie-list/movie-list.twig' with
-  {
-    attributes: attributes,
-    list_title: content.field_list_title|render|trim is not empty ? content.field_list_title,
-    list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
+{% set rendered_content = content|render %}
+
+{%
+  set list_title = {
+    title: content.field_list_title|render|trim is not empty ? content.field_list_title,
+    heading_level: '2',
   }
 %}
 
+{% embed '@patterns/movie-list/movie-list.twig' with
+  {
+    attributes: attributes,
+    list_title: list_title,
+    list: content.field_movie_list|render|trim is not empty ? content.field_movie_list,
+  } only
+%}
   {% block list %}
     {{ list }}
   {% endblock %}
@@ -36,11 +44,11 @@ The twig template has already been added to the `nitflex_dev_theme`, but If you 
 
 Let's go over what we are doing here:
 
-* We're again using the `embed` option to pull in the movie-listing component because just like with the integration of previous components we are going to let Drupal take care of rendering the list of movies through a twig block we set up in the component.
+* We're again using the `embed` option to pull in the movie-list component because just like with the integration of previous components we are going to let Drupal take care of rendering the list of movies through a twig block we set up in the component.
 * We're passing in the Drupal attributes like we have done previously, and mapping the title field for the paragraph to the `list_title` variable in the component.
-* We're also setting a variable for the list that Drupal is provided through the movie listing views reference field in the paragraph type. This `list` variable is then output inside the twig block tag.
+* We're also setting a variable for the list that Drupal is providing through the movie list views reference field in the paragraph type. This `list` variable is then output inside the twig block tag.
 
-So far things are looking good, but we've got one issue: just like with the featured movie's promo sentence, the default Drupal field markup is coming in with our list title field. This means we've got a `<div>` tag inside our `<h3>` tag. To fix this, we'll create a custom field template suggestion file for the list title field. The template suggestion file has already been added to the `nitflex_dev_theme`, but If you were doing this on your own, you would follow the next steps:
+So far things are looking good, but we've got one issue: just like with the featured movie's promo sentence, the default Drupal field markup is coming in with our list title field. This means we've got a `<div>` tag inside our `<h2>` tag. To fix this, we'll create a custom field template suggestion file for the list title field. The template suggestion file has already been added to the `nitflex_dev_theme`, but If you were doing this on your own, you would follow the next steps:
 
 1. Use your browser inspector to view twig debug comments for the location of the default field template \(`modules/core/themes/stable/templates/field.html.twig`\)
 2. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/movie-list`\) and rename `field--paragraph--field-list-title--genre-list.html.twig`

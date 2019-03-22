@@ -1,13 +1,11 @@
 {{ attach_library('nitflex_theme/button') }}
-
-{# If an url value is provided render as a link #}
 {% if button.url %}
-  <a href="{{ button.url }}" class="button {{ modifier_class }}{{ classes|default('') }}">
+  <a href="{{ button.url }}"
+    class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
     {{ button.text }}
   </a>
-{# Otherwise render as a button. #}
 {% else %}
-  <button type="{{ button.type|default('submit') }}" class="button {{ modifier_class }}{{ classes|default('') }}">
+  <button class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
     {{ button.text }}
-  </button
+  </button>
 {% endif %}

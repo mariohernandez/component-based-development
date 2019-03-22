@@ -1,9 +1,9 @@
-cover_image: <img src="../../images/action-3.jpg" alt="" />
+cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
 heading:
-  title: Movie title goes here
+  title: "I love this movie"
   url: "#"
   heading_level: 4
-  classes: movie-card__heading
+  modifier: "movie-card__heading"
 average_rating: 3
-mpaa_rating: PG-13
-synopsis: Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.
+mpaa_rating: "PG-13"
+synopsis: "Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna."
