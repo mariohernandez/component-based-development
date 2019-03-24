@@ -48,6 +48,7 @@ We are now finally at a point where we can integrate the Featured Movie componen
   set watch_button = {
     url: url,
     text: 'Watch now'|t,
+    modifier: 'button--primary'
   }
 %}
 
