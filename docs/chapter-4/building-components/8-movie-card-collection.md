@@ -8,9 +8,9 @@ There are two parts to creating the list. First we need to create a collection o
 
 Let's start with our usual process of creating some files and adding the respective code to each file.
 
-1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **card-collection**
-2. Inside the **card-collection** directory create these files: `card-collection.yml`, `card-collection.scss`, and `card-collection.twig`
-3. Inside `card-collection.yml` copy the following code:
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **movie-card-collection**
+2. Inside the **movie-card-collection** directory create these files: `movie-card-collection.yml`, `movie-card-collection.scss`, and `movie-card-collection.twig`
+3. Inside `movie-card-collection.yml` copy the following code:
 
 ```yaml
 items:
@@ -100,7 +100,7 @@ We created an array called **items**. The array contains multiple items each of 
 
 **Important**
 
-Create the **card-collection** library.
+Create the **movie-card-collection** library.
 
 We are now introducing the concept of \*\*Twig Blocks \(not the same as Drupal blocks\), so we are able to alter how content is rendered when we integrate this component with Drupal.
 
@@ -155,7 +155,6 @@ lando npm run build && lando php patternlab/core/console --generate
 
 ## Viewing the component  <a id="viewing-the-component"></a>
 
-* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-card-collection)
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection)
 
 Under the Components category you should see the new Movie Card Collection component.
-
