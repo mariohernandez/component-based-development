@@ -74,12 +74,12 @@ items:
 
 We created an array called **items**. The array contains multiple items each of which has the fields found in a movie card \(heading, synopsis, cover image, etc.\).
 
-* Inside `movie-card-collection.twig` copy the following code:
+* Inside `movie-card-collection.twig` add the following code:
 
 ```php
-{{ attach_library('nitflex_dev_theme/movie-collection') }}
+{{ attach_library('nitflex_dev_theme/movie-card-collection') }}
 
-<div class="movie-collection
+<div class="movie-card-collection
   {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {% block collection %}
@@ -112,11 +112,11 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 
 * Now add the component's styles below into **movie-card-collection.scss**:
 
-```css
+```scss
 // Import site utilities.
 @import '../../00-global/utils/init';
 
-.movie-collection {
+.movie-card-collection {
   padding: 20px 0;
 
   @include breakpoint($bp-sm) {
