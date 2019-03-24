@@ -12,16 +12,16 @@ Let's start by creating the usual files for building the component:
 3. Add the following code snippet into **featured-movie.yml**:
 
 ```yaml
-cover_image: <img src="/sites/default/files/action-1.jpg" alt="" />
+cover_image: "<img src=\"/sites/default/files/action-1.jpg\" alt=\"Alt text\" />"
 heading:
   heading_level: 2
   modifier:
   title: "DrupalCon Seattle 2019"
   url:
-promo_text: Be part of th 12th season this fall,
-mpaa_rating: PG-13,
-average_rating: 5,
-synopsis: Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.,
+promo_text: "Be part of th 12th season this fall"
+mpaa_rating: "PG-13"
+average_rating: "5"
+synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
 watch_button:
   text: "Watch now"
   url: "#"
@@ -33,7 +33,9 @@ watch_button:
 ```php
 {{ attach_library('nitflex_dev_theme/featured-movie') }}
 
-<section class="featured-movie {{ attributes ? attributes.class }}"{{ attributes ? attributes|without(class) }}>
+<section class="featured-movie
+  {{- attributes ? attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}
   {% if cover_image %}
@@ -262,8 +264,8 @@ Be sure to create the **featured-movie** library and attach it to the component.
 
 By now you should have a good understanding of what we are doing here.
 
-1. First we built a JSON object in which we outlined each of the fields the featured movie component needs. These fields include the movie _title_, _average rating_, _MPAA rating_, _add to favorites_ button as well as a _watch movie_ button.
-2. Next we wrote the markup in twig which makes use of the data from the JSON object. Most of this data is being passed to the component in the way of twig includes which makes use of previously built components such as heading, eyebrow and button.
+1. First we built an object in YML in which we outlined each of the fields the featured movie component needs. These fields include the movie _title_, _average rating_, _MPAA rating_, _add to favorites_ button as well as a _watch movie_ button.
+2. Next we wrote the markup in twig which makes use of the data from the YML object. Most of this data is being passed to the component in the way of twig includes which makes use of previously built components such as heading, eyebrow and button.
 3. Finally we wrote the css styles to give the featured movie component the look and feel we want.
 
 ## Compiling the style-guide

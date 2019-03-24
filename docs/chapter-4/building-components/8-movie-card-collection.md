@@ -16,7 +16,7 @@ Let's start with our usual process of creating some files and adding the respect
 items:
   -
     average_rating: 5
-    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"Alt text\" />"
     heading:
       title: "DrupalCon Seattle 2019"
       url: "#"
@@ -27,7 +27,7 @@ items:
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"Alt text\" />"
     heading:
       title: "DrupalCon Seattle 2019"
       url: "#"
@@ -38,7 +38,7 @@ items:
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"Alt text\" />"
     heading:
       title: "DrupalCon Seattle 2019"
       url: "#"
@@ -49,7 +49,7 @@ items:
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"Alt text\" />"
     heading:
       title: "DrupalCon Seattle 2019"
       url: "#"
@@ -60,7 +60,7 @@ items:
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
-    cover_image: <img src="/sites/default/files/action-3.jpg" alt="" />
+    cover_image: "<img src=\"/sites/default/files/action-3.jpg\" alt=\"Alt text\" />"
     heading:
       title: "DrupalCon Seattle 2019"
       url: "#"
@@ -69,6 +69,7 @@ items:
     mpaa_rating: "PG-13,"
     promo_text: "Be part of th 12th season this fall,"
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+
 ```
 
 We created an array called **items**. The array contains multiple items each of which has the fields found in a movie card \(heading, synopsis, cover image, etc.\).
@@ -76,9 +77,9 @@ We created an array called **items**. The array contains multiple items each of 
 * Inside `movie-card-collection.twig` copy the following code:
 
 ```php
-{{ attach_library('nitflex_dev_theme/card-collection') }}
+{{ attach_library('nitflex_dev_theme/movie-collection') }}
 
-<div class="card-collection
+<div class="movie-collection
   {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {% block collection %}
@@ -115,7 +116,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 // Import site utilities.
 @import '../../00-global/utils/init';
 
-.card-collection {
+.movie-collection {
   padding: 20px 0;
 
   @include breakpoint($bp-sm) {
