@@ -20,7 +20,7 @@ The process for discovering the templates Drupal's views are using is the same a
 2. Right-click on any of the movies within the list and select **Inspect** or **Inspect Element** depending on your browser.
 3. Within the code inspector, scroll up until you find template suggestions starting with **views-view--**. Example:
 
-![Views template suggestions](../../.gitbook/assets/views%20%281%29.png)
+![Views template suggestions](../../.gitbook/assets/views-1.png)
 
 As we read in the excerpt above, there are usually two views templates using when rendering content, the first one I'd like to think of as the wrapper for the view and the second one wraps the content or content rows, and its name is based on the display format used when creating the view \(i.e. unformatted\). This is what we are seeing in the screenshot above.
 

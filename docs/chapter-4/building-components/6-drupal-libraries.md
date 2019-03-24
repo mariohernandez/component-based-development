@@ -1,5 +1,7 @@
 # Drupal Libraries
 
+The CSS styles we've written work great in the style-guide but currently they are not available in Drupal.  Although we have compiled each component's styles into individual CSS stylesheets, Drupal is not aware of them.  To fix this we need to create libraries for each components which we later will attach to the corresponding component for Drupal to load those styles or Javascript.
+
 In Drupal 8, stylesheets \(CSS\) and JavaScript \(JS\) are loaded through the same system for modules \(code\) and themes, for everything: [asset libraries](https://www.drupal.org/node/2274843).
 
 Drupal uses a high-level principle: assets \(CSS or JS\) are still only loaded if you tell Drupal it should load them. Drupal does not load all assets on every page because it slows down front-end performance.
@@ -11,7 +13,7 @@ In the context of the project we are building, we are going to create a library 
 {% hint style="warning" %}
 **IMPORTANT**
 
-Drupal libraries are only intended to work in Drupal. They have no effect in Pattern Lab's style-guide. So how are we passing styles and javascript to the components in the style-guide? Good question; we have a gulp task in place which compiles all CSS into a single stylesheet \(`/dist/all/all.css`\). This stylesheet is automatically appended to the style-guide so all styles are available when a component is rendered in the style-guide.
+Drupal libraries are only intended to work in Drupal. They have no effect in the style-guide. How are we then passing styles and javascript to the components in the style-guide? Good question; we have a gulp task in place which compiles all CSS into a single stylesheet \(`/dist/all/all.css`\). This stylesheet is automatically appended to the style-guide so all styles are available when a component is rendered in the style-guide.
 
 As for Javascript, how are we applying it to the style-guide? Even a better question. You are good! 😄 This unfortunately is a manual step, but not a difficult one. We'll do this shortly.
 {% endhint %}
@@ -34,10 +36,12 @@ global:
 
 There is a lot more to Drupal libraries and we encourage you to learn more about them in the URL above.
 
+**NOTE:**  We've created other libraries which you will see in the **nitflex\_dev\_theme.libraries.yml**.
+
 ## Creating the Movie Card component's library
 
 1. In your editor open `nitflex_dev_theme.libraries.yml`
-2. Add the following code \(anywhere after the global library\):
+2. Add the following code at the bottom of the page:
 
 ```yaml
 movie-card:
