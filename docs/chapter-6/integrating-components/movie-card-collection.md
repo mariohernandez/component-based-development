@@ -44,7 +44,7 @@ As we read in the excerpt above, there are usually two views templates using whe
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% embed '@patterns/card-collection/card-collection.twig' %}
+{% embed '@patterns/movie-card-collection/movie-card-collection.twig' %}
   {% block collection %}
     {{ rows }}
   {% endblock %}
