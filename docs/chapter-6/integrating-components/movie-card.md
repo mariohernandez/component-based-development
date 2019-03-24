@@ -87,7 +87,7 @@ Notice there is an **"x"** next to `node--movie--teaser.html.twig`, which means 
 
 We are now finally at a point where we can integrate the Movie card component with the Movie content type using the newly created template suggestion.
 
-1. Open `node--movie--teaser.html.twig` in your text editor
+1. Open `/src/templates/movie-card/node--movie--teaser.html.twig` in your text editor
 2. Remove all code in the file but leave all comments. It is good to leave the comments untouched as they provide helpful information regarding available variables and other useful Drupal-specific details.
 3. Add the following code at the bottom of the template:
 

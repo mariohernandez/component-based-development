@@ -141,7 +141,7 @@ Create the **movie-list** library.
 }
 ```
 
-### Compiling the style-guide      <a id="compiling-the-style-guide"></a>
+### Compiling the style-guide       <a id="compiling-the-style-guide"></a>
 
 Now that we have written all the necessary code to build the Movie List component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -151,10 +151,11 @@ Now that we have written all the necessary code to build the Movie List componen
 lando npm run build && lando php patternlab/core/console --generate
 ```
 
-## Viewing the component  <a id="viewing-the-component"></a>
+## Viewing the component   <a id="viewing-the-component"></a>
 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-list](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-list)
 
 Under the Components category you should see the new Movie List Collection component.
 
 ## And with that, We are done building components 🙌 🏆 🍻
+
