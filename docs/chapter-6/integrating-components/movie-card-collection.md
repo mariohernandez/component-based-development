@@ -76,3 +76,4 @@ lando drush cr
 ```
 
 Now if you reload the homepage you should see the movie card collections in place. There is one more thing to do for the listing of movies and we will do that next.
+

@@ -197,6 +197,11 @@ watch_button:
     font-size: 4.8rem;
     line-height: 1;
 
+    a {
+      color: $color-white;
+      text-decoration: none;
+    }
+
     @include breakpoint($bp-lg) {
       font-size: 6rem;
     }
