@@ -1,6 +1,6 @@
 # Featured Movie
 
-![Featured Movie screenshot](../../.gitbook/assets/featured.png)
+![Featured Movie screenshot](../../.gitbook/assets/featured%20%281%29.png)
 
 The Featured Movie component, much like the Movie Card, presents similar requirements for field collections, which we will address pretty much the same way we did for the Movie card.
 
@@ -276,7 +276,7 @@ Now that we have written all the necessary code to build the Featured Movie comp
 lando npm run build && lando php patternlab/core/console --generate
 ```
 
-## Viewing the component <a id="viewing-the-component"></a>
+## Viewing the component  <a id="viewing-the-component"></a>
 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-featured-movie](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-featured-movie)
 

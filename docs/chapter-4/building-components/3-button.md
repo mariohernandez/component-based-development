@@ -80,8 +80,8 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 ## Viewing the component
 
 * Open your Drupal site and point to the URL below:   
+
   [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-button](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-button)
 
-  
-  Under the Components category you should see the new Heading component.
+Under the Components category you should see the new Heading component.
 

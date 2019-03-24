@@ -47,7 +47,7 @@ If you have been using Drupal for a while you may be well familiar with where to
 1. In your browser go to `http://nitflex.lndo.site/homepage`
 2. Right-click on one of the small movie cards and select **Inspect** or **Inspect Element** \(depending on your browser\), from the context menu. You should now see the code inspector which shows all the markup that makes up the movie node. If you scroll up/down within the code inspector you will notice green text. This is twig debugging in action.
 
-![node template suggestion](../../.gitbook/assets/node%20%282%29.png)
+![node template suggestion](../../.gitbook/assets/node-2.png)
 
 If you look at the screenshot above, you will see a few things that are extremely helpful for creating the right template suggestions.
 
@@ -75,7 +75,7 @@ With the debugging information above we have all we need to create our first tem
 2. Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
 3. Reload the homepage again and inspect the code one more time.
 
-![Movie template suggestion using teaser view mode](../../.gitbook/assets/node-teaser.png)
+![Movie template suggestion using teaser view mode](../../.gitbook/assets/node-teaser%20%282%29.png)
 
 Notice there is an **"x"** next to `node--movie--teaser.html.twig`, which means Drupal is now using our custom twig template suggestion. Also notice the path of the template. It's our own theme's template directory.
 

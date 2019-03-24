@@ -43,6 +43,8 @@ With Twig we not only write the custom markup we need, but we are also able to p
 }
 ```
 
+Line 2 shows `@import ‘../../00-global/utils/init’;`.  This is something we will add to all stylesheets we create to make any global styles available to each component.
+
 ## Compiling the code
 
 Now that we have written all the necessary code to build the component, it's time to see the component in the style-guide. Let's compile our project first.

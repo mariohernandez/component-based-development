@@ -62,7 +62,7 @@ Now that we have a new button variation let's add css styles to it.
   }
   ```
 
-Styles for `.button--primary` start on line **20** above.  These styles will apply when both, `button` and `button--primary` classes are present \(i.e. `<a class="button button--primary">My button</a>`\), and when they do we are changing background and border color to red. Before we can see the new variation in action, we need to update the pattern's twig template so it's aware when a variation is needed.
+Styles for `.button--primary` start on line **20** above. These styles will apply when both, `button` and `button--primary` classes are present \(i.e. `<a class="button button--primary">My button</a>`\), and when they do we are changing background and border color to red. Before we can see the new variation in action, we need to update the pattern's twig template so it's aware when a variation is needed.
 
 * Now let's edit the twig file to look like this:
 
@@ -99,9 +99,8 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 ## Viewing the component
 
 * Open your Drupal site and point to the URL below:   
+
   [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-button](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-button)
 
-
-
-  Under the Components category you should see the new Button component.
+Under the Components category you should see the new Button component.
 

@@ -1,6 +1,6 @@
 # Movie full display
 
-Now that all components to that make the homepage have been integrated, let's finalize things by integrating the movie full node. For this we'll actually make use of the **Featured Movie** component for the upper part of the page, but leave out the watch button and synopsis text (the synopsis text will instead be output on the lower part of the page.) We also don't have to worry about passing in Drupal attributes or `title_prefix` / `title_suffix` variables since we're outputting those were the node template does it by default. Let's get started.
+Now that all components to that make the homepage have been integrated, let's finalize things by integrating the movie full node. For this we'll actually make use of the **Featured Movie** component for the upper part of the page, but leave out the watch button and synopsis text \(the synopsis text will instead be output on the lower part of the page.\) We also don't have to worry about passing in Drupal attributes or `title_prefix` / `title_suffix` variables since we're outputting those were the node template does it by default. Let's get started.
 
 We are going to follow the exact same steps for using view modes as we did when we integrated the [Movie Card](movie-card.md) and [Featured Movie](featured-movie.md). However, this time we're going to use the **Full content** view mode. Like the **Teaser** view mode, this is one that Drupal provides by default. It has already been enabled, but if you were enabling it on your own you would follow these steps:
 
