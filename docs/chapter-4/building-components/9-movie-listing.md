@@ -157,4 +157,4 @@ lando npm run build && lando php patternlab/core/console --generate
 
 Under the Components category you should see the new Movie List Collection component.
 
-## And with that, We are done building components 🔥 🙌 🏆 🍻
+## And with that, We are done building components 🙌 🏆 🍻
