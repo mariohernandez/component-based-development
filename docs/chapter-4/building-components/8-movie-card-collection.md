@@ -8,9 +8,9 @@ There are two parts to creating the list. First we need to create a collection o
 
 Let's start with our usual process of creating some files and adding the respective code to each file.
 
-1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **movie-card-collection**
-2. Inside the **movie-card-collection** directory create these files: `movie-card-collection.yml`, `movie-card-collection.scss`, and `movie-card-collection.twig`
-3. Inside `movie-card-collection.yml` copy the following code:
+1. Inside `nitflex_dev_theme/src/_patterns/01-patterns/` create a new directory called **card-collection**
+2. Inside the **card-collection** directory create these files: `card-collection.yml`, `card-collection.scss`, and `card-collection.twig`
+3. Inside `card-collection.yml` copy the following code:
 
 ```yaml
 items:
@@ -73,12 +73,12 @@ items:
 
 We created an array called **items**. The array contains multiple items each of which has the fields found in a movie card \(heading, synopsis, cover image, etc.\).
 
-* Inside `movie-card-collection.twig` add the following code:
+* Inside `card-collection.twig` add the following code:
 
 ```php
-{{ attach_library('nitflex_dev_theme/movie-card-collection') }}
+{{ attach_library('nitflex_dev_theme/card-collection') }}
 
-<div class="movie-card-collection
+<div class="card-collection
   {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {% block collection %}
@@ -99,7 +99,7 @@ We created an array called **items**. The array contains multiple items each of 
 
 **Important**
 
-Create the **movie-card-collection** library.
+Create the **card-collection** library.
 
 We are now introducing the concept of \*\*Twig Blocks \(not the same as Drupal blocks\), so we are able to alter how content is rendered when we integrate this component with Drupal.
 
@@ -109,13 +109,13 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 
 [Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks are regions in which you can insert any kind of content.
 
-* Now add the component's styles below into **movie-card-collection.scss**:
+* Now add the component's styles below into **card-collection.scss**:
 
 ```css
 // Import site utilities.
 @import '../../00-global/utils/init';
 
-.movie-card-collection {
+.card-collection {
   padding: 20px 0;
 
   @include breakpoint($bp-sm) {
@@ -154,7 +154,6 @@ lando npm run build && lando php patternlab/core/console --generate
 
 ## Viewing the component   <a id="viewing-the-component"></a>
 
-* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-card-collection)
+* Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-card-collection)
 
 Under the Components category you should see the new Movie Card Collection component.
-

@@ -90,7 +90,7 @@ Same as in the Card Collection component, we created an `items[ ]` array. The ar
     %}
   </div>
   {% block list %}
-    {% include '@patterns/movie-card-collection/movie-card-collection.twig' %}
+    {% include '@patterns/card-collection/card-collection.twig' %}
   {% endblock %}
 </section>
 ```
@@ -101,7 +101,7 @@ Create the **movie-list** library.
 
 * First, notice we are using the very helpful **include** statement to nest the heading component in order to print a title for each collection.
 * Then we have declared `{% block list %}` so we are able to alter how content is rendered when we integrate this component with Drupal.
-* Inside the twig block, we are simply including the _movie-card-collection_ component as is, without having to map variables. This is because we provided a list of movie cards for it to use in our `movie-list.yml` file.
+* Inside the twig block, we are simply including the _card-collection_ component as is, without having to map variables. This is because we provided a list of movie cards for it to use in our `movie-list.yml` file.
 
 ### Twig blocks
 
@@ -158,4 +158,3 @@ lando npm run build && lando php patternlab/core/console --generate
 Under the Components category you should see the new Movie List Collection component.
 
 ## And with that, We are done building components 🙌 🏆 🍻
-
