@@ -78,13 +78,23 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
     1. First, make sure you're at the root level of the theme (`cd ../`),<br />
     2. then run<br />```lando npm run build && lando php patternlab/core/console --generate```
 
-### Login to the site and preview the final results
-- Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
+### Preview your site
+To see Drupal up and running to to
+http://nitflex.lndo.site/
 
-- To access PatternLab, which where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/)
+In some instances, depending on your environment, you may need to append port 8000 to the url (i.e. http://nitflex.lndo.site:8000)
+<!-- - Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
+
+- To access PatternLab, which where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/) -->
+
 
 # You are done! 🙌 🔥 👊
 
+
+### Powering off your environment
+Once you've confirmed you have a site up and running, you can shutdown your lando environment so it is not taking up resources.
+
+run `lando poweroff`
 
 ## Not using Lando?
 
