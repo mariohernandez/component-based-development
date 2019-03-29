@@ -48,7 +48,8 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 
 ## 3. After cloning this repo, run the following commands from the root level of the repository:
 
-**WINDOWS USERS**
+**WINDOWS USERS:**
+
 _If you are running Windows, use Power Shell to run the following commands_.
 
 ---
