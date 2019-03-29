@@ -1,3 +1,8 @@
+# Purpose of this file is to solve 403 Forbidden error
+# while trying to view Twig code in pattern's info page.
+# See here for more info:
+# https://github.com/aleksip/shila-drupal-theme/issues/7
+
 <FilesMatch "\.(twig)$">
   <IfModule mod_authz_core.c>
     Require all granted
