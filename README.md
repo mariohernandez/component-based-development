@@ -85,7 +85,7 @@ _If you are running Windows, use Power Shell to run the following commands_.
 
 **WINDOWS USERS**:
 
-_If you experienced issues with the steps above do the following:
+If you experienced issues with the steps above do the following:
 
 * Skip step #2
 * Follow all other steps, but change step #5 by running this command istead:
