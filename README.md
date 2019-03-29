@@ -83,6 +83,17 @@ _If you are running Windows, use Power Shell to run the following commands_.
     1. First, make sure you're at the root level of the theme (`cd ../`),<br />
     2. then run<br />```lando npm run build && lando php patternlab/core/console --generate```
 
+**WINDOWS USERS**:
+
+_If you experienced issues with the steps above do the following:
+
+* Skip step #2
+* Follow all other steps, but change step #5 by running this command istead:
+
+`lando php patternlab/core/console --generate`
+
+---
+
 ### Preview your site
 To see Drupal up and running to to
 http://nitflex.lndo.site/
