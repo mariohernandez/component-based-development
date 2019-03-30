@@ -1,13 +1,12 @@
 # Welcome Component Based Development
+A training workshop by [Mediacurrent](https://mediacurrent.com).
 
-## Local Development Environment Setup
-
+## Getting Started
 This repo includes everything you need to set up a [Lando-based](https://docs.devwithlando.io/) local Drupal development environment, along with the required front end tools (Node, Pattern Lab, Gulp, etc.). For best results, follow these steps to get your environment setup.
 
-## 1. Install Lando and Docker
 Lando is a free, open source, cross-platform, local development environment tool built on Docker container technology.
 
-### System requirements
+### Prerequisites
 
 This is only going to work if you have a fairly new computer. According to the [Lando documentation](https://docs.devwithlando.io/installation/system-requirements.html#operating-system) you will need one of the following:
 
@@ -17,7 +16,7 @@ This is only going to work if you have a fairly new computer. According to the [
 
   So far, we have tested only with macOS 10.13 \(High Sierra\) and 10.14 \(Mojave\).
 
-### Run the installer
+## 1. Install Lando and Docker
 
 * [Install Lando and Docker](https://github.com/lando/lando/releases) (Select latest version)
 
@@ -39,7 +38,8 @@ Please install Lando and Docker.
 ```git clone https://github.com/mariohernandez/component-based-development.git```
 
 
-## 3. After cloning this repo, run the following commands from the root level of the repository:
+## 3. Build the environment:
+Run all command's from the repo's root.
 
 **WINDOWS USERS:**
 Use Power Shell to run the following commands.
@@ -58,7 +58,7 @@ Use Power Shell to run the following commands.
 6. `lando drush cr`<br />_This will clear the Drupal caches._
 
 
-## 4. Install Front End Tooling including PatternLab
+## 4. Install Front End Tooling
 
 1. `cd web/themes/custom/nitflex_dev_theme`
 
