@@ -86,6 +86,8 @@ If you experienced issues with the steps above do the following:
 ### Preview your site
 To see Drupal up and running go to http://nitflex.lndo.site/
 
+You should see Drupal's homepage which includes a list of movies with images, title and other text content.
+
 In some instances, depending on your environment, you may need to append port 8000 to the url (i.e. http://nitflex.lndo.site:8000)
 <!-- - Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
 
