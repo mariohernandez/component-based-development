@@ -13,6 +13,10 @@ Below are some resources you will find useful as you work with components and Dr
 * [Component-Based Theming in Drupal 8: The Video Series](https://www.fourkitchens.com/blog/article/component-based-theming-drupal-8-video-series)
 * [Twig recipes to produce custom Drupal 8 markup](https://www.youtube.com/watch?v=UD8OxIUgs5c)
 
+### Tutorials
+
+* [Learn to Theme with Hands-On Exercises](https://drupalize.me/blog/201904/learn-theme-hands-on-exercises)
+
 ## Presentations
 
 * [Demystifying Pattern Libraries and Drupal 8](https://2018.badcamp.org/session/demystifying-pattern-libraries-and-drupal-8)
