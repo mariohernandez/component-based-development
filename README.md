@@ -88,7 +88,10 @@ To see Drupal up and running go to http://nitflex.lndo.site/
 
 You should see Drupal's homepage which includes a list of movies with images, title and other text content.
 
-In some instances, depending on your environment, you may need to append port 8000 to the url (i.e. http://nitflex.lndo.site:8000)
+In some instances, depending on your environment, you may need to append port 8000 to the url (i.e. http://nitflex.lndo.site:8000).
+
+Your site's credentials are:  username: `admin`, password: `admin`
+
 <!-- - Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
 
 - To access PatternLab, which where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/) -->
