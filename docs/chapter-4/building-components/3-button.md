@@ -1,6 +1,6 @@
 # Button
 
-So you get the idea, inside the **01-components** directory we create a new directory that matches the name of the component we want to create and then create a few files inside that directory. Let's repeat this process for the Button component.
+So you get the idea, inside the **01-patterns** directory we create a new directory that matches the name of the component we want to create and then create a few files inside that directory. Let's repeat this process for the Button component.
 
 ## Component's data
 
@@ -83,5 +83,5 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
   [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-button](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-button)
 
-Under the Components category you should see the new Heading component.
+Under the Components category you should see the new Button component.
 
