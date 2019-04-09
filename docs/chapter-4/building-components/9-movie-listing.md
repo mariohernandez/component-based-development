@@ -107,7 +107,7 @@ Create the **movie-list** library.
 
 [Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks are regions in which you can insert any kind of content.
 
-* Now add the component's styles below into **movie-listig.scss**:
+* Now add the component's styles below into **movie-list.scss**:
 
 ```css
 // Import site utilities
