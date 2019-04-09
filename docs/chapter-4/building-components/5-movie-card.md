@@ -33,7 +33,7 @@ By looking at the prototype we see that the landing page shows a listing of movi
 
 ```php
 <article class="movie-card
-  {{- attributes ? attributes.class -}}"
+  {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}

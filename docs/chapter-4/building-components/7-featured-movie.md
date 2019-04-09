@@ -34,7 +34,7 @@ watch_button:
 {{ attach_library('nitflex_dev_theme/featured-movie') }}
 
 <section class="featured-movie
-  {{- attributes ? attributes.class -}}"
+  {{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}

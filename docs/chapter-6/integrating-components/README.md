@@ -6,7 +6,7 @@ When integrating custom components into Drupal, there are basically two methods 
 
 ### Presenter templates
 
-Using Presenter templates essentially means that the twig templates in our theme \(e.g., `node.html.twig`, `block.html.twig`, `field.html.twig`, etc.\) will only serve as a way to tell Drupal which one of our custom components to use, and where to insert the content that a user adds or uploads to the site. You can almost think of them as playing the same role that the `.json` files did when we were building components \(i.e., they provide the content\).
+Using Presenter templates essentially means that the twig templates in our theme \(e.g., `node.html.twig`, `block.html.twig`, `field.html.twig`, etc.\) will only serve as a way to tell Drupal which one of our custom components to use, and where to insert the content that a user adds or uploads to the site. You can almost think of them as playing the same role that the `.yml` files did when we were building components \(i.e., they provide the content\).
 
 ### Best Practices and Considerations  <a id="presenter-templates-best-practices-and-considerations"></a>
 
