@@ -93,23 +93,23 @@ You should see Drupal's homepage which includes a list of movies with images, ti
 In some instances, depending on your environment, you may need to append port 8000 to the url (i.e. http://nitflex.lndo.site:8000).
 
 
-<!-- - Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
+### You are done! 🙌 🔥 👊
 
-- To access PatternLab, which where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/) -->
+---
+## Time for exercises
+Now that your local environment is set, it's time to build and integrate components.
+
+[Follow the exercises here](https://mariohernandez.gitbook.io/components/)
 
 
-# You are done! 🙌 🔥 👊
+## Managing your Lando environment
+* To shutdown Lando so it is not consuming your machine's resources run<br />
+```lando poweroff```
 
+* To restart lando run<br /> ```lando restart```
 
-### Powering off your environment
-Once you've confirmed you have a site up and running, you can shutdown your lando environment so it is not taking up resources.
+* If you want to rebuild your lando environment run <br />```lando rebuild```
 
-run `lando poweroff`
+* To destroy your environment completely, run <br />```lando destroy```
 
-## Not using Lando?
-
-The environment we have put together has been extensively tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own and we will not support or provide assistance if issues arise.
-<!-- TODO: Commenting for now until documentation is complete. -->
-<!-- ## Workshop exercises:
-
-[Component based development exercises](https://mariohernandez.gitbooks.io/components-training/). -->
+Learn more about [Lando](https://docs.devwithlando.io/).
