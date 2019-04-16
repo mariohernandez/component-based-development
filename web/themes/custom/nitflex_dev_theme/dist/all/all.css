@@ -607,13 +607,6 @@ li {
   .branding__navigation li a:hover {
     color: #c4d600; }
 
-.eyebrow {
-  display: inline-block;
-  letter-spacing: 0.15rem;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap; }
-
 
 .mpaa-rating {
   font-family: 'Times', sans-serif;
