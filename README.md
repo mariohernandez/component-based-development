@@ -60,7 +60,8 @@ Use Power Shell to run the following commands.
 
 1. `cd web/themes/custom/nitflex_dev_theme`
 
-2. Run: `lando npm install`<br />_This will install the required front end tools (Node, Gulp, etc.)_
+2. Run: `lando npm install`<br />_This will install the required front end tools (Node, Gulp, etc.)_<br />
+**Note**: You may see npm warnings about a missing "repository" or "license" field, as well as a message about vulnerabilities. For our purposes, all of these messages can be ignored, and you _do not_ need to run any of the "audit" commands it suggests. 
 
 3. Move into the patternlab directory:  `cd patternlab`
 

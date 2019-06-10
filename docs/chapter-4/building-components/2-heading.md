@@ -61,7 +61,7 @@ heading:
   url: "#"
 ```
 
-We just created an object for the button with key/value **title**, **url**, **heading\_level**, and **modifier**.
+We just created an object for the heading with key/value **title**, **url**, **heading\_level**, and **modifier**.
 
 * The **url** key, if present, will allow us to wrap the title in an `<a>` tag, otherwise the title will be printed as plain text.
 * The **heading\_level** is something we will use later as we start nesting the heading component into other components. This will allows us to change the headings from say h1 to h2 if we need to.

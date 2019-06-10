@@ -34,7 +34,7 @@ So we just indicated to Drupal which fields we want to display when using the **
 
 ## Updating Twig templates for Movie Card
 
-By default Drupal uses specific templates for rendering different kind of entities/content. For example, to render a node \(regardless of what type of node\), Drupal uses `node.html.twig`, to render a page it uses `page.html.twig`, and so on. This means if we want to change how nodes or pages display we can change those templates. However, any changes we make to those template will apply to all content that uses them. This may not be what we want. In addition, the golden rule in Drupal is _"Never hack core"_. If we change node.html.twig or page.html.twig in Drupal core, we are breaking the golden rule. That's where template suggestion come in.
+By default Drupal uses specific templates for rendering different kind of entities/content. For example, to render a node \(regardless of what type of node\), Drupal uses `node.html.twig`, to render a page it uses `page.html.twig`, and so on. This means if we want to change how nodes or pages display we can change those templates. However, any changes we make to those templates will apply to all content that uses them. This may not be what we want. In addition, the golden rule in Drupal is _"Never hack core"_. If we change node.html.twig or page.html.twig in Drupal core, we are breaking the golden rule. That's where template suggestion come in.
 
 ## Template Suggestions
 

@@ -658,8 +658,6 @@ li {
         margin: 0;
         width: calc(20% - 5px); } }
 
-@charset "UTF-8";
-​
 .eyebrow {
   display: inline-block;
   letter-spacing: 0.15rem;

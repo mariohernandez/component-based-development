@@ -56,6 +56,13 @@ Libraries are great because Drupal only loads what we need when we needed to avo
 
 Don't forget to clear your caches when adding new libraries to your theme.
 
+* Use the admin menu to flush all caches
+* Or run this command:
+
+```bash
+lando drush cr
+```
+
 ## Attaching a library
 
 Now that the Movie Card component's library is ready, we need to make Drupal aware of it so it can use it.
