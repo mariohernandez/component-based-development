@@ -16,9 +16,19 @@ In the Presenter template method you'll quickly discover that when passing the v
 
 One of the easiest ways to eliminate the extra markup that comes with a rendered Drupal field is to create a corresponding field template for the field, and modify as needed. Alternatively, we can use contrib modules, such as [Twig Field Value](https://www.drupal.org/project/twig_field_value), which gives us twig filters that safely pluck the value from a field's render array for us.
 
-In addition to letting Drupal fully render fields, it's also best to let Drupal render the standard `content`variable in node, block, and other templates to help with cache invalidation. Although we're only passing the individual fields from the `content` variable to our component \(e.g., `content.field_image`\), we still want to trigger a full render of the `content` variable by either setting a new variable that is all of the rendered content \(i.e., \`
+In addition to letting Drupal fully render fields, it's also best to let Drupal render the standard `content`variable in node, block, and other templates to help with cache invalidation. Although we're only passing the individual fields from the `content` variable to our component \(e.g., `content.field_image`\), we still want to trigger a full render of the `content` variable by either setting a new variable that is all of the rendered content:
 
-`\), or rendering the`content`variable, and exclude all the fields \(i.e.,`\`\). [Learn more about this situation here](https://www.drupal.org/project/drupal/issues/2660002#comment-12714453).
+```php
+{% rendered_content = content|render %}
+```
+
+Or by rendering the`content`variable, but exclude fields via the twig `without` filter:
+
+```php
+{{ content|without('field_image') }}
+```
+
+[Learn more about this situation here](https://www.drupal.org/project/drupal/issues/2660002#comment-12714453).
 
 Lastly, in our components you may recall places where we added logic to make sure markup associated with an element in the component would not be output if the related field was empty. For example, in the Movie Card component, we have:
 

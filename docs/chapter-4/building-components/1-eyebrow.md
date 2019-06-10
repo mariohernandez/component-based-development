@@ -31,7 +31,9 @@ With Twig we not only write the custom markup we need, but we are also able to p
 2. Inside _eyebrow.scss_ add this code:
 
 ```css
+// Import site utilities
 @import '../../00-global/utils/init';
+
 .eyebrow {
   display: inline-block;
   letter-spacing: 0.15rem;

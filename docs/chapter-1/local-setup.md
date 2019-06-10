@@ -54,8 +54,8 @@ Run the following commands from the root level of the repository.
 ## 4. Install Front End Tooling including PatternLab
 
 1. `cd web/themes/custom/nitflex_dev_theme`
-2. Run: `lando npm install`   _This will install the required front end tools \(Node, Gulp, etc.\)_
-3. Move into the pattern-lab directory `cd patternalb`
+2. Run: `lando npm install`   _This will install the required front end tools \(Node, Gulp, etc.\)_ **Note**: You may see npm warnings about a missing "repository" or "license" field, as well as a message about vulnerabilities. For our purposes, all of these messages can be ignored, and you _do not_ need to run any of the "audit" commands it suggests.
+3. Move into the pattern-lab directory `cd patternlab`
 4. Run: `lando composer install`  _This will install PatternLab_
    * When prompted to `update the config option twigAutoescape`, reply with **n**.
    * When prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**

@@ -216,6 +216,17 @@ By looking at the prototype we see that the landing page shows a listing of movi
 
 Quite the styles huh? 😄
 
+### Compiling the code
+
+Let's take a look at the Movie Card component by compiling our code and building the style-guide.
+
+* In your command line, navigate to `/themes/custom/nitflex_dev_theme`.
+* Run this command:
+
+```bash
+lando npm run build && lando php patternlab/core/console --generate
+```
+
 ## Viewing the component  <a id="viewing-the-component"></a>
 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-card](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-card)

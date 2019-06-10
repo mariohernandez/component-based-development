@@ -18,5 +18,5 @@ In some cases this may not be an issue for you, but in general it's best to plan
 </article>
 ```
 
-> Note that the `without` twig filter in this example is a Drupal-specific filter, so for the style guide we'll want to make sure we’re using one that supports Drupal’s custom filters. Pattern Lab have configuration options that support Drupal twig filters.
+> Note that the `without` twig filter in this example is a Drupal-specific filter, so for the style guide we'll want to make sure we’re using one that supports Drupal’s custom filters. Pattern Lab has configuration options that support Drupal twig filters.
 
