@@ -19,7 +19,7 @@ One of the easiest ways to eliminate the extra markup that comes with a rendered
 In addition to letting Drupal fully render fields, it's also best to let Drupal render the standard `content`variable in node, block, and other templates to help with cache invalidation. Although we're only passing the individual fields from the `content` variable to our component \(e.g., `content.field_image`\), we still want to trigger a full render of the `content` variable by either setting a new variable that is all of the rendered content:
 
 ```php
-{% rendered_content = content|render %}
+{% set rendered_content = content|render %}
 ```
 
 Or by rendering the`content`variable, but exclude fields via the twig `without` filter:
