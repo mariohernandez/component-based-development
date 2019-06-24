@@ -12,7 +12,7 @@ This workshop is hands-on and we have put together a series of exercises which w
 | [Movie Card](5-movie-card.md) | A movie card is a teaser view of a full movie node.  It contains an image, title, teaser, rating and links to the the full movie node.  They are used to displayed as a collection of movies organized by genre. |
 | [Featured Movie](7-featured-movie.md) | The featured movie is a large version of a movie card which is displayed on the homepage.  Think of this component as a hero. |
 | [Movie Card Collection](8-movie-card-collection.md) | A movie collection is a group of movies organized by various categories \(i.e. Horror, Action, Comedy, etc.\). |
-| [Movie Listing](9-movie-listing.md) | A multi-row listing of movies organized by movie genre. |
+| [Movie List](9-movie-listing.md) | A multi-row listing of movies organized by movie genre. |
 
 ### Additional pre-built components
 
