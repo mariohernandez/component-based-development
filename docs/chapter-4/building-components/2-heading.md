@@ -9,10 +9,10 @@ Now that we have some basic idea of the various pieces for building a component,
 3. Inside _heading.yml_ add the following code:
 
 ```yaml
-title: "DrupalCon Seattle 2019"
+title: "Design4Drupal Boston 2019"
 ```
 
-We just created key/value pair for the heading with a key of **title** and **value** of _DrupalCon Seattle 2019_.
+We just created key/value pair for the heading with a key of **title** and **value** of _Design4Drupal Boston 2019_.
 
 1. Inside the **heading** directory create a new file called **heading.twig**.
 2. Inside `heading.twig` add the following code:
@@ -69,7 +69,7 @@ We just created an object for the heading with key/value **title**, **url**, **h
 
 ### Update the heading's markup and logic
 
-* Update the twig code to look like this:
+* Update the heading.twig file to look like this:
 
 ```php
 <h{{ heading.heading_level|default('2') }} class="heading {{ heading.modifier ? ' ' ~ heading.modifier }}

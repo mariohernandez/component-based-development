@@ -32,7 +32,7 @@ We just created an object for the button with key/value **text**, **url**, **typ
 {% endif %}
 ```
 
-We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if an URL is passed, we use an `<a>` with the class of **button**, otherwise we use a `<button>` tag. This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand. An `<a>` tag will allow us to be directed to another page or a section within the same page, whereas a `<button>` element will allow us to perform an action such as submit content.
+We've added some logic to the button to ensure we render the right HTML element based on the data we receive. For example, if a URL is passed, we use an `<a>` with the class of **button**, otherwise we use a `<button>` tag. This is important in many ways; we always want to make sure we use proper semantic markup for accessibility and for the task at hand. An `<a>` tag will allow us to be directed to another page or a section within the same page, whereas a `<button>` element will allow us to perform an action such as submit content.
 
 1. Inside the **button** directory create a new file called **button.scss**.
 2. Inside `button.scss` add this code:
