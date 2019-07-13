@@ -6,7 +6,7 @@ In the past two integration exercises we have integrated components with data th
 
 Whether data for a component comes from a content type, paragraph, block or a view, we still need to be able to override Drupal's templates in order to integrate the components, which means we need to create custom twig template suggestions.
 
-Views template suggestions are not as straight forward as the ones we have worked with thus far. Here is some info on [views template suggestion](https://api.drupal.org/api/drupal/core!modules!views!views.theme.inc/group/views_templates/8.2.x) you should get acquainted with.
+Views template suggestions are not as straight forward as the ones we have worked with thus far. Here is some info on [views template suggestion](https://api.drupal.org/api/drupal/core!modules!views!views.theme.inc/group/views_templates/8.2.x) you should get acquainted with.  In addition, [this article](http://redcrackle.com/blog/drupal-8/theme-views-templates) provides a great breakdown on how Views template suggestions work.
 
 One key piece of information in the views article above is this:
 

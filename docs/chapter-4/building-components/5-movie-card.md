@@ -1,6 +1,6 @@
 # Movie Card
 
-![Movie card screenshot](../../.gitbook/assets/card%20%281%29.png)
+![Movie card screenshot](../../.gitbook/assets/card-1.png)
 
 The Movie Card component is a more advanced component compared to the ones we've built thus far. Here we will start reusing previously built components by using twig's [Include](https://twig.symfony.com/doc/2.x/tags/include.html) and [Embed](https://twig.symfony.com/doc/2.x/tags/embed.html) statements.
 
@@ -227,7 +227,7 @@ Let's take a look at the Movie Card component by compiling our code and building
 lando npm run build && lando php patternlab/core/console --generate
 ```
 
-## Viewing the component  <a id="viewing-the-component"></a>
+## Viewing the component   <a id="viewing-the-component"></a>
 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-movie-card](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-movie-card)
 

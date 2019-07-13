@@ -1,6 +1,6 @@
 # Drupal Libraries
 
-The CSS styles we've written work great in the style-guide but currently they are not available in Drupal.  Although we have compiled each component's styles into individual CSS stylesheets, Drupal is not aware of them.  To fix this we need to create libraries for each components which we later will attach to the corresponding component for Drupal to load those styles or Javascript.
+The CSS styles we've written work great in the style-guide but currently they are not available in Drupal. Although we have compiled each component's styles into individual CSS stylesheets, Drupal is not aware of them. To fix this we need to create libraries for each components which we later will attach to the corresponding component for Drupal to load those styles or Javascript.
 
 In Drupal 8, stylesheets \(CSS\) and JavaScript \(JS\) are loaded through the same system for modules \(code\) and themes, for everything: [asset libraries](https://www.drupal.org/node/2274843).
 
@@ -36,7 +36,7 @@ global:
 
 There is a lot more to Drupal libraries and we encourage you to learn more about them in the URL above.
 
-**NOTE:**  We've created other libraries which you will see in the **nitflex\_dev\_theme.libraries.yml**.
+**NOTE:** We've created other libraries which you will see in the **nitflex\_dev\_theme.libraries.yml**.
 
 ## Creating the Movie Card component's library
 

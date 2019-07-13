@@ -75,7 +75,7 @@ With the debugging information above we have all we need to create our first tem
 2. Clear the site's caches via the Admin Menu when logged into the site, or run `lando drush cr` in the terminal.
 3. Reload the homepage again and inspect the code one more time.
 
-![Movie template suggestion using teaser view mode](../../.gitbook/assets/node-teaser%20%282%29.png)
+![Movie template suggestion using teaser view mode](../../.gitbook/assets/node-teaser-2.png)
 
 Notice there is an **"x"** next to `node--movie--teaser.html.twig`, which means Drupal is now using our custom twig template suggestion. Also notice the path of the template. It's our own theme's template directory.
 

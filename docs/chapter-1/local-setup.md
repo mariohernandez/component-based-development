@@ -39,7 +39,7 @@ At least on a Mac, this installs Lando along with Docker. Optionally, you can in
 ## 3. Build your Lando environment
 
 {% hint style="info" %}
-**WINDOWS USERS:**  Use **Power Shell** to run the commands below.
+**WINDOWS USERS:** Use **Power Shell** to run the commands below.
 {% endhint %}
 
 Run the following commands from the root level of the repository.
@@ -65,11 +65,11 @@ Run the following commands from the root level of the repository.
    2. then run `lando npm run build && lando php patternlab/core/console --generate`
 
 {% hint style="info" %}
-**WINDOWS USERS:**  If you experienced issues with the steps above, do this:
+
+**WINDOWS USERS:** If you experienced issues with the steps above, do this:
 
 1. Skip step \#2
 2. Change the command on step \#5.2 to  `lando php patternlab/core/console --generate`
-{% endhint %}
 
 ### Login to the site and preview the final results
 

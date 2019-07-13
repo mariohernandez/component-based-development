@@ -1,4 +1,4 @@
-# Component Variations
+# Components Variations
 
 Component variations are new instances of a component with small or big changes. Variations are great ways to use an existing component and extend it to change its look and/or behavior. [More on components variations here](http://bradfrost.com/blog/post/pattern-variations/).
 
@@ -99,7 +99,7 @@ _The command above runs all gulp tasks found inside the gulp-tasks directory in 
 
 ## Viewing the component
 
-* Open your Drupal site and point to the URL below:   
+* Open your Drupal site and point to the URL below:
 
   [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-button](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-button)
 
