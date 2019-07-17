@@ -50,7 +50,7 @@ movie-card:
       dist/css/movie-card.css: {}
 ```
 
-Libraries are great because Drupal only loads what we need when we needed to avoid having to load assets that our page or component may never use. This helps with site's performance.
+Libraries are great because Drupal only loads what we need when we need it to avoid having to load assets that our page or component may never use. This helps with the site's performance.
 
 **CLEAR DRUPAL'S CACHE**
 
@@ -100,7 +100,7 @@ As you can see adding a new script to the style-guide is nothing more than speci
 
 ## Creating libraries for each component
 
-Now that we know how Drupal Libraries work and how to create them, go ahead and create a new library for each component you have built thus far, then attach each library to the corresponding component.
+Now that we know how Drupal Libraries work and how to create them, open up your `nitflex_dev_theme.libraries` file in your editor and create a new library for each component you have built thus far, then attach each library to the corresponding component.
 
 Ordering libraries alphabetically is helpful to quickly find the right library as your components catalog grows.
 

@@ -62,7 +62,7 @@ Now that we have a new button variation let's add css styles to it.
   }
   ```
 
-Styles for `.button--primary` start on line **20** above. These styles will apply when both, `button` and `button--primary` classes are present \(i.e. `<a class="button button--primary">My button</a>`\), and when they do we are changing background and border color to red. Before we can see the new variation in action, we need to update the pattern's twig template so it's aware when a variation is needed.
+Styles for `.button--primary` start on line **23** above. These styles will apply when both, `button` and `button--primary` classes are present \(i.e. `<a class="button button--primary">My button</a>`\), and when they do we are changing background and border color to red. Before we can see the new variation in action, we need to update the pattern's twig template so it's aware when a variation is needed.
 
 * Now let's edit the twig file to look like this:
 
