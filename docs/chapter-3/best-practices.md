@@ -9,10 +9,10 @@ There are other ways to implement component based development, such as UI Patter
 ## Presenter template best practices:
 
 * It’s best to try and loyally follow the atomic design approach as much as possible when creating components.
-* When at the molecule/organism level of your components, use twig block tags generously to help with future embeds of those components.  _If in doubt, block it out._
+* When at the molecule/organism level of your components, use twig **block tags** generously to help with future embeds of those components.  _If in doubt, block it out._
 * Let Drupal render all fields at the theme level with little to no preprocessing. Use view modes all the time for everything.
 * Use modules that extend twig \([twig field value](https://www.drupal.org/project/twig_field_value), [twig tweak](https://www.drupal.org/project/twig_tweak), etc.\) when only the field value is required.
-* Create twig template files to help remove bloated field markup, and make use of twig’s extends tag to help streamline reuse of field templates.
+* Create twig template files to help remove bloated field markup, and make use of twig’s **extends tag** to help streamline reuse of field templates.
 * Accommodate Drupal’s attributes object and title\_prefix/suffix vars when that’s necessary.
 
 ## Benefits of this approach:
