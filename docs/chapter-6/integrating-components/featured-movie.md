@@ -40,6 +40,7 @@ We are now finally at a point where we can integrate the Featured Movie componen
     title: label,
     url: url,
     heading_level: '1',
+    modifier: 'featured-movie__title',
     attributes: title_attributes,
   }
 %}
