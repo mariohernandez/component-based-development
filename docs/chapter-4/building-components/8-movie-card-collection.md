@@ -107,7 +107,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 
 ## Twig blocks
 
-[Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks are regions in which you can insert any kind of content.
+[Twig blocks](https://twig.symfony.com/doc/2.x/tags/block.html), not the same as Drupal blocks, are a great way to extend twig templates. It can be confusing at first given that all of our lives as Drupal developers we have worked with blocks. However, think of Twig blocks as regions in which you can insert any kind of content.
 
 * Now add the component's styles below into **card-collection.scss**:
 
