@@ -13,8 +13,9 @@ if [ ! -z $LANDO_MOUNT ]; then
   cp -r assets/imgs/. web/sites/default/files/.
 
   # Check if the DB is empty before importing the gzipped backup.
-  DRUPAL_NOT_INSTALLED=`drush status bootstrap | grep -q Successful`
-  if [ DRUPAL_NOT_INSTALLED ]; then
+  drush status bootstrap | grep Successful > /dev/null
+  IMPORT_DATABASE=$?
+  if [ $IMPORT_DATABASE -eq 1 ]; then
     echo "Importing Drupal database"
     gunzip -c drupal8.export.gz | drush sqlc
   fi
