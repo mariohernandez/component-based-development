@@ -18,6 +18,8 @@ This is only going to work if you have a fairly new computer. According to the [
 
 ## 1. Install Lando and Docker
 
+Watch the [Step-by-step video tutorial](https://www.dropbox.com/s/pa7mdlung83cdri/cbd-local-setup.mp4?dl=0) to setup your local dev environment.  If you want to do it on your own, follow the steps below.
+
 * [Install Lando and Docker](https://github.com/lando/lando/releases) (Select latest version)
 
 
