@@ -16,10 +16,10 @@ Lando is a free, open source, cross-platform, local development environment tool
 
 This is only going to work if you have a fairly new computer. According to the [Lando documentation](https://docs.devwithlando.io/installation/system-requirements.html#operating-system) you will need one of the following:
 
-- macOS 10.10+ \(May need to install command line tools\)
-- Windows 10 Pro+ \(or equivalent\) with Hyper-V running
-- Linux \(with kernel version 4.x or higher\)
-- 10GB+ of available disk space
+* macOS 10.10+ \(May need to install command line tools\)
+* Windows 10 Pro+ \(or equivalent\) with Hyper-V running
+* Linux \(with kernel version 4.x or higher\)
+* 10GB+ of available disk space
 
   So far, we have tested only with macOS 10.13 \(High Sierra\) and 10.14 \(Mojave\).
 
@@ -27,14 +27,14 @@ This is only going to work if you have a fairly new computer. According to the [
 
 ### Run the installer
 
-- [Install Lando and Docker](https://github.com/lando/lando/releases) \(Select latest version\)
+* [Install Lando and Docker](https://github.com/lando/lando/releases) \(Select latest version\)
 
 At least on a Mac, this installs Lando along with Docker. Optionally, you can install Docker first: the Lando installer has not been updated with the latest version of Docker.
 
 ## 2. Clone this repo anywhere in your computer
 
-- In your preferred terminal app, run the following command: `git clone git@github.com:mariohernandez/component-based-development.git`
-- If you experience issues with the command above, try this one: `git clone https://github.com/mariohernandez/component-based-development.git`
+* In your preferred terminal app, run the following command: `git clone git@github.com:mariohernandez/component-based-development.git`
+* If you experience issues with the command above, try this one: `git clone https://github.com/mariohernandez/component-based-development.git`
 
 ## 3. Build your Lando environment
 
@@ -57,9 +57,9 @@ Run the following commands from the root level of the repository.
 2. Run: `lando npm install` _This will install the required front end tools \(Node, Gulp, etc.\)_ **Note**: You may see npm warnings about a missing "repository" or "license" field, as well as a message about vulnerabilities. For our purposes, all of these messages can be ignored, and you _do not_ need to run any of the "audit" commands it suggests.
 3. Move into the pattern-lab directory `cd patternlab`
 4. Run: `lando composer install` _This will install PatternLab_
-   - When prompted to `update the config option twigAutoescape`, reply with **n**.
-   - When prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**
-   - When prompted to `update the config option styleguideKitPath`, reply with **Y**.
+   * When prompted to `update the config option twigAutoescape`, reply with **n**.
+   * When prompted that the `path ./../dist/style-guide/ already exists`, reply with **M**
+   * When prompted to `update the config option styleguideKitPath`, reply with **Y**.
 5. Run an initial build of the front end tools and PatternLab.
    1. `cd ../` Make sure you're at the root level of the theme,
    2. then run `lando npm run build && lando php patternlab/core/console --generate`
@@ -73,8 +73,8 @@ Run the following commands from the root level of the repository.
 
 ### Login to the site and preview the final results
 
-- Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
-- To access PatternLab, which is where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/)
+* Go to: [http://nitflex.lndo.site/user](http://nitflex.lndo.site/user) and log in with username: `admin`, pw: `admin`.
+* To access PatternLab, which is where our components will be displayed, go to [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/)
 
 You are done! 🙌 🔥 👊
 
@@ -83,3 +83,4 @@ You are done! 🙌 🔥 👊
 
 The environment we have put together has been extensively tested and we expect everyone to use it during this training workshop. If you wish to use your own development environment you are on your own and we will not support or provide assistance if issues arise.
 {% endhint %}
+

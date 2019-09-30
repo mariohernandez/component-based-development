@@ -96,7 +96,7 @@ To fix this, we'll create a custom field template suggestion file for the promo 
 2. Use your browser inspector to view twig debug comments for the location of the default field template \(`modules/core/themes/stable/templates/field.html.twig`\)
 3. Copy the default template to the appropriate directory in the `nitflex_dev_theme`\(`/themes/custom/nitflex_dev_theme/src/templates/featured-movie`\) and rename it to `field--node--field-promo-sentence--movie.html.twig`
 
-![Field template suggestion](../../.gitbook/assets/featured-movie-title-field%20%281%29.png)
+![Field template suggestion](../../.gitbook/assets/featured-movie-title-field-1.png)
 
 Now, open the `field--node--field-promo-sentence--movie.html.twig` file, remove all code in the file but leave all comments, and add in:
 

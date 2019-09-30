@@ -142,7 +142,7 @@ Inside the block, we loop through the _items_ array and for each item we loop th
 }
 ```
 
-## Compiling the style-guide        <a id="compiling-the-style-guide"></a>
+## Compiling the style-guide <a id="compiling-the-style-guide"></a>
 
 Now that we have written all the necessary code to build the Movie Card Collection component, it's time to see the component in the style-guide. Let's compile our project first.
 
@@ -152,7 +152,7 @@ Now that we have written all the necessary code to build the Movie Card Collecti
 lando npm run build && lando php patternlab/core/console --generate
 ```
 
-## Viewing the component    <a id="viewing-the-component"></a>
+## Viewing the component <a id="viewing-the-component"></a>
 
 * Open your Drupal site and point to the URL below: [http://nitflex.lndo.site/themes/custom/nitflex\_dev\_theme/dist/style-guide/?p=viewall-patterns-card-collection](http://nitflex.lndo.site/themes/custom/nitflex_dev_theme/dist/style-guide/?p=viewall-patterns-card-collection)
 
