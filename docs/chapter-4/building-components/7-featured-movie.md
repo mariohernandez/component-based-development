@@ -18,7 +18,7 @@ heading:
   modifier:
   title: "DrupalCon Seattle 2019"
   url:
-promo_text: "Be part of th 12th season this fall"
+promo_text: "Be part of the 12th season this fall"
 mpaa_rating: "PG-13"
 average_rating: "5"
 synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
