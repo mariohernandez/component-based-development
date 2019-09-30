@@ -24,7 +24,7 @@ items:
       heading_level: 4
       modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
-    promo_text: "Be part of th 12th season this fall,"
+    promo_text: "Be part of the 12th season this fall,"
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
@@ -35,7 +35,7 @@ items:
       heading_level: 4
       modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
-    promo_text: "Be part of th 12th season this fall,"
+    promo_text: "Be part of the 12th season this fall,"
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
@@ -46,7 +46,7 @@ items:
       heading_level: 4
       modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
-    promo_text: "Be part of th 12th season this fall,"
+    promo_text: "Be part of the 12th season this fall,"
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
@@ -57,7 +57,7 @@ items:
       heading_level: 4
       modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
-    promo_text: "Be part of th 12th season this fall,"
+    promo_text: "Be part of the 12th season this fall,"
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
   -
     average_rating: 5
@@ -68,7 +68,7 @@ items:
       heading_level: 4
       modifier: "movie-card__heading"
     mpaa_rating: "PG-13,"
-    promo_text: "Be part of th 12th season this fall,"
+    promo_text: "Be part of the 12th season this fall,"
     synopsis: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
 ```
 
