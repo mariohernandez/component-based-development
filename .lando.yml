@@ -8,9 +8,6 @@ services:
     type: node
     globals:
       gulp-cli: "latest"
-  appserver:
-    run:
-      - /app/scripts/init.sh
 
 events:
   post-start:
