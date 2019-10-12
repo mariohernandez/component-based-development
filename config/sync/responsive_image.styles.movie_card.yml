@@ -1,8 +1,10 @@
-uuid: 79f78cf4-f55c-4d6d-8d0f-c3262551110a
+uuid: 4a0cfb0c-3d62-44c4-ae3f-8ff4cb219ff9
 langcode: en
 status: true
 dependencies:
   config:
+    - image.style.16_9_1200x675
+    - image.style.16_9_2200x1238
     - image.style.16_9_285x160
     - image.style.16_9_450x253
     - image.style.16_9_570x320
@@ -15,8 +17,10 @@ image_style_mappings:
     multiplier: 1x
     image_mapping_type: sizes
     image_mapping:
-      sizes: '(min-width: 768px) 50vw, (min-width: 1025px) 25vw, 100vw'
+      sizes: '(min-width: 768px) 50vw, (min-width: 1040px) 33vw, (min-width: 1200px) 25vw, 100vw'
       sizes_image_styles:
+        - 16_9_1200x675
+        - 16_9_2200x1238
         - 16_9_285x160
         - 16_9_450x253
         - 16_9_570x320

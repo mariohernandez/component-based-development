@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.movie.field_mpaa_rating
     - field.field.node.movie.field_promo_sentence
     - node.type.movie
-    - responsive_image.styles.4_col_row_16_9
+    - responsive_image.styles.movie_card
   module:
     - options
     - responsive_image
@@ -43,7 +43,7 @@ content:
     region: content
     label: hidden
     settings:
-      responsive_image_style: 4_col_row_16_9
+      responsive_image_style: movie_card
       image_link: ''
     third_party_settings: {  }
   field_mpaa_rating:
