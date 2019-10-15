@@ -1,0 +1,11 @@
+{{ attach_library('nitflex_theme/button') }}
+{% if button.url %}
+  <a href="{{ button.url }}"
+    class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
+    {{ button.text }}
+  </a>
+{% else %}
+  <button class="button{% if button.modifier %} {{ button.modifier|lower }}{% endif %}">
+    {{ button.text }}
+  </button>
+{% endif %}

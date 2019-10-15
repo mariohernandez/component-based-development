@@ -1,0 +1,10 @@
+{{ attach_library('nitflex_theme/heading') }}
+<h{{ heading.heading_level|default('2') }} class="heading {{ heading.modifier ? ' ' ~ heading.modifier }}
+  {{- heading.attributes.class ? heading.attributes.class -}}"
+  {{- heading.attributes ? heading.attributes|without(class) -}}>
+  {% if heading.url %}
+    <a href="{{ heading.url }}">{{ heading.title }}</a>
+  {% else %}
+    {{ heading.title }}
+  {% endif %}
+</h{{ heading.heading_level|default('2') }}>

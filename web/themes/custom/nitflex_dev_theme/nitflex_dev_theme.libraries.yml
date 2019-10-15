@@ -25,6 +25,21 @@ average-rating:
     component:
       dist/css/average-rating.css: {}
 
+button:
+  css:
+    component:
+      dist/css/button.css: {}
+
+eyebrow:
+  css:
+    component:
+      dist/css/eyebrow.css: {}
+
+heading:
+  css:
+    component:
+      dist/css/heading.css: {}
+
 mpaa-rating:
   css:
     component:
