@@ -1,14 +1,16 @@
-# Introduction
-
-## Component based development
+# Component based development
 
 _A training workshop by_ [_Mediacurrent_](https://mediacurrent.com).
 
 This is a hands-on training workshop which will walk you through the process of building components and integrate those components with Drupal 8. _Component based development is typically broken down in 3 parts_:
 
-* Building stand-alone components with Twig using Pattern lab.
+* Building stand-alone components with Twig using Pattern Lab.
 * Building Drupal's back-end.
-* Integrating components with Drupal.
+* Integrating Components with Drupal.
+
+### What are Components?
+
+Components are portions of reusable code within your system and they serve as the building blocks of your application’s interface. Components range in complexity. Reducing components to a single atom, like a button or a drop down increases flexibility, making them more reusable. More complex components, like tables for specific types of data, can serve their use cases well, but this complexity limits the number of applicable scenarios. The more reusable your components are, the less you need to maintain, and the easier scale becomes.
 
 ## Why Components?
 

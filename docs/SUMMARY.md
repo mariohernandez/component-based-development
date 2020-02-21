@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Component based development](README.md)
 * [What you will build](what-you-will-build.md)
 
 ## Chapter 1
