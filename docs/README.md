@@ -1,4 +1,4 @@
-# Component based development
+# Welcome!
 
 _A training workshop by_ [_Mediacurrent_](https://mediacurrent.com).
 
